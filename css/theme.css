@@ -233,3 +233,396 @@
   color: var(--accent-blue);
   font-weight: 700;
 }
+
+/* ==========================================
+   SHARED SLIDE UTILITIES
+   ========================================== */
+
+.slide-subtitle {
+  font-size: 0.6em;
+  color: var(--text-muted);
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+
+/* ==========================================
+   PAIN STORY: DEV LOOP
+   ========================================== */
+
+.loop-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin: 15px auto 10px;
+  max-width: 95%;
+}
+
+.loop-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 8px 4px;
+  min-width: 90px;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+/* Highlight steps where effort went up (problematic) */
+.loop-step:first-child,
+.loop-step:last-child {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(239, 68, 68, 0.06);
+}
+
+/* Highlight step that improved */
+.loop-step.step-improved {
+  border-color: rgba(76, 217, 160, 0.5);
+  background: rgba(76, 217, 160, 0.06);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.step-num {
+  font-size: 0.45em;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.step-name {
+  font-size: 0.55em;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Effort shift row */
+.effort-shift {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.effort-badge {
+  font-size: 0.4em;
+  font-weight: 600;
+  padding: 2px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.effort-low {
+  background: rgba(76, 217, 160, 0.15);
+  color: #4cd9a0;
+  border: 1px solid rgba(76, 217, 160, 0.3);
+}
+
+.effort-mid {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.effort-high {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Direction arrows between badges */
+.effort-arrow {
+  font-size: 0.45em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.effort-arrow-up {
+  color: #ef4444;
+  /* red = effort went up, bad */
+}
+
+.effort-arrow-down {
+  color: #4cd9a0;
+  /* green = effort went down, good */
+}
+
+.effort-arrow-same {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+/* Flow arrows between steps */
+.loop-arrow {
+  position: absolute;
+  right: -13px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7em;
+  color: var(--accent-blue);
+  z-index: 2;
+  opacity: 0.7;
+}
+
+.loop-arrow-return {
+  color: var(--accent-purple);
+  opacity: 0.9;
+}
+
+/* Takeaway box */
+.pain-takeaway {
+  margin: 12px auto 0;
+  max-width: 85%;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: var(--border-radius);
+  padding: 8px 12px;
+}
+
+.pain-takeaway p {
+  font-size: 0.55em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.pain-takeaway strong {
+  color: var(--accent-blue);
+}
+
+/* Footnote */
+.pain-footnote {
+  margin-top: 8px;
+}
+
+.pain-footnote p {
+  font-size: 0.4em;
+  color: var(--text-muted);
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* ==========================================
+   ADOPTION PARADOX SLIDE
+   ========================================== */
+
+.adoption-layout {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  margin: 10px auto;
+  max-width: 95%;
+}
+
+.adoption-col {
+  flex: 1;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 15px;
+}
+
+.adoption-col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-color: rgba(76, 217, 160, 0.4);
+  background: rgba(76, 217, 160, 0.04);
+  max-width: 35%;
+}
+
+.adoption-col-right {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.03);
+}
+
+/* Hero number */
+.adoption-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.adoption-hero-number {
+  font-size: 3em;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.adoption-hero-label {
+  font-size: 0.6em;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.adoption-hero-delta {
+  font-size: 0.55em;
+  font-weight: 600;
+  color: var(--accent-green);
+  margin-top: 4px;
+}
+
+/* Column title */
+.adoption-col-title {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #ef4444;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Metric cards - Reference Style */
+.adoption-metric {
+  background: rgba(26, 26, 26, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Colored top accent lines for metric cards */
+.metric-distrust {
+  border-top: 2px solid var(--accent-purple);
+}
+
+.metric-unfavorable {
+  border-top: 2px solid var(--accent-blue);
+}
+
+.adoption-metric-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.adoption-metric-icon {
+  font-size: 1.1em;
+}
+
+.adoption-metric-name {
+  font-size: 0.6em;
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.metric-distrust .adoption-metric-name {
+  color: var(--accent-purple);
+}
+
+.metric-unfavorable .adoption-metric-name {
+  color: var(--accent-blue);
+}
+
+.adoption-metric-body {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.adoption-metric-main {
+  font-size: 1.6em;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.metric-badge {
+  background: #fbbf24;
+  color: #000;
+  font-size: 0.35em;
+  font-weight: 900;
+  padding: 1px 4px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.adoption-metric-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  gap: 2px;
+  margin: 0;
+}
+
+.adoption-metric-delta {
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #ef4444;
+  /* explicitly red */
+}
+
+.adoption-metric-label {
+  font-size: 0.35em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* Source links */
+.adoption-source {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.adoption-source a {
+  font-size: 0.75em;
+  color: var(--accent-blue);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.adoption-source a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Takeaway */
+.adoption-takeaway {
+  margin: 10px auto 0;
+  max-width: 95%;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: var(--border-radius);
+  padding: 8px 12px;
+}
+
+.adoption-takeaway p {
+  font-size: 0.55em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.adoption-takeaway strong {
+  color: var(--accent-blue);
+}

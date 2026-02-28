@@ -8,24 +8,32 @@
 6. Support (Monitoring, Bug fixing, Rollback, Reflection)
 7. Documentation update
 
-# Product Strategy Checklist
+# Adoption & trust
 
-- [ ] Рынок: ключевые концепции, уровень насыщения (Understand the market: key concepts, saturation)
-- [ ] Конкуренты (Key players & positioning: CodeSpeak, SpecKit, Kiro. Самые значимые? Что можно позаимствовать? Существующие подходы прямых и косвенных конкурентов)
-- [ ] Видение и цель на 12–24 месяца
-- [ ] Потенциальные ниши рынка (Низко висящие фрукты vs Прорывные "Moonshots". На чем сфокусироваться?)
-- [ ] Целевые сегменты и Early-adopters (Кто наши первые пользователи? ICP)
-- [ ] Проблема и ключевые JTBD (Какие проблемы они решают? Какие исходы даём?)
-- [ ] Ценностное предложение (коротко, конкретно)
-- [ ] Дифференциация и позиционирование (почему мы лучше альтернатив)
-- [ ] Ставки и фокус: 2–4 ключевых bets
-- [ ] “Не делаем”: явные исключения из скоупа
-- [ ] Продуктовые принципы (как принимаем решения)
-- [ ] High-level подход к решению (основные части продукта/опыта)
-- [ ] Модель роста (каналы, петли, GTM)
-- [ ] Монетизация (pricing metric, пакеты, кто платит)
-- [ ] Вехи и приоритизация на 6–12 месяцев
-- [ ] Риски и ключевые допущения
-- [ ] План валидации допущений (Лучшие эксперименты для проверки стратегии/гипотез в первый месяц)
-- [ ] Метрики: North Star + supporting + leading indicators + Go/No-Go metrics
-- [ ] Финальный артефакт (Pitch deck, Google Slides или one-pager + Appendix)
+Adoption
+
+* AI adoption among software developers reached 90%, a 14% year-over-year increase (<https://dora.dev/research/2025/dora-report/>)
+
+But:
+
+* AI sentiment:
+"how favorable is your stance?": "Unfavorable + Very unfavorable"
+20.4% (2025) +14.0 п.п. YoY (<https://survey.stackoverflow.co/>)
+* Trust
+    (Highly + Somewhat): 43.04% (2024) -> 32.79% (2025) (−10.25 п.п.)
+    Distrust (Somewhat + Highly): 30.37% -> 45.70% (+15.34 п.п.)
+(<https://survey.stackoverflow.co/>)
+
+# Dev demand \ pain
+
+Documentation - top 1 желаемая задача для автоматизации согласно исследованию (<https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf>)
+А именно:
+"Creating & updating documentation, generating API docs from code comments, & maintaining
+team knowledge bases. Efficiently understanding existing code, APIs, & systems from docu-
+mentation & reports."
+При этом фактическое время работы над документацией занимает 4% раб времени
+
+* разработчики предпочтут в 1,5 раза больше времени тратить на написание кода и вопросы архитектуры
+* env setup занимает в 2 раза больше времени, чем хочется
+* security/compliance, communication, customer support, debugging занимают от 1,5 до 3 раз больше времени, чем хотелось бы. security/compliancе - топ нелюбимых задач по объему затрачиваемого времени
+(<https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf>)
