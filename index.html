@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JetBrains Startups Presentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Reveal.js core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.css">
+
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom theme -->
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-markdown="slides.md" data-separator="^\n---\n" data-separator-vertical="^\n--\n"
+                data-separator-notes="^Notes:">
+            </section>
+        </div>
+    </div>
+
+    <!-- Reveal.js core script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.js"></script>
+    <!-- Reveal.js plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.js"></script>
+
+    <script>
+        Reveal.initialize({
+            width: 960,
+            height: 700,
+            margin: 0.15,
+            transition: 'fade',
+            slideNumber: 'c/t',
+            plugins: [RevealMarkdown, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

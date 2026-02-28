@@ -1,0 +1,8 @@
+{
+  "name": "jetbrains-presentation",
+  "version": "1.0.0",
+  "description": "Presentation template",
+  "scripts": {
+    "dev": "npx -y serve . -p 8001 --no-clipboard"
+  }
+}

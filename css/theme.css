@@ -1,0 +1,235 @@
+:root {
+  /* JetBrains Startups inspired premium minimal dark theme */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --accent-blue: #3b82f6;
+  /* JetBrains-like accent */
+  --accent-purple: #8b5cf6;
+  --accent-green: #4cd9a0;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --border-color: #333333;
+  --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --border-radius: 6px;
+}
+
+.reveal {
+  font-family: var(--font-family);
+  color: var(--text-main);
+  background-color: var(--bg-primary);
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  text-transform: none;
+  color: var(--text-main);
+  margin: 0 0 10px 0;
+  letter-spacing: normal;
+}
+
+.reveal h1 {
+  font-size: 1.8em;
+}
+
+.reveal h2 {
+  font-size: 1.2em;
+}
+
+.reveal h3 {
+  font-size: 1.1em;
+}
+
+.reveal h4 {
+  font-size: 0.9em;
+}
+
+.reveal p {
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+
+.reveal p,
+.reveal li {
+  font-size: 0.7em;
+  color: var(--text-muted);
+}
+
+.reveal .slides section p p,
+.reveal .grid-2x2 p {
+  font-size: 0.6em;
+  /* Even smaller for nested elements */
+}
+
+/* Grid layout for structured content */
+.reveal .grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Feature boxes */
+.reveal .feature-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 8px;
+  margin: 5px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reveal .feature-box h3 {
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.reveal .feature-box p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Gradient text utility */
+.reveal .text-gradient {
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Code blocks tuning (if any) */
+.reveal pre {
+  margin: 10px auto;
+  box-shadow: none;
+}
+
+.reveal pre code {
+  padding: 8px;
+  font-size: 0.6em;
+}
+
+/* Mermaid adjustments */
+.reveal .mermaid {
+  padding: 10px;
+  margin: 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+}
+
+/* ==========================================
+   TITLE SLIDE
+   ========================================== */
+
+.title-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.title-slide .title-label {
+  font-size: 0.65em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+}
+
+.title-slide h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.title-slide .title-subtitle {
+  font-size: 0.75em;
+  color: var(--text-muted);
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.title-slide .title-author {
+  margin-top: 20px;
+}
+
+.title-slide .title-author .author-name {
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.title-slide .title-author .author-date {
+  font-size: 0.55em;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* ==========================================
+   AGENDA / PRESENTATION STRUCTURE
+   ========================================== */
+
+.agenda-nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.agenda-section {
+  flex: 1;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 15px 12px;
+  text-align: left;
+  max-width: 260px;
+  transition: border-color 0.3s ease;
+}
+
+.agenda-section:hover {
+  border-color: var(--accent-blue);
+}
+
+.agenda-section h4 {
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent-blue);
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.agenda-section p {
+  font-size: 0.55em;
+  color: var(--text-muted);
+  margin: 3px 0;
+  padding-left: 8px;
+  position: relative;
+  line-height: 1.3;
+}
+
+.agenda-section p::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
