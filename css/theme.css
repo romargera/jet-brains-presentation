@@ -705,44 +705,24 @@
 }
 
 /* Yellow/Orange */
-.timespend-table td.val-high {
-  color: #f59e0b;
-  font-weight: normal;
-}
-
 .distrust-table td.val-med {
   color: #f97316;
   font-weight: 700;
 }
 
 /* Deep Orange Medium */
-.timespend-table td.val-med {
-  color: #f97316;
-  font-weight: normal;
-}
-
 .distrust-table td.val-low {
   color: #6b7280;
   font-weight: 700;
 }
 
 /* Grey Low */
-.timespend-table td.val-low {
-  color: #6b7280;
-  font-weight: normal;
-}
-
 .distrust-table td.val-critical {
   color: #ef4444;
   font-weight: 700;
 }
 
 /* Red Critical */
-.timespend-table td.val-critical {
-  color: #ef4444;
-  font-weight: normal;
-}
-
 /* Override badges inside distrust sections to match screenshot */
 .distrust-table th .metric-badge,
 .distrust-notes .metric-badge,
