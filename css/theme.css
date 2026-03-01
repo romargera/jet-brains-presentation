@@ -726,7 +726,8 @@
 
 /* Override badges inside distrust sections to match screenshot */
 .distrust-table th .metric-badge,
-.distrust-notes .metric-badge {
+.distrust-notes .metric-badge,
+.distrust-takeaway .metric-badge {
   background: rgba(59, 130, 246, 0.15);
   color: #60a5fa;
   border: 1px solid #3b82f6;

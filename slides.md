@@ -177,7 +177,7 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway:</strong> Developers don’t trust AI-generated code enough to ship it without extra time spent polishing, reviewing, and debugging.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Developers don’t trust AI-generated code enough to ship it without extra time spent polishing, reviewing, and debugging.</p>
 </div>
 
 <ul class="distrust-notes">
