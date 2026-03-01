@@ -206,7 +206,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 </tr>
 </thead>
 <tbody>
-<tr class="highlight-row">
+<tr>
 <td>Security/Compliance</td>
 <td class="center">11.48%</td>
 <td class="center">3.07%</td>
@@ -222,7 +222,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-low">Low</td>
 <td>-</td>
 </tr>
-<tr class="highlight-row">
+<tr>
 <td>Debugging</td>
 <td class="center">11.20%</td>
 <td class="center">7.48%</td>
@@ -238,7 +238,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-low">Low</td>
 <td>-</td>
 </tr>
-<tr class="highlight-row">
+<tr>
 <td>Env Setup</td>
 <td class="center">3.78%</td>
 <td class="center">1.54%</td>
@@ -318,7 +318,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-low">Low</td>
 <td>-</td>
 </tr>
-<tr class="highlight-row">
+<tr>
 <td>System Arch/Design</td>
 <td class="center">8.89%</td>
 <td class="center">15.37%</td>
@@ -326,7 +326,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-high">High</td>
 <td>Reduce time spent on low-value work, boosting satisfaction, retention, and tenure.</td>
 </tr>
-<tr class="highlight-row">
+<tr>
 <td>Coding</td>
 <td class="center">13.93%</td>
 <td class="center">25.16%</td>
@@ -343,8 +343,9 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 </div>
 
 <ul class="distrust-notes">
-<li><strong>Notes <span class="metric-badge">A</span>:</strong> Time spend data is based on <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf" target="_blank">Microsoft's Time-Warp Study</a>.</li>
-<li><strong>Prob.</strong> (Probability) = Probability to make a difference. All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+<li>Time spend data is based on <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf" target="_blank">Microsoft's Time-Warp Study</a>.</li>
+<li>Prob.(Probability) = Probability to make a difference.</li>
+<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
 </ul>
 
 Notes:
