@@ -699,34 +699,49 @@
 }
 
 /* Value text colors */
-.distrust-table td.val-high,
-.timespend-table td.val-high {
+.distrust-table td.val-high {
   color: #f59e0b;
   font-weight: 700;
 }
 
 /* Yellow/Orange */
-.distrust-table td.val-med,
-.timespend-table td.val-med {
+.timespend-table td.val-high {
+  color: #f59e0b;
+  font-weight: normal;
+}
+
+.distrust-table td.val-med {
   color: #f97316;
   font-weight: 700;
 }
 
 /* Deep Orange Medium */
-.distrust-table td.val-low,
-.timespend-table td.val-low {
+.timespend-table td.val-med {
+  color: #f97316;
+  font-weight: normal;
+}
+
+.distrust-table td.val-low {
   color: #6b7280;
   font-weight: 700;
 }
 
 /* Grey Low */
-.distrust-table td.val-critical,
-.timespend-table td.val-critical {
+.timespend-table td.val-low {
+  color: #6b7280;
+  font-weight: normal;
+}
+
+.distrust-table td.val-critical {
   color: #ef4444;
   font-weight: 700;
 }
 
 /* Red Critical */
+.timespend-table td.val-critical {
+  color: #ef4444;
+  font-weight: normal;
+}
 
 /* Override badges inside distrust sections to match screenshot */
 .distrust-table th .metric-badge,
@@ -777,14 +792,14 @@
 }
 
 .timespend-table td:nth-child(6) {
-  width: 45%;
+  width: 53%;
   white-space: normal;
 }
 
 .timespend-table td:nth-child(1) {
-  width: 25%;
+  width: 17%;
   color: var(--text-main);
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .timespend-table td:nth-child(2),
@@ -800,7 +815,7 @@
 }
 
 .timespend-table td.score {
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .timespend-table tr.highlight-row td {
