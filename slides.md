@@ -118,7 +118,7 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 </thead>
 <tr class="highlight-row">
 <td>Skepticism regarding code accuracy and quality</td>
-<td>45.7% distrust AI (up 15.3 pp YoY). 75% would ask a person for help when they don’t trust AI answers. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
+<td>46% distrust AI (up 15 pp YoY). 75% would ask a person for help when they don’t trust AI answers. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
 <td class="center val-high">High</td>
 <td class="center val-high">High</td>
 <td class="center val-high">High</td>
@@ -177,13 +177,175 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Developers don’t trust AI-generated code enough to ship it without extra time spent polishing, reviewing, and debugging.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Developers mainly don’t trust AI-generated code enough to ship it without extra time spent polishing, reviewing, and debugging.</p>
 </div>
 
 <ul class="distrust-notes">
-<li><strong>Notes:</strong> Reach, Freq., Conf. and Score are subjectively estimated/measured based on synthesis of external report signals. All values are <span class="metric-badge">A</span> assumptions.</li>
-<li><strong>Conf.</strong> (Confidence) = Probability to make a difference.</li>
+<li>Reach, Freq. (Frequency), Conf. (Confidence, as a probability to make a difference) and Score are subjectively estimated/measured based on synthesis of external report signals. </li>
+<li>All values are <span class="metric-badge">A</span> assumptions.</li>
 </ul>
 
 Notes:
 Let's drill down into these distrust issues. We analyzed various market reports and extracted the major pain points. As you can see in this table, the top two issues—highlighted here—are skepticism regarding code accuracy and the increased review and debugging time. Both of these score a 9 when evaluating their Reach, Frequency, and our Confidence that solving them will make a difference. Security concerns are also very high but have slightly less consistent frequency of blocking daily workflows. Note that the scores and parameters are our subjective estimates based on these signals.
+
+---
+<!-- .slide: id="time-spend" -->
+
+## WHAT: Dev Time Spent
+
+<div class="timespend-table-wrapper">
+<table class="timespend-table">
+<thead>
+<tr>
+<th>Activity</th>
+<th class="center">Actual</th>
+<th class="center">Ideal</th>
+<th class="center">Gap</th>
+<th class="center">Prob. <span class="metric-badge">A</span></th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="highlight-row">
+<td>Security/Compliance</td>
+<td class="center">11.48%</td>
+<td class="center">3.07%</td>
+<td class="center score">8.40%</td>
+<td class="center val-med">Med</td>
+<td>Opportunity to impower on the planning step</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td class="center">12.95%</td>
+<td class="center">6.57%</td>
+<td class="center score">6.38%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr class="highlight-row">
+<td>Debugging</td>
+<td class="center">11.20%</td>
+<td class="center">7.48%</td>
+<td class="center score">3.72%</td>
+<td class="center val-high">High</td>
+<td>Opportunity to keep usefull and updated spec</td>
+</tr>
+<tr>
+<td>Customer Support</td>
+<td class="center">7.49%</td>
+<td class="center">3.98%</td>
+<td class="center score">3.50%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr class="highlight-row">
+<td>Env Setup</td>
+<td class="center">3.78%</td>
+<td class="center">1.54%</td>
+<td class="center score">2.24%</td>
+<td class="center val-med">Med</td>
+<td>Opportunity to keep usefull and updated spec</td>
+</tr>
+<tr>
+<td>Monitoring/Dashboard</td>
+<td class="center">2.94%</td>
+<td class="center">2.24%</td>
+<td class="center score">0.70%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Task Mgmt (ADO)</td>
+<td class="center">2.03%</td>
+<td class="center">1.33%</td>
+<td class="center score">0.70%</td>
+<td class="center val-med">Med</td>
+<td>Opportunity to automize via agent orcestration</td>
+</tr>
+<tr>
+<td>Code Refactoring</td>
+<td class="center">5.25%</td>
+<td class="center">4.75%</td>
+<td class="center score">0.50%</td>
+<td class="center val-med">Med</td>
+<td>Opportunity to keep usefull and updated spec</td>
+</tr>
+<tr>
+<td>Test Authoring</td>
+<td class="center">4.83%</td>
+<td class="center">5.17%</td>
+<td class="center score">-0.34%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td class="center">3.71%</td>
+<td class="center">4.26%</td>
+<td class="center score">-0.55%</td>
+<td class="center val-med">Med</td>
+<td>Automazation already have widely adopted</td>
+</tr>
+<tr>
+<td>Mentoring/Onboarding</td>
+<td class="center">2.59%</td>
+<td class="center">3.70%</td>
+<td class="center score">-1.11%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tech Presentations</td>
+<td class="center">0.56%</td>
+<td class="center">1.68%</td>
+<td class="center score">-1.12%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr>
+<td>PR/Code Review</td>
+<td class="center">5.88%</td>
+<td class="center">7.13%</td>
+<td class="center score">-1.25%</td>
+<td class="center val-low">Low</td>
+<td>Human in the loop issue mostly depends on AI models base quality evolution</td>
+</tr>
+<tr>
+<td>Learning New Tech</td>
+<td class="center">2.52%</td>
+<td class="center">6.57%</td>
+<td class="center score">-4.05%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr class="highlight-row">
+<td>System Arch/Design</td>
+<td class="center">8.89%</td>
+<td class="center">15.37%</td>
+<td class="center score">-6.49%</td>
+<td class="center val-high">High</td>
+<td>Reduce time spent on low-value work, boosting satisfaction, retention, and tenure.</td>
+</tr>
+<tr class="highlight-row">
+<td>Coding</td>
+<td class="center">13.93%</td>
+<td class="center">25.16%</td>
+<td class="center score">-11.23%</td>
+<td class="center val-high">High</td>
+<td>Reduce time spent on low-value work, boosting satisfaction, retention, and tenure.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> We see an opportunity to cut low-value overhead and reinvest the saved capacity into the core work developers value most: Coding, System Architecture/Design, Security/Compliance, Debugging, and Env Setup.</p>
+</div>
+
+<ul class="distrust-notes">
+<li><strong>Notes <span class="metric-badge">A</span>:</strong> Time spend data is based on <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf" target="_blank">Microsoft's Time-Warp Study</a>.</li>
+<li><strong>Prob.</strong> (Probability) = Probability to make a difference. All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+</ul>
+
+Notes:
+Here we look at how developers actually spend their time versus how they ideally want to spend it. The largest gaps—the overhead we can cut—are in Security & Compliance, Debugging, and Environment Setup. At the same time, we see massive negative gaps in Coding and System Architecture. Developers want to spend almost double the time on architecture and double the time on coding. If we can automate the high-gap overhead areas, we unlock capacity for the deep work that drives real product value and developer satisfaction.
