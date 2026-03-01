@@ -176,6 +176,10 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 </table>
 </div>
 
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Takeaway:</strong> Developers don’t trust AI-generated code enough to ship it without extra time spent polishing, reviewing, and debugging.</p>
+</div>
+
 <ul class="distrust-notes">
 <li><strong>Notes:</strong> Reach, Freq., Conf. and Score are subjectively estimated/measured based on synthesis of external report signals. All values are <span class="metric-badge">A</span> assumptions.</li>
 <li><strong>Conf.</strong> (Confidence) = Probability to make a difference.</li>

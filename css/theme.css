@@ -627,6 +627,10 @@
   color: var(--accent-blue);
 }
 
+.distrust-takeaway {
+  margin: 15px auto 15px;
+}
+
 /* Distrust Issues Table */
 .distrust-table-wrapper {
   margin-top: 5px;
