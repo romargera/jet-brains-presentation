@@ -182,7 +182,7 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 
 <ul class="distrust-notes">
 <li>Reach, Freq. (Frequency), Conf. (Confidence, as a probability to make a difference) and Score are subjectively estimated/measured based on synthesis of external report signals. </li>
-<li>All values are <span class="metric-badge">A</span> assumptions.</li>
+<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
 </ul>
 
 Notes:
@@ -350,3 +350,33 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 
 Notes:
 Here we look at how developers actually spend their time versus how they ideally want to spend it. The largest gaps—the overhead we can cut—are in Security & Compliance, Debugging, and Environment Setup. At the same time, we see massive negative gaps in Coding and System Architecture. Developers want to spend almost double the time on architecture and double the time on coding. If we can automate the high-gap overhead areas, we unlock capacity for the deep work that drives real product value and developer satisfaction.
+
+---
+<!-- .slide: id="jtbd-icp" -->
+
+## WHAT: JTBD + ICP (Early Adopters)
+
+<div class="adoption-layout">
+  <div class="adoption-col adoption-col-left">
+    <h4 style="margin-bottom: 20px; color: var(--text-main);">JTBD</h4>
+    <ul style="font-size: 0.6em; line-height: 1.4; color: var(--text-muted);">
+      <li style="margin-bottom: 12px;">Ship faster while keeping implementation aligned with the intended architecture.</li>
+      <li style="margin-bottom: 12px;">Turn specs into a durable source of truth for AI agents and reviewers.</li>
+      <li style="margin-bottom: 12px;">Reduce extra time spent polishing, reviewing, and debugging AI-assisted output.</li>
+    </ul>
+  </div>
+
+  <div class="adoption-col adoption-col-right">
+    <h4 style="margin-bottom: 20px; color: var(--text-main);">ICP (Early Adopters)</h4>
+    <ul style="font-size: 0.6em; line-height: 1.4; color: var(--text-muted);">
+      <li style="margin-bottom: 12px;">Tech Leads, Staff or Principal Engineers, Architects.</li>
+      <li style="margin-bottom: 12px;">Teams of 10 to 50+ engineers with strong PR and review culture.</li>
+      <li style="margin-bottom: 12px;">High cost of drift: complex systems, compliance, reliability constraints.</li>
+      <li style="margin-bottom: 12px;">Heavy JetBrains IDE usage, already using AI tools daily.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="adoption-takeaway" style="margin-top: 30px;">
+  <p><strong>Mission:</strong> Predictable and controllable spec-driven agents that materially improve developer productivity.</p>
+</div>
