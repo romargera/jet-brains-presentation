@@ -827,3 +827,148 @@
 .distrust-notes strong {
   color: var(--text-main);
 }
+
+/* ==========================================
+   STREAM OPTIONS / SCORE TABLE
+   ========================================== */
+
+.score-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 8px;
+}
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.42em;
+  text-align: left;
+}
+
+.score-table th {
+  background: transparent;
+  color: #888;
+  font-weight: 700;
+  padding: 5px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+.score-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  vertical-align: middle;
+  line-height: 1.3;
+}
+
+.score-table td:nth-child(1) {
+  white-space: nowrap;
+}
+
+.score-table td:nth-child(2) {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.score-table td strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.score-table td:last-child {
+  font-weight: 800;
+  color: var(--text-main);
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.score-table th:not(:nth-child(1)):not(:nth-child(2)) {
+  text-align: center;
+}
+
+.score-table td:not(:nth-child(1)):not(:nth-child(2)) {
+  text-align: center;
+}
+
+.score-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Stream Tags */
+.tag {
+  display: inline-block;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tag-capacity {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.tag-governance {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+}
+
+.tag-wedge {
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.35);
+}
+
+.tag-trust {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+.tag-platform {
+  background: rgba(156, 163, 175, 0.15);
+  color: #9ca3af;
+  border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+.tag-pain-quality {
+  background: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
+  border: 1px solid rgba(251, 146, 60, 0.35);
+}
+
+.tag-pain-review {
+  background: rgba(34, 211, 238, 0.12);
+  color: #22d3ee;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+.tag-time-spent {
+  background: rgba(52, 211, 153, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.tag-token-spent {
+  background: rgba(167, 139, 250, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(167, 139, 250, 0.35);
+}
+
+/* Slide footnote */
+.slide-footnote {
+  margin-top: 10px;
+  font-size: 0.35em !important;
+  color: #666 !important;
+  opacity: 0.8;
+  line-height: 1.4;
+}

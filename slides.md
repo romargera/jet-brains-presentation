@@ -352,31 +352,105 @@ Notes:
 Here we look at how developers actually spend their time versus how they ideally want to spend it. The largest gaps—the overhead we can cut—are in Security & Compliance, Debugging, and Environment Setup. At the same time, we see massive negative gaps in Coding and System Architecture. Developers want to spend almost double the time on architecture and double the time on coding. If we can automate the high-gap overhead areas, we unlock capacity for the deep work that drives real product value and developer satisfaction.
 
 ---
+<!-- .slide: id="stream-options" -->
+
+## WHAT: Strategic Directions
+
+<table class="score-table">
+  <thead>
+    <tr>
+      <th>Direction</th>
+      <th>Pain / Issue</th>
+      <th>Impact</th>
+      <th>Effort</th>
+      <th>Conf.</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Review &amp; Debug Preparations:</strong> AI quality gates &amp; checklists to cut rework</td>
+      <td><span class="tag tag-pain-review">Review &amp; Debug</span></td>
+      <td>High</td><td>Med</td><td>High</td><td>14</td>
+    </tr>
+    <tr>
+      <td><strong>Spec as Control Plane:</strong> executable constraints for agents &amp; PRs</td>
+      <td><span class="tag tag-pain-quality">Quality/Accuracy</span></td>
+      <td>High</td><td>Med</td><td>Med</td><td>13</td>
+    </tr>
+    <tr>
+      <td><strong>Security &amp; Compliance Guardrails:</strong> spec-embedded checks to prevent violations early</td>
+      <td><span class="tag tag-pain-quality">Quality/Accuracy</span></td>
+      <td>High</td><td>Med</td><td>High</td><td>13</td>
+    </tr>
+    <tr>
+      <td><strong>Token Spent Optimization:</strong> proactive &amp; reactive assist to cut LLM cost &amp; waste</td>
+      <td><span class="tag tag-token-spent">Token Spent Opt.</span></td>
+      <td>High</td><td>Med</td><td>Med</td><td>12</td>
+    </tr>
+    <tr>
+      <td><strong>Spec Formalisation Assist:</strong> turn requirements into machine-readable specs</td>
+      <td><span class="tag tag-time-spent">Time Spent Opt.</span></td>
+      <td>Med</td><td>Med</td><td>Med</td><td>11</td>
+    </tr>
+    <tr>
+      <td><strong>Dev Env Automation / Simplification:</strong> reproducible specs to cut setup overhead</td>
+      <td><span class="tag tag-time-spent">Time Spent Opt.</span></td>
+      <td>Med</td><td>Low</td><td>Med</td><td>11</td>
+    </tr>
+    <tr>
+      <td><strong>Drift Detection:</strong> detect spec-to-code divergence before it compounds</td>
+      <td><span class="tag tag-pain-quality">Quality/Accuracy</span></td>
+      <td>Med</td><td>High</td><td>Med</td><td>10</td>
+    </tr>
+    <tr>
+      <td><strong>Agent Plan Traceability:</strong> plan-to-action evidence with interruptibility &amp; control points</td>
+      <td><span class="tag tag-time-spent">Time Spent Opt.</span></td>
+      <td>Med</td><td>Med</td><td>Med</td><td>10</td>
+    </tr>
+  </tbody>
+</table>
+
+Notes:
+This slide shows the solution space. We can invest in multiple streams, but for early adoption we should pick a wedge aligned with our mission: predictable, spec-driven agent work.
+Scoring (assumption): Impact = Reach + Frequency + Probability (H=3/M=2/L=1). Total = Impact + Confidence + Effort (inverted, Low=3/Med=2/High=1). All values are assumptions, validated later via interviews and early pilots.
+Next, we define JTBD and the early adopter segments for the chosen direction.
+
+---
 <!-- .slide: id="jtbd-icp" -->
 
-## WHAT: JTBD + ICP (Early Adopters)
+## WHAT: Chosen Direction
 
-<div class="adoption-layout">
-  <div class="adoption-col adoption-col-left">
-    <h4 style="margin-bottom: 20px; color: var(--text-main);">JTBD</h4>
-    <ul style="font-size: 0.6em; line-height: 1.4; color: var(--text-muted);">
-      <li style="margin-bottom: 12px;">Ship faster while keeping implementation aligned with the intended architecture.</li>
-      <li style="margin-bottom: 12px;">Turn specs into a durable source of truth for AI agents and reviewers.</li>
-      <li style="margin-bottom: 12px;">Reduce extra time spent polishing, reviewing, and debugging AI-assisted output.</li>
-    </ul>
+<div style="display: flex; gap: 10px; margin-bottom: 10px;">
+  <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px;">
+    <h4 style="margin: 0 0 6px; font-size: 0.75em; color: var(--accent, #e05c5c); text-transform: uppercase; letter-spacing: 0.08em;">⚡ The Problem (Pain)</h4>
+    <p style="margin: 0; font-size: 0.58em; line-height: 1.45; color: var(--text-muted);">AI adoption hit 90%, yet distrust surged 15 pp YoY. Developers spend 45% more time debugging AI code than expected. Architecture and coding — the tasks they value most — are being crowded out by low-value overhead: debugging broken AI output, security reviews, and environment drift.</p>
   </div>
-
-  <div class="adoption-col adoption-col-right">
-    <h4 style="margin-bottom: 20px; color: var(--text-main);">ICP (Early Adopters)</h4>
-    <ul style="font-size: 0.6em; line-height: 1.4; color: var(--text-muted);">
-      <li style="margin-bottom: 12px;">Tech Leads, Staff or Principal Engineers, Architects.</li>
-      <li style="margin-bottom: 12px;">Teams of 10 to 50+ engineers with strong PR and review culture.</li>
-      <li style="margin-bottom: 12px;">High cost of drift: complex systems, compliance, reliability constraints.</li>
-      <li style="margin-bottom: 12px;">Heavy JetBrains IDE usage, already using AI tools daily.</li>
-    </ul>
+  <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px;">
+    <h4 style="margin: 0 0 6px; font-size: 0.75em; color: #4ade80; text-transform: uppercase; letter-spacing: 0.08em;">🎯 Chosen Direction</h4>
+    <p style="margin: 0; font-size: 0.58em; line-height: 1.45; color: var(--text-muted);">Spec-driven control layer for AI agents inside JetBrains IDEs — turning living specs into a persistent source of truth that keeps AI output aligned, reviewable, and predictable. Wedge: <strong style="color: #4ade80;">spec-aware code review + drift detection</strong> for teams already using AI tools daily.</p>
   </div>
 </div>
 
-<div class="adoption-takeaway" style="margin-top: 30px;">
-  <p><strong>Mission:</strong> Predictable and controllable spec-driven agents that materially improve developer productivity.</p>
+<div class="adoption-layout" style="gap: 10px;">
+  <div class="adoption-col adoption-col-left" style="background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.25); border-radius: 8px; padding: 10px 14px;">
+    <h4 style="margin: 0 0 8px; font-size: 0.75em; color: #4ade80; text-transform: uppercase; letter-spacing: 0.06em;">Segments</h4>
+    <div style="margin-bottom: 8px;">
+      <p style="margin: 0 0 3px; font-size: 0.62em; font-weight: 600; color: #a3f0c0;">① Tech Leads & Staff/Principal Engineers</p>
+      <p style="margin: 0; font-size: 0.55em; line-height: 1.4; color: var(--text-muted);">Teams of 10–50+ devs · Strong PR & review culture · Complex systems with compliance/reliability constraints · Heavy JetBrains IDE users, daily AI tools</p>
+    </div>
+    <div>
+      <p style="margin: 0 0 3px; font-size: 0.62em; font-weight: 600; color: #a3f0c0;">② Solution Architects & Platform Engineers</p>
+      <p style="margin: 0; font-size: 0.55em; line-height: 1.4; color: var(--text-muted);">Own the spec & architecture layer · High cost of implementation drift · Responsible for AI tooling adoption across the org · Need auditability and traceability</p>
+    </div>
+  </div>
+
+  <div class="adoption-col adoption-col-right" style="background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.25); border-radius: 8px; padding: 10px 14px;">
+    <h4 style="margin: 0 0 8px; font-size: 0.75em; color: #4ade80; text-transform: uppercase; letter-spacing: 0.06em;">JTBD</h4>
+    <ul style="margin: 0; padding-left: 14px; font-size: 0.56em; line-height: 1.5; color: var(--text-muted);">
+      <li style="margin-bottom: 8px;"><span style="color: #d1fae5;">When</span> I ship AI-assisted code, <span style="color: #d1fae5;">I want to</span> ensure it matches the intended architecture and spec, <span style="color: #d1fae5;">so I can</span> merge with confidence without a full manual review.</li>
+      <li style="margin-bottom: 8px;"><span style="color: #d1fae5;">When</span> the codebase drifts from the design, <span style="color: #d1fae5;">I want to</span> detect it instantly inside my IDE, <span style="color: #d1fae5;">so I can</span> fix it before it compounds into technical debt.</li>
+      <li><span style="color: #d1fae5;">When</span> onboarding new devs or AI agents, <span style="color: #d1fae5;">I want to</span> give them a living, structured spec, <span style="color: #d1fae5;">so I can</span> reduce ramp-up time and prevent misaligned output from day one.</li>
+    </ul>
+  </div>
 </div>
