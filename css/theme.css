@@ -626,3 +626,132 @@
 .adoption-takeaway strong {
   color: var(--accent-blue);
 }
+
+/* Distrust Issues Table */
+.distrust-table-wrapper {
+  margin-top: 5px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.distrust-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.38em;
+  /* Adjusted to fit 7 rows and legend */
+  text-align: left;
+}
+
+.distrust-table th {
+  background: transparent;
+  color: #888;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+.distrust-table td {
+  padding: 8px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  vertical-align: middle;
+  line-height: 1.25;
+}
+
+.distrust-table td:nth-child(2) {
+  width: 60%;
+  /* Give Details column more space */
+  white-space: normal;
+}
+
+.distrust-table td:nth-child(1) {
+  width: 20%;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.distrust-table td a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.distrust-table td a:hover {
+  text-decoration: underline;
+}
+
+.distrust-table th.center,
+.distrust-table td.center {
+  text-align: center;
+}
+
+.distrust-table td.score {
+  font-weight: 700;
+}
+
+/* Value text colors */
+.distrust-table td.val-high {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+/* Yellow/Orange */
+.distrust-table td.val-med {
+  color: #f97316;
+  font-weight: 700;
+}
+
+/* Deep Orange Medium */
+.distrust-table td.val-low {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+/* Grey Low */
+.distrust-table td.val-critical {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* Red Critical */
+
+/* Override badges inside distrust sections to match screenshot */
+.distrust-table th .metric-badge,
+.distrust-notes .metric-badge {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid #3b82f6;
+  padding: 0px 4px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.distrust-notes {
+  margin-top: 15px;
+  font-size: 0.35em;
+  color: #999;
+  background: rgba(26, 26, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 10px 15px 10px 30px;
+  text-align: left;
+  line-height: 1.4;
+  list-style-type: disc;
+}
+
+.distrust-notes li {
+  margin-bottom: 4px;
+}
+
+.distrust-notes li:last-child {
+  margin-bottom: 0;
+}
+
+.distrust-notes strong {
+  color: var(--text-main);
+}
