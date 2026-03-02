@@ -37,3 +37,37 @@ mentation & reports."
 * env setup занимает в 2 раза больше времени, чем хочется
 * security/compliance, communication, customer support, debugging занимают от 1,5 до 3 раз больше времени, чем хотелось бы. security/compliancе - топ нелюбимых задач по объему затрачиваемого времени
 (<https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf>)
+
+C точки зрения распределения рабочего времени разработчика:
+
+* Documentation - top 1 желаемая задача для автоматизации согласно исследованию (<https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf>). При этом фактическое время работы над документацией занимает 4% раб времени
+* env setup занимает в 2 раза больше времени, чем хочется
+* security/compliance, communication, customer support, debugging занимают от 1,5 до 3 раз больше времени, чем хотелось бы. security/compliancе - топ нелюбимых задач по объему затрачиваемого времени
+(<https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf>)
+
+# Лучшая стратегия по сокращению времени на Security/Compliance
+
+Не трогать то, что может быть связано с безопасниками
+
+# Лучшая стратегия по сокращению времени на Documentation
+
+Уже есть решения
+
+# Для разработчика
+
+* Боли разработчика
+
+# Для бизнеса продуктовой компании
+
+* Боли бизнеса
+
+Для обоих
+
+* Косты на токены
+* Time spent
+
+# Для Jet Brains
+
+* Новая статья дохода
+* Рост удержания в core продуктах
+* Новые продажи core продуктов

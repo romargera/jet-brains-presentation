@@ -646,6 +646,32 @@
   text-align: left;
 }
 
+/* Competitive approaches slide: narrower Description, wider Key Players */
+#competitive-approaches .distrust-table {
+  font-size: 0.342em;
+  /* 0.38em × 0.9 = -10% */
+}
+
+#competitive-approaches .distrust-table td:nth-child(1) {
+  width: 22%;
+}
+
+#competitive-approaches .distrust-table td:nth-child(2) {
+  width: 42%;
+  /* Description +30% from 32% */
+}
+
+#competitive-approaches .distrust-table td:nth-child(3) {
+  width: 30%;
+  /* narrowed to give space to Description */
+}
+
+#competitive-approaches .distrust-table td:nth-child(4) {
+  width: 6%;
+  text-align: center;
+  font-weight: 700;
+}
+
 .distrust-table th {
   background: transparent;
   color: #888;
@@ -999,6 +1025,35 @@
   color: var(--text-main);
 }
 
+.score-table tr.baseline-row td {
+  background: rgba(255, 255, 255, 0.02);
+  color: #555;
+  font-style: italic;
+}
+
+.score-table tr.baseline-row td strong {
+  color: #666;
+}
+
+.distrust-table tr.highlight-row td {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--text-main);
+}
+
+.distrust-table tr.highlight-row td strong {
+  color: var(--text-main);
+}
+
+.distrust-table tr.baseline-row td {
+  background: rgba(255, 255, 255, 0.02);
+  color: #555;
+  font-style: italic;
+}
+
+.distrust-table tr.baseline-row td strong {
+  color: #666;
+}
+
 .slide-footnote {
   margin-top: 10px;
   font-size: 0.35em !important;
@@ -1039,7 +1094,7 @@
 
 .chosen-tile-label {
   margin: 0 0 3px;
-  font-size: 0.55em;
+  font-size: 0.37em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1056,9 +1111,19 @@
 
 .chosen-tile-body {
   margin: 0;
-  font-size: 0.45em;
+  font-size: 0.3em;
   line-height: 1.45;
   color: var(--text-muted);
+}
+
+.chosen-grid--small .chosen-tile-label {
+  font-size: 0.5em;
+  /* 0.25em * 2 = 0.5em */
+}
+
+.chosen-grid--small .chosen-tile-body {
+  font-size: 0.4em;
+  /* 0.2em * 2 = 0.4em */
 }
 
 .chosen-segment-name {
