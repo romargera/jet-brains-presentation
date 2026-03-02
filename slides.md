@@ -206,7 +206,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="highlight-row">
 <td>Security/Compliance</td>
 <td class="center">11.48%</td>
 <td class="center">3.07%</td>
@@ -214,7 +214,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-med">Med</td>
 <td>Opportunity to impower on the planning step</td>
 </tr>
-<tr>
+<tr class="highlight-row">
 <td>Communication</td>
 <td class="center">12.95%</td>
 <td class="center">6.57%</td>
@@ -222,7 +222,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-low">Low</td>
 <td>-</td>
 </tr>
-<tr>
+<tr class="highlight-row">
 <td>Debugging</td>
 <td class="center">11.20%</td>
 <td class="center">7.48%</td>
@@ -238,7 +238,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-low">Low</td>
 <td>-</td>
 </tr>
-<tr>
+<tr class="highlight-row">
 <td>Env Setup</td>
 <td class="center">3.78%</td>
 <td class="center">1.54%</td>
@@ -318,7 +318,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-low">Low</td>
 <td>-</td>
 </tr>
-<tr>
+<tr class="highlight-row">
 <td>System Arch/Design</td>
 <td class="center">8.89%</td>
 <td class="center">15.37%</td>
@@ -326,7 +326,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <td class="center val-high">High</td>
 <td>Reduce time spent on low-value work, boosting satisfaction, retention, and tenure.</td>
 </tr>
-<tr>
+<tr class="highlight-row">
 <td>Coding</td>
 <td class="center">13.93%</td>
 <td class="center">25.16%</td>
@@ -352,105 +352,192 @@ Notes:
 Here we look at how developers actually spend their time versus how they ideally want to spend it. The largest gaps—the overhead we can cut—are in Security & Compliance, Debugging, and Environment Setup. At the same time, we see massive negative gaps in Coding and System Architecture. Developers want to spend almost double the time on architecture and double the time on coding. If we can automate the high-gap overhead areas, we unlock capacity for the deep work that drives real product value and developer satisfaction.
 
 ---
+<!-- .slide: id="b2b-pains" -->
+
+## WHAT: B2B Pains
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
+<thead>
+<tr>
+<th>B2B Pain (Engineering / Product Teams)</th>
+<th>Details</th>
+<th class="center">Reach <span class="metric-badge">A</span></th>
+<th class="center">Freq. <span class="metric-badge">A</span></th>
+<th class="center">Conf. <span class="metric-badge">A</span></th>
+<th class="center">Score <span class="metric-badge">A</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="highlight-row">
+<td>Delivery predictability and lead time variability</td>
+<td>Unpredictable reviewers make dependent work impossible to forecast reliably. <a href="https://axify.io/blog/lead-time-in-software-development" target="_blank">[1]</a></td>
+<td class="center val-high">High</td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center score val-high">5</td>
+</tr>
+<tr class="highlight-row">
+<td>Quality and reliability risk from software errors</td>
+<td>Poor software quality costs US companies $2.08 trillion annually. <a href="https://raygun.com/blog/cost-of-software-errors/" target="_blank">[1]</a></td>
+<td class="center val-high">High</td>
+<td class="center val-high">High</td>
+<td class="center val-low">Low</td>
+<td class="center score val-high">5</td>
+</tr>
+<tr>
+<td>Documentation debt harming onboarding, satisfaction and speed</td>
+<td>41% of developers report this as a major hindrance. 97% lose significant time to inefficiencies. <a href="https://www.atlassian.com/software/compass/resources/state-of-developer-2024" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center score val-med">3</td>
+</tr>
+<tr>
+<td>Developer burnout from cognitive load and on-call burden</td>
+<td>83% of software engineers report feelings of burnout. <a href="https://www.softwareseni.com/developer-burnout-and-cognitive-load-in-the-devops-era/" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center val-low">Low</td>
+<td class="center score val-low">2</td>
+</tr>
+<tr>
+<td>Productivity loss from technical debt waste</td>
+<td>Developers waste on average 23% of their time due to technical debt. <a href="https://research.chalmers.se/publication/511450/file/511450_Fulltext.pdf" target="_blank">[1]</a></td>
+<td class="center val-low">Low</td>
+<td class="center val-high">High</td>
+<td class="center val-low">Low</td>
+<td class="center score val-low">2</td>
+</tr>
+<tr>
+<td>Compliance overhead from AI and tooling</td>
+<td>Compliance overhead increases 10–20% in regulated industries due to AI audit and privacy controls. <a href="https://www.softwareseni.com/the-real-economics-of-ai-coding-beyond-vendor-productivity-claims/" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-low">Low</td>
+<td class="center val-med">Med</td>
+<td class="center score val-low">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The two highest-scoring B2B pains — delivery unpredictability and quality risk — are directly amplified by uncontrolled AI-generated code entering review pipelines.</p>
+</div>
+
+<ul class="distrust-notes">
+<li>Reach, Freq. (Frequency), Conf. (Confidence = probability to make a difference) and Score are subjectively estimated based on external report signals.</li>
+<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+</ul>
+
+Notes:
+This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
+
+---
 <!-- .slide: id="stream-options" -->
 
 ## WHAT: Strategic Directions
+
+<p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Directions are derived from the top issues across three evidence layers: <strong style="color: var(--text-main);">Distrust</strong>, <strong style="color: var(--text-main);">Time Spent</strong>, and <strong style="color: var(--text-main);">B2B Issues</strong>.</p>
 
 <table class="score-table">
   <thead>
     <tr>
       <th>Direction</th>
-      <th>Pain / Issue</th>
-      <th>Impact</th>
-      <th>Effort</th>
-      <th>Conf.</th>
-      <th>Score</th>
+      <th>Source</th>
+      <th>Impact <span class="metric-badge">A</span></th>
+      <th>Effort <span class="metric-badge">A</span></th>
+      <th>Conf. <span class="metric-badge">A</span></th>
+      <th>Score <span class="metric-badge">A</span></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><strong>Review &amp; Debug Preparations:</strong> AI quality gates &amp; checklists to cut rework</td>
-      <td><span class="tag tag-pain-review">Review &amp; Debug</span></td>
-      <td>High</td><td>Med</td><td>High</td><td>14</td>
+    <tr class="highlight-row">
+      <td><strong>AI-dev transparency:</strong> code &amp; architecture</td>
+      <td><span class="tag tag-pain-review">Distrust issues</span></td>
+      <td>High</td><td>High</td><td>Med</td><td>2.5</td>
     </tr>
     <tr>
-      <td><strong>Spec as Control Plane:</strong> executable constraints for agents &amp; PRs</td>
-      <td><span class="tag tag-pain-quality">Quality/Accuracy</span></td>
-      <td>High</td><td>Med</td><td>Med</td><td>13</td>
+      <td><strong>Security &amp; Compliance</strong> (proactive assist)</td>
+      <td><span class="tag tag-time-spent">Time Spent</span></td>
+      <td>Med</td><td>Med</td><td>Low</td><td>1.7</td>
     </tr>
     <tr>
-      <td><strong>Security &amp; Compliance Guardrails:</strong> spec-embedded checks to prevent violations early</td>
-      <td><span class="tag tag-pain-quality">Quality/Accuracy</span></td>
-      <td>High</td><td>Med</td><td>High</td><td>13</td>
+      <td><strong>Review &amp; Debug assist</strong></td>
+      <td><span class="tag tag-pain-review">Distrust issues</span></td>
+      <td>Med</td><td>High</td><td>Med</td><td>1.7</td>
     </tr>
     <tr>
-      <td><strong>Token Spent Optimization:</strong> proactive &amp; reactive assist to cut LLM cost &amp; waste</td>
-      <td><span class="tag tag-token-spent">Token Spent Opt.</span></td>
-      <td>High</td><td>Med</td><td>Med</td><td>12</td>
+      <td><strong>Spec Formalisation Assist</strong> (proactive assist)</td>
+      <td><span class="tag tag-time-spent">Time Spent</span></td>
+      <td>Med</td><td>Med</td><td>Low</td><td>1.7</td>
     </tr>
     <tr>
-      <td><strong>Spec Formalisation Assist:</strong> turn requirements into machine-readable specs</td>
-      <td><span class="tag tag-time-spent">Time Spent Opt.</span></td>
-      <td>Med</td><td>Med</td><td>Med</td><td>11</td>
+      <td><strong>Dev Env Simplification</strong></td>
+      <td><span class="tag tag-time-spent">Time Spent</span></td>
+      <td>Med</td><td>Med</td><td>Low</td><td>1.7</td>
     </tr>
     <tr>
-      <td><strong>Dev Env Automation / Simplification:</strong> reproducible specs to cut setup overhead</td>
-      <td><span class="tag tag-time-spent">Time Spent Opt.</span></td>
-      <td>Med</td><td>Low</td><td>Med</td><td>11</td>
+      <td><strong>Delivery time variability</strong> (accurate forecasting)</td>
+      <td><span class="tag tag-b2b">B2B Pains</span></td>
+      <td>Med</td><td>Med</td><td>Low</td><td>1.7</td>
     </tr>
     <tr>
-      <td><strong>Drift Detection:</strong> detect spec-to-code divergence before it compounds</td>
-      <td><span class="tag tag-pain-quality">Quality/Accuracy</span></td>
-      <td>Med</td><td>High</td><td>Med</td><td>10</td>
+      <td><strong>Token Spent Optimization</strong></td>
+      <td><span class="tag tag-b2b">B2B Pains</span></td>
+      <td>Low</td><td>Med</td><td>Med</td><td>1.3</td>
     </tr>
     <tr>
-      <td><strong>Agent Plan Traceability:</strong> plan-to-action evidence with interruptibility &amp; control points</td>
-      <td><span class="tag tag-time-spent">Time Spent Opt.</span></td>
-      <td>Med</td><td>Med</td><td>Med</td><td>10</td>
+      <td><strong>Quality &amp; reliability risk</strong> from software errors</td>
+      <td><span class="tag tag-b2b">B2B Pains</span></td>
+      <td>Med</td><td>High</td><td>Low</td><td>1.1</td>
     </tr>
   </tbody>
 </table>
 
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> AI-dev transparency: code &amp; architecture is the top-priority direction, uniquely positioned at the intersection of all three pain layers with the highest value-to-cost score.</p>
+</div>
+
+<ul class="distrust-notes">
+<li>Score ranks directions by value vs cost: Score = (Impact × Confidence) / Effort.</li>
+<li>Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.</li>
+<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+</ul>
+
 Notes:
-This slide shows the solution space. We can invest in multiple streams, but for early adoption we should pick a wedge aligned with our mission: predictable, spec-driven agent work.
-Scoring (assumption): Impact = Reach + Frequency + Probability (H=3/M=2/L=1). Total = Impact + Confidence + Effort (inverted, Low=3/Med=2/High=1). All values are assumptions, validated later via interviews and early pilots.
-Next, we define JTBD and the early adopter segments for the chosen direction.
+Directions are scored by value-to-cost ratio to make prioritization explicit and defensible.
+Score = (Impact × Confidence) / Effort. Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.
+All scores are assumptions marked with A — to be validated through user interviews and early pilots.
+Next: we define the chosen direction in detail with JTBD and early adopter segments.
 
 ---
 <!-- .slide: id="jtbd-icp" -->
 
 ## WHAT: Chosen Direction
 
-<div style="display: flex; gap: 10px; margin-bottom: 10px;">
-  <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px;">
-    <h4 style="margin: 0 0 6px; font-size: 0.75em; color: var(--accent, #e05c5c); text-transform: uppercase; letter-spacing: 0.08em;">⚡ The Problem (Pain)</h4>
-    <p style="margin: 0; font-size: 0.58em; line-height: 1.45; color: var(--text-muted);">AI adoption hit 90%, yet distrust surged 15 pp YoY. Developers spend 45% more time debugging AI code than expected. Architecture and coding — the tasks they value most — are being crowded out by low-value overhead: debugging broken AI output, security reviews, and environment drift.</p>
-  </div>
-  <div style="flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px;">
-    <h4 style="margin: 0 0 6px; font-size: 0.75em; color: #4ade80; text-transform: uppercase; letter-spacing: 0.08em;">🎯 Chosen Direction</h4>
-    <p style="margin: 0; font-size: 0.58em; line-height: 1.45; color: var(--text-muted);">Spec-driven control layer for AI agents inside JetBrains IDEs — turning living specs into a persistent source of truth that keeps AI output aligned, reviewable, and predictable. Wedge: <strong style="color: #4ade80;">spec-aware code review + drift detection</strong> for teams already using AI tools daily.</p>
-  </div>
-</div>
+<div class="chosen-grid chosen-grid--2col">
 
-<div class="adoption-layout" style="gap: 10px;">
-  <div class="adoption-col adoption-col-left" style="background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.25); border-radius: 8px; padding: 10px 14px;">
-    <h4 style="margin: 0 0 8px; font-size: 0.75em; color: #4ade80; text-transform: uppercase; letter-spacing: 0.06em;">Segments</h4>
-    <div style="margin-bottom: 8px;">
-      <p style="margin: 0 0 3px; font-size: 0.62em; font-weight: 600; color: #a3f0c0;">① Tech Leads & Staff/Principal Engineers</p>
-      <p style="margin: 0; font-size: 0.55em; line-height: 1.4; color: var(--text-muted);">Teams of 10–50+ devs · Strong PR & review culture · Complex systems with compliance/reliability constraints · Heavy JetBrains IDE users, daily AI tools</p>
-    </div>
-    <div>
-      <p style="margin: 0 0 3px; font-size: 0.62em; font-weight: 600; color: #a3f0c0;">② Solution Architects & Platform Engineers</p>
-      <p style="margin: 0; font-size: 0.55em; line-height: 1.4; color: var(--text-muted);">Own the spec & architecture layer · High cost of implementation drift · Responsible for AI tooling adoption across the org · Need auditability and traceability</p>
-    </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Chosen Direction</p>
+    <p class="chosen-tile-body">AI-dev transparency layer for code &amp; architecture: keeping AI output aligned with specs, reviewable, and predictable.</p>
   </div>
 
-  <div class="adoption-col adoption-col-right" style="background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.25); border-radius: 8px; padding: 10px 14px;">
-    <h4 style="margin: 0 0 8px; font-size: 0.75em; color: #4ade80; text-transform: uppercase; letter-spacing: 0.06em;">JTBD</h4>
-    <ul style="margin: 0; padding-left: 14px; font-size: 0.56em; line-height: 1.5; color: var(--text-muted);">
-      <li style="margin-bottom: 8px;"><span style="color: #d1fae5;">When</span> I ship AI-assisted code, <span style="color: #d1fae5;">I want to</span> ensure it matches the intended architecture and spec, <span style="color: #d1fae5;">so I can</span> merge with confidence without a full manual review.</li>
-      <li style="margin-bottom: 8px;"><span style="color: #d1fae5;">When</span> the codebase drifts from the design, <span style="color: #d1fae5;">I want to</span> detect it instantly inside my IDE, <span style="color: #d1fae5;">so I can</span> fix it before it compounds into technical debt.</li>
-      <li><span style="color: #d1fae5;">When</span> onboarding new devs or AI agents, <span style="color: #d1fae5;">I want to</span> give them a living, structured spec, <span style="color: #d1fae5;">so I can</span> reduce ramp-up time and prevent misaligned output from day one.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">The Problem (Pain)</p>
+    <p class="chosen-tile-body">AI adoption hit 90%, yet distrust surged +15 pp YoY <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a>. 45% spend more time debugging AI code than expected <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[2]</a>. High-value tasks (architecture, coding) are crowded out by overhead: broken output, extra communication, security reviews, env drift <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf" target="_blank">[3]</a>.</p>
   </div>
+
+  <div class="chosen-tile chosen-tile--green chosen-tile--wide">
+    <p class="chosen-tile-label">Core JTBD</p>
+    <p class="chosen-tile-body">When engineers build with AI in a production codebase, they want development to be predictable and controllable via an executable spec that governs IDE and PR workflows, so they can ship faster with confidence, catch spec-code drift early, and cut review, debugging, and rework.</p>
+  </div>
+
 </div>
+
+<ul class="distrust-notes">
+<li>Decomposed by target segments in the next slides.</li>
+</ul>
+
+Notes:
+This slide synthesises the three evidence slides into a concrete product decision. The chosen direction — AI-dev transparency for code and architecture — directly addresses the top-scoring pains: distrust (Distrust Issues slide), time waste (Dev Time Spent slide), and quality risk (B2B Pains slide). The JTBD statement frames the problem from the user's perspective and defines the minimum valuable outcome.
