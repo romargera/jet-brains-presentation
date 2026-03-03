@@ -560,51 +560,39 @@ This slide synthesises the three evidence slides into a concrete product decisio
   <tbody>
     <tr class="highlight-row">
       <td><strong>Spec-driven development</strong></td>
-      <td>Spec-first: AI generates code &amp; checks from contracts, reducing ambiguity. Spec becomes a reviewable artifact.</td>
-      <td><a href="https://kiro.dev/" target="_blank">Kiro</a>, <a href="https://github.com/github/spec-kit" target="_blank">GitHub Spec Kit</a>, <a href="https://speckit.org/" target="_blank">Spec Kit</a>, <a href="https://codespeak.dev/" target="_blank">CodeSpeak</a></td>
+      <td>Spec-first: AI generates code &amp; checks from contracts. Spec becomes a reviewable, regression artifact.</td>
+      <td><a href="https://kiro.dev/" target="_blank">Kiro</a>, <a href="https://speckit.org/" target="_blank">Spec Kit</a>, <a href="https://codespeak.dev/" target="_blank">CodeSpeak</a>, <a href="https://www.task-master.dev/" target="_blank">Taskmaster</a>, <a href="https://docs.bmad-method.org/" target="_blank">BMAD</a></td>
       <td>3.3</td>
     </tr>
     <tr>
-      <td><strong>Tracing, datasets &amp; eval cycles</strong></td>
-      <td>Trace inputs/outputs, measure quality via evals &amp; LLM-as-judge. Catches degradations pre-release.</td>
-      <td><a href="https://docs.langchain.com/langsmith/home" target="_blank">LangSmith</a>, <a href="https://docs.wandb.ai/weave" target="_blank">W&amp;B Weave</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank">Datadog LLM</a>, <a href="https://galileo.ai/" target="_blank">Galileo</a></td>
+      <td><strong>Observability + evals</strong></td>
+      <td>Trace inputs/outputs &amp; agent steps; measure quality via datasets &amp; LLM-as-judge. Catch degradations pre-release.</td>
+      <td><a href="https://docs.langchain.com/langsmith/home" target="_blank">LangSmith</a>, <a href="https://docs.wandb.ai/weave" target="_blank">W&amp;B Weave</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank">Datadog LLM</a>, <a href="https://galileo.ai/" target="_blank">Galileo</a>, <a href="https://docs.ragas.io/" target="_blank">Ragas</a>, <a href="https://github.com/truera/trulens" target="_blank">TruLens</a>, <a href="https://www.braintrust.dev/docs" target="_blank">Braintrust</a></td>
       <td>3.0</td>
     </tr>
     <tr>
-      <td><strong>Eval harness &amp; test-set gen</strong></td>
-      <td>Reproducible RAG/agent evals, dataset management, failure-mode discovery. Accelerates prompt/model comparison.</td>
-      <td><a href="https://docs.ragas.io/" target="_blank">Ragas</a>, <a href="https://github.com/truera/trulens" target="_blank">TruLens</a>, <a href="https://github.com/confident-ai/deepeval" target="_blank">DeepEval</a>, <a href="https://www.braintrust.dev/docs" target="_blank">Braintrust</a></td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <td><strong>I/O guardrails &amp; schema validation</strong></td>
-      <td>Programmable input/output checks, topic control, JSON Schema validation to prevent invalid responses.</td>
-      <td><a href="https://github.com/guardrails-ai/guardrails" target="_blank">Guardrails AI</a>, <a href="https://docs.nvidia.com/nemo-guardrails/index.html" target="_blank">NeMo Guardrails</a>, <a href="https://developers.openai.com/api/docs/guides/structured-outputs/" target="_blank">OpenAI Structured</a></td>
+      <td><strong>Last mile quality gates</strong></td>
+      <td>I/O guardrails + JSON Schema validation + AI test gen; CI blocks merge until checks pass.</td>
+      <td><a href="https://github.com/guardrails-ai/guardrails" target="_blank">Guardrails AI</a>, <a href="https://docs.nvidia.com/nemo-guardrails/index.html" target="_blank">NeMo</a>, <a href="https://developers.openai.com/api/docs/guides/structured-outputs/" target="_blank">OpenAI Structured</a>, <a href="https://www.diffblue.com/diffblue-cover/" target="_blank">Diffblue</a>, <a href="https://keploy.io/" target="_blank">Keploy</a>, <a href="https://junit.org/" target="_blank">JUnit</a></td>
       <td>2.5</td>
     </tr>
     <tr>
-      <td><strong>AI test gen + CI quality gates</strong></td>
-      <td>AI generates tests; CI blocks merge until regressions pass. Limits non-determinism of AI code.</td>
-      <td><a href="https://www.diffblue.com/diffblue-cover/" target="_blank">Diffblue</a>, <a href="https://keploy.io/" target="_blank">Keploy</a>, <a href="https://docs.pytest.org/" target="_blank">pytest</a>, <a href="https://junit.org/" target="_blank">JUnit</a></td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <td><strong>Code vulnerability scanner</strong></td>
-      <td>Static analysis finds vulnerability classes regardless of code origin. Auto-fixes and noise suppression.</td>
-      <td><a href="https://snyk.io/product/snyk-code/" target="_blank">Snyk Code</a>, <a href="https://semgrep.dev/" target="_blank">Semgrep</a>, <a href="https://codeql.github.com/docs/" target="_blank">CodeQL</a></td>
-      <td>2.3</td>
-    </tr>
-    <tr>
-      <td><strong>Governance &amp; runtime protection</strong></td>
-      <td>Org-level policies, prompt injection defense, compliance artifacts for audit.</td>
-      <td><a href="https://www.lakera.ai/lakera-guard" target="_blank">Lakera Guard</a>, <a href="https://www.holisticai.com/" target="_blank">Holistic AI</a>, <a href="https://protectai.com/" target="_blank">Protect AI</a>, <a href="https://www.hiddenlayer.com/" target="_blank">HiddenLayer</a></td>
+      <td><strong>Security &amp; compliance guardrails</strong></td>
+      <td>Static analysis + runtime protection: catch vulnerabilities &amp; prompt injection, enforce compliance policies.</td>
+      <td><a href="https://snyk.io/product/snyk-code/" target="_blank">Snyk Code</a>, <a href="https://semgrep.dev/" target="_blank">Semgrep</a>, <a href="https://codeql.github.com/docs/" target="_blank">CodeQL</a>, <a href="https://www.lakera.ai/lakera-guard" target="_blank">Lakera Guard</a>, <a href="https://www.holisticai.com/" target="_blank">Holistic AI</a>, <a href="https://protectai.com/" target="_blank">Protect AI</a></td>
       <td>2.3</td>
     </tr>
     <tr>
       <td><strong>AI code reviewer</strong></td>
-      <td>AI analyzes diffs and repo context, finds issues and generates review summaries.</td>
+      <td>AI analyzes diffs &amp; repo context, finds issues, generates review summaries.</td>
       <td><a href="https://www.qodo.ai/" target="_blank">Qodo</a>, <a href="https://coderabbit.ai/" target="_blank">CodeRabbit</a>, <a href="https://github.com/qodo-ai/pr-agent" target="_blank">PR-Agent</a></td>
       <td>2.2</td>
+    </tr>
+    <tr>
+      <td><strong>AI-driven task orchestration</strong></td>
+      <td>Tasks get AI context; agents run on subtasks; code changes, PRs &amp; statuses flow in one managed pipeline.</td>
+      <td><a href="https://vibekanban.com/" target="_blank">Vibe Kanban</a></td>
+      <td>2.0</td>
     </tr>
     <tr>
       <td><strong>Deterministic LLM output</strong></td>
@@ -616,7 +604,7 @@ This slide synthesises the three evidence slides into a concrete product decisio
       <td><strong>Human-Freelancer in the Loop</strong></td>
       <td>AI writes code; freelancer expert approves changes instead of the team.</td>
       <td><a href="https://tendem.ai/" target="_blank">Tendem</a></td>
-      <td>0.8</td>
+      <td>0.9</td>
     </tr>
   </tbody>
 </table>
