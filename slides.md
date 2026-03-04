@@ -545,7 +545,7 @@ This slide synthesises the three evidence slides into a concrete product decisio
 ---
 <!-- .slide: id="competitive-approaches" -->
 
-## WHY: Competitive Approaches
+## WHAT: Approaches
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table">
@@ -621,3 +621,100 @@ This slide synthesises the three evidence slides into a concrete product decisio
 
 Notes:
 This slide maps competitive approaches to improving trust in AI-assisted development, scored using a weighted ICE framework. Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (weights sum to 1), equal to Cost, Transparency, SDLC coverage, Adoption friction, and Monetization. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort. Spec-driven development leads because it addresses ambiguity at the root — before code generation — delivering the highest combined score of 3.3.
+
+---
+<!-- .slide: id="competitor-landscape" -->
+
+## WHAT: Competitor Landscape
+
+<div class="competitor-layout">
+<div class="competitor-col-left">
+<table class="distrust-table">
+  <colgroup>
+    <col style="width: 8%">
+    <col style="width: 17%">
+    <col style="width: 75%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Tier</th>
+      <th>Direct competitors</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="highlight-row">
+      <td rowspan="5"><strong>Tier 1</strong></td>
+      <td><a href="https://speckit.org/" target="_blank">Spec Kit</a></td>
+      <td>GitHub-supported, 73.6k★, markdown specs, фазовый plan-first, CLI + in-agent</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><a href="https://kiro.dev/" target="_blank">Kiro</a></td>
+      <td>Built on Amazon Bedrock, 1,5M MAU (Similarweb), Kiro IDE + CLI + in-agent</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><a href="https://docs.bmad-method.org/" target="_blank">BMAD</a></td>
+      <td>38.9k★, 19 roles, CLI + in‑agent, adaptive depth, REPL-like</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><a href="https://openspec.dev/" target="_blank">OpenSpec</a></td>
+      <td>Vendor-agnostic, Open Source, No API Keys, No MCP, REPL-like</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><a href="https://codespeak.dev/" target="_blank">CodeSpeak</a></td>
+      <td>Specs compile directly to production code, code-to-specs, compiler/ batch model</td>
+    </tr>
+    <tr>
+      <td rowspan="7"><strong>Tier 2</strong></td>
+      <td><a href="https://www.task-master.dev/" target="_blank">Taskmaster</a></td>
+      <td>PRD → tasks + autonomous TDD autopilot (RED → GREEN → COMMIT per subtask)</td>
+    </tr>
+    <tr>
+      <td><a href="https://stately.ai/" target="_blank">Stately</a></td>
+      <td>Model-based approach: state machines as spec artifacts</td>
+    </tr>
+    <tr>
+      <td><a href="https://buildermethods.com/agent-os" target="_blank">Agent-OS</a></td>
+      <td>Standards loop. Extra JTBD: Auto-extracts repo conventions</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ariel-frischer/autospec" target="_blank">Autospec</a></td>
+      <td>Spec Kit fork, automated YAML pipeline</td>
+    </tr>
+    <tr>
+      <td><a href="https://specs.md/" target="_blank">specs.md</a></td>
+      <td>Formal AI-DLC, VS Code extension, CLI + in‑agent</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.autok.dev/" target="_blank">autok</a></td>
+      <td>Knowledge-graph rails + bidirectional requirements sync via CLI + in‑agent (MCP)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.devplan.com/" target="_blank">devplan</a></td>
+      <td>Knowledge-graph planning→execution pipeline, CLI + in‑agent</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="competitor-col-right" style="font-size: 0.28em;">
+<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Indirect Competitors</h4>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #4fc3f7; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">IDE AI Assistants (baseline)</p>
+  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://cursor.com/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">JB AI</a></p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Where 100% ICP already is</p>
+</div>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #b388ff; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">AI Code Reviewers</p>
+  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://coderabbit.ai/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Qodo</a></p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Same trust pain, review stage</p>
+</div>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #69f0ae; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Observability + Evals</p>
+  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Datadog LLM</a></p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Trace agent steps, convergence risk</p>
+</div>
+</div>
+</div>
+
+Notes:
+This slide maps the competitive landscape for spec-driven development. Tier 1 includes five players we consider direct competitors: Spec Kit leads by traction, Kiro is Amazon's bet on this category, BMAD differentiates with multi-agent depth, OpenSpec is uniquely vendor-agnostic, and CodeSpeak takes spec-driven to its purest form — specs compile directly to code. Tier 2 products are on our watch list — they address adjacent problems or are too early-stage to evaluate fully. The key insight: the market is fragmented and early, with no dominant player and no standard methodology.

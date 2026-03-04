@@ -71,3 +71,23 @@ C точки зрения распределения рабочего време
 * Новая статья дохода
 * Рост удержания в core продуктах
 * Новые продажи core продуктов
+
+Prompt engineering, ориентированный на экономию
+“On average, token consumption decreased by 15–20%…” и “Imposing limits on output length or token budget led to a 20–30% reduction…”
+<https://arxiv.org/html/2504.15989v2>
+
+Не забыть про
+
+* версионирование и drift detection
+* мульти репозиторий
+* AI-dev transparency: code & architecture): executable accuracy, task decomposition approach and easy interpretation.
+
+Security/Compliance - снизить охват
+
+Поддерживает стриминг, multi-agent workflows, durable execution и human-in-the-loop. Идеально для PM вроде вас, интегрирующего AI в продукты (например, travel/rental).
+
+трассировка + слой качества/безопасности Evaluation: галлюцинации, prompt injection, PII, off-topic ответы и др.
+
+Хороший FAQ <https://openspec.dev/>
+
+“Vibe-coders” скорее не подходит тк нужна дисциплина

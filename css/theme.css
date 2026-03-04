@@ -1054,6 +1054,113 @@
   color: #666;
 }
 
+/* Competitor Landscape slide: table tweaks */
+#competitor-landscape .distrust-table th {
+  text-align: center;
+}
+
+#competitor-landscape .distrust-table td:nth-child(1),
+#competitor-landscape .distrust-table td:nth-child(2) {
+  text-align: center;
+}
+
+#competitor-landscape .distrust-table {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Competitor Landscape slide: two-column layout */
+.competitor-layout {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.competitor-col-left {
+  flex: 0 0 65%;
+  overflow-x: auto;
+}
+
+.competitor-col-right {
+  flex: 0 0 33%;
+}
+
+.competitor-col-right h4 {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 4px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#competitor-landscape .distrust-table {
+  font-size: 0.28em;
+  table-layout: fixed;
+}
+
+#competitor-landscape .distrust-table th,
+#competitor-landscape .distrust-table td {
+  padding: 2px 4px;
+  line-height: 1.2;
+}
+
+#competitor-landscape .distrust-table td:nth-child(1) {
+  width: 8%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Indirect competitor cards */
+.indirect-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: var(--border-radius);
+  padding: 4px 6px;
+  margin-bottom: 4px;
+}
+
+.indirect-card:nth-child(3) {
+  border-left-color: var(--accent-purple);
+}
+
+.indirect-card:nth-child(4) {
+  border-left-color: var(--accent-green);
+}
+
+.indirect-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 1px;
+}
+
+.indirect-players {
+  font-size: 10px;
+  margin: 0 0 1px;
+}
+
+.indirect-players a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.indirect-players a:hover {
+  text-decoration: underline;
+}
+
+.indirect-note {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+
 .slide-footnote {
   margin-top: 10px;
   font-size: 0.35em !important;
