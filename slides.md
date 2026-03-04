@@ -718,3 +718,165 @@ This slide maps competitive approaches to improving trust in AI-assisted develop
 
 Notes:
 This slide maps the competitive landscape for spec-driven development. Tier 1 includes five players we consider direct competitors: Spec Kit leads by traction, Kiro is Amazon's bet on this category, BMAD differentiates with multi-agent depth, OpenSpec is uniquely vendor-agnostic, and CodeSpeak takes spec-driven to its purest form — specs compile directly to code. Tier 2 products are on our watch list — they address adjacent problems or are too early-stage to evaluate fully. The key insight: the market is fragmented and early, with no dominant player and no standard methodology.
+
+---
+<!-- .slide: id="learn-and-steal" -->
+
+## WHAT: Learn & Steal
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Git-Native Markdown</p>
+    <p class="chosen-tile-body">Open and AI-friendly standard (SpecKit, BMAD). Zero vendor lock-in.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Bi-Directional Sync</p>
+    <p class="chosen-tile-body">Spec↔Code compiler (CodeSpeak). Prevents doc rot.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">IDE-Native Surface</p>
+    <p class="chosen-tile-body">Web-first creates context switch. Keep devs in-IDE.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Persistent Steering</p>
+    <p class="chosen-tile-body">Project rules (Kiro). Stops AI amnesia on long projects.</p>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
+  <p><strong>Synthesis:</strong> The winning formula is a Git-native, bi-directional spec tool living entirely inside the IDE.</p>
+</div>
+
+Notes:
+Here we look at what's actually working in the market. First, Git-native markdown specs are the standard—tools like SpecKit prove developers won't adopt proprietary formats. Second, bi-directional sync: specs compile to code, code updates specs (like CodeSpeak), which stops doc rot. Third, surface area: web-first SaaS creates a context switch; successful workflows are IDE-native or CLI-native. Finally, persistent steering and slash-commands give us a natural UX that prevents AI amnesia.
+
+---
+<!-- .slide: id="niche-choice" -->
+
+## WHAT: Niche Choice
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="table-layout: fixed; width: 100%;">
+  <colgroup>
+    <col style="width: 5%;">
+    <col style="width: 25%;">
+    <col style="width: 70%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="center">#</th>
+      <th>Niche / Positioning</th>
+      <th>Rationale & Focus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- GREEN PATH (Our Focus) -->
+    <tr class="highlight-row">
+      <td class="center"><strong>1</strong></td>
+      <td><strong>IDE-Native Control (Wedge)</strong></td>
+      <td>Zero context switch. Uncontested space. Massive JB distribution moat.</td>
+    </tr>
+    <tr class="highlight-row">
+      <td class="center"><strong>2</strong></td>
+      <td><strong>Architecture Governance (Value)</strong></td>
+      <td>Live spec↔code drift warnings. Combats doc rot directly.</td>
+    </tr>
+    <tr class="highlight-row">
+      <td class="center"><strong>3</strong></td>
+      <td><strong>Spec Compiler (Moonshot)</strong></td>
+      <td>True bi-directional sync (100% predictability). Requires massive R&D (6-12m).</td>
+    </tr>
+    <!-- RED PATH (Rejected/Indirect) -->
+    <tr>
+      <td class="center">4</td>
+      <td><strong>End-to-End Orchestration</strong></td>
+      <td>Too bloated for MVP. PRD→Code→PR is too slow.</td>
+    </tr>
+    <tr>
+      <td class="center">5</td>
+      <td><strong>AI Code Review</strong></td>
+      <td>Red Ocean (CodeRabbit, Qodo). Hard to win without unique advantage.</td>
+    </tr>
+    <tr>
+      <td class="center">6</td>
+      <td><strong>Auto Bug Bounties</strong></td>
+      <td>Narrow security focus. Not our target ICP or core JTBD.</td>
+    </tr>
+    <tr>
+      <td class="center">7</td>
+      <td><strong>PRD-to-Ticket</strong></td>
+      <td>Product-level tracking. Too far from the actual code.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Strategy:</strong> Own the IDE first (1), build the governance graph (2), aim for the compiler (3).</p>
+</div>
+
+Notes:
+Here is our niche selection. We evaluated 7 potential paths. The green path is our strategy: our wedge is IDE-Native Control because no startup is targeting the IntelliJ SDK, giving us a massive distribution moat. Our core value driver is Architecture Governance—specifically live drift detection—which solves the "docs rot" pain. And our 6-12 month moonshot is the full Spec Compiler (true bi-directional sync), which is explicitly delayed because it requires massive R&D.
+We explicitly rejected the red niches: End-to-end orchestration is too bloated for an MVP. AI Code Review is a Red Ocean with established players. Autonomous Bug Bounties is too narrow a security focus. And PRD-to-Ticket automation sits too far away from the actual codebase.
+
+---
+<!-- .slide: id="differentiation" -->
+
+## WHAT: Why Us (Differentiation)
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="table-layout: fixed; width: 100%;">
+  <colgroup>
+    <col style="width: 25%;">
+    <col style="width: 35%;">
+    <col style="width: 40%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Differentiator</th>
+      <th>Current market</th>
+      <th>JB advantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Native JB Integration</strong></td>
+      <td>Rigid one-way CLI terminal flows, Web SaaS, or separate IDEs.</td>
+      <td>We go where Enterprise sits. Native plugin: editable intermediate layers, zero context switch.</td>
+    </tr>
+    <tr>
+      <td><strong>Deep Semantic Context</strong></td>
+      <td>Context via flat AST or text vectors. Leads to severe hallucinations in large mono-repos.</td>
+      <td>Proprietary JB PSI engine. Understands code as deeply as the compiler.</td>
+    </tr>
+    <tr>
+      <td><strong>Continuous drift detection</strong></td>
+      <td>Reactive CI checks or flat doc rotting. (Auto-K waits in beta).</td>
+      <td>Proactive inline warnings + bi-directional sync (code ↔ spec) to prevent divergence.</td>
+    </tr>
+    <tr>
+      <td><strong>AI-Native BDD (Evals)</strong></td>
+      <td>Blind generation ("generate and pray"). No automated validation of the LLM output.</td>
+      <td>Generates tests and validates AI code against strict Spec schemas before the dev sees it.</td>
+    </tr>
+    <tr>
+      <td><strong>Zero Vendor Lock-in</strong></td>
+      <td>Closed SaaS databases (Devplan) or heavy IDE lock-in (Kiro).</td>
+      <td>Open standard (Markdown in Git) + Premium JB Plugin. Keeps IP safe if tool is uninstalled.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="padding: 10px 15px; margin-top: 10px;">
+  <p>We bridge the gap between developer freedom and enterprise-level control: turning chaotic AI-assisted development into a predictable, specified, and reviewable architectural workflow.</p>
+</div>
+
+Notes:
+Why us? Let's look at our 5 core differentiators.
+First, Native JetBrains Integration—we go where Enterprise sits. Instead of a rigid, one-way CLI, developers get editable intermediate layers right in their IDE with zero context switch.
+Second, Deep Semantic Context using JetBrains PSI, completely eliminating the hallucinations you get with standard AST or vector search in complex codebases.
+Third, Continuous Drift Detection. We don't just offer proactive inline warnings; we provide bi-directional sync (code ↔ spec) so that artifacts never diverge, unlike reactive CI breaks or flat docs that rot over time.
+Fourth, AI-Native BDD (Behavior-Driven Development). We don't just 'generate and pray'—we treat specs as executable tests, automatically validating the LLM's output against the schema before it ever hits your code.
+And finally, Zero Vendor Lock-in with an open markdown format combined with a premium plugin.
+These differentiators culminate in our core value proposition: We bridge the gap between developer freedom and enterprise control. Instead of forcing rigid top-down workflows that developers hate, Bonsai embraces bottom-up intent extraction—turning chaotic "vibe-coding" into a predictable, reviewable architectural workflow, right inside the JetBrains IDE.
