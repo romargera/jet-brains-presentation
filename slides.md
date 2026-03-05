@@ -613,8 +613,8 @@ Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px;">
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Strategic Setup & AI Adoption</p>
-    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp. The window for an IDE-native trust-layer governance tool is open right now.</p>
+    <p class="chosen-tile-label">Strategic Alignment</p>
+    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp. Empowering JetBrains IDEs into the governance standard: powered by the community, built for the industry.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
