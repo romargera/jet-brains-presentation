@@ -610,51 +610,59 @@ Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the 
 
 ## WHAT & WHY: Summary
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px;">
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Strategic Setup & AI Adoption</p>
-    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp. High-value tasks are crowded out by overhead. The window for a trust-layer governance tool is now.</p>
+    <p class="chosen-tile-label">Core JTBD</p>
+    <p class="chosen-tile-body">When engineers build with AI in production, they want development to be predictable and controllable, so they can ship faster with confidence.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Market Size</p>
-    <div class="chosen-tile-body" style="display: flex; gap: 15px; align-items: start;">
-      <div style="flex: 1;">
-        <ul style="margin: 0; padding-left: 20px; list-style-type: none;">
-          <li><strong>TAM:</strong> $4.9B</li>
-          <li><strong>SAM:</strong> $3.4B</li>
-          <li><strong>SOM:</strong> $171M</li>
-        </ul>
-      </div>
-      <div style="flex: 1; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 15px;">
-        <p style="margin: 0 0 5px 0; font-size: 1em;"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank">Calculations</a></p>
-        <p style="margin: 0; opacity: 0.8; font-size: 1em;">Cross check via bottom up - tbd</p>
-      </div>
-    </div>
+    <p class="chosen-tile-label">Positioning</p>
+    <p class="chosen-tile-body">B2B infrastructure for AI dev. We shift AI from an &apos;unpredictable copilot&apos; to &apos;enforced architectural workflows&apos; with zero context switch.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Strategic Setup & AI Adoption</p>
+    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp. The window for an IDE-native trust-layer governance tool is open right now.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
+    <p class="chosen-tile-body"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">TAM ($4.9B) → SAM ($3.4B) → SOM ($171M)</a><br><br><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">Bottom-up SOM (Year 1): $9.3M</a></p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Niche & ICP</p>
-    <p class="chosen-tile-body">Uncontested IDE-native wedge: code-first spec extraction + drift detection for Tech Leads wanting predictable architecture.</p>
+    <p class="chosen-tile-body">Code-first spec extraction + drift detection for Tech Leads (Early Adopters) wanting predictable architecture & painless code reviews.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Differentiation</p>
-    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI. Unlike competitors: we extract specs from code (zero friction), then enforce + detect drift.</p>
+    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI. We extract specs from code (zero friction), push to CI, and locally detect drift.</p>
   </div>
 
-  <div class="chosen-tile chosen-tile--green" style="grid-column: span 2;">
+  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Growth Loops</p>
-    <p class="chosen-tile-body">Primary: champion-driven adoption via repo-native specs + CI gates. Supported by reviewer loop, multi-repo spread, and ecosystem distribution. <a href="#/growth-loops">Details</a></p>
+    <p class="chosen-tile-body">Champion-driven adoption via repo-native specs + CI gates. Supported by reviewer loop & ecosystem distribution. <a href="#/growth-loops">Details</a></p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Metrics</p>
+    <p class="chosen-tile-body">NSM: Devs w/ ≥1 spec-linked merge/wk. Key: New MRR (paid tiers) & Attributed MRR (JB core via attach rate/retention).</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Monetization</p>
+    <p class="chosen-tile-body">Free (viral seed). Pro ($8-12/mo) for power users. Team ($15-20/seat) for org budgets. Enterprise ($30-50) for security & SSO.</p>
   </div>
 
 </div>
 
-<ul class="distrust-notes">
-<li>Assumptions: Based on 70% share of AI-using pros in production workflows, targeting 5% of SAM.</li>
+<ul class="distrust-notes" style="margin-top: 15px;">
+<li>Assumptions <span class="metric-badge">A</span> for TAM/SAM/SOM are indicated in the linked calculations.</li>
 <li>Market Size Revenue base year 2024, adoption base year 2025.</li>
-<li>While some reports suggest higher growth, we’ve adopted a conservative $4.91B (2024) base TAM, keeping more optimistic valuations as an alternative scenario.</li>
+<li>We assumed a conservative $4.91B (2024) base TAM to avoid overvaluation.</li>
 </ul>
 
 <div style="height: 40px;"></div>
