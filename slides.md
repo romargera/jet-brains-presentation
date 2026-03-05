@@ -104,6 +104,8 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 
 ## WHAT: ICP, JTBD, Triggers
 
+<p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</p>
+
 <div class="chosen-grid chosen-grid--small">
   <div class="chosen-tile chosen-tile--green chosen-tile--wide">
     <p class="chosen-tile-label">Core JTBD</p>
@@ -156,11 +158,59 @@ Our wedge starts with the Early Adopters—the Tech Leads and Staff Engineers. T
 Once we prove value at the team level, we hit the Scaling phase. Here, we target Engineering Managers, Heads of Platform, and Security leadership. Their headache is blast radius and policy enforcement across many repositories. When they are pushed by an upcoming compliance audit or a sudden drop in code quality across teams, they need a standardized, auditable way to manage AI-assisted development across the organization.
 
 ---
+<!-- .slide: id="segmentation" -->
+
+## HOW: Segmentation
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Early Adopters</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>Unscoped AI diffs</li>
+        <li>Spec ↔ code drift</li>
+        <li>Costly regressions</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>AI-caused prod incidents</li>
+        <li>Review churn rising</li>
+        <li>Major codebase refactor</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Scaling</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>No standard for AI dev</li>
+        <li>Risk across many repos</li>
+        <li>Low auditability</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>Scaling AI across teams</li>
+        <li>Security/compliance audit</li>
+        <li>Incidents across repos</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+Notes:
+We target two distinct segments. First, Early Adopters — Tech Leads feeling the immediate pain of AI-caused bugs and unscoped diffs. 
+Second, when expanding across the org, we target Scaling personas — Engineering Directors and Security who need standardization and auditability.
+
+---
 <!-- .slide: id="stream-options" -->
 
 ## WHY: Strategic Directions
-
-<p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</p>
 
 <table class="score-table">
   <thead>
@@ -225,6 +275,7 @@ Once we prove value at the team level, we hit the Scaling phase. Here, we target
 <li>Score ranks directions by value vs cost: Score = (Impact × Confidence) / Effort.</li>
 <li>Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.</li>
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+<li>Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</li>
 </ul>
 
 Notes:
