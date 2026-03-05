@@ -894,8 +894,8 @@ These differentiators culminate in our core value proposition: We bridge the gap
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Early Adopters</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Who:</strong> Tech Lead, Senior Engineer.</p>
-      <p style="margin-bottom: 8px;"><strong>Sub JTBD:</strong> Task-level predictability.</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
       <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
       <ul style="margin: 0 0 8px 0; padding-left: 18px;">
         <li>Unscoped AI diffs</li>
@@ -913,8 +913,8 @@ These differentiators culminate in our core value proposition: We bridge the gap
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Scaling</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Who:</strong> EM, Dir of Eng, Security.</p>
-      <p style="margin-bottom: 8px;"><strong>Sub JTBD:</strong> Org-wide governance.</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
       <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
       <ul style="margin: 0 0 8px 0; padding-left: 18px;">
         <li>No standard for AI dev</li>
@@ -944,19 +944,19 @@ Once we prove value at the team level, we hit the Scaling phase. Here, we target
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
-  <div class="chosen-tile chosen-tile--red">
+  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Strategic Setup & AI Adoption</p>
     <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp. High-value tasks are crowded out by overhead. The window for a trust-layer governance tool is now.</p>
   </div>
 
-  <div class="chosen-tile chosen-tile--green" style="padding: 10px;">
+  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Market Size</p>
-    <div class="chosen-tile-body" style="display: flex; gap: 15px; align-items: start;">
+    <div class="chosen-tile-body" style="display: flex; gap: 15px; align-items: start; font-size: 0.4em;">
       <div style="flex: 1;">
-        <ul style="margin: 0; padding-left: 20px;">
-          <li style="font-size: 1em;"><strong>TAM:</strong> $4.9B</li>
-          <li style="font-size: 1em;"><strong>SAM:</strong> $3.4B</li>
-          <li style="font-size: 1em;"><strong>SOM:</strong> $171M</li>
+        <ul style="margin: 0; padding-left: 20px; list-style-type: none;">
+          <li style="font-size: 1em; color: var(--text-main);"><strong>TAM:</strong> $4.9B</li>
+          <li style="font-size: 1em; color: var(--text-main);"><strong>SAM:</strong> $3.4B</li>
+          <li style="font-size: 1em; color: var(--text-main);"><strong>SOM:</strong> $171M</li>
         </ul>
       </div>
       <div style="flex: 1; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 15px;">
@@ -978,13 +978,13 @@ Once we prove value at the team level, we hit the Scaling phase. Here, we target
 
 </div>
 
-<div class="adoption-takeaway distrust-takeaway">
 <ul class="distrust-notes">
 <li>Assumptions: Based on 70% share of AI-using pros in production workflows, targeting 5% of SAM.</li>
 <li>Market Size Revenue base year 2024, adoption base year 2025.</li>
 <li>While some reports suggest higher growth, we’ve adopted a conservative $4.91B (2024) base TAM, keeping more optimistic valuations as an alternative scenario.</li>
 </ul>
-</div>
+
+<div style="height: 40px;"></div>
 
 Notes:
 
