@@ -882,6 +882,62 @@ And finally, Zero Vendor Lock-in with an open markdown format combined with a pr
 These differentiators culminate in our core value proposition: We bridge the gap between developer freedom and enterprise control. Instead of forcing rigid top-down workflows that developers hate, Bonsai embraces bottom-up intent extraction—turning chaotic "vibe-coding" into a predictable, reviewable architectural workflow, right inside the JetBrains IDE.
 
 ---
+<!-- .slide: id="what-icp-jtbd" -->
+
+## WHAT: ICP, JTBD, Triggers
+
+<div class="chosen-grid chosen-grid--small">
+  <div class="chosen-tile chosen-tile--red chosen-tile--wide">
+    <p class="chosen-tile-label">Core JTBD</p>
+    <p class="chosen-tile-body">When engineers build with AI in production, they want development to be predictable and controllable, so they can ship faster with confidence.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Early Adopters</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong>Who:</strong> Tech Lead, Senior Engineer.</p>
+      <p style="margin-bottom: 8px;"><strong>Sub JTBD:</strong> Task-level predictability.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>Unscoped AI diffs</li>
+        <li>Spec ↔ code drift</li>
+        <li>Costly regressions</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>AI-caused prod incidents</li>
+        <li>Review churn rising</li>
+        <li>Major codebase refactor</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Scaling</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong>Who:</strong> EM, Dir of Eng, Security.</p>
+      <p style="margin-bottom: 8px;"><strong>Sub JTBD:</strong> Org-wide governance.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>No standard for AI dev</li>
+        <li>Risk across many repos</li>
+        <li>Low auditability</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>Scaling AI across teams</li>
+        <li>Security/compliance audit</li>
+        <li>Incidents across repos</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+Notes:
+Here we look at who we are targeting and why.
+At the absolute core, our user has one main Job To Be Done: "When I use AI to write code, I want it to be predictable so I don't break production."
+Our wedge starts with the Early Adopters—the Tech Leads and Staff Engineers. They are the ones feeling the immediate pain of unscoped AI pull requests and code drift. The triggers here are simple: a few painful AI-caused bugs, or just review fatigue.
+Once we prove value at the team level, we hit the Scaling phase. Here, we target Engineering Managers, Heads of Platform, and Security leadership. Their headache is blast radius and policy enforcement across many repositories. When they are pushed by an upcoming compliance audit or a sudden drop in code quality across teams, they need a standardized, auditable way to manage AI-assisted development across the organization.
+
+---
 <!-- .slide: id="why-summary" -->
 
 ## WHY: Summary & Market
@@ -894,16 +950,18 @@ These differentiators culminate in our core value proposition: We bridge the gap
   </div>
 
   <div class="chosen-tile chosen-tile--green" style="padding: 10px;">
-    <p class="chosen-tile-label">Market Size (USD, 2024 Base)</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0 0 10px 0; padding-left: 20px; font-size: 0.9em;">
-        <li><strong>TAM:</strong> $4.9B</li>
-        <li><strong>SAM:</strong> $3.4B</li>
-        <li><strong>SOM:</strong> $171M</li>
-      </ul>
-      <div style="font-size: 0.7em; text-align: right; margin-top: 5px; color: var(--text-muted);">
-        <em>* <a href="#" target="_blank">Top-down calculation</a> (Bottom-up to follow)</em><br/>
-        <em>Data source: <a href="#" target="_blank">JetBrains test task prep - TAM SAM SOM</a></em>
+    <p class="chosen-tile-label">Market Size</p>
+    <div class="chosen-tile-body" style="display: flex; gap: 15px; align-items: start;">
+      <div style="flex: 1;">
+        <ul style="margin: 0; padding-left: 20px;">
+          <li style="font-size: 1em;"><strong>TAM:</strong> $4.9B</li>
+          <li style="font-size: 1em;"><strong>SAM:</strong> $3.4B</li>
+          <li style="font-size: 1em;"><strong>SOM:</strong> $171M</li>
+        </ul>
+      </div>
+      <div style="flex: 1; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 15px;">
+        <p style="margin: 0 0 5px 0; font-size: 1em;"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank">Calculations</a></p>
+        <p style="margin: 0; opacity: 0.8; font-size: 1em;">Cross check via bottom up - tbd</p>
       </div>
     </div>
   </div>
@@ -920,10 +978,13 @@ These differentiators culminate in our core value proposition: We bridge the gap
 
 </div>
 
+<div class="adoption-takeaway distrust-takeaway">
 <ul class="distrust-notes">
 <li>Assumptions: Based on 70% share of AI-using pros in production workflows, targeting 5% of SAM.</li>
-<li>Revenue base year 2024, adoption base year 2025.</li>
+<li>Market Size Revenue base year 2024, adoption base year 2025.</li>
+<li>While some reports suggest higher growth, we’ve adopted a conservative $4.91B (2024) base TAM, keeping more optimistic valuations as an alternative scenario.</li>
 </ul>
+</div>
 
 Notes:
 
@@ -938,35 +999,31 @@ Notes:
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Repo-Native Viral Loop</p>
-    <p class="chosen-tile-body">1 user adds <code>/specs</code>. Entire team interacts via PR gates. Fast intra-team spread.</p>
+    <p class="chosen-tile-label">Repo-Native Loop</p>
+    <p class="chosen-tile-body">1 dev adds <code>/specs</code> → CI gates & PR checks appear → whole team interacts → other teams copy →</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">PR / CI Enforcement</p>
-    <p class="chosen-tile-body">More compliance checks = fewer bugs. Value compounds, raising switching costs.</p>
+    <p class="chosen-tile-label">Invite-The-Reviewer Loop</p>
+    <p class="chosen-tile-body">Specs create readable contracts → architects/sec engineers get invited to PRs → reviews speed up → format sticks →</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Spec Template Marketplace</p>
-    <p class="chosen-tile-body">Community-built spec packs for standard flows (auth, billing). Accelerates new starts.</p>
+    <p class="chosen-tile-label">Multi-Repo Value Growth</p>
+    <p class="chosen-tile-body">Reusable spec added to repo A → then repo B → better compatibility & fewer diffs → massive incentive to maintain →</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Ecosystem Standard</p>
-    <p class="chosen-tile-body">Format works across IDEs & repos. Becomes an org-wide standard, not just a tool.</p>
+    <p class="chosen-tile-label">Ecosystem Distribution</p>
+    <p class="chosen-tile-body">Format works in Cursor, VS Code, CI → tried locally w/o migration → becomes org-wide standard, not just an app →</p>
   </div>
 
 </div>
 
-<ul class="distrust-notes">
-<li>Invite-the-reviewer loop: sharing readable contracts draws non-devs into the process.</li>
-</ul>
-
 Notes:
-Here we detail the growth engine.
+Here we detail the 4 main B2B growth mechanics that drive viral product-led expansion across an enterprise.
 
-1) Repo-native: one person installs it, but the whole team must interact with it through CI checks and PR comments.
-2) Quality loop: the more rules teams add, the deeper integrated it becomes (high switching cost).
-3) Content loop: shared templates for common architectures reduce cold-start friction.
-4) Ecosystem / Multi-repo: a single specification scales across multiple repositories and works with any client (Cursor, VS Code, CLI), making Bonsai the standard protocol rather than just another IDE plugin.
+1) Repo-native: Viral spread inside a single team via PR checks. This forces adoption simply by interacting with code.
+2) Collaboration: Bringing non-coding stakeholders (architects, security) into the review process using readable contracts.
+3) Org-wide Expansion: A single spec scales across multiple projects, accelerating adoption as its value grows with every added repository.
+4) Ecosystem Agnosticism: Being an open format means it can be adopted without massive migration or forcing developers out of their favorite IDE.
