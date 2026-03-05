@@ -100,340 +100,6 @@ Notes:
 Let's start with the market signal. AI adoption among developers has hit 90% — up 14% year over year, according to Google's DORA report. But here's the paradox: adoption is up, yet trust is collapsing. Stack Overflow's 2025 survey shows unfavorable sentiment toward AI jumped 14 points in one year. Trust dropped from 43% to 33%. And active distrust — developers who say they distrust AI output — surged from 30% to nearly 46%. The takeaway is clear: developers use AI because it's fast, but they don't trust it — because the output is unpredictable and hard to control. This is the gap we're going after.
 
 ---
-<!-- .slide: id="distrust-issues" -->
-
-## WHAT: Distrust issues
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table">
-<thead>
-<tr>
-<th>Trust points (when utilizing AI)</th>
-<th>Details</th>
-<th class="center">Reach <span class="metric-badge">A</span></th>
-<th class="center">Freq. <span class="metric-badge">A</span></th>
-<th class="center">Conf. <span class="metric-badge">A</span></th>
-<th class="center">Score <span class="metric-badge">A</span></th>
-</tr>
-</thead>
-<tr class="highlight-row">
-<td>Skepticism regarding code accuracy and quality</td>
-<td>46% distrust AI (up 15 pp YoY). 75% would ask a person for help when they don’t trust AI answers. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center score val-high">9</td>
-</tr>
-<tr class="highlight-row">
-<td>Increased review and debugging time</td>
-<td>45% say debugging AI code is more time-consuming. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center score val-high">9</td>
-</tr>
-<tr>
-<td>Concerns regarding security and vulnerabilities</td>
-<td>&gt;60% frequently have ethical / security-related concerns about AI-generated code. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center val-med">Med</td>
-<td class="center score val-high">7</td>
-</tr>
-<tr>
-<td>AI decision-making opacity and ambiguous accountability for errors</td>
-<td>75% would ask a person for help when they don’t trust AI answers, keeping humans as final arbiters of correctness. <a href="https://arxiv.org/html/2502.18468v1" target="_blank">[1]</a> <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[2]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center score val-med">3</td>
-</tr>
-<tr>
-<td>Risk of engineering skill degradation</td>
-<td>60% believe AI tools lead to less skilled developers (web-dev firstly). <a href="https://2025.stateofdevs.com/en-US/" target="_blank">[1]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center val-low">Low</td>
-<td class="center score val-low">2</td>
-</tr>
-<tr>
-<td>Fear of data leaks and privacy concerns</td>
-<td>40% of security incidents involve AI (incident-level). &gt;80% report concerns about data security and privacy. Frequency=Low because measured via incidents. <a href="https://www.microsoft.com/en-us/security/blog/2024/11/13/microsoft-data-security-index-annual-report-highlights-evolving-generative-ai-security-needs/" target="_blank">[1]</a> <a href="https://survey.stackoverflow.co/2025/a" target="_blank">[2]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-low">Low</td>
-<td class="center val-med">Med</td>
-<td class="center score val-low">2</td>
-</tr>
-<tr>
-<td>Legal uncertainty regarding copyrights and licensing for AI-generated code</td>
-<td>Survey of 574 GenAI users: broad disagreement and uncertainty about output ownership and copyright risk. <a href="https://arxiv.org/html/2502.18468v1" target="_blank">[1]</a> <a href="https://arxiv.org/html/2411.10877v1" target="_blank">[2]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-low">Low</td>
-<td class="center val-med">Med</td>
-<td class="center score val-low">2</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Developers mainly don’t trust AI-generated code enough to ship it without extra time spent polishing, reviewing, and debugging.</p>
-</div>
-
-<ul class="distrust-notes">
-<li>Reach, Freq. (Frequency), Conf. (Confidence, as a probability to make a difference) and Score are subjectively estimated/measured based on synthesis of external report signals. </li>
-<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
-</ul>
-
-Notes:
-Let's drill down into these distrust issues. We analyzed various market reports and extracted the major pain points. As you can see in this table, the top two issues—highlighted here—are skepticism regarding code accuracy and the increased review and debugging time. Both of these score a 9 when evaluating their Reach, Frequency, and our Confidence that solving them will make a difference. Security concerns are also very high but have slightly less consistent frequency of blocking daily workflows. Note that the scores and parameters are our subjective estimates based on these signals.
-
----
-<!-- .slide: id="time-spend" -->
-
-## WHAT: Dev Time Spent
-
-<div class="timespend-table-wrapper">
-<table class="timespend-table">
-<thead>
-<tr>
-<th>Activity</th>
-<th class="center">Actual</th>
-<th class="center">Ideal</th>
-<th class="center">Gap</th>
-<th class="center">Prob. <span class="metric-badge">A</span></th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="highlight-row">
-<td>Security/Compliance</td>
-<td class="center">11.48%</td>
-<td class="center">3.07%</td>
-<td class="center score">8.40%</td>
-<td class="center val-med">Med</td>
-<td>Opportunity to improve on the planning step</td>
-</tr>
-<tr class="highlight-row">
-<td>Communication</td>
-<td class="center">12.95%</td>
-<td class="center">6.57%</td>
-<td class="center score">6.38%</td>
-<td class="center val-low">Low</td>
-<td>-</td>
-</tr>
-<tr class="highlight-row">
-<td>Debugging</td>
-<td class="center">11.20%</td>
-<td class="center">7.48%</td>
-<td class="center score">3.72%</td>
-<td class="center val-high">High</td>
-<td>Opportunity to keep useful and updated spec</td>
-</tr>
-<tr>
-<td>Customer Support</td>
-<td class="center">7.49%</td>
-<td class="center">3.98%</td>
-<td class="center score">3.50%</td>
-<td class="center val-low">Low</td>
-<td>-</td>
-</tr>
-<tr class="highlight-row">
-<td>Env Setup</td>
-<td class="center">3.78%</td>
-<td class="center">1.54%</td>
-<td class="center score">2.24%</td>
-<td class="center val-med">Med</td>
-<td>Opportunity to keep useful and updated spec</td>
-</tr>
-<tr>
-<td>Monitoring/Dashboard</td>
-<td class="center">2.94%</td>
-<td class="center">2.24%</td>
-<td class="center score">0.70%</td>
-<td class="center val-low">Low</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Task Mgmt (ADO)</td>
-<td class="center">2.03%</td>
-<td class="center">1.33%</td>
-<td class="center score">0.70%</td>
-<td class="center val-med">Med</td>
-<td>Opportunity to automate via agent orchestration</td>
-</tr>
-<tr>
-<td>Code Refactoring</td>
-<td class="center">5.25%</td>
-<td class="center">4.75%</td>
-<td class="center score">0.50%</td>
-<td class="center val-med">Med</td>
-<td>Opportunity to keep useful and updated spec</td>
-</tr>
-<tr>
-<td>Test Authoring</td>
-<td class="center">4.83%</td>
-<td class="center">5.17%</td>
-<td class="center score">-0.34%</td>
-<td class="center val-low">Low</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Documentation</td>
-<td class="center">3.71%</td>
-<td class="center">4.26%</td>
-<td class="center score">-0.55%</td>
-<td class="center val-med">Med</td>
-<td>Automation already widely adopted</td>
-</tr>
-<tr>
-<td>Mentoring/Onboarding</td>
-<td class="center">2.59%</td>
-<td class="center">3.70%</td>
-<td class="center score">-1.11%</td>
-<td class="center val-low">Low</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Tech Presentations</td>
-<td class="center">0.56%</td>
-<td class="center">1.68%</td>
-<td class="center score">-1.12%</td>
-<td class="center val-low">Low</td>
-<td>-</td>
-</tr>
-<tr>
-<td>PR/Code Review</td>
-<td class="center">5.88%</td>
-<td class="center">7.13%</td>
-<td class="center score">-1.25%</td>
-<td class="center val-low">Low</td>
-<td>Human in the loop issue mostly depends on AI models base quality evolution</td>
-</tr>
-<tr>
-<td>Learning New Tech</td>
-<td class="center">2.52%</td>
-<td class="center">6.57%</td>
-<td class="center score">-4.05%</td>
-<td class="center val-low">Low</td>
-<td>-</td>
-</tr>
-<tr class="highlight-row">
-<td>System Arch/Design</td>
-<td class="center">8.89%</td>
-<td class="center">15.37%</td>
-<td class="center score">-6.49%</td>
-<td class="center val-high">High</td>
-<td>Reduce time spent on low-value work, boosting satisfaction, retention, and tenure.</td>
-</tr>
-<tr class="highlight-row">
-<td>Coding</td>
-<td class="center">13.93%</td>
-<td class="center">25.16%</td>
-<td class="center score">-11.23%</td>
-<td class="center val-high">High</td>
-<td>Reduce time spent on low-value work, boosting satisfaction, retention, and tenure.</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> We see an opportunity to cut low-value overhead and reinvest the saved capacity into the core work developers value most: Coding & System Architecture/Design.</p>
-</div>
-
-<ul class="distrust-notes">
-<li>Time spend data is based on <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf" target="_blank">Microsoft's Time-Warp Study</a>.</li>
-<li>Prob.(Probability) = Probability to make a difference.</li>
-<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
-</ul>
-
-Notes:
-Here we look at how developers actually spend their time versus how they ideally want to spend it. The largest gaps—the overhead we can cut—are in Security & Compliance, Debugging, and Environment Setup. At the same time, we see massive negative gaps in Coding and System Architecture. Developers want to spend almost double the time on architecture and double the time on coding. If we can automate the high-gap overhead areas, we unlock capacity for the deep work that drives real product value and developer satisfaction.
-
----
-<!-- .slide: id="b2b-pains" -->
-
-## WHAT: B2B Pains
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table">
-<thead>
-<tr>
-<th>B2B Pain (Engineering / Product Teams)</th>
-<th>Details</th>
-<th class="center">Reach <span class="metric-badge">A</span></th>
-<th class="center">Freq. <span class="metric-badge">A</span></th>
-<th class="center">Conf. <span class="metric-badge">A</span></th>
-<th class="center">Score <span class="metric-badge">A</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="highlight-row">
-<td>Delivery predictability and lead time variability</td>
-<td>Unpredictable reviewers make dependent work impossible to forecast reliably. <a href="https://axify.io/blog/lead-time-in-software-development" target="_blank">[1]</a></td>
-<td class="center val-high">High</td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center score val-high">5</td>
-</tr>
-<tr class="highlight-row">
-<td>Quality and reliability risk from software errors</td>
-<td>Poor software quality costs US companies $2.08 trillion annually. <a href="https://raygun.com/blog/cost-of-software-errors/" target="_blank">[1]</a></td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center val-low">Low</td>
-<td class="center score val-high">5</td>
-</tr>
-<tr>
-<td>Documentation debt harming onboarding, satisfaction and speed</td>
-<td>41% of developers report this as a major hindrance. 97% lose significant time to inefficiencies. <a href="https://www.atlassian.com/software/compass/resources/state-of-developer-2024" target="_blank">[1]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center score val-med">3</td>
-</tr>
-<tr>
-<td>Developer burnout from cognitive load and on-call burden</td>
-<td>83% of software engineers report feelings of burnout. <a href="https://www.softwareseni.com/developer-burnout-and-cognitive-load-in-the-devops-era/" target="_blank">[1]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center val-low">Low</td>
-<td class="center score val-low">2</td>
-</tr>
-<tr>
-<td>Productivity loss from technical debt waste</td>
-<td>Developers waste on average 23% of their time due to technical debt. <a href="https://research.chalmers.se/publication/511450/file/511450_Fulltext.pdf" target="_blank">[1]</a></td>
-<td class="center val-low">Low</td>
-<td class="center val-high">High</td>
-<td class="center val-low">Low</td>
-<td class="center score val-low">2</td>
-</tr>
-<tr>
-<td>Compliance overhead from AI and tooling</td>
-<td>Compliance overhead increases 10–20% in regulated industries due to AI audit and privacy controls. <a href="https://www.softwareseni.com/the-real-economics-of-ai-coding-beyond-vendor-productivity-claims/" target="_blank">[1]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-low">Low</td>
-<td class="center val-med">Med</td>
-<td class="center score val-low">2</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The two highest-scoring B2B pains — delivery unpredictability and quality risk — are directly amplified by uncontrolled AI-generated code entering review pipelines.</p>
-</div>
-
-<ul class="distrust-notes">
-<li>Reach, Freq. (Frequency), Conf. (Confidence = probability to make a difference) and Score are subjectively estimated based on external report signals.</li>
-<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
-</ul>
-
-Notes:
-This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
-
----
 <!-- .slide: id="what-icp-jtbd" -->
 
 ## WHAT: ICP, JTBD, Triggers
@@ -494,7 +160,7 @@ Once we prove value at the team level, we hit the Scaling phase. Here, we target
 
 ## WHY: Strategic Directions
 
-<p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Directions are derived from the top issues across three evidence layers: <strong style="color: var(--text-main);">Distrust</strong>, <strong style="color: var(--text-main);">Time Spent</strong>, and <strong style="color: var(--text-main);">B2B Issues</strong>.</p>
+<p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</p>
 
 <table class="score-table">
   <thead>
@@ -985,43 +651,6 @@ Revenue model: Bonsai Pro is bundled (increases AI subscription stickiness). Bon
 Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the governance standard, JB AI tools become "generation without control" — a weaker value proposition for enterprise.
 
 ---
-<!-- .slide: id="growth-loops" -->
-
-## WHY: Growth Loops
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Champion-driven adoption</p>
-    <p class="chosen-tile-body">1 dev adds <code>/specs</code> → CI gates & PR checks appear → whole team interacts → other teams copy →</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Invite-The-Reviewer Loop</p>
-    <p class="chosen-tile-body">Specs create readable contracts → architects/sec engineers get invited to PRs → reviews speed up → format sticks →</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Multi-Repo Value Growth</p>
-    <p class="chosen-tile-body">Reusable spec added to repo A → then repo B → better compatibility & fewer diffs → massive incentive to maintain →</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Ecosystem Distribution</p>
-    <p class="chosen-tile-body">Format works in Cursor, VS Code, CI → tried locally w/o migration → becomes org-wide standard, not just an app →</p>
-  </div>
-
-</div>
-
-Notes:
-Here we detail the 4 main B2B growth mechanics that drive viral product-led expansion across an enterprise.
-
-1) Repo-native: Viral spread inside a single team via PR checks. This forces adoption simply by interacting with code.
-2) Collaboration: Bringing non-coding stakeholders (architects, security) into the review process using readable contracts.
-3) Org-wide Expansion: A single spec scales across multiple projects, accelerating adoption as its value grows with every added repository.
-4) Ecosystem Agnosticism: Being an open format means it can be adopted without massive migration or forcing developers out of their favorite IDE.
-
----
 <!-- .slide: id="why-summary" -->
 
 ## WHY: Summary & Market
@@ -1062,7 +691,7 @@ Here we detail the 4 main B2B growth mechanics that drive viral product-led expa
 
   <div class="chosen-tile chosen-tile--green" style="grid-column: span 2;">
     <p class="chosen-tile-label">Growth Loops</p>
-    <p class="chosen-tile-body">Primary: champion-driven adoption via repo-native specs + CI gates. Supported by reviewer loop, multi-repo spread, and ecosystem distribution.</p>
+    <p class="chosen-tile-body">Primary: champion-driven adoption via repo-native specs + CI gates. Supported by reviewer loop, multi-repo spread, and ecosystem distribution. <a href="#/growth-loops">Details</a></p>
   </div>
 
 </div>
@@ -1083,7 +712,7 @@ Notes:
 ---
 <!-- .slide: id="golden-path" -->
 
-## HOW: Golden Path — 10 Minutes to First Spec
+## HOW: "Golden" Path
 
 <div class="chosen-grid chosen-grid--2col">
   <div class="chosen-tile chosen-tile--green">
@@ -1119,7 +748,7 @@ Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to re
 ---
 <!-- .slide: id="golden-path-steps" -->
 
-## HOW: Golden Path — The 10-Minute Flow
+## HOW: "Golden" Path
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table">
@@ -1148,13 +777,13 @@ Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to re
       <td><strong>1:30</strong></td>
       <td>Reads generated spec in side panel</td>
       <td>—</td>
-      <td><span style="background: #10b981; color: white; border-radius: 8px; padding: 1px 6px; font-size: 0.85em;">SYNCED</span> Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
+      <td>[SYNCED] Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
     </tr>
     <tr>
       <td><strong>2:30</strong></td>
       <td>Edits: adds "Rate limit: 5 attempts/15 min"</td>
       <td>Saves as <code>/specs/auth_engine.spec.md</code></td>
-      <td><span style="background: #f59e0b; color: #000; border-radius: 8px; padding: 1px 6px; font-size: 0.85em;">EDITED</span> badge</td>
+      <td>[EDITED]</td>
     </tr>
     <tr>
       <td><strong>3:00</strong></td>
@@ -1166,7 +795,7 @@ Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to re
       <td><strong>4:00</strong></td>
       <td>Junior pushes commit: session expiry → 4h</td>
       <td>Detects drift: spec says 2h, code says 4h</td>
-      <td><span style="background: #ef4444; color: white; border-radius: 8px; padding: 1px 6px; font-size: 0.85em;">DRIFT</span> inline: <code>:47 — Session changed 2h→4h</code></td>
+      <td>[DRIFT]: 47 — Session changed 2h→4h</td>
     </tr>
     <tr>
       <td><strong>5:00</strong></td>
@@ -1178,7 +807,7 @@ Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to re
       <td><strong>7:00</strong></td>
       <td>Alex clicks "Update Spec" (accepts 4h change) OR "Request Fix"</td>
       <td>If accepted: spec auto-updates. If rejected: blocks merge until code reverts.</td>
-      <td><span style="background: #10b981; color: white; border-radius: 8px; padding: 1px 6px; font-size: 0.85em;">RESOLVED</span></td>
+      <td>[RESOLVED]</td>
     </tr>
   </tbody>
 </table>
@@ -1283,36 +912,53 @@ JB integration model (preferred):
 
 ## HOW: 6-Month Roadmap
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Month 0-2 (G1)</p>
-    <div class="chosen-tile-body" style="font-size: 0.85em;">
-      • <strong>Ship MVP:</strong> code extraction + drift detection<br>
-      • Recruit 10 design partners (Tech Leads, 5+ devs)<br>
-      • Parallel signal: 2 alt prototypes (review/security)<br>
-      • <strong>Gate 1:</strong> ≥ 60% validation + 3 partners paying
+<div class="roadmap-container">
+
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 0-2 <span class="roadmap-gate">G1</span></span>
+    </div>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 1: MVP & VALIDATION</div>
+      <div class="roadmap-content-body">
+        • <strong>Ship MVP:</strong> code extraction + drift detection<br>
+        • Recruit 10 design partners (Tech Leads, 5+ devs)<br>
+        • <strong>Gate 1:</strong> ≥ 60% validation + 3 partners paying
+      </div>
     </div>
   </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Month 2-4 (G2)</p>
-    <div class="chosen-tile-body" style="font-size: 0.85em;">
-      • <strong>PHASE 2: HARDEN</strong><br>
-      • Bi-sync: add spec→code generation<br>
-      • PR integration: spec-delta visibility<br>
-      • <strong>Gate 2:</strong> ≥ 20% review reduction + 5 partners
+
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 2-4 <span class="roadmap-gate">G2</span></span>
+    </div>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 2: HARDEN</div>
+      <div class="roadmap-content-body">
+        • <strong>Bi-directional sync:</strong> add spec→code generation<br>
+        • PR integration: spec-delta visibility in code reviews<br>
+        • <strong>Gate 2:</strong> ≥ 20% review reduction + 5 partners paying
+      </div>
     </div>
   </div>
-  <div class="chosen-tile chosen-tile--green" style="grid-column: span 2;">
-    <p class="chosen-tile-label">Month 4-6 (G3)</p>
-    <div class="chosen-tile-body" style="font-size: 0.85em;">
-      • <strong>PHASE 3: SCALE</strong> — CI gate enforcement (rollout)<br>
-      • Multi-repo spec management + Marketplace MVP<br>
-      • <strong>Gate 3:</strong> ≥ 100 active users + positive economics
+
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 4-6 <span class="roadmap-gate">G3</span></span>
+    </div>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 3: SCALE</div>
+      <div class="roadmap-content-body">
+        • <strong>Orchestration:</strong> CI gate enforcement (rollout)<br>
+        • Multi-repo spec management + Marketplace MVP<br>
+        • <strong>Gate 3:</strong> ≥ 100 active users + positive economics signal
+      </div>
     </div>
   </div>
+
 </div>
 
-<p class="chosen-tile-body" style="text-align: center; margin-top: 15px; font-size: 0.55em; opacity: 0.8;">
+<p class="chosen-tile-body" style="text-align: center; margin-top: 10px; font-size: 0.45em; opacity: 0.8;">
   <strong>Decision framework:</strong> Each gate requires quantitative metrics + qualitative signal + zero kill signals.
 </p>
 
@@ -1490,7 +1136,7 @@ Risk #0 is our highest-priority uncertainty. Developers report distrust in AI co
     <div class="feature-title" style="color: var(--jb-blue);">1. PoC & Early Adopters</div>
     <ul class="text-sm" style="margin-top: 5px;">
       <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
-      <li><strong>Motion:</strong> "Golden path" to PR in 10 mins.</li>
+      <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="#/golden-path">Details</a></li>
       <li><strong>Goal:</strong> Validate spec extraction & diff control.</li>
     </ul>
   </div>
@@ -1631,3 +1277,495 @@ Notes:
 1) **Quick Feedback Loop**: Our initial month is entirely about proving the core hypothesis: "Devs find drift detection high-value, not noisy."
 2) **Go/No-Go Decision**: If we fail the drift detection value test, we rethink the product narrative before further investment.
 3) **PSI Depth**: Experiment 1 tells us if we need to refine the parser for Java/Kotlin or shift to LLM-heavy extraction.
+
+---
+<!-- .slide: id="appendix" -->
+
+# Appendix
+
+---
+<!-- .slide: id="growth-loops" -->
+
+## WHY: Growth Loops
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Champion-driven adoption</p>
+    <p class="chosen-tile-body">1 dev adds <code>/specs</code> → CI gates & PR checks appear → whole team interacts → other teams copy →</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Invite-The-Reviewer Loop</p>
+    <p class="chosen-tile-body">Specs create readable contracts → architects/sec engineers get invited to PRs → reviews speed up → format sticks →</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Multi-Repo Value Growth</p>
+    <p class="chosen-tile-body">Reusable spec added to repo A → then repo B → better compatibility & fewer diffs → massive incentive to maintain</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Ecosystem Distribution</p>
+    <p class="chosen-tile-body">Format works in Cursor, VS Code, CI → tried locally w/o migration → becomes org-wide standard, not just an app →</p>
+  </div>
+
+</div>
+
+Notes:
+Here we detail the 4 main B2B growth mechanics that drive viral product-led expansion across an enterprise.
+
+1) Repo-native: Viral spread inside a single team via PR checks. This forces adoption simply by interacting with code.
+2) Collaboration: Bringing non-coding stakeholders (architects, security) into the review process using readable contracts.
+3) Org-wide Expansion: A single spec scales across multiple projects, accelerating adoption as its value grows with every added repository.
+4) Ecosystem Agnosticism: Being an open format means it can be adopted without massive migration or forcing developers out of their favorite IDE.
+
+---
+<!-- .slide: id="golden-path" -->
+
+## HOW: "Golden" Path
+
+<div class="chosen-grid chosen-grid--2col">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Persona</p>
+    <div style="font-size: 0.8em; margin-top: 10px;">
+      <p><strong>Alex, Tech Lead</strong></p>
+      <ul>
+        <li>8-person backend team</li>
+        <li>Kotlin monorepo</li>
+        <li>Daily JB AI Assistant user</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Trigger (Friday Afternoon)</p>
+    <div style="font-size: 0.8em; margin-top: 10px;">
+      <p>PR from junior: 400+ lines AI-refactored auth module.</p>
+      <ul>
+        <li>Alex can't tell if session logic changed.</li>
+        <li>Spends 45m line-by-line review.</li>
+        <li>PR gets "Request Changes". Junior frustrated.</li>
+      </ul>
+      <p style="margin-top: 10px; font-style: italic; color: #ff8a80;">"There has to be a better way."</p>
+    </div>
+  </div>
+</div>
+
+Notes:
+Persona: Alex, Tech Lead, 8-person backend team, Kotlin monorepo, using JB AI Assistant daily.
+Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to refactor the auth module. The diff is 400+ lines. Alex can't tell if the session expiry logic changed or not. He spends 45 minutes line-by-line. The PR gets "Request Changes". The junior is frustrated. Alex thinks: "There has to be a better way."
+
+---
+<!-- .slide: id="golden-path-steps" -->
+
+## HOW: "Golden" Path
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
+  <thead>
+    <tr>
+      <th style="width: 8%;">Min</th>
+      <th style="width: 12%;">Alex does</th>
+      <th style="width: 33%;">Bonsai does</th>
+      <th style="width: 47%;">Alex sees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>0:00</strong></td>
+      <td>Installs Bonsai from JB Marketplace (1-click)</td>
+      <td>—</td>
+      <td>Plugin appears in sidebar</td>
+    </tr>
+    <tr>
+      <td><strong>1:00</strong></td>
+      <td>Right-clicks <code>auth_engine.kt</code> → "Extract Spec"</td>
+      <td>PSI parses classes, methods, annotations, deps. Sends structured pre-prompt (200 tokens) to LLM.</td>
+      <td>Loading spinner (2–3 sec)</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>1:30</strong></td>
+      <td>Reads generated spec in side panel</td>
+      <td>—</td>
+      <td>[SYNCED] Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
+    </tr>
+    <tr>
+      <td><strong>2:30</strong></td>
+      <td>Edits: adds "Rate limit: 5 attempts/15 min"</td>
+      <td>Saves as <code>/specs/auth_engine.spec.md</code></td>
+      <td>[EDITED]</td>
+    </tr>
+    <tr>
+      <td><strong>3:00</strong></td>
+      <td>Alex goes home happy.</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>4:00</strong></td>
+      <td>Junior pushes commit: session expiry → 4h</td>
+      <td>Detects drift: spec says 2h, code says 4h</td>
+      <td>[DRIFT]: 47 — Session changed 2h→4h</td>
+    </tr>
+    <tr>
+      <td><strong>5:00</strong></td>
+      <td>Alex opens PR — sees spec-delta summary at top</td>
+      <td>Auto-generates: "1 drift detected, 1 new endpoint, 0 removed"</td>
+      <td>Review time: 5 min instead of 45 min</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>7:00</strong></td>
+      <td>Alex clicks "Update Spec" (accepts 4h change) OR "Request Fix"</td>
+      <td>If accepted: spec auto-updates. If rejected: blocks merge until code reverts.</td>
+      <td>[RESOLVED]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Result:</strong> 45-minute blind review → 7-minute spec-guided review. Spec becomes the shared contract between author and reviewer.</p>
+</div>
+
+Notes:
+This walkthrough shows the complete user journey in under 10 minutes.
+Key moments: minute 1:30 (first spec extracted — immediate value), minute 4:00 (first drift caught — the "aha" moment), minute 7:00 (resolution — the workflow completes).
+The critical insight: Alex never had to *write* a spec. He only had to *read and approve* one. That's the difference between Bonsai and every previous documentation tool.
+The 45→7 minute improvement is our core value metric, tested in Phase 1 with design partners.
+
+---
+<!-- .slide: id="distrust-issues" -->
+
+## WHAT: Distrust issues
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
+<thead>
+<tr>
+<th>Trust points (when utilizing AI)</th>
+<th>Details</th>
+<th class="center">Reach <span class="metric-badge">A</span></th>
+<th class="center">Freq. <span class="metric-badge">A</span></th>
+<th class="center">Conf. <span class="metric-badge">A</span></th>
+<th class="center">Score <span class="metric-badge">A</span></th>
+</tr>
+</thead>
+<tr class="highlight-row">
+<td>Skepticism regarding code accuracy and quality</td>
+<td>46% distrust AI (up 15 pp YoY). 75% would ask a person for help when they don’t trust AI answers. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
+<td class="center val-high">High</td>
+<td class="center val-high">High</td>
+<td class="center val-high">High</td>
+<td class="center score val-high">9</td>
+</tr>
+<tr class="highlight-row">
+<td>Increased review and debugging time</td>
+<td>45% say debugging AI code is more time-consuming. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
+<td class="center val-high">High</td>
+<td class="center val-high">High</td>
+<td class="center val-high">High</td>
+<td class="center score val-high">9</td>
+</tr>
+<tr>
+<td>Concerns regarding security and vulnerabilities</td>
+<td>&gt;60% frequently have ethical / security-related concerns about AI-generated code. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
+<td class="center val-high">High</td>
+<td class="center val-high">High</td>
+<td class="center val-med">Med</td>
+<td class="center score val-high">7</td>
+</tr>
+<tr>
+<td>AI decision-making opacity and ambiguous accountability for errors</td>
+<td>75% would ask a person for help when they don’t trust AI answers, keeping humans as final arbiters of correctness. <a href="https://arxiv.org/html/2502.18468v1" target="_blank">[1]</a> <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[2]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center score val-med">3</td>
+</tr>
+<tr>
+<td>Risk of engineering skill degradation</td>
+<td>60% believe AI tools lead to less skilled developers (web-dev firstly). <a href="https://2025.stateofdevs.com/en-US/" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center val-low">Low</td>
+<td class="center score val-low">2</td>
+</tr>
+<tr>
+<td>Fear of data leaks and privacy concerns</td>
+<td>40% of security incidents involve AI (incident-level). &gt;80% report concerns about data security and privacy. Frequency=Low because measured via incidents. <a href="https://www.microsoft.com/en-us/security/blog/2024/11/13/microsoft-data-security-index-annual-report-highlights-evolving-generative-ai-security-needs/" target="_blank">[1]</a> <a href="https://survey.stackoverflow.co/2025/a" target="_blank">[2]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-low">Low</td>
+<td class="center val-med">Med</td>
+<td class="center score val-low">2</td>
+</tr>
+<tr>
+<td>Legal uncertainty regarding copyrights and licensing for AI-generated code</td>
+<td>Survey of 574 GenAI users: broad disagreement and uncertainty about output ownership and copyright risk. <a href="https://arxiv.org/html/2502.18468v1" target="_blank">[1]</a> <a href="https://arxiv.org/html/2411.10877v1" target="_blank">[2]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-low">Low</td>
+<td class="center val-med">Med</td>
+<td class="center score val-low">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Developers mainly don’t trust AI-generated code enough to ship it without extra time spent polishing, reviewing, and debugging.</p>
+</div>
+
+<ul class="distrust-notes">
+<li>Reach, Freq. (Frequency), Conf. (Confidence, as a probability to make a difference) and Score are subjectively estimated/measured based on synthesis of external report signals. </li>
+<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+</ul>
+
+Notes:
+Let's drill down into these distrust issues. We analyzed various market reports and extracted the major pain points. As you can see in this table, the top two issues—highlighted here—are skepticism regarding code accuracy and the increased review and debugging time. Both of these score a 9 when evaluating their Reach, Frequency, and our Confidence that solving them will make a difference. Security concerns are also very high but have slightly less consistent frequency of blocking daily workflows. Note that the scores and parameters are our subjective estimates based on these signals.
+
+---
+<!-- .slide: id="time-spend" -->
+
+## WHAT: Dev Time Spent
+
+<div class="timespend-table-wrapper">
+<table class="timespend-table">
+<thead>
+<tr>
+<th>Activity</th>
+<th class="center">Actual</th>
+<th class="center">Ideal</th>
+<th class="center">Gap</th>
+<th class="center">Prob. <span class="metric-badge">A</span></th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="highlight-row">
+<td>Security/Compliance</td>
+<td class="center">11.48%</td>
+<td class="center">3.07%</td>
+<td class="center score">8.40%</td>
+<td class="center val-med">Med</td>
+<td>Opportunity to improve on the planning step</td>
+</tr>
+<tr class="highlight-row">
+<td>Communication</td>
+<td class="center">12.95%</td>
+<td class="center">6.57%</td>
+<td class="center score">6.38%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr class="highlight-row">
+<td>Debugging</td>
+<td class="center">11.20%</td>
+<td class="center">7.48%</td>
+<td class="center score">3.72%</td>
+<td class="center val-high">High</td>
+<td>Opportunity to keep useful and updated spec</td>
+</tr>
+<tr>
+<td>Customer Support</td>
+<td class="center">7.49%</td>
+<td class="center">3.98%</td>
+<td class="center score">3.50%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr class="highlight-row">
+<td>Env Setup</td>
+<td class="center">3.78%</td>
+<td class="center">1.54%</td>
+<td class="center score">2.24%</td>
+<td class="center val-med">Med</td>
+<td>Opportunity to keep useful and updated spec</td>
+</tr>
+<tr>
+<td>Monitoring/Dashboard</td>
+<td class="center">2.94%</td>
+<td class="center">2.24%</td>
+<td class="center score">0.70%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Task Mgmt (ADO)</td>
+<td class="center">2.03%</td>
+<td class="center">1.33%</td>
+<td class="center score">0.70%</td>
+<td class="center val-med">Med</td>
+<td>Opportunity to automate via agent orchestration</td>
+</tr>
+<tr>
+<td>Code Refactoring</td>
+<td class="center">5.25%</td>
+<td class="center">4.75%</td>
+<td class="center score">0.50%</td>
+<td class="center val-med">Med</td>
+<td>Opportunity to keep useful and updated spec</td>
+</tr>
+<tr>
+<td>Test Authoring</td>
+<td class="center">4.83%</td>
+<td class="center">5.17%</td>
+<td class="center score">-0.34%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td class="center">3.71%</td>
+<td class="center">4.26%</td>
+<td class="center score">-0.55%</td>
+<td class="center val-med">Med</td>
+<td>Automation already widely adopted</td>
+</tr>
+<tr>
+<td>Mentoring/Onboarding</td>
+<td class="center">2.59%</td>
+<td class="center">3.70%</td>
+<td class="center score">-1.11%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tech Presentations</td>
+<td class="center">0.56%</td>
+<td class="center">1.68%</td>
+<td class="center score">-1.12%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr>
+<td>PR/Code Review</td>
+<td class="center">5.88%</td>
+<td class="center">7.13%</td>
+<td class="center score">-1.25%</td>
+<td class="center val-low">Low</td>
+<td>Human in the loop issue mostly depends on AI models base quality evolution</td>
+</tr>
+<tr>
+<td>Learning New Tech</td>
+<td class="center">2.52%</td>
+<td class="center">6.57%</td>
+<td class="center score">-4.05%</td>
+<td class="center val-low">Low</td>
+<td>-</td>
+</tr>
+<tr class="highlight-row">
+<td>System Arch/Design</td>
+<td class="center">8.89%</td>
+<td class="center">15.37%</td>
+<td class="center score">-6.49%</td>
+<td class="center val-high">High</td>
+<td>Reduce time spent on low-value work, boosting satisfaction, retention, and tenure.</td>
+</tr>
+<tr class="highlight-row">
+<td>Coding</td>
+<td class="center">13.93%</td>
+<td class="center">25.16%</td>
+<td class="center score">-11.23%</td>
+<td class="center val-high">High</td>
+<td>Reduce time spent on low-value work, boosting satisfaction, retention, and tenure.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> We see an opportunity to cut low-value overhead and reinvest the saved capacity into the core work developers value most: Coding & System Architecture/Design.</p>
+</div>
+
+<ul class="distrust-notes">
+<li>Time spend data is based on <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf" target="_blank">Microsoft's Time-Warp Study</a>.</li>
+<li>Prob.(Probability) = Probability to make a difference.</li>
+<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+</ul>
+
+Notes:
+Here we look at how developers actually spend their time versus how they ideally want to spend it. The largest gaps—the overhead we can cut—are in Security & Compliance, Debugging, and Environment Setup. At the same time, we see massive negative gaps in Coding and System Architecture. Developers want to spend almost double the time on architecture and double the time on coding. If we can automate the high-gap overhead areas, we unlock capacity for the deep work that drives real product value and developer satisfaction.
+
+---
+<!-- .slide: id="b2b-pains" -->
+
+## WHAT: B2B Pains
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
+<thead>
+<tr>
+<th>B2B Pain (Engineering / Product Teams)</th>
+<th>Details</th>
+<th class="center">Reach <span class="metric-badge">A</span></th>
+<th class="center">Freq. <span class="metric-badge">A</span></th>
+<th class="center">Conf. <span class="metric-badge">A</span></th>
+<th class="center">Score <span class="metric-badge">A</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="highlight-row">
+<td>Delivery predictability and lead time variability</td>
+<td>Unpredictable reviewers make dependent work impossible to forecast reliably. <a href="https://axify.io/blog/lead-time-in-software-development" target="_blank">[1]</a></td>
+<td class="center val-high">High</td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center score val-high">5</td>
+</tr>
+<tr class="highlight-row">
+<td>Quality and reliability risk from software errors</td>
+<td>Poor software quality costs US companies $2.08 trillion annually. <a href="https://raygun.com/blog/cost-of-software-errors/" target="_blank">[1]</a></td>
+<td class="center val-high">High</td>
+<td class="center val-high">High</td>
+<td class="center val-low">Low</td>
+<td class="center score val-high">5</td>
+</tr>
+<tr>
+<td>Documentation debt harming onboarding, satisfaction and speed</td>
+<td>41% of developers report this as a major hindrance. 97% lose significant time to inefficiencies. <a href="https://www.atlassian.com/software/compass/resources/state-of-developer-2024" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center score val-med">3</td>
+</tr>
+<tr>
+<td>Developer burnout from cognitive load and on-call burden</td>
+<td>83% of software engineers report feelings of burnout. <a href="https://www.softwareseni.com/developer-burnout-and-cognitive-load-in-the-devops-era/" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center val-low">Low</td>
+<td class="center score val-low">2</td>
+</tr>
+<tr>
+<td>Productivity loss from technical debt waste</td>
+<td>Developers waste on average 23% of their time due to technical debt. <a href="https://research.chalmers.se/publication/511450/file/511450_Fulltext.pdf" target="_blank">[1]</a></td>
+<td class="center val-low">Low</td>
+<td class="center val-high">High</td>
+<td class="center val-low">Low</td>
+<td class="center score val-low">2</td>
+</tr>
+<tr>
+<td>Compliance overhead from AI and tooling</td>
+<td>Compliance overhead increases 10–20% in regulated industries due to AI audit and privacy controls. <a href="https://www.softwareseni.com/the-real-economics-of-ai-coding-beyond-vendor-productivity-claims/" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-low">Low</td>
+<td class="center val-med">Med</td>
+<td class="center score val-low">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The two highest-scoring B2B pains — delivery unpredictability and quality risk — are directly amplified by uncontrolled AI-generated code entering review pipelines.</p>
+</div>
+
+<ul class="distrust-notes">
+<li>Reach, Freq. (Frequency), Conf. (Confidence = probability to make a difference) and Score are subjectively estimated based on external report signals.</li>
+<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+</ul>
+
+Notes:
+This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
+
+---
