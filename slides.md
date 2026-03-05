@@ -613,16 +613,6 @@ Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px;">
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Core JTBD</p>
-    <p class="chosen-tile-body">When engineers build with AI in production, they want development to be predictable and controllable, so they can ship faster with confidence.</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Positioning</p>
-    <p class="chosen-tile-body">B2B infrastructure for AI dev. We shift AI from an &apos;unpredictable copilot&apos; to &apos;enforced architectural workflows&apos; with zero context switch.</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Strategic Setup & AI Adoption</p>
     <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp. The window for an IDE-native trust-layer governance tool is open right now.</p>
   </div>
@@ -630,11 +620,6 @@ Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
     <p class="chosen-tile-body"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">TAM ($4.9B) → SAM ($3.4B) → SOM ($171M)</a><br><br><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">Bottom-up SOM (Year 1): $9.3M</a></p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Niche & ICP</p>
-    <p class="chosen-tile-body">Code-first spec extraction + drift detection for Tech Leads (Early Adopters) wanting predictable architecture & painless code reviews.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
