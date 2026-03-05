@@ -527,41 +527,34 @@ We explicitly rejected the red niches: End-to-end orchestration is too bloated f
 <div class="distrust-table-wrapper">
 <table class="distrust-table" style="table-layout: fixed; width: 100%;">
   <colgroup>
-    <col style="width: 25%;">
     <col style="width: 35%;">
-    <col style="width: 40%;">
+    <col style="width: 65%;">
   </colgroup>
   <thead>
     <tr>
       <th>Differentiator</th>
-      <th>Current market</th>
       <th>JB advantage</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Native JB Integration</strong></td>
-      <td>Rigid one-way CLI terminal flows, Web SaaS, or separate IDEs.</td>
       <td>We go where Enterprise sits. Native plugin: editable intermediate layers, zero context switch.</td>
     </tr>
     <tr>
       <td><strong>Deep Semantic Context</strong></td>
-      <td>Context via flat AST or text vectors. 1000–3000 tokens per file for LLM analysis.</td>
       <td>PSI extracts structured signal at 100–300 tokens (70–90% saving). Compiler-grade accuracy, zero hallucination on structure. Not a permanent moat — a 12–18 month head start we convert into data and workflow lock-in.</td>
     </tr>
     <tr>
       <td><strong>Continuous drift detection</strong></td>
-      <td>Steering files (Cursor Rules, CLAUDE.md) give persistent context but no enforcement. CI checks are reactive.</td>
       <td>Proactive inline warnings + bi-directional sync (code ↔ spec) to prevent divergence.</td>
     </tr>
     <tr>
       <td><strong>AI-Native BDD (Evals)</strong></td>
-      <td>Blind generation ("generate and pray"). No automated validation of the LLM output.</td>
       <td>Extracts specs from code via PSI → validates AI output against them → blocks non-conformant changes.</td>
     </tr>
     <tr>
       <td><strong>Zero Vendor Lock-in</strong></td>
-      <td>Closed SaaS databases (Devplan) or heavy IDE lock-in (Kiro).</td>
       <td>Open standard (Markdown in Git) + Premium JB Plugin. Keeps IP safe if tool is uninstalled.</td>
     </tr>
   </tbody>
@@ -708,120 +701,6 @@ Notes:
 
 - Рынок AI-тулзов оценивается по-разному (~$4–5B). Чтобы не завышать TAM, мы берем консервативную базу $4.91B (2024), сохраняя альтернативный апсайд-сценарий.
 - Ожидаемый рост через Tech Lead'ов легко скейлится благодаря "repo-native loop" и CI/PR гейтам.
-
----
-<!-- .slide: id="golden-path" -->
-
-## HOW: "Golden" Path
-
-<div class="chosen-grid chosen-grid--2col">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Persona</p>
-    <div style="font-size: 0.8em; margin-top: 10px;">
-      <p><strong>Alex, Tech Lead</strong></p>
-      <ul>
-        <li>8-person backend team</li>
-        <li>Kotlin monorepo</li>
-        <li>Daily JB AI Assistant user</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="chosen-tile chosen-tile--red">
-    <p class="chosen-tile-label">Trigger (Friday Afternoon)</p>
-    <div style="font-size: 0.8em; margin-top: 10px;">
-      <p>PR from junior: 400+ lines AI-refactored auth module.</p>
-      <ul>
-        <li>Alex can't tell if session logic changed.</li>
-        <li>Spends 45m line-by-line review.</li>
-        <li>PR gets "Request Changes". Junior frustrated.</li>
-      </ul>
-      <p style="margin-top: 10px; font-style: italic; color: #ff8a80;">"There has to be a better way."</p>
-    </div>
-  </div>
-</div>
-
-Notes:
-Persona: Alex, Tech Lead, 8-person backend team, Kotlin monorepo, using JB AI Assistant daily.
-Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to refactor the auth module. The diff is 400+ lines. Alex can't tell if the session expiry logic changed or not. He spends 45 minutes line-by-line. The PR gets "Request Changes". The junior is frustrated. Alex thinks: "There has to be a better way."
-
----
-<!-- .slide: id="golden-path-steps" -->
-
-## HOW: "Golden" Path
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table">
-  <thead>
-    <tr>
-      <th style="width: 8%;">Min</th>
-      <th style="width: 12%;">Alex does</th>
-      <th style="width: 33%;">Bonsai does</th>
-      <th style="width: 47%;">Alex sees</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>0:00</strong></td>
-      <td>Installs Bonsai from JB Marketplace (1-click)</td>
-      <td>—</td>
-      <td>Plugin appears in sidebar</td>
-    </tr>
-    <tr>
-      <td><strong>1:00</strong></td>
-      <td>Right-clicks <code>auth_engine.kt</code> → "Extract Spec"</td>
-      <td>PSI parses classes, methods, annotations, deps. Sends structured pre-prompt (200 tokens) to LLM.</td>
-      <td>Loading spinner (2–3 sec)</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>1:30</strong></td>
-      <td>Reads generated spec in side panel</td>
-      <td>—</td>
-      <td>[SYNCED] Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
-    </tr>
-    <tr>
-      <td><strong>2:30</strong></td>
-      <td>Edits: adds "Rate limit: 5 attempts/15 min"</td>
-      <td>Saves as <code>/specs/auth_engine.spec.md</code></td>
-      <td>[EDITED]</td>
-    </tr>
-    <tr>
-      <td><strong>3:00</strong></td>
-      <td>Clicks "Apply to Repo"</td>
-      <td>Commits spec to branch</td>
-      <td>Spec file in Git diff</td>
-    </tr>
-    <tr class="highlight-row" style="background: rgba(244,67,54,0.08);">
-      <td><strong>4:00</strong></td>
-      <td>Junior pushes commit: session expiry → 4h</td>
-      <td>Detects drift: spec says 2h, code says 4h</td>
-      <td>[DRIFT]: 47 — Session changed 2h→4h</td>
-    </tr>
-    <tr>
-      <td><strong>5:00</strong></td>
-      <td>Alex opens PR — sees spec-delta summary at top</td>
-      <td>Auto-generates: "1 drift detected, 1 new endpoint, 0 removed"</td>
-      <td>Review time: 5 min instead of 45 min</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>7:00</strong></td>
-      <td>Alex clicks "Update Spec" (accepts 4h change) OR "Request Fix"</td>
-      <td>If accepted: spec auto-updates. If rejected: blocks merge until code reverts.</td>
-      <td>[RESOLVED]</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Result:</strong> 45-minute blind review → 7-minute spec-guided review. Spec becomes the shared contract between author and reviewer.</p>
-</div>
-
-Notes:
-This walkthrough shows the complete user journey in under 10 minutes.
-Key moments: minute 1:30 (first spec extracted — immediate value), minute 4:00 (first drift caught — the "aha" moment), minute 7:00 (resolution — the workflow completes).
-The critical insight: Alex never had to *write* a spec. He only had to *read and approve* one. That's the difference between Bonsai and every previous documentation tool.
-The 45→7 minute improvement is our core value metric, tested in Phase 1 with design partners.
 
 ---
 <!-- .slide: id="pricing-monetization" -->
@@ -1769,3 +1648,70 @@ Notes:
 This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
 
 ---
+
+
+---
+<!-- .slide: id="differentiation-full" -->
+
+## WHY: Differentiation - Full
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="table-layout: fixed; width: 100%;">
+  <colgroup>
+    <col style="width: 25%;">
+    <col style="width: 35%;">
+    <col style="width: 40%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Differentiator</th>
+      <th>Current market</th>
+      <th>JB advantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Native JB Integration</strong></td>
+      <td>Rigid one-way CLI terminal flows, Web SaaS, or separate IDEs.</td>
+      <td>We go where Enterprise sits. Native plugin: editable intermediate layers, zero context switch.</td>
+    </tr>
+    <tr>
+      <td><strong>Deep Semantic Context</strong></td>
+      <td>Context via flat AST or text vectors. 1000–3000 tokens per file for LLM analysis.</td>
+      <td>PSI extracts structured signal at 100–300 tokens (70–90% saving). Compiler-grade accuracy, zero hallucination on structure. Not a permanent moat — a 12–18 month head start we convert into data and workflow lock-in.</td>
+    </tr>
+    <tr>
+      <td><strong>Continuous drift detection</strong></td>
+      <td>Steering files (Cursor Rules, CLAUDE.md) give persistent context but no enforcement. CI checks are reactive.</td>
+      <td>Proactive inline warnings + bi-directional sync (code ↔ spec) to prevent divergence.</td>
+    </tr>
+    <tr>
+      <td><strong>AI-Native BDD (Evals)</strong></td>
+      <td>Blind generation ("generate and pray"). No automated validation of the LLM output.</td>
+      <td>Extracts specs from code via PSI → validates AI output against them → blocks non-conformant changes.</td>
+    </tr>
+    <tr>
+      <td><strong>Zero Vendor Lock-in</strong></td>
+      <td>Closed SaaS databases (Devplan) or heavy IDE lock-in (Kiro).</td>
+      <td>Open standard (Markdown in Git) + Premium JB Plugin. Keeps IP safe if tool is uninstalled.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="padding: 10px 15px; margin-top: 10px;">
+  <p>We bridge the gap between developer freedom and enterprise-level control: turning chaotic AI-assisted development into a predictable, specified, and reviewable architectural workflow.</p>
+</div>
+
+Notes:
+Why us? Let's look at our 5 core differentiators.
+First, Native JetBrains Integration—we go where Enterprise sits. Instead of a rigid, one-way CLI, developers get editable intermediate layers right in their IDE with zero context switch.
+Second, Deep Semantic Context using JetBrains PSI, completely eliminating the hallucinations you get with standard AST or vector search in complex codebases.
+Third, Continuous Drift Detection. We don't just offer proactive inline warnings; we provide bi-directional sync (code ↔ spec) so that artifacts never diverge, unlike reactive CI breaks or flat docs that rot over time.
+Fourth, AI-Native BDD (Behavior-Driven Development). We don't just 'generate and pray'—we treat specs as executable tests, automatically validating the LLM's output against the schema before it ever hits your code.
+And finally, Zero Vendor Lock-in with an open markdown format combined with a premium plugin.
+These differentiators culminate in our core value proposition: We bridge the gap between developer freedom and enterprise control. Instead of forcing rigid top-down workflows that developers hate, Bonsai embraces bottom-up intent extraction—turning chaotic "vibe-coding" into a predictable, reviewable architectural workflow, right inside the JetBrains IDE.
+
+PSI advantage is structural, not exclusive — any JB plugin can use PSI, and LSP + tree-sitter cover ~60-70% outside JB.
+The defensibility comes from compounding: PSI accuracy → better specs → users trust and maintain specs → spec data becomes the real moat (not the parser).
+Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org scale (100 commits/day, 50 files/commit), this is ~$1,300/month cost difference.
