@@ -102,9 +102,11 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 ---
 <!-- .slide: id="what-icp-jtbd" -->
 
-## WHAT: ICP, JTBD, Triggers
+## WHAT: Core JTBD
 
-<p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</p>
+<div class="distrust-takeaway">
+  <p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Assumed <span class="metric-badge">A</span> after analyzing the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</p>
+</div>
 
 <div class="chosen-grid chosen-grid--small">
   <div class="chosen-tile chosen-tile--green chosen-tile--wide">
@@ -129,52 +131,49 @@ Once we prove value at the team level, we hit the Scaling phase. Here, we target
     <tr>
       <th>Direction</th>
       <th>Source</th>
-      <th>Impact <span class="metric-badge">A</span></th>
-      <th>Effort <span class="metric-badge">A</span></th>
-      <th>Conf. <span class="metric-badge">A</span></th>
-      <th>Score <span class="metric-badge">A</span></th>
+      <th>ICE Score <span class="metric-badge">A</span></th>
     </tr>
   </thead>
   <tbody>
     <tr class="highlight-row">
       <td><strong>AI-dev transparency:</strong> code &amp; architecture</td>
       <td><span class="tag tag-pain-review">Distrust issues</span></td>
-      <td>High</td><td>High</td><td>Med</td><td>2.5</td>
+      <td>2.5</td>
     </tr>
     <tr class="highlight-row">
-      <td><strong>Spec Formalisation Assist</strong> (proactive assist)</td>
+      <td><strong>Spec Formalisation Proactive Assist</strong></td>
       <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>High</td><td>Med</td><td>Low</td><td>2.5</td>
+      <td>2.5</td>
     </tr>
     <tr>
       <td><strong>Security &amp; Compliance</strong> (proactive assist)</td>
       <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>Med</td><td>Med</td><td>Low</td><td>1.7</td>
+      <td>1.7</td>
     </tr>
     <tr>
       <td><strong>Review &amp; Debug assist</strong></td>
       <td><span class="tag tag-pain-review">Distrust issues</span></td>
-      <td>Med</td><td>High</td><td>Med</td><td>1.7</td>
+      <td>1.7</td>
     </tr>
     <tr>
       <td><strong>Dev Env Simplification</strong></td>
       <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>Med</td><td>Med</td><td>Low</td><td>1.7</td>
+      <td>1.7</td>
     </tr>
     <tr>
       <td><strong>Delivery time variability</strong> (accurate forecasting)</td>
       <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>Med</td><td>Med</td><td>Low</td><td>1.7</td>
+      <td>1.7</td>
     </tr>
     <tr>
       <td><strong>Token Spent Optimization</strong></td>
       <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>Low</td><td>Med</td><td>Med</td><td>1.3</td>
+      <td>1.3</td>
     </tr>
     <tr>
       <td><strong>Quality &amp; reliability risk</strong> from software errors</td>
       <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>Med</td><td>High</td><td>Low</td><td>1.1</td>
+      <td>1.1</td>
     </tr>
   </tbody>
 </table>
@@ -184,7 +183,7 @@ Once we prove value at the team level, we hit the Scaling phase. Here, we target
 </div>
 
 <ul class="distrust-notes">
-<li>Score ranks directions by value vs cost: Score = (Impact × Confidence) / Effort.</li>
+<li>ICE Score ranks directions by value vs cost: ICE Score = (Impact × Confidence) / Effort. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=1907182755#gid=1907182755&range=A1" target="_blank">Calculations</a>.</li>
 <li>Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.</li>
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
 <li>Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</li>
@@ -609,7 +608,7 @@ Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the 
 ---
 <!-- .slide: id="why-summary" -->
 
-## WHY: Summary & Market
+## WHAT & WHY: Summary
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
