@@ -66,11 +66,22 @@
   /* Even smaller for nested elements */
 }
 
+.reveal .grid-2x2 ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.reveal .grid-2x2 ul li {
+  font-size: 0.75em;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
 /* Grid layout for structured content */
 .reveal .grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 5px;
   width: 100%;
 }
 
@@ -79,8 +90,8 @@
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  padding: 8px;
-  margin: 5px;
+  padding: 6px;
+  margin: 2px;
   text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -1279,3 +1290,268 @@
 .chosen-tile a:hover {
   text-decoration: underline;
 }
+
+/* ==========================================
+   ROADMAP / TIMELINE SLIDE
+   ========================================== */
+
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.roadmap-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  text-align: left;
+  transition: border-color 0.3s ease;
+}
+
+.roadmap-item:hover {
+  border-color: var(--accent-blue);
+}
+
+.roadmap-timeline {
+  width: 140px;
+  padding: 12px 15px;
+  background: rgba(251, 191, 36, 0.05);
+  /* subtle amber */
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.roadmap-timeline-label {
+  font-size: 0.6em;
+  font-weight: 700;
+  color: #fbbf24;
+  /* amber */
+  white-space: nowrap;
+}
+
+.roadmap-gate {
+  display: inline-block;
+  background: #fbbf24;
+  color: #000;
+  font-size: 0.55em;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 2px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.roadmap-content {
+  flex-grow: 1;
+  padding: 12px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.roadmap-content-title {
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.roadmap-content-body {
+  font-size: 0.55em;
+  line-height: 1.4;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.roadmap-content-body ul {
+  margin: 4px 0 0 16px;
+  padding: 0;
+}
+
+.roadmap-content-body li {
+  font-size: 1em;
+  /* relative to parent */
+  margin-bottom: 2px;
+}
+
+/* ==========================================
+   SOLUTION DRAFT SLIDE
+   ========================================== */
+
+.solution-draft-container {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 25px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.solution-mockup {
+  flex: 65;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.solution-mockup img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.solution-scope {
+  flex: 35;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: left;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.solution-scope h4 {
+  font-size: 0.6em;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.solution-scope-item {
+  margin-bottom: 14px;
+}
+
+.solution-scope-label {
+  display: block;
+  font-size: 0.45em;
+  font-weight: 800;
+  color: #eee;
+  margin-bottom: 3px;
+}
+
+.solution-scope-body {
+  display: block;
+  font-size: 0.4em;
+  color: #bbb;
+  line-height: 1.4;
+}
+
+.solution-scope-body strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ==========================================
+   RISKS & MITIGATION SLIDE (TABLE)
+   ========================================== */
+
+.risk-table-container {
+  width: 100%;
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+.risk-table {
+  width: 100%;
+  border-collapse: collapse !important;
+  font-family: inherit;
+  color: #fff;
+}
+
+.risk-table th {
+  text-align: left;
+  font-size: 0.35em;
+  font-weight: 800;
+  color: #888;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-bottom: 1px solid #333;
+  letter-spacing: 0.05em;
+}
+
+.risk-table td {
+  text-align: left;
+  font-size: 0.45em;
+  padding: 10px 12px;
+  border-bottom: 1px solid #222;
+  vertical-align: middle;
+  line-height: 1.3;
+}
+
+.risk-table tr:last-child td {
+  border-bottom: none;
+}
+
+.risk-table .col-num {
+  width: 30px;
+  color: #666;
+  font-weight: 700;
+}
+
+.risk-table .col-risk {
+  font-weight: 700;
+  color: #eee;
+  width: 25%;
+}
+
+.risk-table .col-mitigation {
+  color: #ccc;
+  font-size: 0.4em;
+}
+
+.risk-table .col-status {
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.4em;
+  border-left: 1px solid #222;
+  width: 80px;
+}
+
+.risk-table .col-score {
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.45em;
+  border-left: 1px solid #222;
+  width: 60px;
+}
+
+/* Status Colors */
+.text-high {
+  color: #f87171 !important;
+}
+
+/* Soft Red */
+.text-med {
+  color: #fbbf24 !important;
+}
+
+/* Amber */
+.text-low {
+  color: #34d399 !important;
+}
+
+/* Emerald */
