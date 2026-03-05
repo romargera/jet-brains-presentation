@@ -111,44 +111,6 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
     <p class="chosen-tile-label">Core JTBD</p>
     <p class="chosen-tile-body">When engineers build with AI in production, they want development to be predictable and controllable, so they can ship faster with confidence.</p>
   </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Early Adopters</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
-      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
-      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
-        <li>Unscoped AI diffs</li>
-        <li>Spec ↔ code drift</li>
-        <li>Costly regressions</li>
-      </ul>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
-      <ul style="margin: 0; padding-left: 18px;">
-        <li>AI-caused prod incidents</li>
-        <li>Review churn rising</li>
-        <li>Major codebase refactor</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Scaling</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
-      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
-      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
-        <li>No standard for AI dev</li>
-        <li>Risk across many repos</li>
-        <li>Low auditability</li>
-      </ul>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
-      <ul style="margin: 0; padding-left: 18px;">
-        <li>Scaling AI across teams</li>
-        <li>Security/compliance audit</li>
-        <li>Incidents across repos</li>
-      </ul>
-    </div>
-  </div>
 </div>
 
 Notes:
@@ -158,59 +120,9 @@ Our wedge starts with the Early Adopters—the Tech Leads and Staff Engineers. T
 Once we prove value at the team level, we hit the Scaling phase. Here, we target Engineering Managers, Heads of Platform, and Security leadership. Their headache is blast radius and policy enforcement across many repositories. When they are pushed by an upcoming compliance audit or a sudden drop in code quality across teams, they need a standardized, auditable way to manage AI-assisted development across the organization.
 
 ---
-<!-- .slide: id="segmentation" -->
-
-## HOW: Segmentation
-
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr;">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Early Adopters</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
-      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
-      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
-        <li>Unscoped AI diffs</li>
-        <li>Spec ↔ code drift</li>
-        <li>Costly regressions</li>
-      </ul>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
-      <ul style="margin: 0; padding-left: 18px;">
-        <li>AI-caused prod incidents</li>
-        <li>Review churn rising</li>
-        <li>Major codebase refactor</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Scaling</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
-      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
-      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
-        <li>No standard for AI dev</li>
-        <li>Risk across many repos</li>
-        <li>Low auditability</li>
-      </ul>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
-      <ul style="margin: 0; padding-left: 18px;">
-        <li>Scaling AI across teams</li>
-        <li>Security/compliance audit</li>
-        <li>Incidents across repos</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-Notes:
-We target two distinct segments. First, Early Adopters — Tech Leads feeling the immediate pain of AI-caused bugs and unscoped diffs. 
-Second, when expanding across the org, we target Scaling personas — Engineering Directors and Security who need standardization and auditability.
-
----
 <!-- .slide: id="stream-options" -->
 
-## WHY: Strategic Directions
+## WHAT: Strategic Directions
 
 <table class="score-table">
   <thead>
@@ -754,6 +666,194 @@ Notes:
 - Ожидаемый рост через Tech Lead'ов легко скейлится благодаря "repo-native loop" и CI/PR гейтам.
 
 ---
+<!-- .slide: id="roadmap" -->
+
+## HOW: 6-Month Roadmap
+
+<div class="roadmap-container">
+
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 0-2 <span class="roadmap-gate">G1</span></span>
+    </div>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 1: MVP & VALIDATION</div>
+      <div class="roadmap-content-body">
+        • <strong>Ship MVP:</strong> code extraction + drift detection<br>
+        • Recruit 10 design partners (Tech Leads, 5+ devs)<br>
+        • <strong>Gate 1:</strong> ≥ 60% validation + 3 partners paying
+      </div>
+    </div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 2-4 <span class="roadmap-gate">G2</span></span>
+    </div>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 2: HARDEN</div>
+      <div class="roadmap-content-body">
+        • <strong>Bi-directional sync:</strong> add spec→code generation<br>
+        • PR integration: spec-delta visibility in code reviews<br>
+        • <strong>Gate 2:</strong> ≥ 20% review reduction + 5 partners paying
+      </div>
+    </div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 4-6 <span class="roadmap-gate">G3</span></span>
+    </div>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 3: SCALE</div>
+      <div class="roadmap-content-body">
+        • <strong>Orchestration:</strong> CI gate enforcement (rollout)<br>
+        • Multi-repo spec management + Marketplace MVP<br>
+        • <strong>Gate 3:</strong> ≥ 100 active users + positive economics signal
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="chosen-tile-body" style="text-align: center; margin-top: 10px; font-size: 0.45em; opacity: 0.8;">
+  <strong>Decision framework:</strong> Each gate requires quantitative metrics + qualitative signal + zero kill signals.
+</p>
+
+Notes:
+
+Execution follows three strictly gated phases:
+
+1) Phase 1 is all about value validation. Do devs actually review and maintain these extracted specs? If validation rate is low, we don't scale.
+2) Phase 2 moves to bi-directional sync (our moonshot). We prove ROI by measuring actual time reduction in PR reviews.
+3) Phase 3 is scale and monetization. Enterprise features like CI gates and multi-repo management are added here once the core loop is proven.
+4) We focus on JetBrains ecosystem first to exploit our PSI integration advantage.
+
+Team plan:
+• Phase 1 (Mo 0–2): 1 PM + 2 engineers (1 JB plugin/PSI, 1 backend/LLM integration). Total: 3 people.
+• Phase 2 (Mo 2–4): +1 engineer (CI/PR integration + spec-delta rendering). Total: 4 people.
+• Phase 3 (Mo 4–6): +1 designer (onboarding UX + dashboard) + 1 DevRel (community, design partners, content). Total: 6 people.
+• Assumption: engineers are familiar with Kotlin + IntelliJ Plugin SDK. If hired externally, add 2–4 weeks ramp-up to Phase 1 timeline.
+• Budget note: Phase 1–2 headcount fits within a typical JB incubation team. Phase 3 expansion is gated on G2 pass.
+
+---
+<!-- .slide: id="segmentation" -->
+
+## HOW: Segmentation
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Early Adopters</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>Unscoped AI diffs</li>
+        <li>Spec ↔ code drift</li>
+        <li>Costly regressions</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>AI-caused prod incidents</li>
+        <li>Review churn rising</li>
+        <li>Major codebase refactor</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Scaling</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>No standard for AI dev</li>
+        <li>Risk across many repos</li>
+        <li>Low auditability</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>Scaling AI across teams</li>
+        <li>Security/compliance audit</li>
+        <li>Incidents across repos</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+Notes:
+We target two distinct segments. First, Early Adopters — Tech Leads feeling the immediate pain of AI-caused bugs and unscoped diffs.
+Second, when expanding across the org, we target Scaling personas — Engineering Directors and Security who need standardization and auditability.
+
+---
+<!-- .slide: id="mvp-solution-draft" -->
+
+<h2>HOW: MVP SOLUTION DRAFT</h2>
+
+<div class="solution-draft-container">
+<div class="solution-mockup">
+<div style="padding: 2.5rem; width: 100%; text-align: left;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #10b981; padding-bottom: 0.75rem; margin-bottom: 1rem;">
+<span style="font-weight: 900; color: #1e293b; font-size: 0.8em; letter-spacing: -0.02em;">Bonsai Spec View</span>
+<span style="background: #10b981; color: white; border-radius: 12px; padding: 2px 10px; font-size: 0.4em; font-weight: 800;">SYNCED</span>
+</div>
+<div style="margin-bottom: 1.5rem;">
+<p style="color: #64748b; font-size: 0.35em; margin-bottom: 0.5rem; font-weight: 600; text-transform: uppercase;">Extracted from <code>auth_engine.kt</code></p>
+<div style="background: white; border-radius: 4px; padding: 1rem; border: 1px dashed #cbd5e1;">
+<p style="color: #334155; font-size: 0.5em; line-height: 1.5; margin: 0;">
+• <strong>Flow:</strong> User → OAuth → JWT Entry<br>
+• <strong>Requirement:</strong> Session must expire in 2h<br>
+• <strong>Security:</strong> All secrets via Vault
+</p>
+</div>
+</div>
+<div style="display: flex; gap: 8px;">
+<div style="background: #f1f5f9; border-radius: 4px; flex: 1; height: 12px;"></div>
+<div style="background: #10b981; border-radius: 4px; width: 60px; height: 32px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.35em; font-weight: 800;">APPROVE</div>
+</div>
+</div>
+<p style="text-align: center; color: #94a3b8; font-size: 0.35em; margin-top: 1.5rem; font-style: italic;">"JetBrains PSI analyses code → Bonsai generates spec → Dev validates in-loop"</p>
+</div>
+</div>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Strategic wedge</p>
+    <p class="chosen-tile-body">JetBrains users (IntelliJ), 5+ devs, repo-native arch-specs (.md).</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Product</p>
+    <p class="chosen-tile-body">Bonsai: Native JB Plugin. Zero context switch.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Core Logic</p>
+    <p class="chosen-tile-body">Code-first: PSI-based spec gen + real-time drift detection.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Tech layer</p>
+    <p class="chosen-tile-body">Kotlin / PSI Engine. High-precision alerts. Open .md standard.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Launch</p>
+    <p class="chosen-tile-body">Canary rollout: 10 design partners → Private alpha.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Learning gate</p>
+    <p class="chosen-tile-body">≥ 60% validation rate; alert engagement.</p>
+  </div>
+</div>
+</div>
+
+Notes:
+
+1) **Strategic Wedge**: We don't change how devs work. They write code, we sync the spec. This removes the "documentation tax".
+2) **Logic**: Bi-directional sync is the end-game, but we start with "Extraction First" because it's the fastest path to value.
+3) **PSI Engine**: Using JetBrains' native engine means we have deeper understanding than generic LLM-based tools.
+4) **Drift**: The moment code stops matching the spec, the dev gets a red light in the IDE.
+
+---
 <!-- .slide: id="pricing-monetization" -->
 
 ## HOW: Pricing & Monetization
@@ -836,144 +936,6 @@ JB integration model (preferred):
 - Bonsai Pro = included in JB AI Pro subscription (bundle uplift)
 - Bonsai Team/Enterprise = separate SKU, sold via JB Sales
 - Metric: attributed ARPU uplift on JB AI Pro cohort with Bonsai active
-
----
-<!-- .slide: id="roadmap" -->
-
-## HOW: 6-Month Roadmap
-
-<div class="roadmap-container">
-
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 0-2 <span class="roadmap-gate">G1</span></span>
-    </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 1: MVP & VALIDATION</div>
-      <div class="roadmap-content-body">
-        • <strong>Ship MVP:</strong> code extraction + drift detection<br>
-        • Recruit 10 design partners (Tech Leads, 5+ devs)<br>
-        • <strong>Gate 1:</strong> ≥ 60% validation + 3 partners paying
-      </div>
-    </div>
-  </div>
-
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 2-4 <span class="roadmap-gate">G2</span></span>
-    </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 2: HARDEN</div>
-      <div class="roadmap-content-body">
-        • <strong>Bi-directional sync:</strong> add spec→code generation<br>
-        • PR integration: spec-delta visibility in code reviews<br>
-        • <strong>Gate 2:</strong> ≥ 20% review reduction + 5 partners paying
-      </div>
-    </div>
-  </div>
-
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 4-6 <span class="roadmap-gate">G3</span></span>
-    </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 3: SCALE</div>
-      <div class="roadmap-content-body">
-        • <strong>Orchestration:</strong> CI gate enforcement (rollout)<br>
-        • Multi-repo spec management + Marketplace MVP<br>
-        • <strong>Gate 3:</strong> ≥ 100 active users + positive economics signal
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<p class="chosen-tile-body" style="text-align: center; margin-top: 10px; font-size: 0.45em; opacity: 0.8;">
-  <strong>Decision framework:</strong> Each gate requires quantitative metrics + qualitative signal + zero kill signals.
-</p>
-
-Notes:
-
-Execution follows three strictly gated phases:
-
-1) Phase 1 is all about value validation. Do devs actually review and maintain these extracted specs? If validation rate is low, we don't scale.
-2) Phase 2 moves to bi-directional sync (our moonshot). We prove ROI by measuring actual time reduction in PR reviews.
-3) Phase 3 is scale and monetization. Enterprise features like CI gates and multi-repo management are added here once the core loop is proven.
-4) We focus on JetBrains ecosystem first to exploit our PSI integration advantage.
-
-Team plan:
-• Phase 1 (Mo 0–2): 1 PM + 2 engineers (1 JB plugin/PSI, 1 backend/LLM integration). Total: 3 people.
-• Phase 2 (Mo 2–4): +1 engineer (CI/PR integration + spec-delta rendering). Total: 4 people.
-• Phase 3 (Mo 4–6): +1 designer (onboarding UX + dashboard) + 1 DevRel (community, design partners, content). Total: 6 people.
-• Assumption: engineers are familiar with Kotlin + IntelliJ Plugin SDK. If hired externally, add 2–4 weeks ramp-up to Phase 1 timeline.
-• Budget note: Phase 1–2 headcount fits within a typical JB incubation team. Phase 3 expansion is gated on G2 pass.
-
----
-<!-- .slide: id="mvp-solution-draft" -->
-
-<h2>HOW: MVP SOLUTION DRAFT</h2>
-
-<div class="solution-draft-container">
-<div class="solution-mockup">
-<div style="padding: 2.5rem; width: 100%; text-align: left;">
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #10b981; padding-bottom: 0.75rem; margin-bottom: 1rem;">
-<span style="font-weight: 900; color: #1e293b; font-size: 0.8em; letter-spacing: -0.02em;">Bonsai Spec View</span>
-<span style="background: #10b981; color: white; border-radius: 12px; padding: 2px 10px; font-size: 0.4em; font-weight: 800;">SYNCED</span>
-</div>
-<div style="margin-bottom: 1.5rem;">
-<p style="color: #64748b; font-size: 0.35em; margin-bottom: 0.5rem; font-weight: 600; text-transform: uppercase;">Extracted from <code>auth_engine.kt</code></p>
-<div style="background: white; border-radius: 4px; padding: 1rem; border: 1px dashed #cbd5e1;">
-<p style="color: #334155; font-size: 0.5em; line-height: 1.5; margin: 0;">
-• <strong>Flow:</strong> User → OAuth → JWT Entry<br>
-• <strong>Requirement:</strong> Session must expire in 2h<br>
-• <strong>Security:</strong> All secrets via Vault
-</p>
-</div>
-</div>
-<div style="display: flex; gap: 8px;">
-<div style="background: #f1f5f9; border-radius: 4px; flex: 1; height: 12px;"></div>
-<div style="background: #10b981; border-radius: 4px; width: 60px; height: 32px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.35em; font-weight: 800;">APPROVE</div>
-</div>
-</div>
-<p style="text-align: center; color: #94a3b8; font-size: 0.35em; margin-top: 1.5rem; font-style: italic;">"JetBrains PSI analyses code → Bonsai generates spec → Dev validates in-loop"</p>
-</div>
-</div>
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Strategic wedge</p>
-    <p class="chosen-tile-body">JetBrains users (IntelliJ), 5+ devs, repo-native arch-specs (.md).</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Product</p>
-    <p class="chosen-tile-body">Bonsai: Native JB Plugin. Zero context switch.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Core Logic</p>
-    <p class="chosen-tile-body">Code-first: PSI-based spec gen + real-time drift detection.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Tech layer</p>
-    <p class="chosen-tile-body">Kotlin / PSI Engine. High-precision alerts. Open .md standard.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Launch</p>
-    <p class="chosen-tile-body">Canary rollout: 10 design partners → Private alpha.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Learning gate</p>
-    <p class="chosen-tile-body">≥ 60% validation rate; alert engagement.</p>
-  </div>
-</div>
-</div>
-
-Notes:
-
-1) **Strategic Wedge**: We don't change how devs work. They write code, we sync the spec. This removes the "documentation tax".
-2) **Logic**: Bi-directional sync is the end-game, but we start with "Extraction First" because it's the fastest path to value.
-3) **PSI Engine**: Using JetBrains' native engine means we have deeper understanding than generic LLM-based tools.
-4) **Drift**: The moment code stops matching the spec, the dev gets a red light in the IDE.
 
 ---
 <!-- .slide: id="risks-mitigation" -->
@@ -1699,7 +1661,6 @@ Notes:
 This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
 
 ---
-
 
 ---
 <!-- .slide: id="differentiation-full" -->
