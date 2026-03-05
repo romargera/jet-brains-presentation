@@ -575,37 +575,6 @@ What would change our mind on runner-ups:
 Next: we define the chosen direction in detail with JTBD and early adopter segments.
 
 ---
-<!-- .slide: id="jtbd-icp" -->
-
-## WHY: Chosen Direction
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Chosen Direction <span class="metric-badge" style="background: #f59e0b; color: #000;">HYPOTHESIS</span></p>
-    <p class="chosen-tile-body">Bi-directional spec↔code transparency: AI extracts specs from code, detects drift, and keeps AI output aligned, reviewable, and predictable. Validated in Phase 1 against two alternative approaches.</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--red">
-    <p class="chosen-tile-label">The Problem (Pain)</p>
-    <p class="chosen-tile-body">AI adoption hit 90%, yet distrust surged +15 pp YoY <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a>. 45% spend more time debugging AI code than expected <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[2]</a>. High-value tasks (architecture, coding) are crowded out by overhead: broken output, extra communication, security reviews, env drift <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/11/Time-Warp-Developer-Productivity-Study.pdf" target="_blank">[3]</a>.</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green chosen-tile--wide">
-    <p class="chosen-tile-label">Core JTBD</p>
-    <p class="chosen-tile-body">When engineers build with AI in a production codebase, they want development to be predictable and controllable, so they can ship faster with confidence.</p>
-  </div>
-
-</div>
-
-<ul class="distrust-notes">
-<li>Decomposed by target segments in the next slides.</li>
-</ul>
-
-Notes:
-This slide synthesises the three evidence slides into a concrete product decision. The chosen direction — AI-dev transparency for code and architecture — directly addresses the top-scoring pains: distrust (Distrust Issues slide), time waste (Dev Time Spent slide), and quality risk (B2B Pains slide). The JTBD statement frames the problem from the user's perspective and defines the minimum valuable outcome.
-
----
 <!-- .slide: id="competitive-approaches" -->
 
 ## WHY: Approaches
@@ -1153,13 +1122,13 @@ Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to re
 ## HOW: Golden Path — The 10-Minute Flow
 
 <div class="distrust-table-wrapper">
-<table class="distrust-table" style="font-size: 0.5em; width: 100%;">
+<table class="distrust-table">
   <thead>
     <tr>
       <th style="width: 8%;">Min</th>
-      <th style="width: 25%;">Alex does</th>
-      <th style="width: 30%;">Bonsai does</th>
-      <th style="width: 37%;">Alex sees</th>
+      <th style="width: 12%;">Alex does</th>
+      <th style="width: 33%;">Bonsai does</th>
+      <th style="width: 47%;">Alex sees</th>
     </tr>
   </thead>
   <tbody>
@@ -1230,14 +1199,14 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 
 ## HOW: Pricing & Monetization
 
-<div class="distrust-table-wrapper" style="margin-bottom: 10px;">
-<table class="distrust-table" style="font-size: 0.55em; margin: 0 auto; width: 100%;">
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
   <thead>
     <tr>
-      <th>Tier</th>
-      <th>Price</th>
-      <th>Included</th>
-      <th>Goal</th>
+      <th style="width: 14%;">Tier</th>
+      <th style="width: 6%;">Price</th>
+      <th style="width: 50%;">Included</th>
+      <th style="width: 30%;">Goal</th>
     </tr>
   </thead>
   <tbody>
@@ -1270,20 +1239,24 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 </div>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
-  <div class="chosen-tile chosen-tile--green" style="padding: 10px;">
-    <p class="chosen-tile-label" style="font-size: 0.8em;">Pricing Rationale & Integration</p>
-    <ul style="font-size: 0.6em; padding-left: 15px; margin: 5px 0;">
-      <li><strong>JB AI Add-on:</strong> Pro aligns with $8.33/mo base tool.</li>
-      <li><strong>Team Budget:</strong> $15-20 competes with CodeRabbit/Cursor.</li>
-      <li><strong>Integration:</strong> Pro bundled in JB AI; Team sold via Sales.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Pricing Rationale & Integration</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li><strong>JB AI Add-on:</strong> Pro aligns with $8.33/mo base tool.</li>
+        <li><strong>Team Budget:</strong> $15-20 competes with CodeRabbit/Cursor.</li>
+        <li><strong>Integration:</strong> Pro bundled in JB AI; Team sold via Sales.</li>
+      </ul>
+    </div>
   </div>
-  <div class="chosen-tile chosen-tile--red" style="padding: 10px;">
-    <p class="chosen-tile-label" style="font-size: 0.8em;">Validation Experiments</p>
-    <ul style="font-size: 0.6em; padding-left: 15px; margin: 5px 0;">
-      <li><strong>WTP Test (Mo 2):</strong> 5 partners at $10/mo vs free trial.</li>
-      <li><strong>Team Test (Mo 4):</strong> $15/seat vs $20/seat with CI gates.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Validation Experiments</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li><strong>WTP Test (Mo 2):</strong> 5 partners at $10/mo vs free trial.</li>
+        <li><strong>Team Test (Mo 4):</strong> $15/seat vs $20/seat with CI gates.</li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -1310,50 +1283,33 @@ JB integration model (preferred):
 
 ## HOW: 6-Month Roadmap
 
-<div class="roadmap-container">
-
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 0-2 <span class="roadmap-gate">G1</span></span>
-    </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-body">
-        • <strong>Ship MVP:</strong> code→spec extraction + basic drift detection<br>
-        • Recruit 10 design partners (Tech Leads, 5+ devs, frequent PRs)<br>
-        • Parallel signal: lightweight prototypes of 2 alternative approaches (review assist, security pre-check) tested with same partners<br>
-        • <strong>Gate 1:</strong> ≥ 60% spec validation rate AND ≥ 3 partners committed AND spec approach outperforms alternatives in partner preference ranking
-      </div>
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Month 0-2 (G1)</p>
+    <div class="chosen-tile-body" style="font-size: 0.85em;">
+      • <strong>Ship MVP:</strong> code extraction + drift detection<br>
+      • Recruit 10 design partners (Tech Leads, 5+ devs)<br>
+      • Parallel signal: 2 alt prototypes (review/security)<br>
+      • <strong>Gate 1:</strong> ≥ 60% validation + 3 partners paying
     </div>
   </div>
-
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 2-4 <span class="roadmap-gate">G2</span></span>
-    </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 2: HARDEN</div>
-      <div class="roadmap-content-body">
-        • <strong>Bi-directional sync:</strong> add spec→code generation<br>
-        • PR integration: spec-delta visibility in code reviews<br>
-        • <strong>Gate 2:</strong> ≥ 20% review time reduction AND ≥ 5 partners paying
-      </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Month 2-4 (G2)</p>
+    <div class="chosen-tile-body" style="font-size: 0.85em;">
+      • <strong>PHASE 2: HARDEN</strong><br>
+      • Bi-sync: add spec→code generation<br>
+      • PR integration: spec-delta visibility<br>
+      • <strong>Gate 2:</strong> ≥ 20% review reduction + 5 partners
     </div>
   </div>
-
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 4-6 <span class="roadmap-gate">G3</span></span>
-    </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 3: SCALE</div>
-      <div class="roadmap-content-body">
-        • <strong>Orchestration:</strong> CI gate enforcement (organizational rollout)<br>
-        • Multi-repo spec management + Marketplace MVP<br>
-        • <strong>Gate 3:</strong> ≥ 100 active users AND positive unit economics signal
-      </div>
+  <div class="chosen-tile chosen-tile--green" style="grid-column: span 2;">
+    <p class="chosen-tile-label">Month 4-6 (G3)</p>
+    <div class="chosen-tile-body" style="font-size: 0.85em;">
+      • <strong>PHASE 3: SCALE</strong> — CI gate enforcement (rollout)<br>
+      • Multi-repo spec management + Marketplace MVP<br>
+      • <strong>Gate 3:</strong> ≥ 100 active users + positive economics
     </div>
   </div>
-
 </div>
 
 <p class="chosen-tile-body" style="text-align: center; margin-top: 15px; font-size: 0.55em; opacity: 0.8;">
@@ -1368,6 +1324,13 @@ Execution follows three strictly gated phases:
 2) Phase 2 moves to bi-directional sync (our moonshot). We prove ROI by measuring actual time reduction in PR reviews.
 3) Phase 3 is scale and monetization. Enterprise features like CI gates and multi-repo management are added here once the core loop is proven.
 4) We focus on JetBrains ecosystem first to exploit our PSI integration advantage.
+
+Team plan:
+• Phase 1 (Mo 0–2): 1 PM + 2 engineers (1 JB plugin/PSI, 1 backend/LLM integration). Total: 3 people.
+• Phase 2 (Mo 2–4): +1 engineer (CI/PR integration + spec-delta rendering). Total: 4 people.
+• Phase 3 (Mo 4–6): +1 designer (onboarding UX + dashboard) + 1 DevRel (community, design partners, content). Total: 6 people.
+• Assumption: engineers are familiar with Kotlin + IntelliJ Plugin SDK. If hired externally, add 2–4 weeks ramp-up to Phase 1 timeline.
+• Budget note: Phase 1–2 headcount fits within a typical JB incubation team. Phase 3 expansion is gated on G2 pass.
 
 ---
 <!-- .slide: id="mvp-solution-draft" -->
@@ -1400,32 +1363,32 @@ Execution follows three strictly gated phases:
 <p style="text-align: center; color: #94a3b8; font-size: 0.35em; margin-top: 1.5rem; font-style: italic;">"JetBrains PSI analyses code → Bonsai generates spec → Dev validates in-loop"</p>
 </div>
 </div>
-<div class="solution-scope">
-<h4>MVP Scope:</h4>
-<div class="solution-scope-item">
-<span class="solution-scope-label">Strategic wedge:</span>
-<span class="solution-scope-body">JetBrains users (IntelliJ), 5+ devs, repo-native arch-specs (.md).</span>
-</div>
-<div class="solution-scope-item">
-<span class="solution-scope-label">Product:</span>
-<span class="solution-scope-body"><strong>Bonsai:</strong> Native JB Plugin. Zero context switch.</span>
-</div>
-<div class="solution-scope-item">
-<span class="solution-scope-label">Core Logic:</span>
-<span class="solution-scope-body"><strong>Code-first extraction:</strong> PSI-based spec generation + real-time <strong>drift detection</strong>.</span>
-</div>
-<div class="solution-scope-item">
-<span class="solution-scope-label">Tech layer:</span>
-<span class="solution-scope-body">Kotlin / PSI Engine. High-precision alerts. Open .md standard.</span>
-</div>
-<div class="solution-scope-item">
-<span class="solution-scope-label">Launch:</span>
-<span class="solution-scope-body"><strong>Canary rollout:</strong> 10 design partners → Private alpha.</span>
-</div>
-<div class="solution-scope-item">
-<span class="solution-scope-label">Learning gate:</span>
-<span class="solution-scope-body">≥ 60% validation rate; alert engagement.</span>
-</div>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Strategic wedge</p>
+    <p class="chosen-tile-body">JetBrains users (IntelliJ), 5+ devs, repo-native arch-specs (.md).</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Product</p>
+    <p class="chosen-tile-body">Bonsai: Native JB Plugin. Zero context switch.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Core Logic</p>
+    <p class="chosen-tile-body">Code-first: PSI-based spec gen + real-time drift detection.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Tech layer</p>
+    <p class="chosen-tile-body">Kotlin / PSI Engine. High-precision alerts. Open .md standard.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Launch</p>
+    <p class="chosen-tile-body">Canary rollout: 10 design partners → Private alpha.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Learning gate</p>
+    <p class="chosen-tile-body">≥ 60% validation rate; alert engagement.</p>
+  </div>
 </div>
 </div>
 

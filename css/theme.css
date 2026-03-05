@@ -683,6 +683,53 @@
   font-weight: 700;
 }
 
+/* Golden Path Flow slide */
+#golden-path-steps .distrust-table th:nth-child(1),
+#golden-path-steps .distrust-table td:nth-child(1) {
+  width: 8%;
+}
+
+#golden-path-steps .distrust-table th:nth-child(2),
+#golden-path-steps .distrust-table td:nth-child(2) {
+  width: 18%;
+}
+
+#golden-path-steps .distrust-table th:nth-child(3),
+#golden-path-steps .distrust-table td:nth-child(3) {
+  width: 33%;
+  white-space: normal;
+}
+
+#golden-path-steps .distrust-table th:nth-child(4),
+#golden-path-steps .distrust-table td:nth-child(4) {
+  width: 41%;
+  white-space: normal;
+}
+
+/* Pricing & Monetization slide */
+#pricing-monetization .distrust-table th:nth-child(1),
+#pricing-monetization .distrust-table td:nth-child(1) {
+  width: 14%;
+}
+
+#pricing-monetization .distrust-table th:nth-child(2),
+#pricing-monetization .distrust-table td:nth-child(2) {
+  width: 12%;
+  white-space: normal;
+}
+
+#pricing-monetization .distrust-table th:nth-child(3),
+#pricing-monetization .distrust-table td:nth-child(3) {
+  width: 44%;
+  white-space: normal;
+}
+
+#pricing-monetization .distrust-table th:nth-child(4),
+#pricing-monetization .distrust-table td:nth-child(4) {
+  width: 30%;
+  white-space: normal;
+}
+
 .distrust-table th {
   background: transparent;
   color: #888;
