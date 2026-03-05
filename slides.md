@@ -880,3 +880,93 @@ Third, Continuous Drift Detection. We don't just offer proactive inline warnings
 Fourth, AI-Native BDD (Behavior-Driven Development). We don't just 'generate and pray'—we treat specs as executable tests, automatically validating the LLM's output against the schema before it ever hits your code.
 And finally, Zero Vendor Lock-in with an open markdown format combined with a premium plugin.
 These differentiators culminate in our core value proposition: We bridge the gap between developer freedom and enterprise control. Instead of forcing rigid top-down workflows that developers hate, Bonsai embraces bottom-up intent extraction—turning chaotic "vibe-coding" into a predictable, reviewable architectural workflow, right inside the JetBrains IDE.
+
+---
+<!-- .slide: id="why-summary" -->
+
+## WHY: Summary & Market
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Strategic Setup & AI Adoption</p>
+    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp. High-value tasks are crowded out by overhead. The window for a trust-layer governance tool is now.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green" style="padding: 10px;">
+    <p class="chosen-tile-label">Market Size (USD, 2024 Base)</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0 0 10px 0; padding-left: 20px; font-size: 0.9em;">
+        <li><strong>TAM:</strong> $4.9B</li>
+        <li><strong>SAM:</strong> $3.4B</li>
+        <li><strong>SOM:</strong> $171M</li>
+      </ul>
+      <div style="font-size: 0.7em; text-align: right; margin-top: 5px; color: var(--text-muted);">
+        <em>* <a href="#" target="_blank">Top-down calculation</a> (Bottom-up to follow)</em><br/>
+        <em>Data source: <a href="#" target="_blank">JetBrains test task prep - TAM SAM SOM</a></em>
+      </div>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Niche & ICP</p>
+    <p class="chosen-tile-body">Uncontested IDE-native wedge for Tech Leads wanting predictable architecture.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Growth Loops</p>
+    <p class="chosen-tile-body">Repo-native viral adoption (1 repo = many devs) + strict PR/CI enforcement gates.</p>
+  </div>
+
+</div>
+
+<ul class="distrust-notes">
+<li>Assumptions: Based on 70% share of AI-using pros in production workflows, targeting 5% of SAM.</li>
+<li>Revenue base year 2024, adoption base year 2025.</li>
+</ul>
+
+Notes:
+
+* Рынок AI-тулзов оценивается по-разному (~$4–5B). Чтобы не завышать TAM, мы берем консервативную базу $4.91B (2024), сохраняя альтернативный апсайд-сценарий.
+* Ожидаемый рост через Tech Lead'ов легко скейлится благодаря "repo-native loop" и CI/PR гейтам.
+
+---
+<!-- .slide: id="growth-loops" -->
+
+## HOW: Growth Loops
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Repo-Native Viral Loop</p>
+    <p class="chosen-tile-body">1 user adds <code>/specs</code>. Entire team interacts via PR gates. Fast intra-team spread.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">PR / CI Enforcement</p>
+    <p class="chosen-tile-body">More compliance checks = fewer bugs. Value compounds, raising switching costs.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Spec Template Marketplace</p>
+    <p class="chosen-tile-body">Community-built spec packs for standard flows (auth, billing). Accelerates new starts.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Ecosystem Standard</p>
+    <p class="chosen-tile-body">Format works across IDEs & repos. Becomes an org-wide standard, not just a tool.</p>
+  </div>
+
+</div>
+
+<ul class="distrust-notes">
+<li>Invite-the-reviewer loop: sharing readable contracts draws non-devs into the process.</li>
+</ul>
+
+Notes:
+Here we detail the growth engine.
+
+1) Repo-native: one person installs it, but the whole team must interact with it through CI checks and PR comments.
+2) Quality loop: the more rules teams add, the deeper integrated it becomes (high switching cost).
+3) Content loop: shared templates for common architectures reduce cold-start friction.
+4) Ecosystem / Multi-repo: a single specification scales across multiple repositories and works with any client (Cursor, VS Code, CLI), making Bonsai the standard protocol rather than just another IDE plugin.
