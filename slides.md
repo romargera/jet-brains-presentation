@@ -434,9 +434,65 @@ Notes:
 This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
 
 ---
+<!-- .slide: id="what-icp-jtbd" -->
+
+## WHAT: ICP, JTBD, Triggers
+
+<div class="chosen-grid chosen-grid--small">
+  <div class="chosen-tile chosen-tile--green chosen-tile--wide">
+    <p class="chosen-tile-label">Core JTBD</p>
+    <p class="chosen-tile-body">When engineers build with AI in production, they want development to be predictable and controllable, so they can ship faster with confidence.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Early Adopters</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>Unscoped AI diffs</li>
+        <li>Spec ↔ code drift</li>
+        <li>Costly regressions</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>AI-caused prod incidents</li>
+        <li>Review churn rising</li>
+        <li>Major codebase refactor</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Scaling</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>No standard for AI dev</li>
+        <li>Risk across many repos</li>
+        <li>Low auditability</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>Scaling AI across teams</li>
+        <li>Security/compliance audit</li>
+        <li>Incidents across repos</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+Notes:
+Here we look at who we are targeting and why.
+At the absolute core, our user has one main Job To Be Done: "When I use AI to write code, I want it to be predictable so I don't break production."
+Our wedge starts with the Early Adopters—the Tech Leads and Staff Engineers. They are the ones feeling the immediate pain of unscoped AI pull requests and code drift. The triggers here are simple: a few painful AI-caused bugs, or just review fatigue.
+Once we prove value at the team level, we hit the Scaling phase. Here, we target Engineering Managers, Heads of Platform, and Security leadership. Their headache is blast radius and policy enforcement across many repositories. When they are pushed by an upcoming compliance audit or a sudden drop in code quality across teams, they need a standardized, auditable way to manage AI-assisted development across the organization.
+
+---
 <!-- .slide: id="stream-options" -->
 
-## WHAT: Strategic Directions
+## WHY: Strategic Directions
 
 <p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Directions are derived from the top issues across three evidence layers: <strong style="color: var(--text-main);">Distrust</strong>, <strong style="color: var(--text-main);">Time Spent</strong>, and <strong style="color: var(--text-main);">B2B Issues</strong>.</p>
 
@@ -457,6 +513,11 @@ This slide zooms out from the developer to the business buyer. B2B buyers care a
       <td><span class="tag tag-pain-review">Distrust issues</span></td>
       <td>High</td><td>High</td><td>Med</td><td>2.5</td>
     </tr>
+    <tr class="highlight-row">
+      <td><strong>Spec Formalisation Assist</strong> (proactive assist)</td>
+      <td><span class="tag tag-time-spent">Time Spent</span></td>
+      <td>High</td><td>Med</td><td>Low</td><td>2.5</td>
+    </tr>
     <tr>
       <td><strong>Security &amp; Compliance</strong> (proactive assist)</td>
       <td><span class="tag tag-time-spent">Time Spent</span></td>
@@ -466,11 +527,6 @@ This slide zooms out from the developer to the business buyer. B2B buyers care a
       <td><strong>Review &amp; Debug assist</strong></td>
       <td><span class="tag tag-pain-review">Distrust issues</span></td>
       <td>Med</td><td>High</td><td>Med</td><td>1.7</td>
-    </tr>
-    <tr>
-      <td><strong>Spec Formalisation Assist</strong> (proactive assist)</td>
-      <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>Med</td><td>Med</td><td>Low</td><td>1.7</td>
     </tr>
     <tr>
       <td><strong>Dev Env Simplification</strong></td>
@@ -496,7 +552,7 @@ This slide zooms out from the developer to the business buyer. B2B buyers care a
 </table>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> AI-dev transparency: code &amp; architecture is the top-priority direction, uniquely positioned at the intersection of all three pain layers with the highest value-to-cost score.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> AI-dev transparency: code &amp; architecture is the top-priority direction. Key risk: spec fatigue and enforcement resistance. Runner-up (Review &amp; Debug assist) becomes our fallback if ICP interviews disprove pre-hoc control preference.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -509,18 +565,25 @@ Notes:
 Directions are scored by value-to-cost ratio to make prioritization explicit and defensible.
 Score = (Impact × Confidence) / Effort. Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.
 All scores are assumptions marked with A — to be validated through user interviews and early pilots.
+
+Key risks of chosen direction (AI-dev transparency): spec fatigue — developers approve without reading; enforcement resistance — teams reject mandatory gates. Both are tested in Phase 1 experiments.
+
+What would change our mind on runner-ups:
+• Review & Debug assist (1.7): if ICP interviews reveal developers prefer post-hoc review over pre-hoc control, we pivot to this direction — it shares the same trust JTBD but inverts the intervention point.
+• Security & Compliance (1.7): if enterprise pilots show compliance gates drive faster budget approval than architecture governance, we re-scope the wedge.
+
 Next: we define the chosen direction in detail with JTBD and early adopter segments.
 
 ---
 <!-- .slide: id="jtbd-icp" -->
 
-## WHAT: Chosen Direction
+## WHY: Chosen Direction
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Chosen Direction</p>
-    <p class="chosen-tile-body">Bi-directional spec↔code transparency: AI extracts specs from code, detects drift, and keeps AI output aligned, reviewable, and predictable.</p>
+    <p class="chosen-tile-label">Chosen Direction <span class="metric-badge" style="background: #f59e0b; color: #000;">HYPOTHESIS</span></p>
+    <p class="chosen-tile-body">Bi-directional spec↔code transparency: AI extracts specs from code, detects drift, and keeps AI output aligned, reviewable, and predictable. Validated in Phase 1 against two alternative approaches.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--red">
@@ -545,7 +608,7 @@ This slide synthesises the three evidence slides into a concrete product decisio
 ---
 <!-- .slide: id="competitive-approaches" -->
 
-## WHAT: Approaches
+## WHY: Approaches
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table">
@@ -627,7 +690,7 @@ This slide maps competitive approaches to improving trust in AI-assisted develop
 ---
 <!-- .slide: id="competitor-landscape" -->
 
-## WHAT: Competitor Landscape
+## WHY: Competitor Landscape
 
 <div class="competitor-layout">
 <div class="competitor-col-left">
@@ -648,7 +711,7 @@ This slide maps competitive approaches to improving trust in AI-assisted develop
     <tr class="highlight-row">
       <td rowspan="5"><strong>Tier 1</strong></td>
       <td><a href="https://speckit.org/" target="_blank">Spec Kit</a></td>
-      <td>GitHub-supported, 73.6k★, markdown specs, фазовый plan-first, CLI + in-agent</td>
+      <td>GitHub-supported, 73.6k★, markdown specs, phased plan-first workflow, CLI + in-agent</td>
     </tr>
     <tr class="highlight-row">
       <td><a href="https://kiro.dev/" target="_blank">Kiro</a></td>
@@ -724,7 +787,7 @@ This slide maps the competitive landscape for spec-driven development. Tier 1 in
 ---
 <!-- .slide: id="learn-and-steal" -->
 
-## WHAT: Learn & Steal
+## WHY: Learn & Steal
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
   <div class="chosen-tile chosen-tile--green">
@@ -755,7 +818,7 @@ Here we look at what's actually working in the market. First, Git-native markdow
 ---
 <!-- .slide: id="niche-choice" -->
 
-## WHAT: Niche Choice
+## WHY: Niche Choice
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table" style="table-layout: fixed; width: 100%;">
@@ -824,7 +887,7 @@ We explicitly rejected the red niches: End-to-end orchestration is too bloated f
 ---
 <!-- .slide: id="differentiation" -->
 
-## WHAT: Why Us (Differentiation)
+## WHY: Differentiation
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table" style="table-layout: fixed; width: 100%;">
@@ -848,8 +911,8 @@ We explicitly rejected the red niches: End-to-end orchestration is too bloated f
     </tr>
     <tr>
       <td><strong>Deep Semantic Context</strong></td>
-      <td>Context via flat AST or text vectors. Leads to severe hallucinations in large mono-repos.</td>
-      <td>Proprietary JB PSI engine. Understands code as deeply as the compiler.</td>
+      <td>Context via flat AST or text vectors. 1000–3000 tokens per file for LLM analysis.</td>
+      <td>PSI extracts structured signal at 100–300 tokens (70–90% saving). Compiler-grade accuracy, zero hallucination on structure. Not a permanent moat — a 12–18 month head start we convert into data and workflow lock-in.</td>
     </tr>
     <tr>
       <td><strong>Continuous drift detection</strong></td>
@@ -883,66 +946,79 @@ Fourth, AI-Native BDD (Behavior-Driven Development). We don't just 'generate and
 And finally, Zero Vendor Lock-in with an open markdown format combined with a premium plugin.
 These differentiators culminate in our core value proposition: We bridge the gap between developer freedom and enterprise control. Instead of forcing rigid top-down workflows that developers hate, Bonsai embraces bottom-up intent extraction—turning chaotic "vibe-coding" into a predictable, reviewable architectural workflow, right inside the JetBrains IDE.
 
----
-<!-- .slide: id="what-icp-jtbd" -->
+PSI advantage is structural, not exclusive — any JB plugin can use PSI, and LSP + tree-sitter cover ~60-70% outside JB.
+The defensibility comes from compounding: PSI accuracy → better specs → users trust and maintain specs → spec data becomes the real moat (not the parser).
+Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org scale (100 commits/day, 50 files/commit), this is ~$1,300/month cost difference.
 
-## WHAT: ICP, JTBD, Triggers
+---
+<!-- .slide: id="jb-strategic-fit" -->
+
+## WHY: JetBrains Strategic Fit
 
 <div class="chosen-grid chosen-grid--small">
+
   <div class="chosen-tile chosen-tile--green chosen-tile--wide">
-    <p class="chosen-tile-label">Core JTBD</p>
-    <p class="chosen-tile-body">When engineers build with AI in production, they want development to be predictable and controllable, so they can ship faster with confidence.</p>
+    <p class="chosen-tile-label">Positioning within JB AI Portfolio</p>
+    <p class="chosen-tile-body">Bonsai is the <strong>governance layer</strong> for JB's AI stack: AI Assistant generates code, Junie executes autonomously, Bonsai ensures both stay aligned with architectural intent.</p>
   </div>
+
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Early Adopters</p>
+    <p class="chosen-tile-label">Complements (not competes)</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
-      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
-      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
-        <li>Unscoped AI diffs</li>
-        <li>Spec ↔ code drift</li>
-        <li>Costly regressions</li>
-      </ul>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
-      <ul style="margin: 0; padding-left: 18px;">
-        <li>AI-caused prod incidents</li>
-        <li>Review churn rising</li>
-        <li>Major codebase refactor</li>
+      <table style="font-size: 0.75em; width: 100%; border-collapse: collapse;">
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+          <td style="padding: 4px 0;"><strong>AI Assistant</strong></td>
+          <td style="padding: 4px 0;">Generates code → Bonsai validates output against spec before merge</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+          <td style="padding: 4px 0;"><strong>Junie</strong></td>
+          <td style="padding: 4px 0;">Autonomous agent → Bonsai provides guardrails + drift alerts for agent actions</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+          <td style="padding: 4px 0;"><strong>Fleet</strong></td>
+          <td style="padding: 4px 0;">Not in MVP scope. Potential future surface once spec format stabilizes.</td>
+        </tr>
+        <tr>
+          <td style="padding: 4px 0;"><strong>Marketplace</strong></td>
+          <td style="padding: 4px 0;">Distribution channel: 1-click install, same billing, familiar UX</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Business Case for JB</p>
+    <div class="chosen-tile-body">
+      <ul style="font-size: 0.85em; padding-left: 15px; margin: 0;">
+        <li><strong>Attach rate ↑:</strong> Bonsai gives Enterprise buyers a reason to stay on JB IDE over Cursor/VS Code</li>
+        <li><strong>ARPU ↑:</strong> Pro bundled with AI subscription; Team/Enterprise as separate SKU</li>
+        <li><strong>Retention ↑:</strong> Spec data creates switching cost — specs are tied to JB PSI quality</li>
+        <li><strong>Competitive moat:</strong> Only JB can offer PSI-grade analysis natively; competitors need LSP approximation</li>
       </ul>
     </div>
   </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Scaling</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
-      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
-      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
-        <li>No standard for AI dev</li>
-        <li>Risk across many repos</li>
-        <li>Low auditability</li>
-      </ul>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
-      <ul style="margin: 0; padding-left: 18px;">
-        <li>Scaling AI across teams</li>
-        <li>Security/compliance audit</li>
-        <li>Incidents across repos</li>
-      </ul>
-    </div>
-  </div>
+
 </div>
 
 Notes:
-Here we look at who we are targeting and why.
-At the absolute core, our user has one main Job To Be Done: "When I use AI to write code, I want it to be predictable so I don't break production."
-Our wedge starts with the Early Adopters—the Tech Leads and Staff Engineers. They are the ones feeling the immediate pain of unscoped AI pull requests and code drift. The triggers here are simple: a few painful AI-caused bugs, or just review fatigue.
-Once we prove value at the team level, we hit the Scaling phase. Here, we target Engineering Managers, Heads of Platform, and Security leadership. Their headache is blast radius and policy enforcement across many repositories. When they are pushed by an upcoming compliance audit or a sudden drop in code quality across teams, they need a standardized, auditable way to manage AI-assisted development across the organization.
+This slide is critical for internal alignment. Bonsai is not a standalone product — it's the missing governance piece in JB's AI portfolio.
+
+The key strategic argument: as AI Assistants and autonomous agents generate more code, the need for a control layer grows proportionally. Without governance, AI-generated code becomes a liability for enterprise customers. Bonsai turns that liability into a selling point.
+
+Specifically:
+
+- AI Assistant users get spec-validated outputs → higher trust → higher usage → higher renewal
+- Junie (autonomous agent) gets architectural guardrails → safer autonomy → enterprise adoption unlocked
+- Enterprise buyers get audit trail + compliance artifacts → procurement unblocked
+
+Revenue model: Bonsai Pro is bundled (increases AI subscription stickiness). Bonsai Team/Enterprise is a separate revenue stream via JB Sales.
+
+Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the governance standard, JB AI tools become "generation without control" — a weaker value proposition for enterprise.
 
 ---
 <!-- .slide: id="growth-loops" -->
 
-## HOW: Growth Loops
+## WHY: Growth Loops
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
@@ -1032,8 +1108,202 @@ Here we detail the 4 main B2B growth mechanics that drive viral product-led expa
 
 Notes:
 
-* Рынок AI-тулзов оценивается по-разному (~$4–5B). Чтобы не завышать TAM, мы берем консервативную базу $4.91B (2024), сохраняя альтернативный апсайд-сценарий.
-* Ожидаемый рост через Tech Lead'ов легко скейлится благодаря "repo-native loop" и CI/PR гейтам.
+- Рынок AI-тулзов оценивается по-разному (~$4–5B). Чтобы не завышать TAM, мы берем консервативную базу $4.91B (2024), сохраняя альтернативный апсайд-сценарий.
+- Ожидаемый рост через Tech Lead'ов легко скейлится благодаря "repo-native loop" и CI/PR гейтам.
+
+---
+<!-- .slide: id="golden-path" -->
+
+## HOW: Golden Path — 10 Minutes to First Spec
+
+<div class="chosen-grid chosen-grid--2col">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Persona</p>
+    <div style="font-size: 0.8em; margin-top: 10px;">
+      <p><strong>Alex, Tech Lead</strong></p>
+      <ul>
+        <li>8-person backend team</li>
+        <li>Kotlin monorepo</li>
+        <li>Daily JB AI Assistant user</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Trigger (Friday Afternoon)</p>
+    <div style="font-size: 0.8em; margin-top: 10px;">
+      <p>PR from junior: 400+ lines AI-refactored auth module.</p>
+      <ul>
+        <li>Alex can't tell if session logic changed.</li>
+        <li>Spends 45m line-by-line review.</li>
+        <li>PR gets "Request Changes". Junior frustrated.</li>
+      </ul>
+      <p style="margin-top: 10px; font-style: italic; color: #ff8a80;">"There has to be a better way."</p>
+    </div>
+  </div>
+</div>
+
+Notes:
+Persona: Alex, Tech Lead, 8-person backend team, Kotlin monorepo, using JB AI Assistant daily.
+Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to refactor the auth module. The diff is 400+ lines. Alex can't tell if the session expiry logic changed or not. He spends 45 minutes line-by-line. The PR gets "Request Changes". The junior is frustrated. Alex thinks: "There has to be a better way."
+
+---
+<!-- .slide: id="golden-path-steps" -->
+
+## HOW: Golden Path — The 10-Minute Flow
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="font-size: 0.5em; width: 100%;">
+  <thead>
+    <tr>
+      <th style="width: 8%;">Min</th>
+      <th style="width: 25%;">Alex does</th>
+      <th style="width: 30%;">Bonsai does</th>
+      <th style="width: 37%;">Alex sees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>0:00</strong></td>
+      <td>Installs Bonsai from JB Marketplace (1-click)</td>
+      <td>—</td>
+      <td>Plugin appears in sidebar</td>
+    </tr>
+    <tr>
+      <td><strong>1:00</strong></td>
+      <td>Right-clicks <code>auth_engine.kt</code> → "Extract Spec"</td>
+      <td>PSI parses classes, methods, annotations, deps. Sends structured pre-prompt (200 tokens) to LLM.</td>
+      <td>Loading spinner (2–3 sec)</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>1:30</strong></td>
+      <td>Reads generated spec in side panel</td>
+      <td>—</td>
+      <td><span style="background: #10b981; color: white; border-radius: 8px; padding: 1px 6px; font-size: 0.85em;">SYNCED</span> Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
+    </tr>
+    <tr>
+      <td><strong>2:30</strong></td>
+      <td>Edits: adds "Rate limit: 5 attempts/15 min"</td>
+      <td>Saves as <code>/specs/auth_engine.spec.md</code></td>
+      <td><span style="background: #f59e0b; color: #000; border-radius: 8px; padding: 1px 6px; font-size: 0.85em;">EDITED</span> badge</td>
+    </tr>
+    <tr>
+      <td><strong>3:00</strong></td>
+      <td>Clicks "Apply to Repo"</td>
+      <td>Commits spec to branch</td>
+      <td>Spec file in Git diff</td>
+    </tr>
+    <tr class="highlight-row" style="background: rgba(244,67,54,0.08);">
+      <td><strong>4:00</strong></td>
+      <td>Junior pushes commit: session expiry → 4h</td>
+      <td>Detects drift: spec says 2h, code says 4h</td>
+      <td><span style="background: #ef4444; color: white; border-radius: 8px; padding: 1px 6px; font-size: 0.85em;">DRIFT</span> inline: <code>:47 — Session changed 2h→4h</code></td>
+    </tr>
+    <tr>
+      <td><strong>5:00</strong></td>
+      <td>Alex opens PR — sees spec-delta summary at top</td>
+      <td>Auto-generates: "1 drift detected, 1 new endpoint, 0 removed"</td>
+      <td>Review time: 5 min instead of 45 min</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>7:00</strong></td>
+      <td>Alex clicks "Update Spec" (accepts 4h change) OR "Request Fix"</td>
+      <td>If accepted: spec auto-updates. If rejected: blocks merge until code reverts.</td>
+      <td><span style="background: #10b981; color: white; border-radius: 8px; padding: 1px 6px; font-size: 0.85em;">RESOLVED</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Result:</strong> 45-minute blind review → 7-minute spec-guided review. Spec becomes the shared contract between author and reviewer.</p>
+</div>
+
+Notes:
+This walkthrough shows the complete user journey in under 10 minutes.
+Key moments: minute 1:30 (first spec extracted — immediate value), minute 4:00 (first drift caught — the "aha" moment), minute 7:00 (resolution — the workflow completes).
+The critical insight: Alex never had to *write* a spec. He only had to *read and approve* one. That's the difference between Bonsai and every previous documentation tool.
+The 45→7 minute improvement is our core value metric, tested in Phase 1 with design partners.
+
+---
+<!-- .slide: id="pricing-monetization" -->
+
+## HOW: Pricing & Monetization
+
+<div class="distrust-table-wrapper" style="margin-bottom: 10px;">
+<table class="distrust-table" style="font-size: 0.55em; margin: 0 auto; width: 100%;">
+  <thead>
+    <tr>
+      <th>Tier</th>
+      <th>Price</th>
+      <th>Included</th>
+      <th>Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Free</strong></td>
+      <td>$0</td>
+      <td>Spec extraction (≤3 repos), basic drift, markdown export</td>
+      <td>Adoption, viral seed</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>Pro</strong></td>
+      <td>$8–12/mo</td>
+      <td>Unlimited repos, CI integration, spec history</td>
+      <td>Prove WTP, convert power users</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>Team</strong></td>
+      <td>$15–20/seat</td>
+      <td>Shared library, org dashboard, PR spec-delta</td>
+      <td>Land team budget, org expansion</td>
+    </tr>
+    <tr>
+      <td><strong>Enterprise</strong></td>
+      <td>$30–50 floor</td>
+      <td>SSO, audit log, SLA, self-hosted option</td>
+      <td>Security-driven buy</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+  <div class="chosen-tile chosen-tile--green" style="padding: 10px;">
+    <p class="chosen-tile-label" style="font-size: 0.8em;">Pricing Rationale & Integration</p>
+    <ul style="font-size: 0.6em; padding-left: 15px; margin: 5px 0;">
+      <li><strong>JB AI Add-on:</strong> Pro aligns with $8.33/mo base tool.</li>
+      <li><strong>Team Budget:</strong> $15-20 competes with CodeRabbit/Cursor.</li>
+      <li><strong>Integration:</strong> Pro bundled in JB AI; Team sold via Sales.</li>
+    </ul>
+  </div>
+  <div class="chosen-tile chosen-tile--red" style="padding: 10px;">
+    <p class="chosen-tile-label" style="font-size: 0.8em;">Validation Experiments</p>
+    <ul style="font-size: 0.6em; padding-left: 15px; margin: 5px 0;">
+      <li><strong>WTP Test (Mo 2):</strong> 5 partners at $10/mo vs free trial.</li>
+      <li><strong>Team Test (Mo 4):</strong> $15/seat vs $20/seat with CI gates.</li>
+    </ul>
+  </div>
+</div>
+
+Notes:
+Pricing rationale:
+
+- JB AI Assistant = $8.33/month → Pro tier aligns as add-on (не дороже base tool)
+- CodeRabbit = $12/seat/month → Team tier at $15–20 includes more SDLC coverage
+- Cursor Pro = $20/month → в том же бюджетном «карман» разработчика
+
+Two key experiments:
+
+1. WTP test (Month 2): Offer 5 design partners «Pro for $10/month» — measure conversion vs «Pro for free extended trial». If <30% convert at $10, test $5.
+2. Team pricing test (Month 4): Offer 3 orgs «Team at $15/seat» vs «Team at $20/seat with CI gates included». Measure which feature drives budget approval.
+
+JB integration model (preferred):
+
+- Bonsai Pro = included in JB AI Pro subscription (bundle uplift)
+- Bonsai Team/Enterprise = separate SKU, sold via JB Sales
+- Metric: attributed ARPU uplift on JB AI Pro cohort with Bonsai active
 
 ---
 <!-- .slide: id="roadmap" -->
@@ -1047,11 +1317,11 @@ Notes:
       <span class="roadmap-timeline-label">Month 0-2 <span class="roadmap-gate">G1</span></span>
     </div>
     <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 1: VALIDATE</div>
       <div class="roadmap-content-body">
         • <strong>Ship MVP:</strong> code→spec extraction + basic drift detection<br>
         • Recruit 10 design partners (Tech Leads, 5+ devs, frequent PRs)<br>
-        • <strong>Gate 1:</strong> ≥ 60% spec validation rate AND ≥ 3 partners committed
+        • Parallel signal: lightweight prototypes of 2 alternative approaches (review assist, security pre-check) tested with same partners<br>
+        • <strong>Gate 1:</strong> ≥ 60% spec validation rate AND ≥ 3 partners committed AND spec approach outperforms alternatives in partner preference ranking
       </div>
     </div>
   </div>
@@ -1185,6 +1455,14 @@ Notes:
     </thead>
     <tbody>
       <tr>
+        <td class="col-num"><strong>0</strong></td>
+        <td class="col-risk"><strong>Solution-Problem Fit: specs may not be what developers want</strong></td>
+        <td class="col-mitigation">Phase 1 dual-track: (a) test spec extraction value with 10 partners, (b) parallel test of 2 alternative approaches (review assist, security gates) via lightweight prototypes. Gate 1 includes comparative signal.</td>
+        <td class="col-status text-high"><strong>High</strong></td>
+        <td class="col-status text-med"><strong>Med</strong></td>
+        <td class="col-score"><strong>6</strong></td>
+      </tr>
+      <tr>
         <td class="col-num">1</td>
         <td class="col-risk">PSI Engine Complexity</td>
         <td class="col-mitigation">Focus on JetBrains ecosystem (Kotlin first), leverage native PSI APIs for stability.</td>
@@ -1229,6 +1507,8 @@ Notes:
 </div>
 
 Notes:
+
+Risk #0 is our highest-priority uncertainty. Developers report distrust in AI code (validated), but they do not explicitly ask for specs (hypothesis). If Phase 1 shows <40% spec engagement AND alternative approaches score higher in partner feedback, we pivot before Phase 2.
 
 1) **Technical**: We are building on top of JetBrains' own infrastructure. It's complex, but it's where our advantage lies.
 2) **Accuracy**: AI is the assistant, not the decider. The "Approve" button is our safety valve.
