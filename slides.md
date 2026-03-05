@@ -1336,3 +1336,55 @@ Notes:
 2) **Monetization**: Tracking Net MRR for the product, and rigorously attributing JB Core revenue via matched cohort uplifts.
 3) **Value**: Faster reviews and passing CI gates are our leading indicators for expansion to team-wide usage.
 4) **Guardrails**: Above all, we must not harm the core IDE experience. Performance degradation is a strict No-Go.
+
+---
+
+<!-- .slide: id="experiments" -->
+
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: First 30 Days — Validation Experiments</h2>
+
+<div class="grid-2x2" style="font-size: 0.7em; gap: 4px; height: 500px;">
+
+  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="feature-title" style="color: var(--jb-purple); margin-bottom: 2px;">1. Extraction Quality (PSI)</div>
+    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
+      <li><strong>Question:</strong> Accurate spec creation?</li>
+      <li><strong>GO:</strong> &ge; 3.5/5 score, &le; 30% edits.</li>
+      <li><strong>Fail:</strong> Manual rework > 60%.</li>
+    </ul>
+  </div>
+
+  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="feature-title" style="color: var(--jb-blue); margin-bottom: 2px;">2. Drift Detection Value</div>
+    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
+      <li><strong>Question:</strong> Does it catch real bugs?</li>
+      <li><strong>GO:</strong> &ge; 40% fix rate, &ge; 1 catch/week.</li>
+      <li><strong>Fail:</strong> Alerts noisy, disabled by devs.</li>
+    </ul>
+  </div>
+
+  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="feature-title" style="color: var(--jb-green); margin-bottom: 2px;">3. ICP Pain Priority</div>
+    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
+      <li><strong>Question:</strong> Is drift a top-3 problem?</li>
+      <li><strong>GO:</strong> &ge; 8/15 rank top-3, &ge; 5 pilots.</li>
+      <li><strong>Fail:</strong> Problem too low priority.</li>
+    </ul>
+  </div>
+
+  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="feature-title" style="color: var(--jb-red); margin-bottom: 2px;">4. Timeline (Weeks 1-4)</div>
+    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
+      <li><strong>W1:</strong> Telemetry + Recruit partners.</li>
+      <li><strong>W2-3:</strong> Run parallel experiments (1-2).</li>
+      <li><strong>W4:</strong> ICP interviews & Gate 1 Decision.</li>
+    </ul>
+  </div>
+
+</div>
+
+Notes:
+
+1) **Quick Feedback Loop**: Our initial month is entirely about proving the core hypothesis: "Devs find drift detection high-value, not noisy."
+2) **Go/No-Go Decision**: If we fail the drift detection value test, we rethink the product narrative before further investment.
+3) **PSI Depth**: Experiment 1 tells us if we need to refine the parser for Java/Kotlin or shift to LLM-heavy extraction.
