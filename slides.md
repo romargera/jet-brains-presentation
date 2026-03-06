@@ -21,23 +21,27 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 <div class="agenda-nav">
   <div class="agenda-section">
     <h4>WHAT</h4>
+    <div style="font-size: 0.52em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Problem &amp; Signals</div>
     <p>AI Adoption Paradox</p>
     <p>Core JTBD</p>
     <p>Strategic Directions</p>
   </div>
   <div class="agenda-section">
     <h4>WHY</h4>
+    <div style="font-size: 0.52em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Market &amp; Insights</div>
     <p>Competitor Landscape</p>
     <p>Learn &amp; Steal</p>
     <p>Approaches</p>
     <p>Niche Choice</p>
+    <p>Why specs, not just better models</p>
     <p>Differentiation</p>
     <p>WHAT &amp; WHY: Summary</p>
   </div>
   <div class="agenda-section">
     <h4>HOW</h4>
-    <p>6-Month Roadmap</p>
-    <p>MVP <span class="metric-badge">A</span></p>
+    <div style="font-size: 0.52em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Plan &amp; Execution</div>
+    <p>Roadmap</p>
+    <p>MVP</p>
     <p>Segmentation</p>
     <p>Monetization</p>
     <p>Key Metrics</p>
@@ -48,7 +52,7 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 </div>
 
 Notes:
-The presentation has three parts. First, **What** — problem framing, JTBD, and strategic directions. Second, **Why** — competitor map, learn-and-steal analysis, approaches, niche choice, differentiation, and summary. Third, **How** — roadmap, MVP definition, segmentation, monetization, metrics, risks, GTM, and first-month execution actions. Let's start with the problem.
+The presentation has three parts. First, **What: Problem & Signals** — problem framing, JTBD, and strategic directions. Second, **Why: Market & Insights** — competitor map, learnings, approaches, niche choice, why specs, differentiation, and summary. Third, **How: Plan & Execution** — roadmap, MVP definition, segmentation, monetization, metrics, risks, GTM, and first-month execution actions. Let's start with the problem.
 
 ---
 <!-- .slide: id="adoption-paradox" -->
@@ -265,7 +269,7 @@ This slide maps the competitive landscape for spec-driven development. Tier 1 in
 ---
 <!-- .slide: id="learn-and-steal" -->
 
-## WHAT: Learn & Steal
+## WHY: Learn & Steal
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
   <div class="chosen-tile chosen-tile--green">
@@ -362,7 +366,7 @@ Here we look at what's actually working in the market. First, Git-native markdow
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Spec-driven development</a> is the top-priority approach for addressing trust, combining the highest ICE Score across impact, confidence, and effort factors.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Spec-driven development is the top-priority approach for addressing trust, combining the highest ICE Score across impact, confidence, and effort factors.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -441,8 +445,28 @@ This slide maps competitive approaches to improving trust in AI-assisted develop
 </div>
 
 Notes:
-Here is our niche selection. We evaluated 7 potential paths. The green path is our strategy: our wedge is IDE-Native Control because no startup is targeting the IntelliJ SDK, giving us a massive distribution moat. Our core value driver is Architecture Governance—specifically live drift detection—which solves the "docs rot" pain. And our 6-12 month moonshot is the full Spec Compiler (true bi-directional sync), which is explicitly delayed because it requires massive R&D.
+Here is our niche selection. We evaluated 7 potential paths. The green path is our strategy: our wedge is IDE-Native Control because no major player is IDE-native on IntelliJ SDK today <span class="metric-badge">A</span>, giving us a strong distribution moat. Our core value driver is Architecture Governance—specifically live drift detection—which solves the "docs rot" pain. And our 6-12 month moonshot is the full Spec Compiler (true bi-directional sync), which is explicitly delayed because it requires massive R&D.
 We explicitly rejected the red niches: End-to-end orchestration is too bloated for an MVP. AI Code Review is a Red Ocean with established players. Autonomous Bug Bounties is too narrow a security focus. And PRD-to-Ticket automation sits too far away from the actual codebase.
+
+---
+<!-- .slide: id="why-specs-not-just-models" -->
+
+## WHY: Why Specs, Not Just Better Models
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Better Models ≠ Control</p>
+    <p class="chosen-tile-body">Better models reduce error rate, but don’t solve control, auditability, and scope boundaries in production workflows.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Specs As Control Plane</p>
+    <p class="chosen-tile-body">Specs act as a control plane: constraints, intent, and approval points that survive beyond a chat session.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Fallback Path</p>
+    <p class="chosen-tile-body">Fallbacks: if spec-first adoption is weak, start from review assist or change containment and evolve into spec-first.</p>
+  </div>
+</div>
 
 ---
 <!-- .slide: id="differentiation" -->
@@ -523,7 +547,7 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Differentiation</p>
-    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI: extract specs (zero friction), contain changes in diff (change containment), and detect drift early.</p>
+    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI <span class="metric-badge">A</span>: extract specs (zero friction), contain changes in diff (change containment), and detect drift early.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
@@ -554,7 +578,7 @@ Notes:
 ---
 <!-- .slide: id="roadmap" -->
 
-## HOW: 6-Month Roadmap <span class="metric-badge">A</span>
+## HOW: Roadmap <span class="metric-badge">A</span>
 
 <div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.48em !important; line-height: 1.18 !important; width: 100% !important;">
 
@@ -565,7 +589,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Primary + fallback flows selected; most partners repeat the flow &ge;2x/week.<br>&bull; Core risk: demand for spec-first is a hypothesis; Month 1 runs 3 PoCs with a hard gate on repeat usage.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; Pilot commitments &ge;3<br>&bull; Problem ranks top-3 for &ge;5/8 respondents in AI dev<br>&bull; Qualified waitlist signups (ICP) &ge;15<br>&bull; Core risk: demand for spec-first is a hypothesis; Month 1 runs 3 PoCs with a hard gate on repeat usage.</p>
     </div>
   </div>
 
@@ -576,7 +600,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization & OSS</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification (tbd) from 3+ companies (budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS (tbd): spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> (tbd) 3+ payment-intent verifications with named budget owners and agreed pilot terms.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification from &ge;3 companies (named budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS track: spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span> &ge;3 payment-intent commitments with named budget owners and agreed pilot terms.</p>
     </div>
   </div>
 
@@ -587,7 +611,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 3: Scale</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Soft-launch a minimal IDE plugin and start paid pilots.<br><strong style="color: var(--r-main-color);">Do:</strong> MVP on one primary scenario, one low-noise quality check (change containment or drift signal), one workflow integration (PR/commits), first paid partner pilots.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span><br>&bull; Token spend per successful PR-ready outcome &darr; 10%<br>&bull; % PRs where CI checks pass on 1st try &uarr; 10%<br>&bull; Median time to PR-ready (from spec approved) &darr; 10-20%<br>&bull; containment pass rate &ge; X% / unscoped diffs &darr; X% - tbd</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Soft-launch a minimal IDE plugin and start paid pilots.<br><strong style="color: var(--r-main-color);">Do:</strong> MVP on one primary scenario, one low-noise quality check (change containment or drift signal), one workflow integration (PR/commits), first paid partner pilots.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; Token spend per successful PR-ready outcome &darr; 10%<br>&bull; % PRs where CI checks pass on 1st try &uarr; 10%<br>&bull; Median time to PR-ready (from spec approved) &darr; 10-20%<br>&bull; Target range: 10-20% fewer unscoped diffs / rework signals</p>
     </div>
   </div>
 
@@ -598,7 +622,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standard</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the approach and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span><br>&bull; New MRR and Attributed JB MRR &gt; TBD (based on internal promo and attach rate opportunities)<br>&bull; Usage: most active teams run core scenario &ge;2x/week<br>&bull; &ge;70% with clear qualitative wins (CS + SMM)<br>&bull; Guardrail: alert disable rate stable + cost per outcome stable<br>&bull; Active users per org grows (champion &rarr; team) - TBD</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the approach and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; MRR target: $5-15k from paid pilots by Month 4-6<br>&bull; Usage: most active teams run core scenario &ge;2x/week<br>&bull; &ge;70% with clear qualitative wins (CS + SMM)<br>&bull; Guardrail: alert disable rate stable + cost per outcome stable<br>&bull; Active users per org target: 3-5 by Month 6</p>
     </div>
   </div>
 
@@ -607,7 +631,7 @@ Notes:
 ---
 <!-- .slide: id="mvp-definition" -->
 
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP <span class="metric-badge">A</span></h2>
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP</h2>
 <p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
@@ -647,13 +671,13 @@ Notes:
   </div>
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Success Criteria</p>
+    <p class="chosen-tile-label">Success Criteria <span class="metric-badge">A</span></p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
         <li>Token spend per successful PR-ready outcome &darr; 10%</li>
         <li>% PRs where CI checks pass on 1st try &uarr; 10%</li>
         <li>Median time to PR-ready (from spec approved) &darr; 10-20%</li>
-        <li>Containment pass rate &ge; X% / unscoped diffs &darr; X% - tbd</li>
+        <li>Target range: 10-20% fewer unscoped diffs / rework signals</li>
       </ul>
     </div>
   </div>
@@ -799,7 +823,7 @@ OSS stays narrow and strategic as the standard layer, while paid value concentra
   </div>
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">2. Monetization (MRR)</p>
+    <p class="chosen-tile-label">2. Monetization</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
         <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats)</li>
@@ -982,7 +1006,7 @@ Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen
     <p class="chosen-tile-label">4. Market Standard</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><strong>OSS (risk mitigation first):</strong> Spec Format + validator + examples to widen partner funnel and reduce distrust; later OSS adds templates/hooks starter pack and compatibility assets.</li>
+        <li><span class="metric-badge">A</span> <strong>OSS (risk mitigation first):</strong> Spec Format + validator + examples to widen partner funnel and reduce distrust; later OSS adds templates/hooks starter pack and compatibility assets.</li>
         <li><strong>Ecosystem:</strong> Marketplace for hooks and templates.</li>
         <li><strong>Enterprise:</strong> Hosted orchestration and governance.</li>
       </ul>
@@ -1012,7 +1036,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Internal Ramp-Up</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;">&bull; Meet team and stakeholders; align on product stage, constraints, and success definition.<br>&bull; Review prior launches and learnings: what worked, what failed, and best practices.</p>
+      <p style="margin: 0 !important; display: block !important;">&bull; Meet team and stakeholders; align on product stage, constraints, and success definition.<br>&bull; Review prior launches and learnings: what worked, what failed, and best practices.<br>&bull; Start a massive assumptions burn-down: validate PSI token-signal/cost claim, spec-first demand, design-partner ramp speed, and early monetization assumptions.</p>
     </div>
   </div>
 
@@ -1032,7 +1056,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Go / No-Go</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;">Gate:<br>GO: &ge;5/8 respondents rank the pain top-3.<br>Note: quantitative survey next month.</p>
+      <p style="margin: 0 !important; display: block !important;">Gate: GO if pilot commitments &ge;3, problem ranks top-3 for &ge;5/8 in AI dev, and qualified waitlist signups (ICP) &ge;15 <span class="metric-badge">A</span>.</p>
     </div>
   </div>
 
@@ -1057,7 +1081,7 @@ Notes:
 ---
 <!-- .slide: id="growth-loops" -->
 
-## WHY: Growth Loops
+## WHY: Growth Loops <span class="metric-badge">A</span>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
@@ -1094,7 +1118,7 @@ Here we detail the 4 main B2B growth mechanics that drive viral product-led expa
 ---
 <!-- .slide: id="golden-path" -->
 
-## HOW: "Golden" Path
+## HOW: "Golden" Path <span class="metric-badge">A</span>
 
 <div class="chosen-grid chosen-grid--2col">
   <div class="chosen-tile chosen-tile--green">
@@ -1130,7 +1154,7 @@ Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to re
 ---
 <!-- .slide: id="golden-path-steps" -->
 
-## HOW: "Golden" Path
+## HOW: "Golden" Path <span class="metric-badge">A</span>
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table">
@@ -1168,13 +1192,13 @@ Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to re
       <td>[EDITED]</td>
     </tr>
     <tr>
-      <td><strong>3:00</strong></td>
+      <td><strong>T+3:00</strong><br><span style="font-size: 0.78em;">(same session)</span></td>
       <td>Alex goes home happy.</td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr class="highlight-row">
-      <td><strong>4:00</strong></td>
+      <td><strong>T+4:00</strong><br><span style="font-size: 0.78em;">(later / next iteration)</span></td>
       <td>Junior pushes commit: session expiry → 4h</td>
       <td>Detects drift: spec says 2h, code says 4h</td>
       <td>[DRIFT]: 47 — Session changed 2h→4h</td>
