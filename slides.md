@@ -203,91 +203,9 @@ What would change our mind on runner-ups:
 Next: we define the chosen direction in detail with JTBD and early adopter segments.
 
 ---
-<!-- .slide: id="competitive-approaches" -->
-
-## WHY: Approaches
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table">
-  <thead>
-    <tr>
-      <th>Approach</th>
-      <th>Description</th>
-      <th>Key Players</th>
-      <th>ICE Score <span class="metric-badge">A</span></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="highlight-row">
-      <td><strong>Spec-driven development</strong></td>
-      <td>Spec-first: AI generates code &amp; checks from contracts. Spec becomes a reviewable, regression artifact.</td>
-      <td><a href="https://kiro.dev/" target="_blank">Kiro</a>, <a href="https://speckit.org/" target="_blank">Spec Kit</a>, <a href="https://codespeak.dev/" target="_blank">CodeSpeak</a>, <a href="https://www.task-master.dev/" target="_blank">Taskmaster</a>, <a href="https://docs.bmad-method.org/" target="_blank">BMAD</a></td>
-      <td>3.3</td>
-    </tr>
-    <tr>
-      <td><strong>Observability + evals</strong></td>
-      <td>Trace inputs/outputs &amp; agent steps; measure quality via datasets &amp; LLM-as-judge. Catch degradations pre-release.</td>
-      <td><a href="https://docs.langchain.com/langsmith/home" target="_blank">LangSmith</a>, <a href="https://docs.wandb.ai/weave" target="_blank">W&amp;B Weave</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank">Datadog LLM</a>, <a href="https://galileo.ai/" target="_blank">Galileo</a>, <a href="https://docs.ragas.io/" target="_blank">Ragas</a>, <a href="https://github.com/truera/trulens" target="_blank">TruLens</a>, <a href="https://www.braintrust.dev/docs" target="_blank">Braintrust</a></td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <td><strong>Last mile quality gates</strong></td>
-      <td>I/O guardrails + JSON Schema validation + AI test gen; CI blocks merge until checks pass.</td>
-      <td><a href="https://github.com/guardrails-ai/guardrails" target="_blank">Guardrails AI</a>, <a href="https://docs.nvidia.com/nemo-guardrails/index.html" target="_blank">NeMo</a>, <a href="https://developers.openai.com/api/docs/guides/structured-outputs/" target="_blank">OpenAI Structured</a>, <a href="https://www.diffblue.com/diffblue-cover/" target="_blank">Diffblue</a>, <a href="https://keploy.io/" target="_blank">Keploy</a>, <a href="https://junit.org/" target="_blank">JUnit</a></td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <td><strong>Security &amp; compliance guardrails</strong></td>
-      <td>Static analysis + runtime protection: catch vulnerabilities &amp; prompt injection, enforce compliance policies.</td>
-      <td><a href="https://snyk.io/product/snyk-code/" target="_blank">Snyk Code</a>, <a href="https://semgrep.dev/" target="_blank">Semgrep</a>, <a href="https://codeql.github.com/docs/" target="_blank">CodeQL</a>, <a href="https://www.lakera.ai/lakera-guard" target="_blank">Lakera Guard</a>, <a href="https://www.holisticai.com/" target="_blank">Holistic AI</a>, <a href="https://protectai.com/" target="_blank">Protect AI</a></td>
-      <td>2.3</td>
-    </tr>
-    <tr>
-      <td><strong>AI code reviewer</strong></td>
-      <td>AI analyzes diffs &amp; repo context, finds issues, generates review summaries.</td>
-      <td><a href="https://www.qodo.ai/" target="_blank">Qodo</a>, <a href="https://coderabbit.ai/" target="_blank">CodeRabbit</a>, <a href="https://github.com/qodo-ai/pr-agent" target="_blank">PR-Agent</a></td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <td><strong>AI-driven task orchestration</strong></td>
-      <td>Tasks get AI context; agents run on subtasks; code changes, PRs &amp; statuses flow in one managed pipeline.</td>
-      <td><a href="https://vibekanban.com/" target="_blank">Vibe Kanban</a></td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <td><strong>Deterministic LLM output</strong></td>
-      <td>Force strictly validatable structure; retry/fix on schema mismatch.</td>
-      <td><a href="https://ai.pydantic.dev/" target="_blank">PydanticAI</a>, <a href="https://github.com/567-labs/instructor" target="_blank">Instructor</a>, <a href="https://github.com/dottxt-ai/outlines" target="_blank">Outlines</a></td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <td><strong>Human-Freelancer in the Loop</strong></td>
-      <td>AI writes code; freelancer expert approves changes instead of the team.</td>
-      <td><a href="https://tendem.ai/" target="_blank">Tendem</a></td>
-      <td>0.9</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Spec-driven development</a> is the top-priority approach for addressing trust, combining the highest ICE Score across impact, confidence, and effort factors.</p>
-</div>
-
-<ul class="distrust-notes">
-<li>Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (their weights sum to 1), equal to each of the other dimensions (Cost, Transparency, SDLC coverage, Adoption friction, Monetization), which all have equal weight. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort (Effort and Confidence both rated 1–3). <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Details →</a></li>
-<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
-<li>Note: IDE-native steering files (Cursor Rules, CLAUDE.md, Windsurf Memory) partially solve persistent context but lack spec enforcement, drift detection, and structured generation pipelines.</li>
-<li>Each score was triangulated against: (1) Distrust + Time Spent + B2B evidence, (2) competitor traction signals, (3) JB SDK feasibility.</li>
-</ul>
-
-Notes:
-This slide maps competitive approaches to improving trust in AI-assisted development, scored using a weighted ICE framework. Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (weights sum to 1), equal to Cost, Transparency, SDLC coverage, Adoption friction, and Monetization. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort. Spec-driven development leads because it addresses ambiguity at the root — before code generation — delivering the highest combined score of 3.3.
-
----
 <!-- .slide: id="competitor-landscape" -->
 
-## WHY: Competitor Landscape
+## WHAT: Competitor Landscape
 
 <div class="competitor-layout">
 <div class="competitor-col-left">
@@ -384,7 +302,7 @@ This slide maps the competitive landscape for spec-driven development. Tier 1 in
 ---
 <!-- .slide: id="learn-and-steal" -->
 
-## WHY: Learn & Steal
+## WHAT: Learn & Steal
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
   <div class="chosen-tile chosen-tile--green">
@@ -411,6 +329,88 @@ This slide maps the competitive landscape for spec-driven development. Tier 1 in
 
 Notes:
 Here we look at what's actually working in the market. First, Git-native markdown specs are the standard—tools like SpecKit prove developers won't adopt proprietary formats. Second, bi-directional sync: specs compile to code, code updates specs (like CodeSpeak), which stops doc rot. Third, surface area: web-first SaaS creates a context switch; successful workflows are IDE-native or CLI-native. Finally, persistent steering and slash-commands give us a natural UX that prevents AI amnesia.
+
+---
+<!-- .slide: id="competitive-approaches" -->
+
+## WHY: Approaches
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
+  <thead>
+    <tr>
+      <th>Approach</th>
+      <th>Description</th>
+      <th>Key Players</th>
+      <th>ICE Score <span class="metric-badge">A</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="highlight-row">
+      <td><strong>Spec-driven development</strong></td>
+      <td>Spec-first: AI generates code &amp; checks from contracts. Spec becomes a reviewable, regression artifact.</td>
+      <td><a href="https://kiro.dev/" target="_blank">Kiro</a>, <a href="https://speckit.org/" target="_blank">Spec Kit</a>, <a href="https://codespeak.dev/" target="_blank">CodeSpeak</a>, <a href="https://www.task-master.dev/" target="_blank">Taskmaster</a>, <a href="https://docs.bmad-method.org/" target="_blank">BMAD</a></td>
+      <td>3.3</td>
+    </tr>
+    <tr>
+      <td><strong>Observability + evals</strong></td>
+      <td>Trace inputs/outputs &amp; agent steps; measure quality via datasets &amp; LLM-as-judge. Catch degradations pre-release.</td>
+      <td><a href="https://docs.langchain.com/langsmith/home" target="_blank">LangSmith</a>, <a href="https://docs.wandb.ai/weave" target="_blank">W&amp;B Weave</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank">Datadog LLM</a>, <a href="https://galileo.ai/" target="_blank">Galileo</a>, <a href="https://docs.ragas.io/" target="_blank">Ragas</a>, <a href="https://github.com/truera/trulens" target="_blank">TruLens</a>, <a href="https://www.braintrust.dev/docs" target="_blank">Braintrust</a></td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td><strong>Last mile quality gates</strong></td>
+      <td>I/O guardrails + JSON Schema validation + AI test gen; CI blocks merge until checks pass.</td>
+      <td><a href="https://github.com/guardrails-ai/guardrails" target="_blank">Guardrails AI</a>, <a href="https://docs.nvidia.com/nemo-guardrails/index.html" target="_blank">NeMo</a>, <a href="https://developers.openai.com/api/docs/guides/structured-outputs/" target="_blank">OpenAI Structured</a>, <a href="https://www.diffblue.com/diffblue-cover/" target="_blank">Diffblue</a>, <a href="https://keploy.io/" target="_blank">Keploy</a>, <a href="https://junit.org/" target="_blank">JUnit</a></td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <td><strong>Security &amp; compliance guardrails</strong></td>
+      <td>Static analysis + runtime protection: catch vulnerabilities &amp; prompt injection, enforce compliance policies.</td>
+      <td><a href="https://snyk.io/product/snyk-code/" target="_blank">Snyk Code</a>, <a href="https://semgrep.dev/" target="_blank">Semgrep</a>, <a href="https://codeql.github.com/docs/" target="_blank">CodeQL</a>, <a href="https://www.lakera.ai/lakera-guard" target="_blank">Lakera Guard</a>, <a href="https://www.holisticai.com/" target="_blank">Holistic AI</a>, <a href="https://protectai.com/" target="_blank">Protect AI</a></td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <td><strong>AI code reviewer</strong></td>
+      <td>AI analyzes diffs &amp; repo context, finds issues, generates review summaries.</td>
+      <td><a href="https://www.qodo.ai/" target="_blank">Qodo</a>, <a href="https://coderabbit.ai/" target="_blank">CodeRabbit</a>, <a href="https://github.com/qodo-ai/pr-agent" target="_blank">PR-Agent</a></td>
+      <td>2.2</td>
+    </tr>
+    <tr>
+      <td><strong>AI-driven task orchestration</strong></td>
+      <td>Tasks get AI context; agents run on subtasks; code changes, PRs &amp; statuses flow in one managed pipeline.</td>
+      <td><a href="https://vibekanban.com/" target="_blank">Vibe Kanban</a></td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td><strong>Deterministic LLM output</strong></td>
+      <td>Force strictly validatable structure; retry/fix on schema mismatch.</td>
+      <td><a href="https://ai.pydantic.dev/" target="_blank">PydanticAI</a>, <a href="https://github.com/567-labs/instructor" target="_blank">Instructor</a>, <a href="https://github.com/dottxt-ai/outlines" target="_blank">Outlines</a></td>
+      <td>0.9</td>
+    </tr>
+    <tr>
+      <td><strong>Human-Freelancer in the Loop</strong></td>
+      <td>AI writes code; freelancer expert approves changes instead of the team.</td>
+      <td><a href="https://tendem.ai/" target="_blank">Tendem</a></td>
+      <td>0.9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Spec-driven development</a> is the top-priority approach for addressing trust, combining the highest ICE Score across impact, confidence, and effort factors.</p>
+</div>
+
+<ul class="distrust-notes">
+<li>Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (their weights sum to 1), equal to each of the other dimensions (Cost, Transparency, SDLC coverage, Adoption friction, Monetization), which all have equal weight. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort (Effort and Confidence both rated 1–3). <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Details →</a></li>
+<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+<li>Note: IDE-native steering files (Cursor Rules, CLAUDE.md, Windsurf Memory) partially solve persistent context but lack spec enforcement, drift detection, and structured generation pipelines.</li>
+<li>Each score was triangulated against: (1) Distrust + Time Spent + B2B evidence, (2) competitor traction signals, (3) JB SDK feasibility.</li>
+</ul>
+
+Notes:
+This slide maps competitive approaches to improving trust in AI-assisted development, scored using a weighted ICE framework. Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (weights sum to 1), equal to Cost, Transparency, SDLC coverage, Adoption friction, and Monetization. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort. Spec-driven development leads because it addresses ambiguity at the root — before code generation — delivering the highest combined score of 3.3.
 
 ---
 <!-- .slide: id="niche-choice" -->
