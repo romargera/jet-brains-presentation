@@ -1,0 +1,22 @@
+Block	Metric	Unit	Value	Source
+Assumptions	Share of AI-using pros who use AI in production workflows	share	0.7	
+Assumptions	Target share of SAM achievable	share	0.05	
+				
+TAM	Professional developers (global, early 2025)	devs	36,500,000	https://www.slashdata.co/post/global-developer-population-trends-2025-how-many-developers-are-there
+TAM	AI tools adoption among devs (currently use or plan to soon, SO 2025)	share	68.00%	https://survey.stackoverflow.co/2025/ai
+TAM	AI Code Tools market size (2024)	USD	4,910,000,000	https://www.polarismarketresearch.com/industry-analysis/ai-code-tools-market
+TAM	LLMOps Platform market size (2024)	USD	1,280,000,000	https://dataintelo.com/report/llmops-platform-market
+TAM	TAM users (current, AI-using pros)	devs	24,820,000	
+TAM	TAM revenue (2024, no double counting)	USD	4,910,000,000	
+TAM	Implied ARPU among AI-using devs (2024)	USD per dev per year	198	
+				
+SAM	SAM users (AI-using pros in production)	devs	17,374,000	
+SAM	SAM revenue	USD	3,437,000,000	
+				
+SOM	SOM users	devs	868,700	
+SOM	SOM revenue	USD	171,850,000	
+				
+Note: 				
+* Assumtions - ...				
+* Revenue base year 2024, adoption base year 2025				
+* Рынок AI code tools оценивается по-разному: “кластер” независимых отчетов дает ~$4–5B в 2022–2024, а отдельные источники показывают более широкий охват категории и более высокие значения. Чтобы не завышать TAM, мы берем консервативную оценку $4.91B (2024) как базовую и держим верхнюю оценку как альтернативный сценарий.				

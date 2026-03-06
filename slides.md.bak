@@ -203,32 +203,80 @@ What would change our mind on runner-ups:
 Next: we define the chosen direction in detail with JTBD and early adopter segments.
 
 ---
-<!-- .slide: id="why-competitor-landscape" -->
+<!-- .slide: id="competitor-landscape" -->
 
-## WHY: Competitor Landscape
+## WHAT: Competitor Landscape
 
-<div class="competitor-layout" style="display: flex; gap: 15px; align-items: stretch; justify-content: space-between;">
-<div class="competitor-col-left" style="font-size: 0.28em; flex: 1;">
-<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Direct Competitors</h4>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #10b981; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Tier 1: Direct Threats</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://speckit.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Spec Kit</a>: GitHub-supported, 73.6k★, phased plan-first workflow, CLI + in-agent</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://kiro.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Kiro</a>: Built on Amazon Bedrock, 1.5M MAU, IDE + CLI + in-agent</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://docs.bmad-method.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">BMAD</a>: 38.9k★, 19 roles, CLI + agent, adaptive depth</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://openspec.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">OpenSpec</a>: Vendor-agnostic, Open Source, No APIs</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://codespeak.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">CodeSpeak</a>: Specs compile to code, diff sync</p>
+<div class="competitor-layout">
+<div class="competitor-col-left">
+<table class="distrust-table">
+  <colgroup>
+    <col style="width: 8%">
+    <col style="width: 17%">
+    <col style="width: 75%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Tier</th>
+      <th>Direct competitors</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="highlight-row">
+      <td rowspan="5"><strong>Tier 1</strong></td>
+      <td><a href="https://speckit.org/" target="_blank">Spec Kit</a></td>
+      <td>GitHub-supported, 73.6k★, markdown specs, phased plan-first workflow, CLI + in-agent</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><a href="https://kiro.dev/" target="_blank">Kiro</a></td>
+      <td>Built on Amazon Bedrock, 1,5M MAU (Similarweb), Kiro IDE + CLI + in-agent</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><a href="https://docs.bmad-method.org/" target="_blank">BMAD</a></td>
+      <td>38.9k★, 19 roles, CLI + in‑agent, adaptive depth, REPL-like</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><a href="https://openspec.dev/" target="_blank">OpenSpec</a></td>
+      <td>Vendor-agnostic, Open Source, No API Keys, No MCP, REPL-like</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><a href="https://codespeak.dev/" target="_blank">CodeSpeak</a></td>
+      <td>Specs compile to code, spec-diff → code-diff; code-to-spec coming soon</td>
+    </tr>
+    <tr>
+      <td rowspan="7"><strong>Tier 2</strong></td>
+      <td><a href="https://www.task-master.dev/" target="_blank">Taskmaster</a></td>
+      <td>PRD → tasks + autonomous TDD autopilot (RED → GREEN → COMMIT per subtask)</td>
+    </tr>
+    <tr>
+      <td><a href="https://stately.ai/" target="_blank">Stately</a></td>
+      <td>Model-based approach: state machines as spec artifacts</td>
+    </tr>
+    <tr>
+      <td><a href="https://buildermethods.com/agent-os" target="_blank">Agent-OS</a></td>
+      <td>Standards loop. Extra JTBD: Auto-extracts repo conventions</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ariel-frischer/autospec" target="_blank">Autospec</a></td>
+      <td>Spec Kit fork, automated YAML pipeline</td>
+    </tr>
+    <tr>
+      <td><a href="https://specs.md/" target="_blank">specs.md</a></td>
+      <td>Formal AI-DLC, VS Code extension, CLI + in‑agent</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.autok.dev/" target="_blank">autok</a></td>
+      <td>Knowledge-graph rails + bidirectional requirements sync via CLI + in‑agent (MCP)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.devplan.com/" target="_blank">devplan</a></td>
+      <td>Context graph (code + tickets + docs) → spec creation → agent prompts, CLI + browser</td>
+    </tr>
+  </tbody>
+</table>
 </div>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #ffb74d; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Tier 2: Watchlist</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.task-master.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Taskmaster</a>: PRD→tasks + TDD autopilot</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://stately.ai/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Stately</a>: State machines as specs</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://buildermethods.com/agent-os" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Agent-OS</a>: Auto-extract repo conventions</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Autospec</a>: Spec Kit fork, YAML pipeline</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://specs.md/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">specs.md</a>: Formal AI-DLC, VS Code ext</p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.autok.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">devplan</a>: Graph context + sync</p>
-</div>
-</div>
-<div class="competitor-col-right" style="font-size: 0.28em; flex: 1;">
+<div class="competitor-col-right" style="font-size: 0.28em;">
 <h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Indirect Competitors</h4>
 <div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #4fc3f7; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
   <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">IDE AI Assistants (baseline)</p>
@@ -387,8 +435,8 @@ This slide maps competitive approaches to improving trust in AI-assisted develop
     <!-- GREEN PATH (Our Focus) -->
     <tr class="highlight-row">
       <td class="center"><strong>1</strong></td>
-      <td><strong>IDE-Native Control (Entry Point)</strong></td>
-      <td>Zero context switch. Start with spec-first + diff control (change containment) inside JB IDE. Massive JB distribution moat.</td>
+      <td><strong>IDE-Native Control (Wedge)</strong></td>
+      <td>Zero context switch. Uncontested for structured spec control (steering files ≠ enforceable specs). Massive JB distribution moat.</td>
     </tr>
     <tr class="highlight-row">
       <td class="center"><strong>2</strong></td>
@@ -493,6 +541,71 @@ The defensibility comes from compounding: PSI accuracy → better specs → user
 Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org scale (100 commits/day, 50 files/commit), this is ~$1,300/month cost difference.
 
 ---
+<!-- .slide: id="jb-strategic-fit" -->
+
+## WHY: JetBrains Strategic Fit
+
+<div class="chosen-grid chosen-grid--small">
+
+  <div class="chosen-tile chosen-tile--green chosen-tile--wide">
+    <p class="chosen-tile-label">Positioning within JB AI Portfolio</p>
+    <p class="chosen-tile-body">Bonsai is the <strong>governance layer</strong> for JB's AI stack: AI Assistant generates code, Junie executes autonomously, Bonsai ensures both stay aligned with architectural intent.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Complements (not competes)</p>
+    <div class="chosen-tile-body">
+      <table style="font-size: 0.75em; width: 100%; border-collapse: collapse;">
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+          <td style="padding: 4px 0;"><strong>AI Assistant</strong></td>
+          <td style="padding: 4px 0;">Generates code → Bonsai validates output against spec before merge</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+          <td style="padding: 4px 0;"><strong>Junie</strong></td>
+          <td style="padding: 4px 0;">Autonomous agent → Bonsai provides guardrails + drift alerts for agent actions</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+          <td style="padding: 4px 0;"><strong>Fleet</strong></td>
+          <td style="padding: 4px 0;">Not in MVP scope. Potential future surface once spec format stabilizes.</td>
+        </tr>
+        <tr>
+          <td style="padding: 4px 0;"><strong>Marketplace</strong></td>
+          <td style="padding: 4px 0;">Distribution channel: 1-click install, same billing, familiar UX</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Business Case for JB</p>
+    <div class="chosen-tile-body">
+      <ul style="font-size: 0.85em; padding-left: 15px; margin: 0;">
+        <li><strong>Attach rate ↑:</strong> Bonsai gives Enterprise buyers a reason to stay on JB IDE over Cursor/VS Code</li>
+        <li><strong>ARPU ↑:</strong> Pro bundled with AI subscription; Team/Enterprise as separate SKU</li>
+        <li><strong>Retention ↑:</strong> Spec data creates switching cost — specs are tied to JB PSI quality</li>
+        <li><strong>Competitive moat:</strong> Only JB can offer PSI-grade analysis natively; competitors need LSP approximation</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+Notes:
+This slide is critical for internal alignment. Bonsai is not a standalone product — it's the missing governance piece in JB's AI portfolio.
+
+The key strategic argument: as AI Assistants and autonomous agents generate more code, the need for a control layer grows proportionally. Without governance, AI-generated code becomes a liability for enterprise customers. Bonsai turns that liability into a selling point.
+
+Specifically:
+
+- AI Assistant users get spec-validated outputs → higher trust → higher usage → higher renewal
+- Junie (autonomous agent) gets architectural guardrails → safer autonomy → enterprise adoption unlocked
+- Enterprise buyers get audit trail + compliance artifacts → procurement unblocked
+
+Revenue model: Bonsai Pro is bundled (increases AI subscription stickiness). Bonsai Team/Enterprise is a separate revenue stream via JB Sales.
+
+Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the governance standard, JB AI tools become "generation without control" — a weaker value proposition for enterprise.
+
+---
 <!-- .slide: id="why-summary" -->
 
 ## WHAT & WHY: Summary
@@ -506,12 +619,12 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
-    <p class="chosen-tile-body"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">Top-down SOM is $171.85M</a>, based on a $4.91B 2024 market, a 70% production workflows share, and a 5% achievable share, while the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">bottom-up Year 1 cross-check yields ~$0.93M</a>.</p>
+    <p class="chosen-tile-body"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">TAM ($4.9B) → SAM ($3.4B) → SOM ($171M)</a><br><br><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">Bottom-up SOM (Year 1): $9.3M</a></p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Differentiation</p>
-    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI: extract specs (zero friction), contain changes in diff (change containment), and detect drift early.</p>
+    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI. We extract specs from code (zero friction), push to CI, and locally detect drift.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
@@ -519,15 +632,20 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
     <p class="chosen-tile-body">Champion-driven adoption via repo-native specs + CI gates. Supported by reviewer loop & ecosystem distribution. <a href="#/growth-loops">Details</a></p>
   </div>
 
-  <div class="chosen-tile chosen-tile--green" style="grid-column: 2 / 4;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Metrics</p>
+    <p class="chosen-tile-body">NSM: Devs w/ ≥1 spec-linked merge/wk. Key: New MRR (paid tiers) & Attributed MRR (JB core via attach rate/retention).</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Monetization</p>
-    <p class="chosen-tile-body">Start free inside JetBrains IDEs. Month 2: validate budget intent and pilot terms. Months 3-4: paid team pilots once plugin MVP exists (team controls + PR/CI integration + change containment). OSS stays narrow (spec format + validator) to reduce lock-in and widen partner funnel; later it drives ecosystem growth.</p>
+    <p class="chosen-tile-body">Free (viral seed). Pro ($8-12/mo) for power users. Team ($15-20/seat) for org budgets. Enterprise ($30-50) for security & SSO.</p>
   </div>
 
 </div>
 
 <ul class="distrust-notes" style="margin-top: 15px;">
-<li>Assumptions <span class="metric-badge">A</span> for TAM/SAM/SOM and bottom up are indicated in the linked calculations <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank">[1]</a><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank">[2]</a>.</li>
+<li>Assumptions <span class="metric-badge">A</span> for TAM/SAM/SOM are indicated in the linked calculations.</li>
 <li>Market Size Revenue base year 2024, adoption base year 2025.</li>
 <li>We assumed a conservative $4.91B (2024) base TAM to avoid overvaluation.</li>
 </ul>
@@ -544,53 +662,71 @@ Notes:
 
 ## HOW: 6-Month Roadmap
 
-<div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.48em !important; line-height: 1.18 !important; width: 100% !important;">
+<div class="roadmap-container">
 
-  <!-- Phase 1 -->
-  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 1</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 0-2 <span class="roadmap-gate">G1</span></span>
     </div>
-    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Primary + fallback flows selected; most partners repeat the flow >=2x/week.</p>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 1: MVP & VALIDATION</div>
+      <div class="roadmap-content-body">
+        • <strong>Ship MVP:</strong> code extraction + drift detection<br>
+        • Recruit 10 design partners (Tech Leads, 5+ devs)<br>
+        • <strong>Gate 1:</strong> ≥ 60% validation + 3 partners paying
+      </div>
     </div>
   </div>
 
-  <!-- Phase 2 -->
-  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 2</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization & OSS</span>
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 2-4 <span class="roadmap-gate">G2</span></span>
     </div>
-    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification (tbd) from 3+ companies (budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS (tbd): spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> (tbd) 3+ payment-intent verifications with named budget owners and agreed pilot terms .</p>
-    </div>
-  </div>
-
-  <!-- Phase 3 -->
-  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 3-4</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 3: Scale</span>
-    </div>
-    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Soft-launch a minimal IDE plugin and start paid pilots.<br><strong style="color: var(--r-main-color);">Do:</strong> MVP on one primary scenario, one low-noise quality check (change containment or drift signal), one workflow integration (PR/commits), first paid partner pilots.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Repeatable usage + measurable effect; 5+ paying teams or comparable revenue signal.</p>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 2: HARDEN</div>
+      <div class="roadmap-content-body">
+        • <strong>Bi-directional sync:</strong> add spec→code generation<br>
+        • PR integration: spec-delta visibility in code reviews<br>
+        • <strong>Gate 2:</strong> ≥ 20% review reduction + 5 partners paying
+      </div>
     </div>
   </div>
 
-  <!-- Phase 4 -->
-  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 5-6</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standard</span>
+  <div class="roadmap-item">
+    <div class="roadmap-timeline">
+      <span class="roadmap-timeline-label">Month 4-6 <span class="roadmap-gate">G3</span></span>
     </div>
-    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the approach and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Self-serve onboarding works; multi-user adoption in one company; external pull via issues/PRs/integrations.</p>
+    <div class="roadmap-content">
+      <div class="roadmap-content-title">PHASE 3: SCALE</div>
+      <div class="roadmap-content-body">
+        • <strong>Orchestration:</strong> CI gate enforcement (rollout)<br>
+        • Multi-repo spec management + Marketplace MVP<br>
+        • <strong>Gate 3:</strong> ≥ 100 active users + positive economics signal
+      </div>
     </div>
   </div>
 
 </div>
+
+<p class="chosen-tile-body" style="text-align: center; margin-top: 10px; font-size: 0.45em; opacity: 0.8;">
+  <strong>Decision framework:</strong> Each gate requires quantitative metrics + qualitative signal + zero kill signals.
+</p>
+
+Notes:
+
+Execution follows three strictly gated phases:
+
+1) Phase 1 is all about value validation. Do devs actually review and maintain these extracted specs? If validation rate is low, we don't scale.
+2) Phase 2 moves to bi-directional sync (our moonshot). We prove ROI by measuring actual time reduction in PR reviews.
+3) Phase 3 is scale and monetization. Enterprise features like CI gates and multi-repo management are added here once the core loop is proven.
+4) We focus on JetBrains ecosystem first to exploit our PSI integration advantage.
+
+Team plan:
+• Phase 1 (Mo 0–2): 1 PM + 2 engineers (1 JB plugin/PSI, 1 backend/LLM integration). Total: 3 people.
+• Phase 2 (Mo 2–4): +1 engineer (CI/PR integration + spec-delta rendering). Total: 4 people.
+• Phase 3 (Mo 4–6): +1 designer (onboarding UX + dashboard) + 1 DevRel (community, design partners, content). Total: 6 people.
+• Assumption: engineers are familiar with Kotlin + IntelliJ Plugin SDK. If hired externally, add 2–4 weeks ramp-up to Phase 1 timeline.
+• Budget note: Phase 1–2 headcount fits within a typical JB incubation team. Phase 3 expansion is gated on G2 pass.
 
 ---
 <!-- .slide: id="segmentation" -->
@@ -645,7 +781,7 @@ Second, when expanding across the org, we target Scaling personas — Engineerin
 ---
 <!-- .slide: id="mvp-solution-draft" -->
 
-<h2>HOW: MVP SOLUTION DRAFT <span style="font-size:0.6em; color: rgba(255,255,255,0.6); font-weight: 600;">(Phase 3: MVP Build &amp; Soft Launch, Mo 3-4)</span></h2>
+<h2>HOW: MVP SOLUTION DRAFT</h2>
 
 <div class="solution-draft-container">
 <div class="solution-mockup">
@@ -677,7 +813,7 @@ Second, when expanding across the org, we target Scaling personas — Engineerin
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Strategic wedge</p>
-    <p class="chosen-tile-body">JetBrains IDE teams (5+ devs). Entry point: spec-first + change containment (diff control) on repo-native .md specs.</p>
+    <p class="chosen-tile-body">JetBrains users (IntelliJ), 5+ devs, repo-native arch-specs (.md).</p>
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Product</p>
@@ -685,19 +821,19 @@ Second, when expanding across the org, we target Scaling personas — Engineerin
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Core Logic</p>
-    <p class="chosen-tile-body">PSI extracts draft specs → dev approves → Bonsai enforces scoped diffs (change containment) + flags spec↔code drift in IDE.</p>
+    <p class="chosen-tile-body">Code-first: PSI-based spec gen + real-time drift detection.</p>
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Tech layer</p>
-    <p class="chosen-tile-body">Kotlin / PSI Engine + repo-native Markdown. OSS is narrow: spec format + validator; premium value is the IDE-native workflow.</p>
+    <p class="chosen-tile-body">Kotlin / PSI Engine. High-precision alerts. Open .md standard.</p>
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Launch</p>
-    <p class="chosen-tile-body">Mo 1: instrumented prototype with partners (no plugin). Mo 3-4: private alpha plugin MVP (Phase 3).</p>
+    <p class="chosen-tile-body">Canary rollout: 10 design partners → Private alpha.</p>
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Learning gate</p>
-    <p class="chosen-tile-body">Phase 3 gate: repeat weekly usage of the core scenario + measurable cycle-time improvement (faster to PR/review) with low-noise alerts.</p>
+    <p class="chosen-tile-body">≥ 60% validation rate; alert engagement.</p>
   </div>
 </div>
 </div>
@@ -712,56 +848,86 @@ Notes:
 ---
 <!-- .slide: id="pricing-monetization" -->
 
-## HOW: Monetization
+## HOW: Pricing & Monetization
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px;">
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
+  <thead>
+    <tr>
+      <th style="width: 14%;">Tier</th>
+      <th style="width: 6%;">Price</th>
+      <th style="width: 50%;">Included</th>
+      <th style="width: 30%;">Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Free</strong></td>
+      <td>$0</td>
+      <td>Spec extraction (≤3 repos), basic drift, markdown export</td>
+      <td>Adoption, viral seed</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>Pro</strong></td>
+      <td>$8–12/mo</td>
+      <td>Unlimited repos, CI integration, spec history</td>
+      <td>Prove WTP, convert power users</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>Team</strong></td>
+      <td>$15–20/seat</td>
+      <td>Shared library, org dashboard, PR spec-delta</td>
+      <td>Land team budget, org expansion</td>
+    </tr>
+    <tr>
+      <td><strong>Enterprise</strong></td>
+      <td>$30–50 floor</td>
+      <td>SSO, audit log, SLA, self-hosted option</td>
+      <td>Security-driven buy</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Packaging (min)</p>
+    <p class="chosen-tile-label">Pricing Rationale & Integration</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>OSS (risk mitigation, narrow scope):</strong> Spec format + validator/linter + examples.</li>
-        <li><strong>Free (plugin):</strong> try core workflow on small scope.</li>
-        <li><strong>Paid (plugin):</strong> team templates, basic controls, usage visibility, PR/CI integrations, change containment.</li>
-        <li><strong>Enterprise add-ons:</strong> governance, audit, rollout support.</li>
+        <li><strong>JB AI Add-on:</strong> Pro aligns with $8.33/mo base tool.</li>
+        <li><strong>Team Budget:</strong> $15-20 competes with CodeRabbit/Cursor.</li>
+        <li><strong>Integration:</strong> Pro bundled in JB AI; Team sold via Sales.</li>
       </ul>
     </div>
   </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">When Money Starts</p>
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Validation Experiments</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>Mo 2:</strong> commercial intent only (written budget intent + pilot terms), no product charging.</li>
-        <li><strong>Mo 3-4:</strong> paid pilots once plugin MVP exists.</li>
-        <li><strong>Mo 5-6:</strong> repeatable upgrades via JetBrains ecosystem distribution.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Pricing Principles</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Keep packaging simple and predictable.</li>
-        <li>OSS is the standard layer; paid value stays in IDE-native workflow and team controls.</li>
-        <li>Start team-first, then add enterprise governance.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Success Checks</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Budget intent to paid pilot conversion.</li>
-        <li>Team expansion inside one org.</li>
-        <li>Weekly repeat usage of the core scenario.</li>
+        <li><strong>WTP Test (Mo 2):</strong> 5 partners at $10/mo vs free trial.</li>
+        <li><strong>Team Test (Mo 4):</strong> $15/seat vs $20/seat with CI gates.</li>
       </ul>
     </div>
   </div>
 </div>
 
 Notes:
-This monetization model starts with low-friction adoption and converts only after value is observable in real workflows.
-Month 2 validates commercial intent and procurement path; revenue begins with paid pilots once plugin MVP is usable in Months 3-4.
-OSS stays narrow and strategic as the standard layer, while paid value concentrates in IDE-native team controls and workflow integration.
+Pricing rationale:
+
+- JB AI Assistant = $8.33/month → Pro tier aligns as add-on (не дороже base tool)
+- CodeRabbit = $12/seat/month → Team tier at $15–20 includes more SDLC coverage
+- Cursor Pro = $20/month → в том же бюджетном «карман» разработчика
+
+Two key experiments:
+
+1. WTP test (Month 2): Offer 5 design partners «Pro for $10/month» — measure conversion vs «Pro for free extended trial». If <30% convert at $10, test $5.
+2. Team pricing test (Month 4): Offer 3 orgs «Team at $15/seat» vs «Team at $20/seat with CI gates included». Measure which feature drives budget approval.
+
+JB integration model (preferred):
+
+- Bonsai Pro = included in JB AI Pro subscription (bundle uplift)
+- Bonsai Team/Enterprise = separate SKU, sold via JB Sales
+- Metric: attributed ARPU uplift on JB AI Pro cohort with Bonsai active
 
 ---
 <!-- .slide: id="risks-mitigation" -->
@@ -783,22 +949,14 @@ OSS stays narrow and strategic as the standard layer, while paid value concentra
     <tbody>
       <tr>
         <td class="col-num"><strong>0</strong></td>
-        <td class="col-risk"><strong>PoC risk: we can't prove repeatable value for spec-first + diff control</strong></td>
-        <td class="col-mitigation">Month 1: 3 parallel PoCs with an instrumented prototype: (1) spec-first control, (2) review help, (3) diff control (change containment). Gate: most partners repeat the core scenario 2x in 7 days and outcomes beat alternatives. If not, switch the entry point before building the plugin MVP.</td>
+        <td class="col-risk"><strong>Solution-Problem Fit: specs may not be what developers want</strong></td>
+        <td class="col-mitigation">Phase 1 dual-track: (a) test spec extraction value with 10 partners, (b) parallel test of 2 alternative approaches (review assist, security gates) via lightweight prototypes. Gate 1 includes comparative signal.</td>
         <td class="col-status text-high"><strong>High</strong></td>
         <td class="col-status text-med"><strong>Med</strong></td>
         <td class="col-score"><strong>6</strong></td>
       </tr>
       <tr>
         <td class="col-num">1</td>
-        <td class="col-risk">Partner risk: can't recruit enough high-signal design partners fast</td>
-        <td class="col-mitigation">Two-track recruitment: (a) warm network for named companies, (b) OSS narrow scope (Spec Format + validator + examples) to widen the funnel. Use OSS to attract credible teams, collect spec samples, and convert top contributors into pilots.</td>
-        <td class="col-status text-high">High</td>
-        <td class="col-status text-med">Med</td>
-        <td class="col-score">6</td>
-      </tr>
-      <tr>
-        <td class="col-num">2</td>
         <td class="col-risk">PSI Engine Complexity</td>
         <td class="col-mitigation">Focus on JetBrains ecosystem (Kotlin first), leverage native PSI APIs for stability.</td>
         <td class="col-status text-high">High</td>
@@ -806,7 +964,7 @@ OSS stays narrow and strategic as the standard layer, while paid value concentra
         <td class="col-score">6</td>
       </tr>
       <tr>
-        <td class="col-num">3</td>
+        <td class="col-num">2</td>
         <td class="col-risk">Developer Friction</td>
         <td class="col-mitigation">Zero-friction code-first extraction. Repo-native .md format lives in current workflow.</td>
         <td class="col-status text-high">High</td>
@@ -814,7 +972,7 @@ OSS stays narrow and strategic as the standard layer, while paid value concentra
         <td class="col-score">6</td>
       </tr>
       <tr>
-        <td class="col-num">4</td>
+        <td class="col-num">3</td>
         <td class="col-risk">Competitor Entry</td>
         <td class="col-mitigation">Deep IDE-native PSI integration provides a semantic moat generic LLMs lack.</td>
         <td class="col-status text-med">Med</td>
@@ -822,15 +980,7 @@ OSS stays narrow and strategic as the standard layer, while paid value concentra
         <td class="col-score">4</td>
       </tr>
       <tr>
-        <td class="col-num">5</td>
-        <td class="col-risk">Monetization risk: value is clear, but buyers don't approve budget / packaging is confusing</td>
-        <td class="col-mitigation">Mo 2: written budget intent + pilot terms (buyer, success metrics, procurement path). Mo 3-4: paid pilots once MVP exists. Keep pricing simple and tie value to measurable outcomes (fewer review iterations, faster time-to-PR, fewer unscoped diffs).</td>
-        <td class="col-status text-med">Med</td>
-        <td class="col-status text-med">Med</td>
-        <td class="col-score">4</td>
-      </tr>
-      <tr>
-        <td class="col-num">6</td>
+        <td class="col-num">4</td>
         <td class="col-risk">AI Hallucinations</td>
         <td class="col-mitigation">Human-in-the-loop "Approve" gate before syncing specs. High-precision prompt tuning.</td>
         <td class="col-status text-high">High</td>
@@ -838,7 +988,7 @@ OSS stays narrow and strategic as the standard layer, while paid value concentra
         <td class="col-score">3</td>
       </tr>
       <tr>
-        <td class="col-num">7</td>
+        <td class="col-num">5</td>
         <td class="col-risk">Adoption Tax</td>
         <td class="col-mitigation">Strategic wedge: extract from existing code, don't force devs to write from scratch.</td>
         <td class="col-status text-med">Med</td>
@@ -851,8 +1001,7 @@ OSS stays narrow and strategic as the standard layer, while paid value concentra
 
 Notes:
 
-Risk #0 is our highest-priority uncertainty. Developers report distrust in AI code (validated), but they do not explicitly ask for specs (hypothesis). If Phase 1 shows weak repeat usage (most partners don’t repeat the core scenario 2x in 7 days) and alternatives win on measured outcomes, we switch entry point before building the plugin MVP.
-Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen the funnel and generate pilots from community pull.
+Risk #0 is our highest-priority uncertainty. Developers report distrust in AI code (validated), but they do not explicitly ask for specs (hypothesis). If Phase 1 shows <40% spec engagement AND alternative approaches score higher in partner feedback, we pivot before Phase 2.
 
 1) **Technical**: We are building on top of JetBrains' own infrastructure. It's complex, but it's where our advantage lies.
 2) **Accuracy**: AI is the assistant, not the decider. The "Approve" button is our safety valve.
@@ -872,15 +1021,14 @@ Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen
     <ul class="text-sm" style="margin-top: 5px;">
       <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
       <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="#/golden-path">Details</a></li>
-      <li><strong>Goal:</strong> Validate spec-first + diff control (change containment) via instrumented prototype, before plugin MVP.</li>
+      <li><strong>Goal:</strong> Validate spec extraction & diff control.</li>
     </ul>
   </div>
 
   <div class="feature-box">
     <div class="feature-title" style="color: var(--jb-purple);">2. Early Monetization</div>
     <ul class="text-sm" style="margin-top: 5px;">
-      <li><strong>Offer:</strong> Written budget intent + pilot agreement (scope, success metrics, buyer, procurement path).</li>
-      <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (Mo 3-4).</li>
+      <li><strong>Offer:</strong> Paid Design Partners, early Team packs.</li>
       <li><strong>Model:</strong> Add-on to JB AI credits (shared quota).</li>
       <li><strong>Goal:</strong> Prove WTP & secure team budget early.</li>
     </ul>
@@ -898,7 +1046,7 @@ Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen
   <div class="feature-box">
     <div class="feature-title" style="color: var(--jb-green);">4. Market Standard</div>
     <ul class="text-sm" style="margin-top: 5px;">
-      <li><strong>OSS (risk mitigation first):</strong> Spec Format + validator + examples to widen partner funnel and reduce distrust.<br><strong>OSS (later growth):</strong> templates/hooks starter pack and compatibility assets.</li>
+      <li><strong>OSS Core:</strong> Spec Format v1, CLI, Validator.</li>
       <li><strong>Ecosystem:</strong> Marketplace for hooks & templates.</li>
       <li><strong>Enterprise:</strong> Hosted orchestration & governance.</li>
     </ul>
@@ -909,7 +1057,7 @@ Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen
 Notes:
 
 1) **PoC**: We don't need a perfect product, we need a "golden path" that demonstrates value in 10 minutes.
-2) **Monetization**: Early monetization starts as budget intent and pilot agreements. Charging starts when plugin MVP is usable.
+2) **Monetization**: We charge early to validate willingness to pay. Using JB AI credits makes purchasing familiar.
 3) **Scale**: The JetBrains ecosystem is our unfair advantage. One-click install via Toolbox/Marketplace.
 4) **Standard**: We open-source the Spec Format and CLI to become the protocol, while monetizing the orchestration and governance.
 
@@ -917,53 +1065,40 @@ Notes:
 
 <!-- .slide: id="metrics" -->
 
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: Key Metrics</h2>
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: Key Metrics & Guardrails</h2>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+<div class="grid-2x2" style="font-size: 0.7em; gap: 4px; height: 500px;">
 
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">1. NSM & Engagement</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>NSM:</b> Active users/wk with ≥1 spec-linked merge</li>
-        <li><b>Engagement:</b> Activation to 1st merge, N-day retention, WAU/MAU</li>
-        <li><b>Expansion:</b> % org with X+ users with ≥1 spec-merge</li>
-        <li><b>Velocity:</b> Lead time & deployment frequency</li>
-      </ul>
-    </div>
+  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="feature-title" style="color: var(--jb-purple); margin-bottom: 2px;">1. North Star & Depth</div>
+    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
+      <li><strong>NSM:</strong> WAU/WAO with &ge;1 spec-merge.</li>
+      <li><strong>Depth & Coverage:</strong> Merges per active User. % of PRs spec-linked.</li>
+    </ul>
   </div>
 
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">2. Monetization (MRR)</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats)</li>
-        <li><b>Attributed JB MRR:</b> Attach rate (JB paid with product), Cohort ARPU & Churn</li>
-      </ul>
-    </div>
+  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="feature-title" style="color: var(--jb-blue); margin-bottom: 2px;">2. Monetization & JB Core</div>
+    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
+      <li><strong>Product:</strong> Net MRR, GRR / NRR.</li>
+      <li><strong>JB Core Attributed:</strong> Attach, ARPU (Cohort matched).</li>
+    </ul>
   </div>
 
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">3. Guardrails & Basic Quality</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>Safety:</b> CR to core JB actions, Sec/privacy incidents</li>
-        <li><b>Quality:</b> False positive rate, added latency/Time to PR</li>
-        <li><b>Drift:</b> Drift rate & severity, prevented incidents</li>
-        <li><b>Qualitative:</b> CSAT & User Interviews on Spec View</li>
-      </ul>
-    </div>
+  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="feature-title" style="color: var(--jb-green); margin-bottom: 2px;">3. Value & Expansion</div>
+    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
+      <li><strong>Value / Expansion:</strong> Review iters &darr;, Gate pass &uarr;. Orgs hit 3+/10+ users.</li>
+      <li><strong>Outcomes:</strong> Lead time &darr;, Deploy freq &uarr;.</li>
+    </ul>
   </div>
 
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">4. Value & Outcomes</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>Cost:</b> Total avg token spend, Token cost per governed change</li>
-        <li><b>Quality:</b> % PRs passing checks on 1st try</li>
-        <li><b>Velocity:</b> Time to merged PR (from spec)</li>
-      </ul>
-    </div>
+  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="feature-title" style="color: var(--jb-red); margin-bottom: 2px;">4. Guardrails & Quality</div>
+    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
+      <li><strong>IDE Loop:</strong> Build/run times at baseline.</li>
+      <li><strong>Risk:</strong> Latency added, Policy hits vs incidents.</li>
+    </ul>
   </div>
 
 </div>
@@ -971,9 +1106,9 @@ Notes:
 Notes:
 
 1) **North Star**: Focus is on habitual usage (spec-linked merges), tracking both individual users and orgs.
-2) **Monetization**: Tracking New MRR for the product, and rigorously attributing JB Core revenue via matched cohort uplifts.
-3) **Safety & Quality**: Tracking latency and false positives alongside qualitative CSAT to ensure we don't harm the IDE experience.
-4) **Value**: Proving cost efficiency and improved PR throughput (passing checks on 1st try).
+2) **Monetization**: Tracking Net MRR for the product, and rigorously attributing JB Core revenue via matched cohort uplifts.
+3) **Value**: Faster reviews and passing CI gates are our leading indicators for expansion to team-wide usage.
+4) **Guardrails**: Above all, we must not harm the core IDE experience. Performance degradation is a strict No-Go.
 
 ---
 
@@ -1516,3 +1651,71 @@ Here we look at how developers actually spend their time versus how they ideally
 
 Notes:
 This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
+
+---
+
+---
+<!-- .slide: id="differentiation-full" -->
+
+## WHY: Differentiation - Full
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="table-layout: fixed; width: 100%;">
+  <colgroup>
+    <col style="width: 25%;">
+    <col style="width: 35%;">
+    <col style="width: 40%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Differentiator</th>
+      <th>Current market</th>
+      <th>JB advantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Native JB Integration</strong></td>
+      <td>Rigid one-way CLI terminal flows, Web SaaS, or separate IDEs.</td>
+      <td>We go where Enterprise sits. Native plugin: editable intermediate layers, zero context switch.</td>
+    </tr>
+    <tr>
+      <td><strong>Deep Semantic Context</strong></td>
+      <td>Context via flat AST or text vectors. 1000–3000 tokens per file for LLM analysis.</td>
+      <td>PSI extracts structured signal at 100–300 tokens (70–90% saving). Compiler-grade accuracy, zero hallucination on structure. Not a permanent moat — a 12–18 month head start we convert into data and workflow lock-in.</td>
+    </tr>
+    <tr>
+      <td><strong>Continuous drift detection</strong></td>
+      <td>Steering files (Cursor Rules, CLAUDE.md) give persistent context but no enforcement. CI checks are reactive.</td>
+      <td>Proactive inline warnings + bi-directional sync (code ↔ spec) to prevent divergence.</td>
+    </tr>
+    <tr>
+      <td><strong>AI-Native BDD (Evals)</strong></td>
+      <td>Blind generation ("generate and pray"). No automated validation of the LLM output.</td>
+      <td>Extracts specs from code via PSI → validates AI output against them → blocks non-conformant changes.</td>
+    </tr>
+    <tr>
+      <td><strong>Zero Vendor Lock-in</strong></td>
+      <td>Closed SaaS databases (Devplan) or heavy IDE lock-in (Kiro).</td>
+      <td>Open standard (Markdown in Git) + Premium JB Plugin. Keeps IP safe if tool is uninstalled.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="padding: 10px 15px; margin-top: 10px;">
+  <p>We bridge the gap between developer freedom and enterprise-level control: turning chaotic AI-assisted development into a predictable, specified, and reviewable architectural workflow.</p>
+</div>
+
+Notes:
+Why us? Let's look at our 5 core differentiators.
+First, Native JetBrains Integration—we go where Enterprise sits. Instead of a rigid, one-way CLI, developers get editable intermediate layers right in their IDE with zero context switch.
+Second, Deep Semantic Context using JetBrains PSI, completely eliminating the hallucinations you get with standard AST or vector search in complex codebases.
+Third, Continuous Drift Detection. We don't just offer proactive inline warnings; we provide bi-directional sync (code ↔ spec) so that artifacts never diverge, unlike reactive CI breaks or flat docs that rot over time.
+Fourth, AI-Native BDD (Behavior-Driven Development). We don't just 'generate and pray'—we treat specs as executable tests, automatically validating the LLM's output against the schema before it ever hits your code.
+And finally, Zero Vendor Lock-in with an open markdown format combined with a premium plugin.
+These differentiators culminate in our core value proposition: We bridge the gap between developer freedom and enterprise control. Instead of forcing rigid top-down workflows that developers hate, Bonsai embraces bottom-up intent extraction—turning chaotic "vibe-coding" into a predictable, reviewable architectural workflow, right inside the JetBrains IDE.
+
+PSI advantage is structural, not exclusive — any JB plugin can use PSI, and LSP + tree-sitter cover ~60-70% outside JB.
+The defensibility comes from compounding: PSI accuracy → better specs → users trust and maintain specs → spec data becomes the real moat (not the parser).
+Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org scale (100 commits/day, 50 files/commit), this is ~$1,300/month cost difference.

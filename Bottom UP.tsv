@@ -1,0 +1,42 @@
+Metric	Conservative	Base Case	Optimistic	Notes	
+ADDRESSABLE USERS					
+JB Active Users (Total)	10,000,000	12,000,000	15,000,000	JB reported 16.4M in 2024; active subset estimated at 10-15M	
+AI Tool Adoption Rate (Current Use)	50.60%	68.00%	80.80%	Conservative=daily; Base=daily+weekly; Optimistic=daily+weekly+monthly	https://survey.stackoverflow.co/2025/ai
+AI Tools Adoption (Use or plan soon, reference)	85.40%	85.40%	85.40%	Reference only, do not use in bottom-up formula	https://survey.stackoverflow.co/2025/ai
+JB Users with Active AI Usage	5,060,000	8,160,000	12,120,000	Addressable pool within JB ecosystem	
+					
+PRODUCTION FILTER					
+% in Production Codebases (5+ devs)	50%	60%	70%	Filter for teams where specs have collaborative value	
+Target Pool (Production Teams)	2,530,000	4,896,000	8,484,000	Interpreted as devs in target teams	
+					
+PENETRATION & ADOPTION					
+Avg paid seats per paying org	10	10	6	Used to convert org adoption into paid seats	
+Year 1 Awareness/Reach	3%	5%	8%	Realistic for new JB Marketplace plugin Year 1	
+Activation Rate	40%	50%	60%	Code-first extraction = low friction	
+Retention (Monthly Active at M12)	30%	40%	50%	Spec-linked merge at least 1x/month	
+Paying Conversion Rate	8%	12%	18%	Freemium conversion benchmark for dev tools	
+Active Paying Users (Year 1)	7,286	58,752	219,905	Individual paying seats end of Year 1	
+REVENUE PER USER					
+Blended ARPU (Monthly)	$11	$13	$16	Pro=10, Team=18; mix can shift toward Team over time	
+Blended ARPU (Annual)	$130	$158	$192		
+					
+BOTTOM-UP SOM					
+Year 1 Revenue (Annual)	$944,317.44	$9,306,316.80	$42,221,813.76	End-state annual run rate	
+Year 1 Revenue (Rounded, $M)	0.90	9.30	42.20	For slide-friendly display	
+					
+CROSS-CHECK vs TOP-DOWN					
+Top-Down SOM (Annual)	$171,000,000	$171,000,000	$171,000,000		
+Bottom-Up as % of Top-Down	0.55%	5.44%	24.69%		
+					
+UNIT ECONOMICS SIGNAL					
+Token Cost per User (Monthly)	$0.80	$1.20	$1.50	~50 extractions + drift checks/month	
+Infra Cost per User (Monthly)	$0.40	$0.50	$0.60	Plugin-side local; backend for LLM + spec storage	
+Total COGS per User (Monthly)	$1.20	$1.70	$2.10		
+Gross Margin	88.89%	87.12%	86.88%		
+Monthly Contribution per User	$10	$12	$14	Before CAC	
+					
+CAC & PAYBACK					
+Blended CAC	$15	$25	$40	Low CAC due to JB Marketplace distribution	
+Payback Period (Months)	$1.56	$2.17	$2.88	<3 months is a strong signal	
+LTV (12-month)	$100	$113	$127	Conservative 12-month horizon only	
+LTV:CAC Ratio	6.68	4.52	3.17	>3x is typically investable	
