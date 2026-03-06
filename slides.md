@@ -553,7 +553,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Primary + fallback flows selected.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Primary + fallback flows selected; most partners repeat the flow &ge;2x/week.</p>
     </div>
   </div>
 
@@ -561,7 +561,7 @@ Notes:
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 2</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization Concept</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization & OSS</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification (tbd) from 3+ companies (budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS (tbd): spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> (tbd) 3+ payment-intent verifications with named budget owners and agreed pilot terms.</p>
@@ -591,6 +591,65 @@ Notes:
   </div>
 
 </div>
+
+---
+<!-- .slide: id="mvp-definition" -->
+
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP <span class="metric-badge">A</span></h2>
+<p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+
+  <div class="chosen-tile chosen-tile--green chosen-tile--wide">
+    <p class="chosen-tile-label">What It Is</p>
+    <p class="chosen-tile-body">JetBrains IDE plugin that turns a spec (repo-native Markdown) into controlled code changes, with in-IDE review and traceability, so teams ship faster without unscoped diffs.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Who It Is For (MVP users)</p>
+    <p class="chosen-tile-body">A small set of design partner teams on real JetBrains IDE repos (single repo each), where scoped changes are common and review cycles are costly.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Core User Flow</p>
+    <div class="chosen-tile-body">
+      <ol style="margin: 0; padding-left: 16px;">
+        <li>Define a spec for a scoped change (Markdown in the repo).</li>
+        <li>Run spec-aware workflow in IDE to generate plan + scoped diffs (change containment).</li>
+        <li>Review and approve/apply changes in IDE (hard stop on scope violations).</li>
+        <li>Produce PR-ready changeset with traceability (spec ↔ diff ↔ commits).</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Core Capabilities (MVP)</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Spec-aware workflow (not a Markdown editor): run/validate/apply from spec in IDE.</li>
+        <li>Change containment: hard scope boundaries + stop/ask on violations.</li>
+        <li>In-IDE diff review with approve/apply loop.</li>
+        <li>Traceability: links spec to diffs/commits + PR-ready summary.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Not In MVP</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Full Code → Spec automation (validated via existing tools first).</li>
+        <li>Broad language/framework coverage and edge cases.</li>
+        <li>Full org governance (roles, audit, policy management at scale).</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+Notes:
+MVP scope is intentionally narrow: one real workflow on partner repos with strict containment and clear traceability.
+Success criteria are repeat weekly usage, low-noise operation, and measurable review-cycle improvement before broader rollout.
 
 ---
 <!-- .slide: id="segmentation" -->
@@ -641,73 +700,6 @@ Notes:
 Notes:
 We target two distinct segments. First, Early Adopters — Tech Leads feeling the immediate pain of AI-caused bugs and unscoped diffs.
 Second, when expanding across the org, we target Scaling personas — Engineering Directors and Security who need standardization and auditability.
-
----
-<!-- .slide: id="mvp-solution-draft" -->
-
-<h2>HOW: MVP SOLUTION DRAFT <span style="font-size:0.6em; color: rgba(255,255,255,0.6); font-weight: 600;">(Phase 3: MVP Build &amp; Soft Launch, Mo 3-4)</span></h2>
-
-<div class="solution-draft-container">
-<div class="solution-mockup">
-<div style="padding: 2.5rem; width: 100%; text-align: left;">
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #10b981; padding-bottom: 0.75rem; margin-bottom: 1rem;">
-<span style="font-weight: 900; color: #1e293b; font-size: 0.8em; letter-spacing: -0.02em;">Bonsai Spec View</span>
-<span style="background: #10b981; color: white; border-radius: 12px; padding: 2px 10px; font-size: 0.4em; font-weight: 800;">SYNCED</span>
-</div>
-<div style="margin-bottom: 1.5rem;">
-<p style="color: #64748b; font-size: 0.35em; margin-bottom: 0.5rem; font-weight: 600; text-transform: uppercase;">Extracted from <code>auth_engine.kt</code></p>
-<div style="background: white; border-radius: 4px; padding: 1rem; border: 1px dashed #cbd5e1;">
-<p style="color: #334155; font-size: 0.5em; line-height: 1.5; margin: 0;">
-• <strong>Flow:</strong> User → OAuth → JWT Entry<br>
-• <strong>Requirement:</strong> Session must expire in 2h<br>
-• <strong>Security:</strong> All secrets via Vault
-</p>
-</div>
-</div>
-<div style="display: flex; gap: 8px;">
-<div style="background: #f1f5f9; border-radius: 4px; flex: 1; height: 12px;"></div>
-<div style="background: #10b981; border-radius: 4px; width: 60px; height: 32px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.35em; font-weight: 800;">APPROVE</div>
-</div>
-</div>
-<p style="text-align: center; color: #94a3b8; font-size: 0.35em; margin-top: 1.5rem; font-style: italic;">"JetBrains PSI analyses code → Bonsai generates spec → Dev validates in-loop"</p>
-</div>
-</div>
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Strategic wedge</p>
-    <p class="chosen-tile-body">JetBrains IDE teams (5+ devs). Entry point: spec-first + change containment (diff control) on repo-native .md specs.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Product</p>
-    <p class="chosen-tile-body">Bonsai: Native JB Plugin. Zero context switch.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Core Logic</p>
-    <p class="chosen-tile-body">PSI extracts draft specs → dev approves → Bonsai enforces scoped diffs (change containment) + flags spec↔code drift in IDE.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Tech layer</p>
-    <p class="chosen-tile-body">Kotlin / PSI Engine + repo-native Markdown. OSS is narrow: spec format + validator; premium value is the IDE-native workflow.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Launch</p>
-    <p class="chosen-tile-body">Mo 1: instrumented prototype with partners (no plugin). Mo 3-4: private alpha plugin MVP (Phase 3).</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Learning gate</p>
-    <p class="chosen-tile-body">Phase 3 gate: repeat weekly usage of the core scenario + measurable cycle-time improvement (faster to PR/review) with low-noise alerts.</p>
-  </div>
-</div>
-</div>
-
-Notes:
-
-1) **Strategic Wedge**: We don't change how devs work. They write code, we sync the spec. This removes the "documentation tax".
-2) **Logic**: Bi-directional sync is the end-game, but we start with "Extraction First" because it's the fastest path to value.
-3) **PSI Engine**: Using JetBrains' native engine means we have deeper understanding than generic LLM-based tools.
-4) **Drift**: The moment code stops matching the spec, the dev gets a red light in the IDE.
 
 ---
 <!-- .slide: id="pricing-monetization" -->
@@ -762,6 +754,67 @@ Notes:
 This monetization model starts with low-friction adoption and converts only after value is observable in real workflows.
 Month 2 validates commercial intent and procurement path; revenue begins with paid pilots once plugin MVP is usable in Months 3-4.
 OSS stays narrow and strategic as the standard layer, while paid value concentrates in IDE-native team controls and workflow integration.
+
+---
+<!-- .slide: id="metrics" -->
+
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: Key Metrics</h2>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">1. NSM & Engagement</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><b>NSM:</b> Active users/wk with ≥1 spec-linked merge</li>
+        <li><b>Engagement:</b> Activation to 1st merge, N-day retention, WAU/MAU</li>
+        <li><b>Expansion:</b> % org with X+ users with ≥1 spec-merge</li>
+        <li><b>Velocity:</b> Lead time & deployment frequency</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">2. Monetization (MRR)</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats)</li>
+        <li><b>Attributed JB MRR:</b> Attach rate (JB paid with product), Cohort ARPU & Churn</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">3. Guardrails & Basic Quality</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><b>Safety:</b> CR to core JB actions, Sec/privacy incidents</li>
+        <li><b>Quality:</b> False positive rate, added latency/Time to PR</li>
+        <li><b>Drift:</b> Drift rate & severity, prevented incidents</li>
+        <li><b>Qualitative:</b> CSAT & User Interviews on Spec View</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">4. Value & Outcomes</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><b>Cost:</b> Total avg token spend, Token cost per governed change</li>
+        <li><b>Quality:</b> % PRs passing checks on 1st try</li>
+        <li><b>Velocity:</b> Time to merged PR (from spec)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+Notes:
+
+1) **North Star**: Focus is on habitual usage (spec-linked merges), tracking both individual users and orgs.
+2) **Monetization**: Tracking New MRR for the product, and rigorously attributing JB Core revenue via matched cohort uplifts.
+3) **Safety & Quality**: Tracking latency and false positives alongside qualitative CSAT to ensure we don't harm the IDE experience.
+4) **Value**: Proving cost efficiency and improved PR throughput (passing checks on 1st try).
 
 ---
 <!-- .slide: id="risks-mitigation" -->
@@ -863,45 +916,53 @@ Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen
 
 <!-- .slide: id="gtm" -->
 
-<h2>HOW: GTM Strategy</h2>
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy</h2>
 
-<div class="grid-2x2" style="font-size: 0.85em;">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
-  <div class="feature-box">
-    <div class="feature-title" style="color: var(--jb-blue);">1. PoC & Early Adopters</div>
-    <ul class="text-sm" style="margin-top: 5px;">
-      <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
-      <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="#/golden-path">Details</a></li>
-      <li><strong>Goal:</strong> Validate spec-first + diff control (change containment) via instrumented prototype, before plugin MVP.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">1. PoC & Early Adopters</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
+        <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="#/golden-path">Details</a></li>
+        <li><strong>Goal:</strong> Validate spec-first + diff control (change containment) via instrumented prototype before plugin MVP.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="feature-box">
-    <div class="feature-title" style="color: var(--jb-purple);">2. Early Monetization</div>
-    <ul class="text-sm" style="margin-top: 5px;">
-      <li><strong>Offer:</strong> Written budget intent + pilot agreement (scope, success metrics, buyer, procurement path).</li>
-      <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (Mo 3-4).</li>
-      <li><strong>Model:</strong> Add-on to JB AI credits (shared quota).</li>
-      <li><strong>Goal:</strong> Prove WTP & secure team budget early.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">2. Early Monetization</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><strong>Offer:</strong> Written budget intent + pilot agreement (scope, success metrics, buyer, procurement path).</li>
+        <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (Mo 3-4).</li>
+        <li><strong>Model:</strong> Add-on to JB AI credits (shared quota).</li>
+        <li><strong>Goal:</strong> Prove WTP and secure team budget early.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="feature-box">
-    <div class="feature-title" style="color: var(--jb-orange);">3. Scale Sales</div>
-    <ul class="text-sm" style="margin-top: 5px;">
-      <li><strong>Distribution:</strong> JB IDE Promo, Toolbox, Marketplace.</li>
-      <li><strong>Motion:</strong> PLG loop (Indiv. &rarr; Team org policy).</li>
-      <li><strong>Goal:</strong> Zero-friction install to paid conversion.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">3. Scale Sales</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><strong>Distribution:</strong> JB IDE Promo, Toolbox, Marketplace.</li>
+        <li><strong>Motion:</strong> PLG loop (Indiv. &rarr; Team org policy).</li>
+        <li><strong>Goal:</strong> Zero-friction install to paid conversion.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="feature-box">
-    <div class="feature-title" style="color: var(--jb-green);">4. Market Standard</div>
-    <ul class="text-sm" style="margin-top: 5px;">
-      <li><strong>OSS (risk mitigation first):</strong> Spec Format + validator + examples to widen partner funnel and reduce distrust.<br><strong>OSS (later growth):</strong> templates/hooks starter pack and compatibility assets.</li>
-      <li><strong>Ecosystem:</strong> Marketplace for hooks & templates.</li>
-      <li><strong>Enterprise:</strong> Hosted orchestration & governance.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">4. Market Standard</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><strong>OSS (risk mitigation first):</strong> Spec Format + validator + examples to widen partner funnel and reduce distrust; later OSS adds templates/hooks starter pack and compatibility assets.</li>
+        <li><strong>Ecosystem:</strong> Marketplace for hooks and templates.</li>
+        <li><strong>Enterprise:</strong> Hosted orchestration and governance.</li>
+      </ul>
+    </div>
   </div>
 
 </div>
@@ -914,66 +975,6 @@ Notes:
 4) **Standard**: We open-source the Spec Format and CLI to become the protocol, while monetizing the orchestration and governance.
 
 ---
-
-<!-- .slide: id="metrics" -->
-
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: Key Metrics</h2>
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">1. NSM & Engagement</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>NSM:</b> Active users/wk with ≥1 spec-linked merge</li>
-        <li><b>Engagement:</b> Activation to 1st merge, N-day retention, WAU/MAU</li>
-        <li><b>Expansion:</b> % org with X+ users with ≥1 spec-merge</li>
-        <li><b>Velocity:</b> Lead time & deployment frequency</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">2. Monetization (MRR)</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats)</li>
-        <li><b>Attributed JB MRR:</b> Attach rate (JB paid with product), Cohort ARPU & Churn</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">3. Guardrails & Basic Quality</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>Safety:</b> CR to core JB actions, Sec/privacy incidents</li>
-        <li><b>Quality:</b> False positive rate, added latency/Time to PR</li>
-        <li><b>Drift:</b> Drift rate & severity, prevented incidents</li>
-        <li><b>Qualitative:</b> CSAT & User Interviews on Spec View</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">4. Value & Outcomes</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>Cost:</b> Total avg token spend, Token cost per governed change</li>
-        <li><b>Quality:</b> % PRs passing checks on 1st try</li>
-        <li><b>Velocity:</b> Time to merged PR (from spec)</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-
-Notes:
-
-1) **North Star**: Focus is on habitual usage (spec-linked merges), tracking both individual users and orgs.
-2) **Monetization**: Tracking New MRR for the product, and rigorously attributing JB Core revenue via matched cohort uplifts.
-3) **Safety & Quality**: Tracking latency and false positives alongside qualitative CSAT to ensure we don't harm the IDE experience.
-4) **Value**: Proving cost efficiency and improved PR throughput (passing checks on 1st try).
 
 <!-- .slide: id="appendix" -->
 
