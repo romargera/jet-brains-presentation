@@ -207,8 +207,8 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
 
 ## WHY: Competitor Landscape
 
-<div class="competitor-layout">
-<div class="competitor-col-left" style="font-size: 0.28em;">
+<div class="competitor-layout" style="display: flex; gap: 15px; align-items: stretch; justify-content: space-between;">
+<div class="competitor-col-left" style="font-size: 0.28em; flex: 1;">
 <h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Direct Competitors</h4>
 <div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #10b981; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
   <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Tier 1: Direct Threats</p>
@@ -228,7 +228,7 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
   <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.autok.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">devplan</a>: Graph context + sync</p>
 </div>
 </div>
-<div class="competitor-col-right" style="font-size: 0.28em;">
+<div class="competitor-col-right" style="font-size: 0.28em; flex: 1;">
 <h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Indirect Competitors</h4>
 <div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #4fc3f7; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
   <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">IDE AI Assistants (baseline)</p>
