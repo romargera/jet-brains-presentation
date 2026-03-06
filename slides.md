@@ -387,8 +387,8 @@ This slide maps competitive approaches to improving trust in AI-assisted develop
     <!-- GREEN PATH (Our Focus) -->
     <tr class="highlight-row">
       <td class="center"><strong>1</strong></td>
-      <td><strong>IDE-Native Control (Wedge)</strong></td>
-      <td>Zero context switch. Uncontested for structured spec control (steering files ≠ enforceable specs). Massive JB distribution moat.</td>
+      <td><strong>IDE-Native Control (Entry Point)</strong></td>
+      <td>Zero context switch. Start with spec-first + diff control (change containment) inside JB IDE. Massive JB distribution moat.</td>
     </tr>
     <tr class="highlight-row">
       <td class="center"><strong>2</strong></td>
@@ -511,7 +511,7 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Differentiation</p>
-    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI. We extract specs from code (zero friction), push to CI, and locally detect drift.</p>
+    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI: extract specs (zero friction), contain changes in diff (change containment), and detect drift early.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
@@ -697,7 +697,7 @@ Second, when expanding across the org, we target Scaling personas — Engineerin
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Launch</p>
-    <p class="chosen-tile-body">Canary rollout: 10 design partners → Private alpha.</p>
+    <p class="chosen-tile-body">Month 1: instrumented prototype with design partners (no plugin MVP yet). Months 3-4: private alpha plugin MVP.</p>
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Learning gate</p>
@@ -723,7 +723,7 @@ Notes:
   <thead>
     <tr>
       <th style="width: 14%;">Tier</th>
-      <th style="width: 6%;">Price</th>
+      <th style="width: 6%;">Packaging</th>
       <th style="width: 50%;">Included</th>
       <th style="width: 30%;">Goal</th>
     </tr>
@@ -739,7 +739,7 @@ Notes:
       <td><strong>Pro</strong></td>
       <td>$8–12/mo</td>
       <td>Unlimited repos, CI integration, spec history</td>
-      <td>Prove WTP, convert power users</td>
+      <td>Validate repeat usage and upgrade intent (after MVP exists)</td>
     </tr>
     <tr class="highlight-row">
       <td><strong>Team</strong></td>
@@ -772,7 +772,7 @@ Notes:
     <p class="chosen-tile-label">Validation Experiments</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>WTP Test (Mo 2):</strong> 5 partners at $10/mo vs free trial.</li>
+        <li><strong>Commercial intent test (Mo 2):</strong> written budget intent + pilot agreement terms vs extended free access.</li>
         <li><strong>Team Test (Mo 4):</strong> $15/seat vs $20/seat with CI gates.</li>
       </ul>
     </div>
@@ -788,7 +788,7 @@ Pricing rationale:
 
 Two key experiments:
 
-1. WTP test (Month 2): Offer 5 design partners «Pro for $10/month» — measure conversion vs «Pro for free extended trial». If <30% convert at $10, test $5.
+1. Commercial intent test (Mo 2): Test budget intent and pilot terms vs free trial. Charging starts with paid pilots once plugin MVP exists (Mo 3-4).
 2. Team pricing test (Month 4): Offer 3 orgs «Team at $15/seat» vs «Team at $20/seat with CI gates included». Measure which feature drives budget approval.
 
 JB integration model (preferred):
@@ -818,7 +818,7 @@ JB integration model (preferred):
       <tr>
         <td class="col-num"><strong>0</strong></td>
         <td class="col-risk"><strong>Solution-Problem Fit: specs may not be what developers want</strong></td>
-        <td class="col-mitigation">Phase 1 dual-track: (a) test spec extraction value with 10 partners, (b) parallel test of 2 alternative approaches (review assist, security gates) via lightweight prototypes. Gate 1 includes comparative signal.</td>
+        <td class="col-mitigation">Phase 1: 3 parallel PoCs with instrumented prototype: (1) spec-first control, (2) review help, (3) diff control (change containment). Gate 1 based on repeat usage (2x/week) and signal vs alternatives. If we can’t recruit named partners fast, use narrow OSS (Spec Format + validator + examples) to widen the funnel and reduce distrust.</td>
         <td class="col-status text-high"><strong>High</strong></td>
         <td class="col-status text-med"><strong>Med</strong></td>
         <td class="col-score"><strong>6</strong></td>
@@ -869,7 +869,7 @@ JB integration model (preferred):
 
 Notes:
 
-Risk #0 is our highest-priority uncertainty. Developers report distrust in AI code (validated), but they do not explicitly ask for specs (hypothesis). If Phase 1 shows <40% spec engagement AND alternative approaches score higher in partner feedback, we pivot before Phase 2.
+Risk #0 is our highest-priority uncertainty. Developers report distrust in AI code (validated), but they do not explicitly ask for specs (hypothesis). If Phase 1 shows weak repeat usage (most partners don’t repeat the core scenario 2x in 7 days) and alternatives win on measured outcomes, we switch entry point before building the plugin MVP.
 
 1) **Technical**: We are building on top of JetBrains' own infrastructure. It's complex, but it's where our advantage lies.
 2) **Accuracy**: AI is the assistant, not the decider. The "Approve" button is our safety valve.
@@ -889,14 +889,15 @@ Risk #0 is our highest-priority uncertainty. Developers report distrust in AI co
     <ul class="text-sm" style="margin-top: 5px;">
       <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
       <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="#/golden-path">Details</a></li>
-      <li><strong>Goal:</strong> Validate spec extraction & diff control.</li>
+      <li><strong>Goal:</strong> Validate spec-first + diff control (change containment) via instrumented prototype, before plugin MVP.</li>
     </ul>
   </div>
 
   <div class="feature-box">
     <div class="feature-title" style="color: var(--jb-purple);">2. Early Monetization</div>
     <ul class="text-sm" style="margin-top: 5px;">
-      <li><strong>Offer:</strong> Paid Design Partners, early Team packs.</li>
+      <li><strong>Offer:</strong> Written budget intent + pilot agreement (scope, success metrics, buyer, procurement path).</li>
+      <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (Mo 3-4).</li>
       <li><strong>Model:</strong> Add-on to JB AI credits (shared quota).</li>
       <li><strong>Goal:</strong> Prove WTP & secure team budget early.</li>
     </ul>
@@ -914,7 +915,7 @@ Risk #0 is our highest-priority uncertainty. Developers report distrust in AI co
   <div class="feature-box">
     <div class="feature-title" style="color: var(--jb-green);">4. Market Standard</div>
     <ul class="text-sm" style="margin-top: 5px;">
-      <li><strong>OSS Core:</strong> Spec Format v1, CLI, Validator.</li>
+      <li><strong>OSS (risk mitigation first):</strong> Spec Format + validator + examples to widen partner funnel and reduce distrust.<br><strong>OSS (later growth):</strong> templates/hooks starter pack and compatibility assets.</li>
       <li><strong>Ecosystem:</strong> Marketplace for hooks & templates.</li>
       <li><strong>Enterprise:</strong> Hosted orchestration & governance.</li>
     </ul>
@@ -925,7 +926,7 @@ Risk #0 is our highest-priority uncertainty. Developers report distrust in AI co
 Notes:
 
 1) **PoC**: We don't need a perfect product, we need a "golden path" that demonstrates value in 10 minutes.
-2) **Monetization**: We charge early to validate willingness to pay. Using JB AI credits makes purchasing familiar.
+2) **Monetization**: Early monetization starts as budget intent and pilot agreements. Charging starts when plugin MVP is usable.
 3) **Scale**: The JetBrains ecosystem is our unfair advantage. One-click install via Toolbox/Marketplace.
 4) **Standard**: We open-source the Spec Format and CLI to become the protocol, while monetizing the orchestration and governance.
 
