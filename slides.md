@@ -203,78 +203,30 @@ What would change our mind on runner-ups:
 Next: we define the chosen direction in detail with JTBD and early adopter segments.
 
 ---
-<!-- .slide: id="competitor-landscape" -->
+<!-- .slide: id="why-competitor-landscape" -->
 
-## WHAT: Competitor Landscape
+## WHY: Competitor Landscape
 
 <div class="competitor-layout">
-<div class="competitor-col-left">
-<table class="distrust-table">
-  <colgroup>
-    <col style="width: 8%">
-    <col style="width: 17%">
-    <col style="width: 75%">
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Tier</th>
-      <th>Direct competitors</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="highlight-row">
-      <td rowspan="5"><strong>Tier 1</strong></td>
-      <td><a href="https://speckit.org/" target="_blank">Spec Kit</a></td>
-      <td>GitHub-supported, 73.6k★, markdown specs, phased plan-first workflow, CLI + in-agent</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><a href="https://kiro.dev/" target="_blank">Kiro</a></td>
-      <td>Built on Amazon Bedrock, 1,5M MAU (Similarweb), Kiro IDE + CLI + in-agent</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><a href="https://docs.bmad-method.org/" target="_blank">BMAD</a></td>
-      <td>38.9k★, 19 roles, CLI + in‑agent, adaptive depth, REPL-like</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><a href="https://openspec.dev/" target="_blank">OpenSpec</a></td>
-      <td>Vendor-agnostic, Open Source, No API Keys, No MCP, REPL-like</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><a href="https://codespeak.dev/" target="_blank">CodeSpeak</a></td>
-      <td>Specs compile to code, spec-diff → code-diff; code-to-spec coming soon</td>
-    </tr>
-    <tr>
-      <td rowspan="7"><strong>Tier 2</strong></td>
-      <td><a href="https://www.task-master.dev/" target="_blank">Taskmaster</a></td>
-      <td>PRD → tasks + autonomous TDD autopilot (RED → GREEN → COMMIT per subtask)</td>
-    </tr>
-    <tr>
-      <td><a href="https://stately.ai/" target="_blank">Stately</a></td>
-      <td>Model-based approach: state machines as spec artifacts</td>
-    </tr>
-    <tr>
-      <td><a href="https://buildermethods.com/agent-os" target="_blank">Agent-OS</a></td>
-      <td>Standards loop. Extra JTBD: Auto-extracts repo conventions</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/ariel-frischer/autospec" target="_blank">Autospec</a></td>
-      <td>Spec Kit fork, automated YAML pipeline</td>
-    </tr>
-    <tr>
-      <td><a href="https://specs.md/" target="_blank">specs.md</a></td>
-      <td>Formal AI-DLC, VS Code extension, CLI + in‑agent</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.autok.dev/" target="_blank">autok</a></td>
-      <td>Knowledge-graph rails + bidirectional requirements sync via CLI + in‑agent (MCP)</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.devplan.com/" target="_blank">devplan</a></td>
-      <td>Context graph (code + tickets + docs) → spec creation → agent prompts, CLI + browser</td>
-    </tr>
-  </tbody>
-</table>
+<div class="competitor-col-left" style="font-size: 0.28em;">
+<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Direct Competitors</h4>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #10b981; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Tier 1: Direct Threats</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://speckit.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Spec Kit</a>: GitHub-supported, 73.6k★, phased plan-first workflow, CLI + in-agent</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://kiro.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Kiro</a>: Built on Amazon Bedrock, 1.5M MAU, IDE + CLI + in-agent</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://docs.bmad-method.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">BMAD</a>: 38.9k★, 19 roles, CLI + agent, adaptive depth</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://openspec.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">OpenSpec</a>: Vendor-agnostic, Open Source, No APIs</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://codespeak.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">CodeSpeak</a>: Specs compile to code, diff sync</p>
+</div>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #ffb74d; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Tier 2: Watchlist</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.task-master.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Taskmaster</a>: PRD→tasks + TDD autopilot</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://stately.ai/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Stately</a>: State machines as specs</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://buildermethods.com/agent-os" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Agent-OS</a>: Auto-extract repo conventions</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Autospec</a>: Spec Kit fork, YAML pipeline</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://specs.md/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">specs.md</a>: Formal AI-DLC, VS Code ext</p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.autok.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">devplan</a>: Graph context + sync</p>
+</div>
 </div>
 <div class="competitor-col-right" style="font-size: 0.28em;">
 <h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Indirect Competitors</h4>
@@ -541,71 +493,6 @@ The defensibility comes from compounding: PSI accuracy → better specs → user
 Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org scale (100 commits/day, 50 files/commit), this is ~$1,300/month cost difference.
 
 ---
-<!-- .slide: id="jb-strategic-fit" -->
-
-## WHY: JetBrains Strategic Fit
-
-<div class="chosen-grid chosen-grid--small">
-
-  <div class="chosen-tile chosen-tile--green chosen-tile--wide">
-    <p class="chosen-tile-label">Positioning within JB AI Portfolio</p>
-    <p class="chosen-tile-body">Bonsai is the <strong>governance layer</strong> for JB's AI stack: AI Assistant generates code, Junie executes autonomously, Bonsai ensures both stay aligned with architectural intent.</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Complements (not competes)</p>
-    <div class="chosen-tile-body">
-      <table style="font-size: 0.75em; width: 100%; border-collapse: collapse;">
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
-          <td style="padding: 4px 0;"><strong>AI Assistant</strong></td>
-          <td style="padding: 4px 0;">Generates code → Bonsai validates output against spec before merge</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
-          <td style="padding: 4px 0;"><strong>Junie</strong></td>
-          <td style="padding: 4px 0;">Autonomous agent → Bonsai provides guardrails + drift alerts for agent actions</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
-          <td style="padding: 4px 0;"><strong>Fleet</strong></td>
-          <td style="padding: 4px 0;">Not in MVP scope. Potential future surface once spec format stabilizes.</td>
-        </tr>
-        <tr>
-          <td style="padding: 4px 0;"><strong>Marketplace</strong></td>
-          <td style="padding: 4px 0;">Distribution channel: 1-click install, same billing, familiar UX</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Business Case for JB</p>
-    <div class="chosen-tile-body">
-      <ul style="font-size: 0.85em; padding-left: 15px; margin: 0;">
-        <li><strong>Attach rate ↑:</strong> Bonsai gives Enterprise buyers a reason to stay on JB IDE over Cursor/VS Code</li>
-        <li><strong>ARPU ↑:</strong> Pro bundled with AI subscription; Team/Enterprise as separate SKU</li>
-        <li><strong>Retention ↑:</strong> Spec data creates switching cost — specs are tied to JB PSI quality</li>
-        <li><strong>Competitive moat:</strong> Only JB can offer PSI-grade analysis natively; competitors need LSP approximation</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-
-Notes:
-This slide is critical for internal alignment. Bonsai is not a standalone product — it's the missing governance piece in JB's AI portfolio.
-
-The key strategic argument: as AI Assistants and autonomous agents generate more code, the need for a control layer grows proportionally. Without governance, AI-generated code becomes a liability for enterprise customers. Bonsai turns that liability into a selling point.
-
-Specifically:
-
-- AI Assistant users get spec-validated outputs → higher trust → higher usage → higher renewal
-- Junie (autonomous agent) gets architectural guardrails → safer autonomy → enterprise adoption unlocked
-- Enterprise buyers get audit trail + compliance artifacts → procurement unblocked
-
-Revenue model: Bonsai Pro is bundled (increases AI subscription stickiness). Bonsai Team/Enterprise is a separate revenue stream via JB Sales.
-
-Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the governance standard, JB AI tools become "generation without control" — a weaker value proposition for enterprise.
-
----
 <!-- .slide: id="why-summary" -->
 
 ## WHAT & WHY: Summary
@@ -619,7 +506,7 @@ Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the 
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
-    <p class="chosen-tile-body"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">TAM ($4.9B) → SAM ($3.4B) → SOM ($171M)</a><br><br><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">Bottom-up SOM (Year 1): $9.3M</a></p>
+    <p class="chosen-tile-body"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">Top-down SOM is $171.85M</a>, based on a $4.91B 2024 market, a 70% production workflows share, and a 5% achievable share, while the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">bottom-up Year 1 cross-check yields ~$0.93M</a>.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
@@ -633,11 +520,6 @@ Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the 
   </div>
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Metrics</p>
-    <p class="chosen-tile-body">NSM: Devs w/ ≥1 spec-linked merge/wk. Key: New MRR (paid tiers) & Attributed MRR (JB core via attach rate/retention).</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Monetization</p>
     <p class="chosen-tile-body">Free (viral seed). Pro ($8-12/mo) for power users. Team ($15-20/seat) for org budgets. Enterprise ($30-50) for security & SSO.</p>
   </div>
@@ -645,7 +527,7 @@ Risk of NOT building this: if a competitor (Kiro/Amazon, CodeSpeak) becomes the 
 </div>
 
 <ul class="distrust-notes" style="margin-top: 15px;">
-<li>Assumptions <span class="metric-badge">A</span> for TAM/SAM/SOM are indicated in the linked calculations.</li>
+<li>Assumptions <span class="metric-badge">A</span> for TAM/SAM/SOM and bottom up are indicated in the linked calculations <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank">[1]</a><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank">[2]</a>.</li>
 <li>Market Size Revenue base year 2024, adoption base year 2025.</li>
 <li>We assumed a conservative $4.91B (2024) base TAM to avoid overvaluation.</li>
 </ul>
@@ -1067,38 +949,50 @@ Notes:
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: Key Metrics & Guardrails</h2>
 
-<div class="grid-2x2" style="font-size: 0.7em; gap: 4px; height: 500px;">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
-  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="feature-title" style="color: var(--jb-purple); margin-bottom: 2px;">1. North Star & Depth</div>
-    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
-      <li><strong>NSM:</strong> WAU/WAO with &ge;1 spec-merge.</li>
-      <li><strong>Depth & Coverage:</strong> Merges per active User. % of PRs spec-linked.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">1. NSM & Engagement</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><b>NSM:</b> Active users/wk with ≥1 spec-linked merge</li>
+        <li><b>Engagement:</b> Activation to 1st merge, N-day retention, WAU/MAU</li>
+        <li><b>Expansion:</b> % org with X+ users with ≥1 spec-merge</li>
+        <li><b>Velocity:</b> Lead time & deployment frequency</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="feature-title" style="color: var(--jb-blue); margin-bottom: 2px;">2. Monetization & JB Core</div>
-    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
-      <li><strong>Product:</strong> Net MRR, GRR / NRR.</li>
-      <li><strong>JB Core Attributed:</strong> Attach, ARPU (Cohort matched).</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">2. Monetization (MRR)</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats)</li>
+        <li><b>Attributed JB MRR:</b> Attach rate (JB paid with config), Cohort ARPU & Churn</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="feature-title" style="color: var(--jb-green); margin-bottom: 2px;">3. Value & Expansion</div>
-    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
-      <li><strong>Value / Expansion:</strong> Review iters &darr;, Gate pass &uarr;. Orgs hit 3+/10+ users.</li>
-      <li><strong>Outcomes:</strong> Lead time &darr;, Deploy freq &uarr;.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">3. Guardrails & Basic Quality</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><b>Safety:</b> CR to core JB actions, Sec/privacy incidents</li>
+        <li><b>Quality:</b> False positive rate, added latency/Time to PR</li>
+        <li><b>Drift:</b> Drift rate & severity, prevented incidents</li>
+        <li><b>Qualitative:</b> CSAT & User Interviews on Spec View</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="feature-title" style="color: var(--jb-red); margin-bottom: 2px;">4. Guardrails & Quality</div>
-    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
-      <li><strong>IDE Loop:</strong> Build/run times at baseline.</li>
-      <li><strong>Risk:</strong> Latency added, Policy hits vs incidents.</li>
-    </ul>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">4. Value & Outcomes</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><b>Cost:</b> Total avg token spend, Token cost per governed change</li>
+        <li><b>Quality:</b> % PRs passing checks on 1st try</li>
+      </ul>
+    </div>
   </div>
 
 </div>
@@ -1106,9 +1000,9 @@ Notes:
 Notes:
 
 1) **North Star**: Focus is on habitual usage (spec-linked merges), tracking both individual users and orgs.
-2) **Monetization**: Tracking Net MRR for the product, and rigorously attributing JB Core revenue via matched cohort uplifts.
-3) **Value**: Faster reviews and passing CI gates are our leading indicators for expansion to team-wide usage.
-4) **Guardrails**: Above all, we must not harm the core IDE experience. Performance degradation is a strict No-Go.
+2) **Monetization**: Tracking New MRR for the product, and rigorously attributing JB Core revenue via matched cohort uplifts.
+3) **Safety & Quality**: Tracking latency and false positives alongside qualitative CSAT to ensure we don't harm the IDE experience.
+4) **Value**: Proving cost efficiency and improved PR throughput (passing checks on 1st try).
 
 ---
 
@@ -1651,8 +1545,6 @@ Here we look at how developers actually spend their time versus how they ideally
 
 Notes:
 This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
-
----
 
 ---
 <!-- .slide: id="differentiation-full" -->
