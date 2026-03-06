@@ -544,53 +544,49 @@ Notes:
 
 ## HOW: 6-Month Roadmap
 
-<div class="roadmap-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.6em; line-height: 1.25;">
+<div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.52em !important; line-height: 1.2 !important; width: 100% !important;">
 
   <!-- Phase 1 -->
-  <div class="roadmap-item" style="margin-bottom: 0; padding: 6px;">
-    <div class="roadmap-timeline" style="margin-bottom: 4px; display: flex; flex-direction: column; align-items: flex-start; gap: 2px;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em; padding: 2px 6px; display: inline-block;">Month 1</span>
-      <span style="font-size: 0.75em; font-weight: bold; color: rgba(255,255,255,0.7); text-transform: uppercase;">Phase 1: PoC</span>
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 1px !important;">
+      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 1</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
-    <div class="roadmap-content" style="padding: 2px 6px;">
-      <p style="font-size: 0.9em; margin: 0 0 6px 0;">Select core flow with 10–15 design partners via fast prototyping (spec-first, review assist). Author initial spec format draft.</p>
-      <p style="font-size: 0.85em; margin: 0;"><span style="color: #64ffda; font-weight: bold;">Gate:</span> Core flow validated via repeated weekly use.</p>
+    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
+      <p style="margin: 0 !important; display: block !important;">Select core flow with 10–15 partners via fast prototyping (spec-first, review assist). Author spec format v1 draft. <span style="color: #64ffda; font-weight: bold; margin-left: 8px;">Gate:</span> Core flow validated via repeat use.</p>
     </div>
   </div>
 
   <!-- Phase 2 -->
-  <div class="roadmap-item" style="margin-bottom: 0; padding: 6px;">
-    <div class="roadmap-timeline" style="margin-bottom: 4px; display: flex; flex-direction: column; align-items: flex-start; gap: 2px;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em; padding: 2px 6px; display: inline-block;">Month 2</span>
-      <span style="font-size: 0.75em; font-weight: bold; color: rgba(255,255,255,0.7); text-transform: uppercase;">Phase 2: Monetization & OSS</span>
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 1px !important;">
+      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 2</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Mon. & OSS</span>
     </div>
-    <div class="roadmap-content" style="padding: 2px 6px;">
-      <p style="font-size: 0.9em; margin: 0 0 6px 0;">Secure commercial intent by gathering letters of intent from 3+ companies with defined pilot metrics. Package for the JB Ecosystem.</p>
-      <p style="font-size: 0.85em; margin: 0;"><span style="color: var(--r-main-color); font-weight: bold;">OSS:</span> Build trust with format v1 and open validator.</p>
+    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
+      <p style="margin: 0 !important; display: block !important;">Gather budget intent (LOIs) from 3+ companies with pilot metrics. Package for JB Ecosystem. <span style="color: var(--r-main-color); font-weight: bold; margin-left:8px;">OSS:</span> Broaden funnel with format v1 & validator.</p>
     </div>
   </div>
 
   <!-- Phase 3 -->
-  <div class="roadmap-item" style="margin-bottom: 0; padding: 6px;">
-    <div class="roadmap-timeline" style="margin-bottom: 4px; display: flex; flex-direction: column; align-items: flex-start; gap: 2px;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em; padding: 2px 6px; display: inline-block;">Months 3-4</span>
-      <span style="font-size: 0.75em; font-weight: bold; color: rgba(255,255,255,0.7); text-transform: uppercase;">Phase 3: Scale</span>
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 1px !important;">
+      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 3-4</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 3: Scale</span>
     </div>
-    <div class="roadmap-content" style="padding: 2px 6px;">
-      <p style="font-size: 0.9em; margin: 0 0 6px 0;">Launch IDE-plugin MVP focused on the core scenario with high-signal quality checks and seamless workflow integration. Run first paid pilots.</p>
-      <p style="font-size: 0.85em; margin: 0;"><span style="color: #64ffda; font-weight: bold;">Gate:</span> 5+ paying teams or equivalent revenue signal.</p>
+    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
+      <p style="margin: 0 !important; display: block !important;">Launch IDE-plugin MVP with high-signal quality checks and workflow integration. Run first paid pilots. <span style="color: #64ffda; font-weight: bold; margin-left: 8px;">Gate:</span> 5+ paying teams or revenue signal.</p>
     </div>
   </div>
 
   <!-- Phase 4 -->
-  <div class="roadmap-item" style="margin-bottom: 0; padding: 6px;">
-    <div class="roadmap-timeline" style="margin-bottom: 4px; display: flex; flex-direction: column; align-items: flex-start; gap: 2px;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em; padding: 2px 6px; display: inline-block;">Months 5-6</span>
-      <span style="font-size: 0.75em; font-weight: bold; color: rgba(255,255,255,0.7); text-transform: uppercase;">Phase 4: Standard</span>
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 1px !important;">
+      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 5-6</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standard</span>
     </div>
-    <div class="roadmap-content" style="padding: 2px 6px;">
-      <p style="font-size: 0.9em; margin: 0 0 6px 0;">Solidify standard. Publish to JB Marketplace with team-ready features (shared templates, visibility). Drive open-source growth.</p>
-      <p style="font-size: 0.85em; margin: 0;"><span style="color: #64ffda; font-weight: bold;">Gate:</span> Self-serve works across multi-user organizations.</p>
+    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
+      <p style="margin: 0 !important; display: block !important;">Publish to JB Marketplace with team-ready features (shared templates, visibility). Drive open-source growth. <span style="color: #64ffda; font-weight: bold; margin-left: 8px;">Gate:</span> Self-serve works across multi-user orgs.</p>
     </div>
   </div>
 
