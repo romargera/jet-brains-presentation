@@ -1,4 +1,4 @@
-<!-- .slide: id="title" -->
+<!-- markdownlint-disable MD033 -->
 
 <div class="title-slide">
   <p class="title-label">Take-Home Task</p>
@@ -521,7 +521,7 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
   <div class="chosen-tile chosen-tile--green" style="grid-column: 2 / 4;">
     <p class="chosen-tile-label">Monetization</p>
-    <p class="chosen-tile-body">Start free inside JetBrains IDEs. Month 2: validate budget intent and pilot terms. Months 3-4: paid team pilots once plugin MVP exists (team controls + PR/CI integration + change containment). OSS stays narrow (spec format + validator) to reduce lock-in and widen partner funnel; later it drives ecosystem growth.</p>
+    <p class="chosen-tile-body">Free entry via JetBrains IDE distribution. Month 2 secures budget intent and pilot terms; paid team pilots start once the plugin MVP exists (Mo 3-4). OSS stays narrow (spec format + validator) to reduce lock-in and widen the funnel, then supports ecosystem growth: stand-alone plugin or AI plans.</p>
   </div>
 
 </div>
@@ -553,7 +553,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Primary + fallback flows selected; most partners repeat the flow >=2x/week.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Primary + fallback flows selected.</p>
     </div>
   </div>
 
@@ -561,21 +561,21 @@ Notes:
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 2</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization & OSS</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization Concept</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification (tbd) from 3+ companies (budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS (tbd): spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> (tbd) 3+ payment-intent verifications with named budget owners and agreed pilot terms .</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification (tbd) from 3+ companies (budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS (tbd): spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> (tbd) 3+ payment-intent verifications with named budget owners and agreed pilot terms.</p>
     </div>
   </div>
 
   <!-- Phase 3 -->
-  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(90, 65, 65, 0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 3-4</span>
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 3: Scale</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Soft-launch a minimal IDE plugin and start paid pilots.<br><strong style="color: var(--r-main-color);">Do:</strong> MVP on one primary scenario, one low-noise quality check (change containment or drift signal), one workflow integration (PR/commits), first paid partner pilots.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Repeatable usage + measurable effect; 5+ paying teams or comparable revenue signal.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Soft-launch a minimal IDE plugin and start paid pilots.<br><strong style="color: var(--r-main-color);">Do:</strong> MVP on one primary scenario, one low-noise quality check (change containment or drift signal), one workflow integration (PR/commits), first paid partner pilots.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span><br>&bull; Token spend per successful PR-ready outcome &darr; 10%<br>&bull; % PRs where CI checks pass on 1st try &uarr; 10%<br>&bull; Median time to PR-ready (from spec approved) &darr; 10-20%<br>&bull; containment pass rate &ge; X% / unscoped diffs &darr; X% - tbd</p>
     </div>
   </div>
 
@@ -586,7 +586,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standard</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the approach and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Self-serve onboarding works; multi-user adoption in one company; external pull via issues/PRs/integrations.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the approach and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span><br>&bull; New MRR and Attributed JB MRR &gt; TBD (based on internal promo and attach rate opportunities)<br>&bull; Usage: most active teams run core scenario &ge;2x/week<br>&bull; &ge;70% with clear qualitative wins (CS + SMM)<br>&bull; Guardrail: alert disable rate stable + cost per outcome stable<br>&bull; Active users per org grows (champion &rarr; team) - TBD</p>
     </div>
   </div>
 
@@ -975,59 +975,6 @@ Notes:
 3) **Safety & Quality**: Tracking latency and false positives alongside qualitative CSAT to ensure we don't harm the IDE experience.
 4) **Value**: Proving cost efficiency and improved PR throughput (passing checks on 1st try).
 
----
-
-<!-- .slide: id="experiments" -->
-
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: First 30 Days — Validation Experiments</h2>
-
-<div class="grid-2x2" style="font-size: 0.7em; gap: 4px; height: 500px;">
-
-  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="feature-title" style="color: var(--jb-purple); margin-bottom: 2px;">1. Extraction Quality (PSI)</div>
-    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
-      <li><strong>Question:</strong> Accurate spec creation?</li>
-      <li><strong>GO:</strong> &ge; 3.5/5 score, &le; 30% edits.</li>
-      <li><strong>Fail:</strong> Manual rework > 60%.</li>
-    </ul>
-  </div>
-
-  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="feature-title" style="color: var(--jb-blue); margin-bottom: 2px;">2. Drift Detection Value</div>
-    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
-      <li><strong>Question:</strong> Does it catch real bugs?</li>
-      <li><strong>GO:</strong> &ge; 40% fix rate, &ge; 1 catch/week.</li>
-      <li><strong>Fail:</strong> Alerts noisy, disabled by devs.</li>
-    </ul>
-  </div>
-
-  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="feature-title" style="color: var(--jb-green); margin-bottom: 2px;">3. ICP Pain Priority</div>
-    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
-      <li><strong>Question:</strong> Is drift a top-3 problem?</li>
-      <li><strong>GO:</strong> &ge; 8/15 rank top-3, &ge; 5 pilots.</li>
-      <li><strong>Fail:</strong> Problem too low priority.</li>
-    </ul>
-  </div>
-
-  <div class="feature-box" style="padding: 5px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="feature-title" style="color: var(--jb-red); margin-bottom: 2px;">4. Timeline (Weeks 1-4)</div>
-    <ul class="text-sm" style="margin-top: 0; line-height: 1.2;">
-      <li><strong>W1:</strong> Telemetry + Recruit partners.</li>
-      <li><strong>W2-3:</strong> Run parallel experiments (1-2).</li>
-      <li><strong>W4:</strong> ICP interviews & Gate 1 Decision.</li>
-    </ul>
-  </div>
-
-</div>
-
-Notes:
-
-1) **Quick Feedback Loop**: Our initial month is entirely about proving the core hypothesis: "Devs find drift detection high-value, not noisy."
-2) **Go/No-Go Decision**: If we fail the drift detection value test, we rethink the product narrative before further investment.
-3) **PSI Depth**: Experiment 1 tells us if we need to refine the parser for Java/Kotlin or shift to LLM-heavy extraction.
-
----
 <!-- .slide: id="appendix" -->
 
 # Appendix
