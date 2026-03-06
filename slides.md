@@ -544,71 +544,77 @@ Notes:
 
 ## HOW: 6-Month Roadmap
 
-<div class="roadmap-container">
+<div class="roadmap-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 0.6em; line-height: 1.1;">
 
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 0-2 <span class="roadmap-gate">G1</span></span>
+  <!-- Phase 1 -->
+  <div class="roadmap-item" style="margin-bottom: 0; padding: 4px;">
+    <div class="roadmap-timeline" style="margin-bottom: 2px;">
+      <span class="roadmap-timeline-label" style="font-size: 0.8em; padding: 2px 6px;">Month 1 <span class="roadmap-gate" style="margin-left:4px;">G1</span></span>
     </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 1: MVP & VALIDATION</div>
-      <div class="roadmap-content-body">
-        • <strong>Ship MVP:</strong> code extraction + drift detection<br>
-        • Recruit 10 design partners (Tech Leads, 5+ devs)<br>
-        • <strong>Gate 1:</strong> ≥ 60% validation + 3 partners paying
+    <div class="roadmap-content" style="padding: 4px 6px;">
+      <div class="roadmap-content-title" style="font-size: 0.8em; margin-bottom: 3px;">PHASE 1: PoC</div>
+      <div class="roadmap-content-body" style="font-size: 0.9em; line-height: 1.2;">
+        <strong>Goal:</strong> Find entry point & core flow.<br>
+        • 10-15 design partners (JB Power Users)<br>
+        • 3 quick prototypes (spec-first, review assist)<br>
+        • Draft spec format v1 + 5-10 examples<br>
+        <span style="color: #64ffda; font-weight: bold; font-size: 0.85em; display: inline-block; margin-top: 3px;">Gate:</span> Core flow chosen, repeated ≥2x/week.
       </div>
     </div>
   </div>
 
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 2-4 <span class="roadmap-gate">G2</span></span>
+  <!-- Phase 2 -->
+  <div class="roadmap-item" style="margin-bottom: 0; padding: 4px;">
+    <div class="roadmap-timeline" style="margin-bottom: 2px;">
+      <span class="roadmap-timeline-label" style="font-size: 0.8em; padding: 2px 6px;">Month 2</span>
     </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 2: HARDEN</div>
-      <div class="roadmap-content-body">
-        • <strong>Bi-directional sync:</strong> add spec→code generation<br>
-        • PR integration: spec-delta visibility in code reviews<br>
-        • <strong>Gate 2:</strong> ≥ 20% review reduction + 5 partners paying
+    <div class="roadmap-content" style="padding: 4px 6px;">
+      <div class="roadmap-content-title" style="font-size: 0.8em; margin-bottom: 3px;">PHASE 2: MONETIZATION & OSS</div>
+      <div class="roadmap-content-body" style="font-size: 0.9em; line-height: 1.2;">
+        <strong>Goal:</strong> Secure commercial demand.<br>
+        • Letters of Intent from 3+ companies<br>
+        • Pilot scope defined (promised outcomes)<br>
+        • JB Ecosystem packaging (AI bundle or extra)<br>
+        <span style="color: var(--r-main-color); font-weight: bold; font-size: 0.85em; display: inline-block; margin-top: 3px;">OSS:</span> Format v1 + validator + examples.
       </div>
     </div>
   </div>
 
-  <div class="roadmap-item">
-    <div class="roadmap-timeline">
-      <span class="roadmap-timeline-label">Month 4-6 <span class="roadmap-gate">G3</span></span>
+  <!-- Phase 3 -->
+  <div class="roadmap-item" style="margin-bottom: 0; padding: 4px;">
+    <div class="roadmap-timeline" style="margin-bottom: 2px;">
+      <span class="roadmap-timeline-label" style="font-size: 0.8em; padding: 2px 6px;">Months 3-4 <span class="roadmap-gate" style="margin-left:4px;">G2</span></span>
     </div>
-    <div class="roadmap-content">
-      <div class="roadmap-content-title">PHASE 3: SCALE</div>
-      <div class="roadmap-content-body">
-        • <strong>Orchestration:</strong> CI gate enforcement (rollout)<br>
-        • Multi-repo spec management + Marketplace MVP<br>
-        • <strong>Gate 3:</strong> ≥ 100 active users + positive economics signal
+    <div class="roadmap-content" style="padding: 4px 6px;">
+      <div class="roadmap-content-title" style="font-size: 0.8em; margin-bottom: 3px;">PHASE 3: SCALE</div>
+      <div class="roadmap-content-body" style="font-size: 0.9em; line-height: 1.2;">
+        <strong>Goal:</strong> IDE-plugin soft launch & paid pilots.<br>
+        • Plugin MVP focused on the core scenario<br>
+        • 1 high-signal quality check w/o noise<br>
+        • 1 workflow integration (PR/Commits)<br>
+        <span style="color: #64ffda; font-weight: bold; font-size: 0.85em; display: inline-block; margin-top: 3px;">Gate:</span> 5+ paying teams or revenue signal.
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 4 -->
+  <div class="roadmap-item" style="margin-bottom: 0; padding: 4px;">
+    <div class="roadmap-timeline" style="margin-bottom: 2px;">
+      <span class="roadmap-timeline-label" style="font-size: 0.8em; padding: 2px 6px;">Months 5-6 <span class="roadmap-gate" style="margin-left:4px;">G3</span></span>
+    </div>
+    <div class="roadmap-content" style="padding: 4px 6px;">
+      <div class="roadmap-content-title" style="font-size: 0.8em; margin-bottom: 3px;">PHASE 4: STANDARD</div>
+      <div class="roadmap-content-body" style="font-size: 0.9em; line-height: 1.2;">
+        <strong>Goal:</strong> Solidify approach & ecosystem effects.<br>
+        • JB Marketplace listing (onboarding)<br>
+        • Team features (shared templates, visibility)<br>
+        • OSS Growth (first external contributors)<br>
+        <span style="color: #64ffda; font-weight: bold; font-size: 0.85em; display: inline-block; margin-top: 3px;">Gate:</span> Self-serve works, multi-user orgs.
       </div>
     </div>
   </div>
 
 </div>
-
-<p class="chosen-tile-body" style="text-align: center; margin-top: 10px; font-size: 0.45em; opacity: 0.8;">
-  <strong>Decision framework:</strong> Each gate requires quantitative metrics + qualitative signal + zero kill signals.
-</p>
-
-Notes:
-
-Execution follows three strictly gated phases:
-
-1) Phase 1 is all about value validation. Do devs actually review and maintain these extracted specs? If validation rate is low, we don't scale.
-2) Phase 2 moves to bi-directional sync (our moonshot). We prove ROI by measuring actual time reduction in PR reviews.
-3) Phase 3 is scale and monetization. Enterprise features like CI gates and multi-repo management are added here once the core loop is proven.
-4) We focus on JetBrains ecosystem first to exploit our PSI integration advantage.
-
-Team plan:
-• Phase 1 (Mo 0–2): 1 PM + 2 engineers (1 JB plugin/PSI, 1 backend/LLM integration). Total: 3 people.
-• Phase 2 (Mo 2–4): +1 engineer (CI/PR integration + spec-delta rendering). Total: 4 people.
-• Phase 3 (Mo 4–6): +1 designer (onboarding UX + dashboard) + 1 DevRel (community, design partners, content). Total: 6 people.
-• Assumption: engineers are familiar with Kotlin + IntelliJ Plugin SDK. If hired externally, add 2–4 weeks ramp-up to Phase 1 timeline.
-• Budget note: Phase 1–2 headcount fits within a typical JB incubation team. Phase 3 expansion is gated on G2 pass.
 
 ---
 <!-- .slide: id="segmentation" -->
