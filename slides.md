@@ -21,31 +21,33 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 <div class="agenda-nav">
   <div class="agenda-section">
     <h4>WHAT</h4>
-    <p>Pain Story</p>
-    <p>Pain Map</p>
-    <p>JTBD + ICP</p>
-    <p>Direction: Wedge</p>
+    <p>AI Adoption Paradox</p>
+    <p>Core JTBD</p>
+    <p>Strategic Directions</p>
+    <p>Learn &amp; Steal</p>
+    <p>WHAT &amp; WHY: Summary</p>
   </div>
   <div class="agenda-section">
     <h4>WHY</h4>
-    <p>Why Now</p>
-    <p>Market Map</p>
     <p>Competitive Landscape</p>
+    <p>Approaches</p>
     <p>Niche Choice</p>
+    <p>Differentiation</p>
   </div>
   <div class="agenda-section">
     <h4>HOW</h4>
-    <p>Product Thesis</p>
-    <p>MVP Scope</p>
-    <p>Validation Experiments</p>
-    <p>GTM: First 100 Users</p>
-    <p>Metrics + Kill Signals</p>
-    <p>Risks + Roadmap</p>
+    <p>6-Month Roadmap</p>
+    <p>MVP Product Definition</p>
+    <p>Segmentation</p>
+    <p>Monetization</p>
+    <p>Key Metrics</p>
+    <p>Risks &amp; Mitigation</p>
+    <p>GTM Strategy</p>
   </div>
 </div>
 
 Notes:
-The presentation has three parts. First, **What** — the problem AI teams face today and who we're building for. Second, **Why** — the market timing, competitive landscape, and our strategic choice. Third, **How** — the MVP, validation experiments, go-to-market, and risk management. Let's start with the problem.
+The presentation has three parts. First, **What** — problem framing, JTBD, strategic directions, and summary. Second, **Why** — competitor map, approaches, niche choice, and differentiation. Third, **How** — roadmap, MVP definition, segmentation, monetization, metrics, risks, and GTM. Let's start with the problem.
 
 ---
 <!-- .slide: id="adoption-paradox" -->
@@ -211,9 +213,9 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
 <div class="competitor-col-left" style="font-size: 0.28em; flex: 1;">
 <h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Direct Competitors</h4>
 <div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #10b981; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <div style="display: flex; gap: 8px; align-items: flex-start;">
-    <p style="flex: 1; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0;">Tier 1: Direct Threats</p>
-    <div style="flex: 2;">
+  <div style="display: flex; gap: 0; align-items: stretch;">
+    <p style="flex: 1; display: flex; align-items: center; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0; padding-right: 8px; line-height: 1.2;">Tier 1:<br>Direct Threats</p>
+    <div style="flex: 4; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 8px;">
       <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://speckit.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Spec Kit</a>: GitHub-supported, 73.6k★, phased plan-first workflow, CLI + in-agent</p>
       <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://kiro.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Kiro</a>: Built on Amazon Bedrock, 1.5M MAU, IDE + CLI + in-agent</p>
       <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://docs.bmad-method.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">BMAD</a>: 38.9k★, 19 roles, CLI + agent, adaptive depth</p>
@@ -223,9 +225,9 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
   </div>
 </div>
 <div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #ffb74d; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <div style="display: flex; gap: 8px; align-items: flex-start;">
-    <p style="flex: 1; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0;">Tier 2: Watchlist</p>
-    <div style="flex: 2;">
+  <div style="display: flex; gap: 0; align-items: stretch;">
+    <p style="flex: 1; display: flex; align-items: center; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0; padding-right: 8px; line-height: 1.2;">Tier 2:<br>Watchlist</p>
+    <div style="flex: 4; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 8px;">
       <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.task-master.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Taskmaster</a>: PRD→tasks + TDD autopilot</p>
       <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://stately.ai/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Stately</a>: State machines as specs</p>
       <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://buildermethods.com/agent-os" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Agent-OS</a>: Auto-extract repo conventions</p>
@@ -486,6 +488,7 @@ We explicitly rejected the red niches: End-to-end orchestration is too bloated f
 <div class="adoption-takeaway distrust-takeaway" style="padding: 10px 15px; margin-top: 10px;">
   <p>We bridge the gap between developer freedom and enterprise-level control: turning chaotic AI-assisted development into a predictable, specified, and reviewable architectural workflow.</p>
 </div>
+<p style="margin: 6px 2px 0; font-size: 0.4em; color: rgba(255,255,255,0.68); text-align: left;"><em>Note: PSI isn’t exclusive; defensibility compounds via accumulated spec data + workflow lock-in.</em></p>
 
 Notes:
 Why us? Let's look at our 5 core differentiators.
@@ -514,7 +517,7 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
-    <p class="chosen-tile-body"><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">Top-down SOM is $171.85M</a>, based on a $4.91B 2024 market, a 70% production workflows share, and a 5% achievable share, while the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: inherit; text-decoration: underline;">bottom-up Year 1 cross-check yields ~$0.93M</a>.</p>
+    <p class="chosen-tile-body">While the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">$171.85M top-down SOM</a> targets a 5% share of the $4.91B market, the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">$0.93M bottom-up Year 1 exit run-rate (~0.54% SOM)</a> reflects early funnel ramp-up versus a mature steady-state.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
@@ -561,7 +564,7 @@ Notes:
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Primary + fallback flows selected; most partners repeat the flow &ge;2x/week.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> Primary + fallback flows selected; most partners repeat the flow &ge;2x/week.<br>&bull; Core risk: demand for spec-first is a hypothesis; Month 1 runs 3 PoCs with a hard gate on repeat usage.</p>
     </div>
   </div>
 
@@ -608,7 +611,7 @@ Notes:
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
-  <div class="chosen-tile chosen-tile--green chosen-tile--wide">
+  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">What It Is</p>
     <p class="chosen-tile-body">JetBrains IDE plugin that turns a spec (repo-native Markdown) into controlled code changes, with in-IDE review and traceability, so teams ship faster without unscoped diffs.</p>
   </div>
@@ -638,6 +641,18 @@ Notes:
         <li>Change containment: hard scope boundaries + stop/ask on violations.</li>
         <li>In-IDE diff review with approve/apply loop.</li>
         <li>Traceability: links spec to diffs/commits + PR-ready summary.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Success Criteria</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Token spend per successful PR-ready outcome &darr; 10%</li>
+        <li>% PRs where CI checks pass on 1st try &uarr; 10%</li>
+        <li>Median time to PR-ready (from spec approved) &darr; 10-20%</li>
+        <li>Containment pass rate &ge; X% / unscoped diffs &darr; X% - tbd</li>
       </ul>
     </div>
   </div>
