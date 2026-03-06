@@ -24,30 +24,31 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
     <p>AI Adoption Paradox</p>
     <p>Core JTBD</p>
     <p>Strategic Directions</p>
-    <p>Learn &amp; Steal</p>
-    <p>WHAT &amp; WHY: Summary</p>
   </div>
   <div class="agenda-section">
     <h4>WHY</h4>
-    <p>Competitive Landscape</p>
+    <p>Competitor Landscape</p>
+    <p>Learn &amp; Steal</p>
     <p>Approaches</p>
     <p>Niche Choice</p>
     <p>Differentiation</p>
+    <p>WHAT &amp; WHY: Summary</p>
   </div>
   <div class="agenda-section">
     <h4>HOW</h4>
     <p>6-Month Roadmap</p>
-    <p>MVP Product Definition</p>
+    <p>MVP <span class="metric-badge">A</span></p>
     <p>Segmentation</p>
     <p>Monetization</p>
     <p>Key Metrics</p>
     <p>Risks &amp; Mitigation</p>
     <p>GTM Strategy</p>
+    <p>My 1st month actions</p>
   </div>
 </div>
 
 Notes:
-The presentation has three parts. First, **What** — problem framing, JTBD, strategic directions, and summary. Second, **Why** — competitor map, approaches, niche choice, and differentiation. Third, **How** — roadmap, MVP definition, segmentation, monetization, metrics, risks, and GTM. Let's start with the problem.
+The presentation has three parts. First, **What** — problem framing, JTBD, and strategic directions. Second, **Why** — competitor map, learn-and-steal analysis, approaches, niche choice, differentiation, and summary. Third, **How** — roadmap, MVP definition, segmentation, monetization, metrics, risks, GTM, and first-month execution actions. Let's start with the problem.
 
 ---
 <!-- .slide: id="adoption-paradox" -->
@@ -467,7 +468,7 @@ We explicitly rejected the red niches: End-to-end orchestration is too bloated f
     </tr>
     <tr>
       <td><strong>Deep Semantic Context</strong></td>
-      <td>PSI extracts structured signal at 100–300 tokens (70–90% saving). Compiler-grade accuracy, zero hallucination on structure. Not a permanent moat — a 12–18 month head start we convert into data and workflow lock-in.</td>
+      <td><span class="metric-badge">A</span> PSI extracts structured signal at 100–300 tokens (70–90% saving). Compiler-grade accuracy, zero hallucination on structure. Not a permanent moat — a 12–18 month head start we convert into data and workflow lock-in.</td>
     </tr>
     <tr>
       <td><strong>Continuous drift detection</strong></td>
@@ -553,7 +554,7 @@ Notes:
 ---
 <!-- .slide: id="roadmap" -->
 
-## HOW: 6-Month Roadmap
+## HOW: 6-Month Roadmap <span class="metric-badge">A</span>
 
 <div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.48em !important; line-height: 1.18 !important; width: 100% !important;">
 
@@ -677,7 +678,7 @@ Success criteria are repeat weekly usage, low-noise operation, and measurable re
 ---
 <!-- .slide: id="segmentation" -->
 
-## HOW: Segmentation
+## HOW: Segmentation <span class="metric-badge">A</span>
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr;">
   <div class="chosen-tile chosen-tile--green">
@@ -727,7 +728,7 @@ Second, when expanding across the org, we target Scaling personas — Engineerin
 ---
 <!-- .slide: id="pricing-monetization" -->
 
-## HOW: Monetization
+## HOW: Monetization <span class="metric-badge">A</span>
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px;">
   <div class="chosen-tile chosen-tile--green">
@@ -851,9 +852,9 @@ Notes:
         <th class="col-num">#</th>
         <th class="col-risk">Risk Name</th>
         <th class="col-mitigation">Mitigation Strategy</th>
-        <th class="col-status">Impact</th>
-        <th class="col-status">Prob.</th>
-        <th class="col-score">Score</th>
+        <th class="col-status">Impact <span class="metric-badge">A</span></th>
+        <th class="col-status">Prob. <span class="metric-badge">A</span></th>
+        <th class="col-score">Score <span class="metric-badge">A</span></th>
       </tr>
     </thead>
     <tbody>
@@ -939,7 +940,7 @@ Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen
 
 <!-- .slide: id="gtm" -->
 
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy</h2>
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy <span class="metric-badge">A</span></h2>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
 
@@ -996,6 +997,56 @@ Notes:
 2) **Monetization**: Early monetization starts as budget intent and pilot agreements. Charging starts when plugin MVP is usable.
 3) **Scale**: The JetBrains ecosystem is our unfair advantage. One-click install via Toolbox/Marketplace.
 4) **Standard**: We open-source the Spec Format and CLI to become the protocol, while monetizing the orchestration and governance.
+
+---
+
+<!-- .slide: id="month1-actions" -->
+
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">My 1st month actions</h2>
+
+<div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.48em !important; line-height: 1.18 !important; width: 100% !important;">
+
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Week 1</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Internal Ramp-Up</span>
+    </div>
+    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
+      <p style="margin: 0 !important; display: block !important;">&bull; Meet team and stakeholders; align on product stage, constraints, and success definition.<br>&bull; Review prior launches and learnings: what worked, what failed, and best practices.</p>
+    </div>
+  </div>
+
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Weeks 2-3</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Validation + Planning</span>
+    </div>
+    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
+      <p style="margin: 0 !important; display: block !important;">&bull; Start Research (2 options):<br>&nbsp;&nbsp;&bull; Option A (must-have): discovery interviews in parallel, &ge;8 by end of Week 3; validate pain, workflow fit, willingness to pilot; start outreach/scheduling for 10-15 design partners (2-3 weeks ramp).<br>&nbsp;&nbsp;&bull; Option B (nice-to-have): fake door (landing page or Marketplace listing) with per-track value prop, waitlist, and tracking.<br>&bull; Update: formalize MVP scope and roadmap with team and key stakeholders.</p>
+    </div>
+  </div>
+
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(90, 65, 65, 0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Week 4</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Go / No-Go</span>
+    </div>
+    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
+      <p style="margin: 0 !important; display: block !important;">Gate:<br>GO: &ge;5/8 respondents rank the pain top-3.<br>Note: quantitative survey next month.</p>
+    </div>
+  </div>
+
+  <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">End Mo 1</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Outputs</span>
+    </div>
+    <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
+      <p style="margin: 0 !important; display: block !important;">Deliver: Initial qualitative signal (winner track + evidence); updated roadmap, next steps, and MVP scope.</p>
+    </div>
+  </div>
+
+</div>
 
 ---
 
