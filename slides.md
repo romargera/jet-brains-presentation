@@ -51,7 +51,7 @@ The presentation has three parts. First, **What** — problem framing through a 
 <div style="margin: 40px 0; max-width: none; width: 100%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 30px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); box-sizing: border-box;">
   <div style="position: absolute; top: -10px; left: 15px; font-size: 8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
   <p style="font-size: 0.66em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. What used to be a 5-minute review can easily turn into 45 minutes of review, re-prompting, and cleanup... <span style="color: #ff8a80; font-weight: 600;">there has to be a better way.</span>"</p>
-  <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;"> (c) Alex, Tech Lead, Kotlin + Gemini</div>
+  <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;"><span style="line-height: 1.5; color: #e0e0e0; font-style: italic; font-weight: 400;">(c) Alex</span>, <span style="font-style: italic;">Tech Lead, Kotlin + Gemini</span></div>
 </div>
 
 <ul class="distrust-notes">
@@ -123,55 +123,50 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 
 ## WHAT: Strategic Directions
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr);">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">AI-Dev Transparency</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;">Fixes <strong>Distrust</strong>.</p>
-      <p>Makes generation predictable.</p>
-      <p class="chosen-segment-name" style="margin-top: 10px;">Core Focus</p>
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;">Two directions lead across <a href="#/distrust-issues" style="color: var(--accent-blue);">distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>.</p>
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: stretch; margin-top: 2px;">
+  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px;">
+    <div>
+      <p class="chosen-tile-label">AI-dev Transparency</p>
+      <div class="chosen-tile-body">
+        <p style="font-size: 0.82em; line-height: 1.32;">Makes AI output visible, reviewable, and predictable.</p>
+      </div>
     </div>
+    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">Lead direction</span></p>
   </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Spec Formalisation</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;">Fixes <strong>Time Spent</strong>.</p>
-      <p>Persistent context & rules.</p>
-      <p class="chosen-segment-name" style="margin-top: 10px;">Core Focus</p>
+
+  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px;">
+    <div>
+      <p class="chosen-tile-label">Spec Formalisation</p>
+      <div class="chosen-tile-body">
+        <p style="font-size: 0.82em; line-height: 1.32;">Creates persistent context, rules, and clearer execution.</p>
+      </div>
     </div>
+    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">Lead direction</span></p>
   </div>
-  <div class="chosen-tile chosen-tile--red">
-    <p class="chosen-tile-label">Review Assist</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;">Fixes <strong>Distrust</strong>.</p>
-      <p>Post-facto validation.</p>
-      <p style="color: #f87171; font-weight: 600; margin-top: 10px;">Fallback Option</p>
+
+  <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px; border: 1px solid rgba(251, 191, 36, 0.4); background: rgba(120, 87, 24, 0.18); opacity: 0.9;">
+    <div>
+      <p class="chosen-tile-label">Review &amp; Debug Assist</p>
+      <div class="chosen-tile-body">
+        <p style="font-size: 0.82em; line-height: 1.32;">Use if spec-first control is too high-friction.</p>
+      </div>
     </div>
+    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.5); background: rgba(251, 191, 36, 0.14);">Fallback option</span></p>
   </div>
 </div>
 
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Across <a href="#/distrust-issues" style="color: var(--accent-blue);">dev distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>, two directions lead. They converge to: <strong>persistent, controllable specs</strong>.</p>
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
+  <ul style="margin: 0; padding-left: 18px;">
+    <li style="margin-bottom: 5px;"><strong>Recommendation:</strong> Prioritise spec-driven control as the main path forward.</li>
+    <li style="margin-bottom: 5px;"><strong>Why:</strong> The two strongest directions, AI-dev Transparency and Spec Formalisation, converge on the same solution: persistent specs that make AI output transparent, reviewable, and controllable.</li>
+    <li><strong>Fallback:</strong> If pre-hoc spec control proves too high-friction, shift to Review &amp; Debug Assist.</li>
+  </ul>
 </div>
-
-<ul class="distrust-notes" style="display: none;">
-<li>ICE Score ranks directions by value vs cost: ICE Score = (Impact × Confidence) / Effort. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=1907182755#gid=1907182755&range=A1" target="_blank">Calculations</a>.</li>
-<li>Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.</li>
-<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
-</ul>
 
 Notes:
-Directions are scored by value-to-cost ratio to make prioritization explicit and defensible.
-Score = (Impact × Confidence) / Effort. Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.
-All scores are assumptions marked with A — to be validated through user interviews and early pilots.
-
-Key risks of chosen direction (AI-dev transparency): spec fatigue — developers approve without reading; enforcement resistance — teams reject mandatory gates. Both are tested in Phase 1 experiments.
-
-What would change our mind on runner-ups:
-• Review & Debug assist (1.7): if ICP interviews reveal developers prefer post-hoc review over pre-hoc control, we pivot to this direction — it shares the same trust JTBD but inverts the intervention point.
-• Security & Compliance (1.7): if enterprise pilots show compliance gates drive faster budget approval than architecture governance, we re-scope the wedge.
-
-Next: we define the chosen direction in detail with JTBD and early adopter segments.
+This is an executive decision slide: two lead directions converge on one path (spec-driven control), with a clear fallback if pre-hoc control friction is too high.
 
 ---
 <!-- .slide: id="why-competitor-landscape" -->
@@ -180,7 +175,10 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr);">
   <div class="chosen-tile">
-    <p class="chosen-tile-label" style="color: #10b981;">Direct: Spec-driven</p>
+    <p class="chosen-tile-label" style="color: #10b981; line-height: 1.12;">
+      <span style="display: block; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Direct</span>
+      <span style="display: block;">Spec-driven</span>
+    </p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 2px;"><strong>Tier 1: Direct Threats</strong></p>
       <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: var(--accent-blue);">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: var(--accent-blue);">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: var(--accent-blue);">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: var(--accent-blue);">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: var(--accent-blue);">OpenSpec</a></p>
@@ -190,14 +188,20 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
     </div>
   </div>
   <div class="chosen-tile">
-    <p class="chosen-tile-label" style="color: #4fc3f7;">Indirect: IDE Assistants</p>
+    <p class="chosen-tile-label" style="color: #4fc3f7; line-height: 1.12;">
+      <span style="display: block; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Indirect</span>
+      <span style="display: block;">IDE Assistants</span>
+    </p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 5px;"><strong><a href="https://cursor.com/" target="_blank" style="color: var(--accent-blue);">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: var(--accent-blue);">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: var(--accent-blue);">JB AI</a></strong></p>
       <p style="font-size: 0.9em; color: var(--text-muted);">Rule files exist, but lack hard spec enforcement and drift detection.</p>
     </div>
   </div>
   <div class="chosen-tile">
-    <p class="chosen-tile-label" style="color: #b388ff;">Adjacent: Post-facto, Evals</p>
+    <p class="chosen-tile-label" style="color: #b388ff; line-height: 1.12;">
+      <span style="display: block; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Adjacent</span>
+      <span style="display: block;">Post-facto &amp; Evals</span>
+    </p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 2px;"><strong>AI Code Reviewers</strong></p>
       <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://coderabbit.ai/" target="_blank" style="color: var(--accent-blue);">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: var(--accent-blue);">Qodo</a> (Review stage trust)</p>
@@ -246,46 +250,51 @@ Here we look at what's actually working in the market. First, Git-native markdow
 
 ## WHY: Approaches
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px;">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Spec-driven</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>High Defensibility</strong></p>
-      <p>High friction entry.</p>
-      <p class="chosen-tile-footnote">Score: 3.25 [A]</p>
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 14px;">One primary bet stands out: spec-driven control. Observability supports it, but does not replace it.</p>
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: stretch; margin-top: 2px;">
+  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px;">
+    <div>
+      <p class="chosen-tile-label">SPEC-DRIVEN CONTROL</p>
+      <div class="chosen-tile-body">
+        <p style="font-size: 0.82em; line-height: 1.32;">Prevents ambiguity before generation.</p>
+        <p style="font-size: 0.82em; line-height: 1.32;">Turns intent into persistent, reviewable constraints.</p>
+      </div>
     </div>
+    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">Primary bet</span></p>
   </div>
-  <div class="chosen-tile">
-    <p class="chosen-tile-label">IDE Assistants</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Low Friction</strong></p>
-      <p>Low defensibility.</p>
-      <p class="chosen-tile-footnote">Copilot / Cursor</p>
+
+  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px;">
+    <div>
+      <p class="chosen-tile-label">OBSERVABILITY &amp; EVALS</p>
+      <div class="chosen-tile-body">
+        <p style="font-size: 0.82em; line-height: 1.32;">Detects drift, regressions, and failures after execution.</p>
+        <p style="font-size: 0.82em; line-height: 1.32;">Best for validation, not primary control.</p>
+      </div>
     </div>
+    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Supporting layer</span></p>
   </div>
-  <div class="chosen-tile">
-    <p class="chosen-tile-label">Review Agents</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Post-facto</strong></p>
-      <p>Validation only.</p>
-      <p class="chosen-tile-footnote">CodeRabbit / Qodo</p>
+
+  <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px; border: 1px solid rgba(248, 113, 113, 0.3); background: rgba(71, 85, 105, 0.24); opacity: 0.92;">
+    <div>
+      <p class="chosen-tile-label">ADVERSARIAL REVIEW AGENTS</p>
+      <div class="chosen-tile-body">
+        <p style="font-size: 0.82em; line-height: 1.32;">Reduce manual review effort post-generation.</p>
+        <p style="font-size: 0.82em; line-height: 1.32;">Useful downstream, but too post-facto to be the core bet.</p>
+      </div>
     </div>
+    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #cbd5e1; border: 1px solid rgba(203, 213, 225, 0.45); background: rgba(148, 163, 184, 0.14);">Tactical helper</span></p>
   </div>
 </div>
 
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Takeaway:</strong> Spec-driven is the hardest to adopt but the most defensible [A].</p>
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
+  <p style="margin: 0 0 7px 0;"><strong>Recommendation:</strong> Prioritise spec-driven development as the core approach.</p>
+  <p style="margin: 0 0 7px 0;"><strong>Why:</strong> It prevents ambiguity before generation, while observability mainly detects issues after output or drift appears.</p>
+  <p style="margin: 0;"><strong>Use observability for:</strong> drift detection, regression monitoring, and validation.</p>
 </div>
 
 Notes:
-Detailed Approach Comparison (ICE Scores):
-1. Spec-driven (3.25): Proactive control. Artifact: Contracts. Players: Kiro, Spec Kit, CodeSpeak.
-2. Observability (3.0): Reactive trace. Players: LangSmith, W&B.
-3. Quality Gates (2.5): CI blocking. Players: Guardrails AI, Diffblue.
-4. Security (2.25): Compliance. Players: Snyk, Semgrep.
-5. Reviewers (2.17): Post-facto. Players: Qodo, CodeRabbit.
-6. Orchestration (2.0): Managed pipeline.
-Scores = Impact × Confidence ÷ Effort. Full data in Appendix. Impact scored 1–3 across 9 criteria.
+Primary strategy is spec-driven control because it constrains ambiguity before generation. Observability remains critical as a supporting layer for detection and validation after execution.
 
 ---
 <!-- .slide: id="target-niche" -->
@@ -302,12 +311,12 @@ Scores = Impact × Confidence ÷ Effort. Full data in Appendix. Impact scored 1�
       <p><strong style="color: var(--r-main-color);">Trigger:</strong> AI-caused prod incident or 3+ review cycles on a single AI-generated PR</p>
     </div>
   </div>
-  <div class="chosen-tile chosen-tile--green" style="opacity: 0.7;">
+  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Scaling Niche (after proving value)</p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security</p>
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> 100+ dev orgs, multi-repo, compliance pressure</p>
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> No standard for AI governance across teams</p>
+      <p><strong style="color: var(--r-main-color);">Problem:</strong> No standard for AI governance across teams</p>
     </div>
   </div>
 </div>
@@ -319,8 +328,6 @@ Scores = Impact × Confidence ÷ Effort. Full data in Appendix. Impact scored 1�
 Notes:
 Our primary niche is Tech Leads and Senior Engineers working in teams of 10-50 developers who use JetBrains IDEs in production and already use AI code generation. Their specific pain: unscoped AI diffs cause review bottlenecks and unpredictable regressions. The trigger event is an AI-caused production incident or repeated review cycles on AI-generated PRs.
 After proving value, we expand to the scaling niche: Engineering Managers, Directors, and Security leads who need org-wide AI governance standards.
-
----
 
 ---
 <!-- .slide: id="why-specs-not-just-models" -->
@@ -483,92 +490,70 @@ Detailed metrics and gates are maintained in the project dashboard.
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP</h2>
 <p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px;">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Who</p>
+    <p class="chosen-tile-label">What It Is</p>
+    <p class="chosen-tile-body">JetBrains IDE plugin that turns a spec (repo-native Markdown) into controlled code changes, with in-IDE review and traceability, so teams ship faster without unscoped diffs.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Who It Is For (MVP users)</p>
+    <p class="chosen-tile-body">A small set of design partner teams on real JetBrains IDE repos (single repo each), where scoped changes are common and review cycles are costly.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Core User Flow</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Backend Tech Leads</strong></p>
-      <p>Single-repo (Kotlin/Java) [A]</p>
+      <ol style="margin: 0; padding-left: 16px;">
+        <li>Define a spec for a scoped change (Markdown in the repo).</li>
+        <li>Run spec-aware workflow in IDE to generate plan + scoped diffs (change containment).</li>
+        <li>Review and approve/apply changes in IDE (hard stop on scope violations).</li>
+        <li>Produce PR-ready changeset with traceability (spec ↔ diff ↔ commits).</li>
+      </ol>
     </div>
   </div>
+
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">What (MVP)</p>
+    <p class="chosen-tile-label">Core Capabilities (MVP)</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Spec-aware plugin</strong></p>
-      <p>Hard scope containment.</p>
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Spec-aware workflow (not a Markdown editor): run/validate/apply from spec in IDE.</li>
+        <li>Change containment: hard scope boundaries + stop/ask on violations.</li>
+        <li>In-IDE diff review with approve/apply loop.</li>
+        <li>Traceability: links spec to diffs/commits + PR-ready summary.</li>
+      </ul>
     </div>
   </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Success Criteria <span class="metric-badge">A</span></p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Token spend per successful PR-ready outcome &darr; 10%</li>
+        <li>% PRs where CI checks pass on 1st try &uarr; 10%</li>
+        <li>Median time to PR-ready (from spec approved) &darr; 10-20%</li>
+        <li>Target range: 10-20% fewer unscoped diffs / rework signals</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="chosen-tile chosen-tile--red">
     <p class="chosen-tile-label">Not In MVP</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Governance & Edge</strong></p>
-      <p>Code -> Spec automation [A]</p>
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Full Code → Spec automation (validated via existing tools first).</li>
+        <li>Broad language/framework coverage and edge cases.</li>
+        <li>Full org governance (roles, audit, policy management at scale).</li>
+      </ul>
     </div>
   </div>
-</div>
 
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Takeaway:</strong> Narrow scope. Prove trust before horizontal scale.</p>
-</div>
-
-Notes:
-Product Definition: JetBrains IDE plugin that turns a spec (Markdown) into controlled code changes with in-IDE review.
-Core Flow: 1. Write Spec -> 2. Generate Plan -> 3. Review Diff (Hard containment) -> 4. Produce PR changeset.
-Core Capabilities: Spec-aware workflow, scope containment (stop/ask on violations), in-IDE review loop, spec-to-diff traceability.
-Success Criteria: -10% Token spend, +10% CI pass rate, 20% faster time-to-PR on scoped changes.
-Not in MVP: Full org governance, edge languages, automated code-to-spec generation (requires separate validation).
-
-
-
----
-<!-- .slide: id="golden-path-steps" -->
-
-## HOW: "Golden" Path <span class="metric-badge">A</span>
-
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(4, 1fr); gap: 10px;">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">1. Write Spec</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Markdown in Repo</strong></p>
-      <p>PSI-aware context [A]</p>
-    </div>
-  </div>
-  <div class="chosen-tile">
-    <p class="chosen-tile-label">2. AI Drafts</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Scoped Code</strong></p>
-      <p>Zero-rework hypothesis [A]</p>
-    </div>
-  </div>
-  <div class="chosen-tile">
-    <p class="chosen-tile-label">3. Guided Review</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>7-min Loop</strong></p>
-      <p>Diff vs. Contract</p>
-    </div>
-  </div>
-  <div class="chosen-tile">
-    <p class="chosen-tile-label">4. Update Spec</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Merge & Close</strong></p>
-      <p>Persistent contract [A]</p>
-    </div>
-  </div>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Result:</strong> 45-min blind review → 7-min guided review. Trust via transparency.</p>
 </div>
 
 Notes:
-Detailed Walkthrough (Alex Case):
-0:00 - Installs/Extracts spec from auth_engine.kt. Spinner 2-3s.
-1:30 - Reads generated spec (OAuth/JWT/Vault).
-2:30 - Edits (adds Rate limit rule).
-4:00 - Junior pushes drift (2h -> 4h). Bonsai detects mismatch.
-5:00 - Alex opens PR. Sees "1 drift detected" summary.
-7:00 - Alex resolves (Accept change or request fix).
-Core insight: Alex reviews the *contract diff*, not just 400 lines of code.
+MVP scope is intentionally narrow: one real workflow on partner repos with strict containment and clear traceability.
+Success criteria are repeat weekly usage, low-noise operation, and measurable review-cycle improvement before broader rollout.
 
 ---
 <!-- .slide: id="pricing-monetization" -->
@@ -1338,7 +1323,7 @@ This slide zooms out from the developer to the business buyer. B2B buyers care a
 ---
 <!-- .slide: id="stream-options-main-appendix" -->
 
-## WHAT: Strategic Directions
+## WHAT: Strategic Directions: detailed
 
 <table class="score-table">
   <thead>
