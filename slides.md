@@ -176,14 +176,13 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 </table>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong>Across the three evidence layers, distrust, time spent, and B2B issues, two directions emerged as the strongest: AI dev transparency and spec formalisation. Together, they point to the same core solution: persistent specs that make AI output transparent, reviewable, and controllable. Therefore, the primary recommendation is to invest in spec-driven control as the main path forward. If pre-hoc spec control proves too high-friction, the fallback is Review & Debug Assist.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Across the three evidence layers, <a href="#/distrust-issues" style="color: var(--accent-blue);">dev distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>, two directions emerged as the strongest: AI dev transparency and spec formalisation. Together, they point to the same core solution: persistent specs that make AI output transparent, reviewable, and controllable. Therefore, the primary recommendation is to invest in spec-driven control as the main path forward. If pre-hoc spec control proves too high-friction, the fallback is Review & Debug Assist.</p>
 </div>
 
 <ul class="distrust-notes">
 <li>ICE Score ranks directions by value vs cost: ICE Score = (Impact × Confidence) / Effort. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=1907182755#gid=1907182755&range=A1" target="_blank">Calculations</a>.</li>
 <li>Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.</li>
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
-<li>Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</li>
 </ul>
 
 Notes:
@@ -261,7 +260,7 @@ This slide summarizes the competitive landscape into three buckets. Direct compe
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Synthesis:</strong> The winning formula is a Git-native, bi-directional spec tool living entirely inside the IDE.</p>
+  <p><strong>Synthesis:</strong> The winning pattern is clear: an IDE-native, Git-native spec layer with bi-directional sync and persistent steering.</p>
 </div>
 
 Notes:
