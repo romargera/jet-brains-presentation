@@ -30,7 +30,7 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
   </div>
   <div class="agenda-section">
     <h4>HOW</h4>
-    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px;">Roadmap, MVP, metrics, risks, and first 30 days</div>
+    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px;">Roadmap, MVP, metrics, risks, my first 30 days</div>
   </div>
 </div>
 
@@ -50,8 +50,8 @@ The presentation has three parts. First, **What** — problem framing through a 
 <div style="width: 100%; max-width: 90%; margin: 0 auto;">
 <div style="margin: 40px 0; max-width: none; width: 100%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 30px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); box-sizing: border-box;">
   <div style="position: absolute; top: -10px; left: 15px; font-size: 8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
-  <p style="font-size: 0.66em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. The time saved in drafting is often spent on review, re-prompting, and cleanup. ...<span style="color: #ff8a80; font-weight: 600;">There has to be a better way.</span>"</p>
-  <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;">— Alex, Tech Lead, core backend team (8 devs), Kotlin + Gemini</div>
+  <p style="font-size: 0.66em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. What used to be a 5-minute review can easily turn into 45 minutes of review, re-prompting, and cleanup... <span style="color: #ff8a80; font-weight: 600;">there has to be a better way.</span>"</p>
+  <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;">— Alex, Tech Lead, Kotlin + Gemini</div>
 </div>
 
 <ul class="distrust-notes">
@@ -209,9 +209,9 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
     <p class="chosen-tile-label" style="color: #10b981;">Direct: Spec-driven</p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 2px;"><strong>Tier 1: Direct Threats</strong></p>
-      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: #4fc3f7;">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: #4fc3f7;">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: #4fc3f7;">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: #4fc3f7;">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: #4fc3f7;">OpenSpec</a></p>
+      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: var(--accent-blue);">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: var(--accent-blue);">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: var(--accent-blue);">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: var(--accent-blue);">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: var(--accent-blue);">OpenSpec</a></p>
       <p style="margin-bottom: 2px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;"><strong>Tier 2: Watchlist</strong></p>
-      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://www.task-master.dev/" target="_blank" style="color: #4fc3f7;">Taskmaster</a>, <a href="https://stately.ai/" target="_blank" style="color: #4fc3f7;">Stately</a>, <a href="https://buildermethods.com/agent-os" target="_blank" style="color: #4fc3f7;">Agent-OS</a>, <a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: #4fc3f7;">Autospec</a>, <a href="https://www.autok.dev/" target="_blank" style="color: #4fc3f7;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #4fc3f7;">devplan</a></p>
+      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://www.task-master.dev/" target="_blank" style="color: var(--accent-blue);">Taskmaster</a>, <a href="https://stately.ai/" target="_blank" style="color: var(--accent-blue);">Stately</a>, <a href="https://buildermethods.com/agent-os" target="_blank" style="color: var(--accent-blue);">Agent-OS</a>, <a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: var(--accent-blue);">Autospec</a>, <a href="https://www.autok.dev/" target="_blank" style="color: var(--accent-blue);">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: var(--accent-blue);">devplan</a></p>
       <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;">Phased plan-first workflows.</p>
     </div>
   </div>
@@ -537,36 +537,6 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
 ## WHAT & WHY: Summary
 
-<div style="display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: nowrap; margin-bottom: 10px;">
-  <div style="background: rgba(255,138,128,0.15); border: 1px solid rgba(255,138,128,0.4); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
-    <strong>Alex</strong><br>400-line AI PR<br>45 min review
-  </div>
-  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
-  <div style="background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
-    <strong>Core JTBD</strong><br>Predictable<br>AI dev
-  </div>
-  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
-  <div style="background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
-    <strong>Market</strong><br>90% adoption<br>+15pp distrust
-  </div>
-  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
-  <div style="background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
-    <strong>Spec-driven</strong><br>Score: 3.25
-  </div>
-  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
-  <div style="background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
-    <strong>IDE-Native</strong><br>Entry Strategy
-  </div>
-  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
-  <div style="background: rgba(100,255,218,0.15); border: 1px solid rgba(100,255,218,0.4); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
-    <strong>Result</strong><br>45→7 min review<br>spec-guided
-  </div>
-  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
-  <div style="background: rgba(100,255,218,0.15); border: 1px solid rgba(100,255,218,0.4); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
-    <strong>6-mo Plan</strong><br>Hard gates
-  </div>
-</div>
-
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">WHAT</p>
@@ -576,9 +546,8 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
     <p class="chosen-tile-label">WHY</p>
     <p class="chosen-tile-body">90% adoption + 15pp distrust surge prove demand. Spec-driven scores highest (3.25). JB's PSI gives a 12-18 month semantic edge. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">$4.91B TAM</a>, <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">~$0.93M Y1 bottom-up</a>.</p>
   </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">NEXT: Execution</p>
-    <p class="chosen-tile-body">IDE-native plugin via JB Marketplace. 6-month roadmap with hard Go/No-Go gates. Month 1: 10-15 design partners, 3 parallel PoCs.</p>
+  <div class="chosen-tile chosen-tile--green" style="display: flex; align-items: center; justify-content: center;">
+    <p class="chosen-tile-label" style="font-size: 1.2em; margin: 0; padding: 0; border: none; font-weight: 700;">NEXT: HOW <span style="margin-left: 8px; color: var(--accent-blue);">→</span></p>
   </div>
 </div>
 
@@ -1502,6 +1471,14 @@ Here we look at how developers actually spend their time versus how they ideally
 <td class="center score val-med">3</td>
 </tr>
 <tr>
+<td>Token Spent Optimization</td>
+<td>On average, token consumption decreased by 15–20%. <a href="https://arxiv.org/html/2504.15989v2" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center score val-med">3</td>
+</tr>
+<tr>
 <td>Developer burnout from cognitive load and on-call burden</td>
 <td>83% of software engineers report feelings of burnout. <a href="https://www.softwareseni.com/developer-burnout-and-cognitive-load-in-the-devops-era/" target="_blank">[1]</a></td>
 <td class="center val-med">Med</td>
@@ -1524,14 +1501,6 @@ Here we look at how developers actually spend their time versus how they ideally
 <td class="center val-low">Low</td>
 <td class="center val-med">Med</td>
 <td class="center score val-low">1.5</td>
-</tr>
-<tr>
-<td>Token Spent Optimization</td>
-<td>On average, token consumption decreased by 15–20%. <a href="https://arxiv.org/html/2504.15989v2" target="_blank">[1]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center score val-med">3</td>
 </tr>
 </tbody>
 </table>
