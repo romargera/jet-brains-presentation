@@ -21,38 +21,44 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 <div class="agenda-nav">
   <div class="agenda-section">
     <h4>WHAT</h4>
-    <div style="font-size: 0.52em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Problem &amp; Signals</div>
-    <p>AI Adoption Paradox</p>
-    <p>Core JTBD</p>
-    <p>Strategic Directions</p>
+    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Define the problem and pick a direction</div>
   </div>
   <div class="agenda-section">
     <h4>WHY</h4>
-    <div style="font-size: 0.52em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Market &amp; Insights</div>
-    <p>Competitor Landscape</p>
-    <p>Learn &amp; Steal</p>
-    <p>Approaches</p>
-    <p>Niche Choice</p>
-    <p>Why specs, not just better models</p>
-    <p>Differentiation</p>
-    <p>WHAT &amp; WHY: Summary</p>
+    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Map the market and justify the approach</div>
   </div>
   <div class="agenda-section">
     <h4>HOW</h4>
-    <div style="font-size: 0.52em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Plan &amp; Execution</div>
-    <p>Roadmap</p>
-    <p>MVP</p>
-    <p>Segmentation</p>
-    <p>Monetization</p>
-    <p>Key Metrics</p>
-    <p>Risks &amp; Mitigation</p>
-    <p>GTM Strategy</p>
-    <p>My 1st month actions</p>
+    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Roadmap, MVP, metrics, risks, and first 30 days</div>
   </div>
 </div>
 
+<ul class="distrust-notes">
+  <li><span class="metric-badge">A</span> Assumptions are marked with this icon</li>
+</ul>
+
 Notes:
-The presentation has three parts. First, **What: Problem & Signals** — problem framing, JTBD, and strategic directions. Second, **Why: Market & Insights** — competitor map, learnings, approaches, niche choice, why specs, differentiation, and summary. Third, **How: Plan & Execution** — roadmap, MVP definition, segmentation, monetization, metrics, risks, GTM, and first-month execution actions. Let's start with the problem.
+The presentation has three parts. First, **What** — problem framing through a real user story, JTBD, and strategic direction choice. Second, **Why** — competitor landscape, approach comparison, niche and entry strategy, differentiation. Third, **How** — execution roadmap, MVP, monetization, metrics, risks, GTM, and first-month actions. Let's start with the problem.
+
+---
+<!-- .slide: id="what-icp-jtbd" -->
+
+## WHAT: Issue signal
+
+<div style="margin: 40px auto; max-width: 90%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 30px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+  <div style="position: absolute; top: -10px; left: 15px; font-size: 8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
+  <p style="font-size: 1.0em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. The time saved in drafting is often spent on review, re-prompting, and cleanup. ...<span style="color: #ff8a80; font-weight: 600;">There has to be a better way.</span>"</p>
+  <div style="font-size: 0.8em; color: var(--text-muted); position: relative; z-index: 1;">— Alex, Tech Lead, core backend team (8 devs), Kotlin + Gemini</div>
+</div>
+
+<ul class="distrust-notes">
+  <li>Preliminary signal. Quality research planned in Month 1.</li>
+</ul>
+
+Notes:
+We start with a concrete pain point. Alex, a Tech Lead on an 8-person backend team, uses JB AI Assistant daily. On Friday afternoon he gets a PR from a junior — 400+ lines of AI-refactored auth module. He can't tell if the session expiry logic actually changed. After 45 minutes of line-by-line review, the PR gets "Request Changes". Both are frustrated.
+This maps directly to our Core JTBD: "When I use AI to write code, I want it to be predictable so I don't break production."
+The signal check quote comes from an exploratory conversation with a developer matching our target ICP. Full validation is planned for Month 1 with 10-15 design partners.
 
 ---
 <!-- .slide: id="adoption-paradox" -->
@@ -100,33 +106,11 @@ The presentation has three parts. First, **What: Problem & Signals** — problem
 </div>
 
 <div class="adoption-takeaway">
-  <p><strong>Takeaway:</strong> Developers adopt AI because of speed — but lose trust when output is unpredictable and hard to control.</p>
+  <p><strong>Takeaway:</strong> 90% adoption + 15pp distrust surge → developers use AI for speed but reject unpredictable output → our opportunity: make AI-assisted dev predictable.</p>
 </div>
 
 Notes:
 Let's start with the market signal. AI adoption among developers has hit 90% — up 14% year over year, according to Google's DORA report. But here's the paradox: adoption is up, yet trust is collapsing. Stack Overflow's 2025 survey shows unfavorable sentiment toward AI jumped 14 points in one year. Trust dropped from 43% to 33%. And active distrust — developers who say they distrust AI output — surged from 30% to nearly 46%. The takeaway is clear: developers use AI because it's fast, but they don't trust it — because the output is unpredictable and hard to control. This is the gap we're going after.
-
----
-<!-- .slide: id="what-icp-jtbd" -->
-
-## WHAT: Core JTBD
-
-<div class="distrust-takeaway">
-  <p style="font-size: 0.45em; color: var(--text-muted); margin: 0 0 8px; line-height: 1.4;">Assumed <span class="metric-badge">A</span> after analyzing the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</p>
-</div>
-
-<div class="chosen-grid chosen-grid--small">
-  <div class="chosen-tile chosen-tile--green chosen-tile--wide">
-    <p class="chosen-tile-label">Core JTBD</p>
-    <p class="chosen-tile-body">When engineers build with AI in production, they want development to be predictable and controllable, so they can ship faster with confidence.</p>
-  </div>
-</div>
-
-Notes:
-Here we look at who we are targeting and why.
-At the absolute core, our user has one main Job To Be Done: "When I use AI to write code, I want it to be predictable so I don't break production."
-Our wedge starts with the Early Adopters—the Tech Leads and Staff Engineers. They are the ones feeling the immediate pain of unscoped AI pull requests and code drift. The triggers here are simple: a few painful AI-caused bugs, or just review fatigue.
-Once we prove value at the team level, we hit the Scaling phase. Here, we target Engineering Managers, Heads of Platform, and Security leadership. Their headache is blast radius and policy enforcement across many repositories. When they are pushed by an upcoming compliance audit or a sudden drop in code quality across teams, they need a standardized, auditable way to manage AI-assisted development across the organization.
 
 ---
 <!-- .slide: id="stream-options" -->
@@ -186,7 +170,7 @@ Once we prove value at the team level, we hit the Scaling phase. Here, we target
 </table>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> AI-dev transparency: code &amp; architecture is the top-priority direction. Key risk: spec fatigue and enforcement resistance. Runner-up (Review &amp; Debug assist) becomes our fallback if ICP interviews disprove pre-hoc control preference.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Two directions share the top score (2.5): AI-dev transparency (from Distrust data) and Spec Formalisation (from Time Spent data). Both converge on the same approach — persistent specs that make AI output transparent and controllable. Fallback: Review &amp; Debug assist (1.7) if pre-hoc spec control proves too high-friction.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -214,57 +198,37 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
 
 ## WHY: Competitor Landscape
 
-<div class="competitor-layout" style="display: flex; gap: 15px; align-items: stretch; justify-content: space-between;">
-<div class="competitor-col-left" style="font-size: 0.28em; flex: 1;">
-<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Direct Competitors</h4>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #10b981; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <div style="display: flex; gap: 0; align-items: stretch;">
-    <p style="flex: 1; display: flex; align-items: center; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0; padding-right: 8px; line-height: 1.2;">Tier 1:<br>Direct Threats</p>
-    <div style="flex: 4; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 8px;">
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://speckit.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Spec Kit</a>: GitHub-supported, 73.6k★, phased plan-first workflow, CLI + in-agent</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://kiro.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Kiro</a>: Built on Amazon Bedrock, 1.5M MAU, IDE + CLI + in-agent</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://docs.bmad-method.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">BMAD</a>: 38.9k★, 19 roles, CLI + agent, adaptive depth</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://openspec.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">OpenSpec</a>: Vendor-agnostic, Open Source, No APIs</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://codespeak.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">CodeSpeak</a>: Specs compile to code, diff sync</p>
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr);">
+  <div class="chosen-tile">
+    <p class="chosen-tile-label" style="color: #10b981;">Direct: Spec-driven</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 2px;"><strong>Tier 1: Direct Threats</strong></p>
+      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: #4fc3f7;">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: #4fc3f7;">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: #4fc3f7;">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: #4fc3f7;">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: #4fc3f7;">OpenSpec</a></p>
+      <p style="margin-bottom: 2px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;"><strong>Tier 2: Watchlist</strong></p>
+      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://www.task-master.dev/" target="_blank" style="color: #4fc3f7;">Taskmaster</a>, <a href="https://stately.ai/" target="_blank" style="color: #4fc3f7;">Stately</a>, <a href="https://buildermethods.com/agent-os" target="_blank" style="color: #4fc3f7;">Agent-OS</a>, <a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: #4fc3f7;">Autospec</a>, <a href="https://www.autok.dev/" target="_blank" style="color: #4fc3f7;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #4fc3f7;">devplan</a></p>
+      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;">Phased plan-first workflows. Strongest conceptual alignment.</p>
     </div>
   </div>
-</div>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #ffb74d; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <div style="display: flex; gap: 0; align-items: stretch;">
-    <p style="flex: 1; display: flex; align-items: center; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0; padding-right: 8px; line-height: 1.2;">Tier 2:<br>Watchlist</p>
-    <div style="flex: 4; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 8px;">
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.task-master.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Taskmaster</a>: PRD→tasks + TDD autopilot</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://stately.ai/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Stately</a>: State machines as specs</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://buildermethods.com/agent-os" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Agent-OS</a>: Auto-extract repo conventions</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Autospec</a>: Spec Kit fork, YAML pipeline</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://specs.md/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">specs.md</a>: Formal AI-DLC, VS Code ext</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.autok.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">devplan</a>: Graph context + sync</p>
+  <div class="chosen-tile">
+    <p class="chosen-tile-label" style="color: #4fc3f7;">Indirect: IDE Assistants</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong><a href="https://cursor.com/" target="_blank" style="color: #4fc3f7;">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: #4fc3f7;">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: #4fc3f7;">JB AI</a></strong></p>
+      <p style="font-size: 0.9em; color: var(--text-muted);">Rule files exist, but lack hard spec enforcement and drift detection.</p>
     </div>
   </div>
-</div>
-</div>
-<div class="competitor-col-right" style="font-size: 0.28em; flex: 1;">
-<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Indirect Competitors</h4>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #4fc3f7; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">IDE AI Assistants (baseline)</p>
-  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://cursor.com/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">JB AI</a></p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Have steering files (Rules, CLAUDE.md) but no spec enforcement or drift detection</p>
-</div>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #b388ff; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">AI Code Reviewers</p>
-  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://coderabbit.ai/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Qodo</a></p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Same trust pain, review stage</p>
-</div>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #69f0ae; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Observability + Evals</p>
-  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Datadog LLM</a></p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Trace agent steps, convergence risk</p>
-</div>
-</div>
+  <div class="chosen-tile">
+    <p class="chosen-tile-label" style="color: #b388ff;">Adjacent: Post-facto / Evals</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 2px;"><strong>AI Code Reviewers</strong></p>
+      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://coderabbit.ai/" target="_blank" style="color: #4fc3f7;">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: #4fc3f7;">Qodo</a> (Review stage trust)</p>
+      <p style="margin-bottom: 2px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;"><strong>Observability & Evals</strong></p>
+      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: #4fc3f7;">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: #4fc3f7;">Datadog LLM</a> (Trace agent steps, convergence risk)</p>
+    </div>
+  </div>
 </div>
 
 Notes:
-This slide maps the competitive landscape for spec-driven development. Tier 1 includes five players we consider direct competitors: Spec Kit leads by traction, Kiro is Amazon's bet on this category, BMAD differentiates with multi-agent depth, OpenSpec is uniquely vendor-agnostic, and CodeSpeak takes spec-driven to its purest form — specs compile directly to code. Tier 2 products are on our watch list — they address adjacent problems or are too early-stage to evaluate fully. The key insight: the market is fragmented and early, with no dominant player and no standard methodology.
+This slide summarizes the competitive landscape into three buckets. Direct competitors are spec-driven (Spec Kit, Kiro, BMAD), indirect are IDE-native assistants (Cursor, Copilot) which lack enforcement, and adjacent are AI code reviewers (CodeRabbit) addressing the same pain but purely post-facto. 
 
 ---
 <!-- .slide: id="learn-and-steal" -->
@@ -317,7 +281,7 @@ Here we look at what's actually working in the market. First, Git-native markdow
       <td><strong>Spec-driven development</strong></td>
       <td>Spec-first: AI generates code &amp; checks from contracts. Spec becomes a reviewable, regression artifact.</td>
       <td><a href="https://kiro.dev/" target="_blank">Kiro</a>, <a href="https://speckit.org/" target="_blank">Spec Kit</a>, <a href="https://codespeak.dev/" target="_blank">CodeSpeak</a>, <a href="https://www.task-master.dev/" target="_blank">Taskmaster</a>, <a href="https://docs.bmad-method.org/" target="_blank">BMAD</a></td>
-      <td>3.3</td>
+      <td>3.25</td>
     </tr>
     <tr>
       <td><strong>Observability + evals</strong></td>
@@ -335,13 +299,13 @@ Here we look at what's actually working in the market. First, Git-native markdow
       <td><strong>Security &amp; compliance guardrails</strong></td>
       <td>Static analysis + runtime protection: catch vulnerabilities &amp; prompt injection, enforce compliance policies.</td>
       <td><a href="https://snyk.io/product/snyk-code/" target="_blank">Snyk Code</a>, <a href="https://semgrep.dev/" target="_blank">Semgrep</a>, <a href="https://codeql.github.com/docs/" target="_blank">CodeQL</a>, <a href="https://www.lakera.ai/lakera-guard" target="_blank">Lakera Guard</a>, <a href="https://www.holisticai.com/" target="_blank">Holistic AI</a>, <a href="https://protectai.com/" target="_blank">Protect AI</a></td>
-      <td>2.3</td>
+      <td>2.25</td>
     </tr>
     <tr>
       <td><strong>AI code reviewer</strong></td>
       <td>AI analyzes diffs &amp; repo context, finds issues, generates review summaries.</td>
       <td><a href="https://www.qodo.ai/" target="_blank">Qodo</a>, <a href="https://coderabbit.ai/" target="_blank">CodeRabbit</a>, <a href="https://github.com/qodo-ai/pr-agent" target="_blank">PR-Agent</a></td>
-      <td>2.2</td>
+      <td>2.17</td>
     </tr>
     <tr>
       <td><strong>AI-driven task orchestration</strong></td>
@@ -366,23 +330,54 @@ Here we look at what's actually working in the market. First, Git-native markdow
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Spec-driven development is the top-priority approach for addressing trust, combining the highest ICE Score across impact, confidence, and effort factors.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Spec-driven development leads (3.25) primarily due to higher transparency and broader SDLC coverage vs Observability (3.0). Spec-driven addresses ambiguity pre-generation (root cause), while observability catches problems post-facto. We build on spec-driven and integrate observability signals into drift detection.</p>
 </div>
 
 <ul class="distrust-notes">
-<li>Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (their weights sum to 1), equal to each of the other dimensions (Cost, Transparency, SDLC coverage, Adoption friction, Monetization), which all have equal weight. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort (Effort and Confidence both rated 1–3). <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Details →</a></li>
+<li>Impact scored 1–3 across 9 criteria (delivery outcomes, cost, transparency, SDLC coverage, adoption friction, monetization). Weights set as expert assumptions <span class="metric-badge">A</span>, equal by default — to be refined via ICP interviews. Total Score = Impact × Confidence ÷ Effort. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Calculations →</a></li>
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
-<li>Note: IDE-native steering files (Cursor Rules, CLAUDE.md, Windsurf Memory) partially solve persistent context but lack spec enforcement, drift detection, and structured generation pipelines.</li>
-<li>Each score was triangulated against: (1) Distrust + Time Spent + B2B evidence, (2) competitor traction signals, (3) JB SDK feasibility.</li>
 </ul>
 
 Notes:
-This slide maps competitive approaches to improving trust in AI-assisted development, scored using a weighted ICE framework. Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (weights sum to 1), equal to Cost, Transparency, SDLC coverage, Adoption friction, and Monetization. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort. Spec-driven development leads because it addresses ambiguity at the root — before code generation — delivering the highest combined score of 3.3.
+Spec-driven development leads (3.25) vs Observability (3.0). Both share high confidence, but spec-driven scores higher on transparency and SDLC coverage. The key difference: spec-driven addresses ambiguity before code generation (root cause), while observability catches problems post-facto. We build on spec-driven and integrate observability signals into drift detection. Impact is scored 1–3 across 9 criteria with equal-weight expert assumptions, to be refined via ICP interviews.
 
 ---
-<!-- .slide: id="niche-choice" -->
+<!-- .slide: id="target-niche" -->
 
-## WHY: Niche Choice
+## WHY: Target Niche <span class="metric-badge">A</span>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Primary Niche: Early Adopters</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Leads &amp; Senior Engineers</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> Teams 10-50 devs, production JB IDE users, already using AI code gen (Copilot/JB AI)</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> Unscoped AI diffs → review bottlenecks and unpredictable regressions</p>
+      <p><strong style="color: var(--r-main-color);">Trigger:</strong> AI-caused prod incident or 3+ review cycles on a single AI-generated PR</p>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green" style="opacity: 0.7;">
+    <p class="chosen-tile-label">Scaling Niche (after proving value)</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> 100+ dev orgs, multi-repo, compliance pressure</p>
+      <p><strong style="color: var(--r-main-color);">Problem:</strong> No standard for AI governance across teams</p>
+    </div>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px;">
+  <p><strong>Takeaway:</strong> We start narrow — Tech Leads feeling AI review pain in JB IDEs — and expand to org-wide governance once value is proven.</p>
+</div>
+
+Notes:
+Our primary niche is Tech Leads and Senior Engineers working in teams of 10-50 developers who use JetBrains IDEs in production and already use AI code generation. Their specific pain: unscoped AI diffs cause review bottlenecks and unpredictable regressions. The trigger event is an AI-caused production incident or repeated review cycles on AI-generated PRs.
+After proving value, we expand to the scaling niche: Engineering Managers, Directors, and Security leads who need org-wide AI governance standards.
+
+---
+<!-- .slide: id="entry-strategy" -->
+
+## WHY: Entry Strategy
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table" style="table-layout: fixed; width: 100%;">
@@ -476,8 +471,8 @@ We explicitly rejected the red niches: End-to-end orchestration is too bloated f
 <div class="distrust-table-wrapper">
 <table class="distrust-table" style="table-layout: fixed; width: 100%;">
   <colgroup>
-    <col style="width: 35%;">
-    <col style="width: 65%;">
+    <col style="width: 20%;">
+    <col style="width: 80%;">
   </colgroup>
   <thead>
     <tr>
@@ -513,7 +508,10 @@ We explicitly rejected the red niches: End-to-end orchestration is too bloated f
 <div class="adoption-takeaway distrust-takeaway" style="padding: 10px 15px; margin-top: 10px;">
   <p>We bridge the gap between developer freedom and enterprise-level control: turning chaotic AI-assisted development into a predictable, specified, and reviewable architectural workflow.</p>
 </div>
-<p style="margin: 6px 2px 0; font-size: 0.4em; color: rgba(255,255,255,0.68); text-align: left;"><em>Note: PSI isn’t exclusive; defensibility compounds via accumulated spec data + workflow lock-in.</em></p>
+
+<ul class="distrust-notes">
+  <li>Note: PSI isn’t exclusive; defensibility compounds via accumulated spec data + workflow lock-in.</li>
+</ul>
 
 Notes:
 Why us? Let's look at our 5 core differentiators.
@@ -533,60 +531,144 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
 ## WHAT & WHY: Summary
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px;">
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Strategic Alignment</p>
-    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp. Empowering JetBrains IDEs into the governance standard: powered by the community, built for the industry.</p>
+<div style="display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: nowrap; margin-bottom: 10px;">
+  <div style="background: rgba(255,138,128,0.15); border: 1px solid rgba(255,138,128,0.4); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
+    <strong>Alex</strong><br>400-line AI PR<br>45 min review
   </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
-    <p class="chosen-tile-body">While the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">$171.85M top-down SOM</a> targets a 5% share of the $4.91B market, the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">$0.93M bottom-up Year 1 exit run-rate (~0.54% SOM)</a> reflects early funnel ramp-up versus a mature steady-state.</p>
+  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
+  <div style="background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
+    <strong>Core JTBD</strong><br>Predictable<br>AI dev
   </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Differentiation</p>
-    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI <span class="metric-badge">A</span>: extract specs (zero friction), contain changes in diff (change containment), and detect drift early.</p>
+  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
+  <div style="background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
+    <strong>Market</strong><br>90% adoption<br>+15pp distrust
   </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Growth Loops</p>
-    <p class="chosen-tile-body">Champion-driven adoption via repo-native specs + CI gates. Supported by reviewer loop & ecosystem distribution. <a href="#/growth-loops">Details</a></p>
+  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
+  <div style="background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
+    <strong>Spec-driven</strong><br>Score: 3.25
   </div>
-
-  <div class="chosen-tile chosen-tile--green" style="grid-column: 2 / 4;">
-    <p class="chosen-tile-label">Monetization</p>
-    <p class="chosen-tile-body">Free entry via JetBrains IDE distribution. Month 2 secures budget intent and pilot terms; paid team pilots start once the plugin MVP exists (Mo 3-4). OSS stays narrow (spec format + validator) to reduce lock-in and widen the funnel, then supports ecosystem growth: stand-alone plugin or AI plans.</p>
+  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
+  <div style="background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
+    <strong>IDE-Native</strong><br>Entry Strategy
   </div>
-
+  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
+  <div style="background: rgba(100,255,218,0.15); border: 1px solid rgba(100,255,218,0.4); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
+    <strong>Result</strong><br>45→7 min review<br>spec-guided
+  </div>
+  <span style="color: var(--text-muted); font-size: 0.5em;">→</span>
+  <div style="background: rgba(100,255,218,0.15); border: 1px solid rgba(100,255,218,0.4); border-radius: 6px; padding: 5px 8px; text-align: center; font-size: 0.42em; line-height: 1.3; min-width: 80px;">
+    <strong>6-mo Plan</strong><br>Hard gates
+  </div>
 </div>
 
-<ul class="distrust-notes" style="margin-top: 15px;">
-<li>Assumptions <span class="metric-badge">A</span> for TAM/SAM/SOM and bottom up are indicated in the linked calculations <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank">[1]</a><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank">[2]</a>.</li>
-<li>Market Size Revenue base year 2024, adoption base year 2025.</li>
-<li>We assumed a conservative $4.91B (2024) base TAM to avoid overvaluation.</li>
-</ul>
-
-<div style="height: 40px;"></div>
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">WHAT</p>
+    <p class="chosen-tile-body">Engineers need predictable AI dev — not just faster AI dev. Core JTBD: control over AI-generated changes.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">WHY</p>
+    <p class="chosen-tile-body">90% adoption + 15pp distrust surge prove demand. Spec-driven scores highest (3.25). JB's PSI gives a 12-18 month semantic edge. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">$4.91B TAM</a>, <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">~$0.93M Y1 bottom-up</a>.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">NEXT: Execution</p>
+    <p class="chosen-tile-body">IDE-native plugin via JB Marketplace. 6-month roadmap with hard Go/No-Go gates. Month 1: 10-15 design partners, 3 parallel PoCs.</p>
+  </div>
+</div>
 
 Notes:
+This summary connects the dots from problem to execution. The Mermaid diagram visualizes the decision chain: from Alex's concrete pain → JTBD → market validation → approach selection → entry strategy → resolution → execution plan. Each step is backed by evidence presented in the preceding slides.
 
-- Рынок AI-тулзов оценивается по-разному (~$4–5B). Чтобы не завышать TAM, мы берем консервативную базу $4.91B (2024), сохраняя альтернативный апсайд-сценарий.
-- Ожидаемый рост через Tech Lead'ов легко скейлится благодаря "repo-native loop" и CI/PR гейтам.
+---
+<!-- .slide: id="golden-path-steps" -->
+
+## HOW: "Golden" Path <span class="metric-badge">A</span>
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
+  <thead>
+    <tr>
+      <th style="width: 8%;">Min</th>
+      <th style="width: 12%;">Alex does</th>
+      <th style="width: 33%;">Bonsai does</th>
+      <th style="width: 47%;">Alex sees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>0:00</strong></td>
+      <td>Installs Bonsai from JB Marketplace (1-click)</td>
+      <td>—</td>
+      <td>Plugin appears in sidebar</td>
+    </tr>
+    <tr>
+      <td><strong>1:00</strong></td>
+      <td>Right-clicks <code>auth_engine.kt</code> → "Extract Spec"</td>
+      <td>PSI parses classes, methods, annotations, deps. Sends structured pre-prompt (200 tokens) to LLM.</td>
+      <td>Loading spinner (2–3 sec)</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>1:30</strong></td>
+      <td>Reads generated spec in side panel</td>
+      <td>—</td>
+      <td>[SYNCED] Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
+    </tr>
+    <tr>
+      <td><strong>2:30</strong></td>
+      <td>Edits: adds "Rate limit: 5 attempts/15 min"</td>
+      <td>Saves as <code>/specs/auth_engine.spec.md</code></td>
+      <td>[EDITED]</td>
+    </tr>
+    <tr>
+      <td><strong>T+3:00</strong><br><span style="font-size: 0.78em;">(same session)</span></td>
+      <td>Alex goes home happy.</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>T+4:00</strong><br><span style="font-size: 0.78em;">(later / next iteration)</span></td>
+      <td>Junior pushes commit: session expiry → 4h</td>
+      <td>Detects drift: spec says 2h, code says 4h</td>
+      <td>[DRIFT]: 47 — Session changed 2h→4h</td>
+    </tr>
+    <tr>
+      <td><strong>5:00</strong></td>
+      <td>Alex opens PR — sees spec-delta summary at top</td>
+      <td>Auto-generates: "1 drift detected, 1 new endpoint, 0 removed"</td>
+      <td>Review time: 5 min instead of 45 min</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>7:00</strong></td>
+      <td>Alex clicks "Update Spec" (accepts 4h change) OR "Request Fix"</td>
+      <td>If accepted: spec auto-updates. If rejected: blocks merge until code reverts.</td>
+      <td>[RESOLVED]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Result:</strong> 45-minute blind review → 7-minute spec-guided review. Spec becomes the shared contract between author and reviewer.</p>
+</div>
+
+Notes:
+This walkthrough shows the complete user journey in under 10 minutes.
+Key moments: minute 1:30 (first spec extracted — immediate value), minute 4:00 (first drift caught — the "aha" moment), minute 7:00 (resolution — the workflow completes).
+The critical insight: Alex never had to *write* a spec. He only had to *read and approve* one. That's the difference between Bonsai and every previous documentation tool.
+The 45→7 minute improvement is our core value metric, tested in Phase 1 with design partners.
 
 ---
 <!-- .slide: id="roadmap" -->
 
 ## HOW: Roadmap <span class="metric-badge">A</span>
 
-<div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.48em !important; line-height: 1.18 !important; width: 100% !important;">
+<div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.56em !important; line-height: 1.22 !important; width: 100% !important; text-align: left !important;">
 
   <!-- Phase 1 -->
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 1</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
+      <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 1</span>
+      <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; Pilot commitments &ge;3<br>&bull; Problem ranks top-3 for &ge;5/8 respondents in AI dev<br>&bull; Qualified waitlist signups (ICP) &ge;15<br>&bull; Core risk: demand for spec-first is a hypothesis; Month 1 runs 3 PoCs with a hard gate on repeat usage.</p>
@@ -596,8 +678,8 @@ Notes:
   <!-- Phase 2 -->
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 2</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization & OSS</span>
+      <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 2</span>
+      <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization & OSS</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification from &ge;3 companies (named budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS track: spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span> &ge;3 payment-intent commitments with named budget owners and agreed pilot terms.</p>
@@ -607,8 +689,8 @@ Notes:
   <!-- Phase 3 -->
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(90, 65, 65, 0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 3-4</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 3: Scale</span>
+      <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 3-4</span>
+      <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 3: Scale</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Soft-launch a minimal IDE plugin and start paid pilots.<br><strong style="color: var(--r-main-color);">Do:</strong> MVP on one primary scenario, one low-noise quality check (change containment or drift signal), one workflow integration (PR/commits), first paid partner pilots.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; Token spend per successful PR-ready outcome &darr; 10%<br>&bull; % PRs where CI checks pass on 1st try &uarr; 10%<br>&bull; Median time to PR-ready (from spec approved) &darr; 10-20%<br>&bull; Target range: 10-20% fewer unscoped diffs / rework signals</p>
@@ -618,8 +700,8 @@ Notes:
   <!-- Phase 4 -->
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 5-6</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standard</span>
+      <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 5-6</span>
+      <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standard</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the approach and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; MRR target: $5-15k from paid pilots by Month 4-6<br>&bull; Usage: most active teams run core scenario &ge;2x/week<br>&bull; &ge;70% with clear qualitative wins (CS + SMM)<br>&bull; Guardrail: alert disable rate stable + cost per outcome stable<br>&bull; Active users per org target: 3-5 by Month 6</p>
@@ -634,7 +716,7 @@ Notes:
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP</h2>
 <p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="text-align: left;">
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">What It Is</p>
@@ -700,61 +782,11 @@ MVP scope is intentionally narrow: one real workflow on partner repos with stric
 Success criteria are repeat weekly usage, low-noise operation, and measurable review-cycle improvement before broader rollout.
 
 ---
-<!-- .slide: id="segmentation" -->
-
-## HOW: Segmentation <span class="metric-badge">A</span>
-
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr;">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Early Adopters</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
-      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
-      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
-        <li>Unscoped AI diffs</li>
-        <li>Spec ↔ code drift</li>
-        <li>Costly regressions</li>
-      </ul>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
-      <ul style="margin: 0; padding-left: 18px;">
-        <li>AI-caused prod incidents</li>
-        <li>Review churn rising</li>
-        <li>Major codebase refactor</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Scaling</p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
-      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
-      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
-        <li>No standard for AI dev</li>
-        <li>Risk across many repos</li>
-        <li>Low auditability</li>
-      </ul>
-      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
-      <ul style="margin: 0; padding-left: 18px;">
-        <li>Scaling AI across teams</li>
-        <li>Security/compliance audit</li>
-        <li>Incidents across repos</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-Notes:
-We target two distinct segments. First, Early Adopters — Tech Leads feeling the immediate pain of AI-caused bugs and unscoped diffs.
-Second, when expanding across the org, we target Scaling personas — Engineering Directors and Security who need standardization and auditability.
-
----
 <!-- .slide: id="pricing-monetization" -->
 
 ## HOW: Monetization <span class="metric-badge">A</span>
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px;">
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; text-align: left;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Packaging (min)</p>
     <div class="chosen-tile-body">
@@ -808,7 +840,7 @@ OSS stays narrow and strategic as the standard layer, while paid value concentra
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: Key Metrics</h2>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="text-align: left;">
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">1. NSM & Engagement</p>
@@ -966,7 +998,7 @@ Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy <span class="metric-badge">A</span></h2>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="text-align: left;">
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">1. PoC & Early Adopters</p>
@@ -1028,12 +1060,12 @@ Notes:
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">My 1st month actions</h2>
 
-<div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.48em !important; line-height: 1.18 !important; width: 100% !important;">
+<div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.56em !important; line-height: 1.22 !important; width: 100% !important;">
 
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Week 1</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Internal Ramp-Up</span>
+      <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Week 1</span>
+      <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Internal Ramp-Up</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;">&bull; Meet team and stakeholders; align on product stage, constraints, and success definition.<br>&bull; Review prior launches and learnings: what worked, what failed, and best practices.<br>&bull; Start a massive assumptions burn-down: validate PSI token-signal/cost claim, spec-first demand, design-partner ramp speed, and early monetization assumptions.</p>
@@ -1042,8 +1074,8 @@ Notes:
 
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Weeks 2-3</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Validation + Planning</span>
+      <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Weeks 2-3</span>
+      <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Validation + Planning</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;">&bull; Start Research (2 options):<br>&nbsp;&nbsp;&bull; Option A (must-have): discovery interviews in parallel, &ge;8 by end of Week 3; validate pain, workflow fit, willingness to pilot; start outreach/scheduling for 10-15 design partners (2-3 weeks ramp).<br>&nbsp;&nbsp;&bull; Option B (nice-to-have): fake door (landing page or Marketplace listing) with per-track value prop, waitlist, and tracking.<br>&bull; Update: formalize MVP scope and roadmap with team and key stakeholders.</p>
@@ -1052,8 +1084,8 @@ Notes:
 
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(90, 65, 65, 0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Week 4</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Go / No-Go</span>
+      <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Week 4</span>
+      <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Go / No-Go</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;">Gate: GO if pilot commitments &ge;3, problem ranks top-3 for &ge;5/8 in AI dev, and qualified waitlist signups (ICP) &ge;15 <span class="metric-badge">A</span>.</p>
@@ -1062,8 +1094,8 @@ Notes:
 
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
-      <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">End Mo 1</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Outputs</span>
+      <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">End Mo 1</span>
+      <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Outputs</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
       <p style="margin: 0 !important; display: block !important;">Deliver: Initial qualitative signal (winner track + evidence); updated roadmap, next steps, and MVP scope.</p>
@@ -1077,6 +1109,113 @@ Notes:
 <!-- .slide: id="appendix" -->
 
 # Appendix
+
+---
+<!-- .slide: id="appendix-competitor-landscape" -->
+
+## APPENDIX: Competitor Landscape (Detailed)
+
+<div class="competitor-layout" style="display: flex; gap: 15px; align-items: stretch; justify-content: space-between;">
+<div class="competitor-col-left" style="font-size: 0.38em; flex: 1;">
+<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Direct Competitors</h4>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #10b981; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <div style="display: flex; gap: 0; align-items: stretch;">
+    <p style="flex: 1; display: flex; align-items: center; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0; padding-right: 8px; line-height: 1.2;">Tier 1:<br>Direct Threats</p>
+    <div style="flex: 4; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 8px;">
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://speckit.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Spec Kit</a>: GitHub-supported, 73.6k★, phased plan-first workflow, CLI + in-agent</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://kiro.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Kiro</a>: Built on Amazon Bedrock, 1.5M MAU, IDE + CLI + in-agent</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://docs.bmad-method.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">BMAD</a>: 38.9k★, 19 roles, CLI + agent, adaptive depth</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://openspec.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">OpenSpec</a>: Vendor-agnostic, Open Source, No APIs</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://codespeak.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">CodeSpeak</a>: Specs compile to code, diff sync</p>
+    </div>
+  </div>
+</div>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #ffb74d; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <div style="display: flex; gap: 0; align-items: stretch;">
+    <p style="flex: 1; display: flex; align-items: center; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0; padding-right: 8px; line-height: 1.2;">Tier 2:<br>Watchlist</p>
+    <div style="flex: 4; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 8px;">
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.task-master.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Taskmaster</a>: PRD→tasks + TDD autopilot</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://stately.ai/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Stately</a>: State machines as specs</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://buildermethods.com/agent-os" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Agent-OS</a>: Auto-extract repo conventions</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Autospec</a>: Spec Kit fork, YAML pipeline</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://specs.md/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">specs.md</a>: Formal AI-DLC, VS Code ext</p>
+      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.autok.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">devplan</a>: Graph context + sync</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="competitor-col-right" style="font-size: 0.38em; flex: 1;">
+<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Indirect Competitors</h4>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #4fc3f7; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">IDE AI Assistants (baseline)</p>
+  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://cursor.com/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">JB AI</a></p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Have steering files (Rules, CLAUDE.md) but no spec enforcement or drift detection</p>
+</div>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #b388ff; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">AI Code Reviewers</p>
+  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://coderabbit.ai/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Qodo</a></p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Same trust pain, review stage</p>
+</div>
+<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #69f0ae; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
+  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Observability + Evals</p>
+  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Datadog LLM</a></p>
+  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Trace agent steps, convergence risk</p>
+</div>
+</div>
+</div>
+
+Notes:
+This slide maps the original detailed competitive landscape for spec-driven development. Tier 1 includes five players we consider direct competitors: Spec Kit leads by traction, Kiro is Amazon's bet on this category, BMAD differentiates with multi-agent depth, OpenSpec is uniquely vendor-agnostic, and CodeSpeak takes spec-driven to its purest form — specs compile directly to code. Tier 2 products are on our watch list — they address adjacent problems or are too early-stage to evaluate fully. The key insight: the market is fragmented and early, with no dominant player and no standard methodology.
+
+---
+<!-- .slide: id="segmentation" -->
+
+## HOW: Segmentation <span class="metric-badge">A</span>
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Early Adopters</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Lead, Senior Engineer.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Task-level predictability.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>Unscoped AI diffs</li>
+        <li>Spec ↔ code drift</li>
+        <li>Costly regressions</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>AI-caused prod incidents</li>
+        <li>Review churn rising</li>
+        <li>Major codebase refactor</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Scaling</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--r-main-color);">Sub JTBD:</strong> Org-wide governance.</p>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Problems</p>
+      <ul style="margin: 0 0 8px 0; padding-left: 18px;">
+        <li>No standard for AI dev</li>
+        <li>Risk across many repos</li>
+        <li>Low auditability</li>
+      </ul>
+      <p style="margin-bottom: 3px; font-weight: bold; color: var(--r-main-color);">Top Triggers</p>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>Scaling AI across teams</li>
+        <li>Security/compliance audit</li>
+        <li>Incidents across repos</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+Notes:
+We target two distinct segments. First, Early Adopters — Tech Leads feeling the immediate pain of AI-caused bugs and unscoped diffs.
+Second, when expanding across the org, we target Scaling personas — Engineering Directors and Security who need standardization and auditability.
 
 ---
 <!-- .slide: id="growth-loops" -->
@@ -1152,84 +1291,6 @@ Persona: Alex, Tech Lead, 8-person backend team, Kotlin monorepo, using JB AI As
 Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to refactor the auth module. The diff is 400+ lines. Alex can't tell if the session expiry logic changed or not. He spends 45 minutes line-by-line. The PR gets "Request Changes". The junior is frustrated. Alex thinks: "There has to be a better way."
 
 ---
-<!-- .slide: id="golden-path-steps" -->
-
-## HOW: "Golden" Path <span class="metric-badge">A</span>
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table">
-  <thead>
-    <tr>
-      <th style="width: 8%;">Min</th>
-      <th style="width: 12%;">Alex does</th>
-      <th style="width: 33%;">Bonsai does</th>
-      <th style="width: 47%;">Alex sees</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>0:00</strong></td>
-      <td>Installs Bonsai from JB Marketplace (1-click)</td>
-      <td>—</td>
-      <td>Plugin appears in sidebar</td>
-    </tr>
-    <tr>
-      <td><strong>1:00</strong></td>
-      <td>Right-clicks <code>auth_engine.kt</code> → "Extract Spec"</td>
-      <td>PSI parses classes, methods, annotations, deps. Sends structured pre-prompt (200 tokens) to LLM.</td>
-      <td>Loading spinner (2–3 sec)</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>1:30</strong></td>
-      <td>Reads generated spec in side panel</td>
-      <td>—</td>
-      <td>[SYNCED] Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
-    </tr>
-    <tr>
-      <td><strong>2:30</strong></td>
-      <td>Edits: adds "Rate limit: 5 attempts/15 min"</td>
-      <td>Saves as <code>/specs/auth_engine.spec.md</code></td>
-      <td>[EDITED]</td>
-    </tr>
-    <tr>
-      <td><strong>T+3:00</strong><br><span style="font-size: 0.78em;">(same session)</span></td>
-      <td>Alex goes home happy.</td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>T+4:00</strong><br><span style="font-size: 0.78em;">(later / next iteration)</span></td>
-      <td>Junior pushes commit: session expiry → 4h</td>
-      <td>Detects drift: spec says 2h, code says 4h</td>
-      <td>[DRIFT]: 47 — Session changed 2h→4h</td>
-    </tr>
-    <tr>
-      <td><strong>5:00</strong></td>
-      <td>Alex opens PR — sees spec-delta summary at top</td>
-      <td>Auto-generates: "1 drift detected, 1 new endpoint, 0 removed"</td>
-      <td>Review time: 5 min instead of 45 min</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>7:00</strong></td>
-      <td>Alex clicks "Update Spec" (accepts 4h change) OR "Request Fix"</td>
-      <td>If accepted: spec auto-updates. If rejected: blocks merge until code reverts.</td>
-      <td>[RESOLVED]</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Result:</strong> 45-minute blind review → 7-minute spec-guided review. Spec becomes the shared contract between author and reviewer.</p>
-</div>
-
-Notes:
-This walkthrough shows the complete user journey in under 10 minutes.
-Key moments: minute 1:30 (first spec extracted — immediate value), minute 4:00 (first drift caught — the "aha" moment), minute 7:00 (resolution — the workflow completes).
-The critical insight: Alex never had to *write* a spec. He only had to *read and approve* one. That's the difference between Bonsai and every previous documentation tool.
-The 45→7 minute improvement is our core value metric, tested in Phase 1 with design partners.
-
----
 <!-- .slide: id="distrust-issues" -->
 
 ## WHAT: Distrust issues
@@ -1268,7 +1329,7 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 <td class="center val-high">High</td>
 <td class="center val-high">High</td>
 <td class="center val-med">Med</td>
-<td class="center score val-high">7</td>
+<td class="center score val-high">6.75</td>
 </tr>
 <tr>
 <td>AI decision-making opacity and ambiguous accountability for errors</td>
@@ -1288,11 +1349,11 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 </tr>
 <tr>
 <td>Fear of data leaks and privacy concerns</td>
-<td>40% of security incidents involve AI (incident-level). &gt;80% report concerns about data security and privacy. Frequency=Low because measured via incidents. <a href="https://www.microsoft.com/en-us/security/blog/2024/11/13/microsoft-data-security-index-annual-report-highlights-evolving-generative-ai-security-needs/" target="_blank">[1]</a> <a href="https://survey.stackoverflow.co/2025/a" target="_blank">[2]</a></td>
+<td>40% of security incidents involve AI (incident-level). &gt;80% report concerns about data security and privacy. Frequency=Low because measured via incidents. <a href="https://www.microsoft.com/en-us/security/blog/2024/11/13/microsoft-data-security-index-annual-report-highlights-evolving-generative-ai-security-needs/" target="_blank">[1]</a> <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[2]</a></td>
 <td class="center val-med">Med</td>
 <td class="center val-low">Low</td>
 <td class="center val-med">Med</td>
-<td class="center score val-low">2</td>
+<td class="center score val-low">1.5</td>
 </tr>
 <tr>
 <td>Legal uncertainty regarding copyrights and licensing for AI-generated code</td>
@@ -1300,7 +1361,7 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 <td class="center val-med">Med</td>
 <td class="center val-low">Low</td>
 <td class="center val-med">Med</td>
-<td class="center score val-low">2</td>
+<td class="center score val-low">1.5</td>
 </tr>
 </tbody>
 </table>
@@ -1505,7 +1566,7 @@ Here we look at how developers actually spend their time versus how they ideally
 <td class="center val-high">High</td>
 <td class="center val-med">Med</td>
 <td class="center val-med">Med</td>
-<td class="center score val-high">5</td>
+<td class="center score val-high">4.5</td>
 </tr>
 <tr class="highlight-row">
 <td>Quality and reliability risk from software errors</td>
@@ -1513,7 +1574,7 @@ Here we look at how developers actually spend their time versus how they ideally
 <td class="center val-high">High</td>
 <td class="center val-high">High</td>
 <td class="center val-low">Low</td>
-<td class="center score val-high">5</td>
+<td class="center score val-high">4.5</td>
 </tr>
 <tr>
 <td>Documentation debt harming onboarding, satisfaction and speed</td>
@@ -1545,7 +1606,15 @@ Here we look at how developers actually spend their time versus how they ideally
 <td class="center val-med">Med</td>
 <td class="center val-low">Low</td>
 <td class="center val-med">Med</td>
-<td class="center score val-low">2</td>
+<td class="center score val-low">1.5</td>
+</tr>
+<tr>
+<td>Token Spent Optimization</td>
+<td>On average, token consumption decreased by 15–20%. <a href="https://arxiv.org/html/2504.15989v2" target="_blank">[1]</a></td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center val-med">Med</td>
+<td class="center score val-med">3</td>
 </tr>
 </tbody>
 </table>
@@ -1561,4 +1630,4 @@ Here we look at how developers actually spend their time versus how they ideally
 </ul>
 
 Notes:
-This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
+This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 4.5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.

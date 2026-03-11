@@ -56,13 +56,13 @@
 
 .reveal p,
 .reveal li {
-  font-size: 0.7em;
+  font-size: 0.78em;
   color: var(--text-muted);
 }
 
 .reveal .slides section p p,
 .reveal .grid-2x2 p {
-  font-size: 0.6em;
+  font-size: 0.68em;
   /* Even smaller for nested elements */
 }
 
@@ -122,7 +122,7 @@
 
 .reveal pre code {
   padding: 8px;
-  font-size: 0.6em;
+  font-size: 0.68em;
 }
 
 /* Mermaid adjustments */
@@ -185,7 +185,7 @@
 }
 
 .title-slide .title-author .author-date {
-  font-size: 0.55em;
+  font-size: 0.6em;
   color: var(--text-muted);
   font-weight: 300;
 }
@@ -229,7 +229,7 @@
 }
 
 .agenda-section p {
-  font-size: 0.55em;
+  font-size: 0.62em;
   color: var(--text-muted);
   margin: 3px 0;
   padding-left: 8px;
@@ -250,7 +250,7 @@
    ========================================== */
 
 .slide-subtitle {
-  font-size: 0.6em;
+  font-size: 0.66em;
   color: var(--text-muted);
   margin-top: -5px;
   margin-bottom: 15px;
@@ -303,13 +303,13 @@
 }
 
 .step-num {
-  font-size: 0.45em;
+  font-size: 0.5em;
   color: var(--text-muted);
   opacity: 0.6;
 }
 
 .step-name {
-  font-size: 0.55em;
+  font-size: 0.62em;
   font-weight: 600;
   color: var(--text-main);
 }
@@ -322,7 +322,7 @@
 }
 
 .effort-badge {
-  font-size: 0.4em;
+  font-size: 0.48em;
   font-weight: 600;
   padding: 2px 5px;
   border-radius: 3px;
@@ -350,7 +350,7 @@
 
 /* Direction arrows between badges */
 .effort-arrow {
-  font-size: 0.45em;
+  font-size: 0.52em;
   font-weight: 700;
   line-height: 1;
 }
@@ -398,7 +398,7 @@
 }
 
 .pain-takeaway p {
-  font-size: 0.55em;
+  font-size: 0.62em;
   color: var(--text-main);
   margin: 0;
 }
@@ -413,7 +413,7 @@
 }
 
 .pain-footnote p {
-  font-size: 0.4em;
+  font-size: 0.48em;
   color: var(--text-muted);
   opacity: 0.6;
   margin: 0;
@@ -472,13 +472,13 @@
 }
 
 .adoption-hero-label {
-  font-size: 0.6em;
+  font-size: 0.66em;
   color: var(--text-muted);
   text-align: center;
 }
 
 .adoption-hero-delta {
-  font-size: 0.55em;
+  font-size: 0.62em;
   font-weight: 600;
   color: var(--accent-green);
   margin-top: 4px;
@@ -528,7 +528,7 @@
 }
 
 .adoption-metric-name {
-  font-size: 0.6em;
+  font-size: 0.66em;
   color: var(--text-main);
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -595,7 +595,7 @@
 }
 
 .adoption-metric-label {
-  font-size: 0.35em;
+  font-size: 0.44em;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -632,7 +632,7 @@
 }
 
 .adoption-takeaway p {
-  font-size: 0.55em;
+  font-size: 0.62em;
   color: var(--text-main);
   margin: 0;
 }
@@ -656,15 +656,14 @@
 .distrust-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.38em;
+  font-size: 0.45em;
   /* Adjusted to fit 7 rows and legend */
   text-align: left;
 }
 
 /* Competitive approaches slide: narrower Description, wider Key Players */
 #competitive-approaches .distrust-table {
-  font-size: 0.342em;
-  /* 0.38em × 0.9 = -10% */
+  font-size: 0.42em;
 }
 
 #competitive-approaches .distrust-table td:nth-child(1) {
@@ -821,8 +820,7 @@
 .timespend-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.28em;
-  /* Much smaller to fit 16 rows */
+  font-size: 0.36em;
   text-align: left;
 }
 
@@ -898,7 +896,7 @@
 
 .distrust-notes {
   margin-top: 15px;
-  font-size: 0.35em;
+  font-size: 0.44em;
   color: #999;
   background: rgba(26, 26, 26, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -934,7 +932,7 @@
 .score-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.42em;
+  font-size: 0.48em;
   text-align: left;
 }
 
@@ -1134,7 +1132,7 @@
 }
 
 .competitor-col-right h4 {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1144,7 +1142,7 @@
 }
 
 #competitor-landscape .distrust-table {
-  font-size: 0.28em;
+  font-size: 0.38em;
   table-layout: fixed;
 }
 
@@ -1179,14 +1177,14 @@
 }
 
 .indirect-label {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-main);
   margin: 0 0 1px;
 }
 
 .indirect-players {
-  font-size: 10px;
+  font-size: 13px;
   margin: 0 0 1px;
 }
 
@@ -1201,7 +1199,7 @@
 }
 
 .indirect-note {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--text-muted);
   margin: 0;
   font-style: italic;
@@ -1210,7 +1208,7 @@
 
 .slide-footnote {
   margin-top: 10px;
-  font-size: 0.35em !important;
+  font-size: 0.44em !important;
   color: #666 !important;
   opacity: 0.8;
   line-height: 1.4;
@@ -1248,7 +1246,7 @@
 
 .chosen-tile-label {
   margin: 0 0 3px;
-  font-size: 0.37em;
+  font-size: 0.44em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1265,19 +1263,17 @@
 
 .chosen-tile-body {
   margin: 0;
-  font-size: 0.3em;
+  font-size: 0.4em;
   line-height: 1.45;
   color: var(--text-muted);
 }
 
 .chosen-grid--small .chosen-tile-label {
-  font-size: 0.5em;
-  /* 0.25em * 2 = 0.5em */
+  font-size: 0.56em;
 }
 
 .chosen-grid--small .chosen-tile-body {
-  font-size: 0.4em;
-  /* 0.2em * 2 = 0.4em */
+  font-size: 0.48em;
 }
 
 .chosen-segment-name {
@@ -1288,7 +1284,7 @@
 .chosen-jtbd {
   margin: 0;
   padding-left: 13px;
-  font-size: 0.45em;
+  font-size: 0.52em;
   line-height: 1.45;
   color: var(--text-muted);
 }
@@ -1312,7 +1308,7 @@
 
 .chosen-tile-footnote {
   margin: 6px 0 0;
-  font-size: 0.45em;
+  font-size: 0.5em;
   color: #888;
   font-style: italic;
 }
@@ -1368,7 +1364,7 @@
 }
 
 .roadmap-timeline-label {
-  font-size: 0.6em;
+  font-size: 0.66em;
   font-weight: 700;
   color: #fbbf24;
   /* amber */
@@ -1379,7 +1375,7 @@
   display: inline-block;
   background: #fbbf24;
   color: #000;
-  font-size: 0.55em;
+  font-size: 0.62em;
   font-weight: 800;
   padding: 1px 4px;
   border-radius: 2px;
@@ -1396,7 +1392,7 @@
 }
 
 .roadmap-content-title {
-  font-size: 0.5em;
+  font-size: 0.56em;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 4px;
@@ -1405,7 +1401,7 @@
 }
 
 .roadmap-content-body {
-  font-size: 0.4em;
+  font-size: 0.48em;
   line-height: 1.4;
   color: var(--text-muted);
   margin: 0;
@@ -1467,7 +1463,7 @@
 }
 
 .solution-scope h4 {
-  font-size: 0.6em;
+  font-size: 0.66em;
   color: #fff;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -1482,7 +1478,7 @@
 
 .solution-scope-label {
   display: block;
-  font-size: 0.45em;
+  font-size: 0.52em;
   font-weight: 800;
   color: #eee;
   margin-bottom: 3px;
@@ -1490,7 +1486,7 @@
 
 .solution-scope-body {
   display: block;
-  font-size: 0.4em;
+  font-size: 0.48em;
   color: #bbb;
   line-height: 1.4;
 }
@@ -1513,7 +1509,7 @@
 .risk-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.38em;
+  font-size: 0.45em;
   text-align: left;
 }
 
