@@ -18,6 +18,7 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 
 ## Presentation Structure
 
+<div style="width: 100%; max-width: 820px; margin: 0 auto;">
 <div class="agenda-nav">
   <div class="agenda-section">
     <h4>WHAT</h4>
@@ -36,6 +37,7 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 <ul class="distrust-notes">
   <li><span class="metric-badge">A</span> Assumptions are marked with this icon</li>
 </ul>
+</div>
 
 Notes:
 The presentation has three parts. First, **What** — problem framing through a real user story, JTBD, and strategic direction choice. Second, **Why** — competitor landscape, approach comparison, niche and entry strategy, differentiation. Third, **How** — execution roadmap, MVP, monetization, metrics, risks, GTM, and first-month actions. Let's start with the problem.
@@ -45,7 +47,8 @@ The presentation has three parts. First, **What** — problem framing through a 
 
 ## WHAT: Issue signal
 
-<div style="margin: 40px auto; max-width: 90%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 30px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+<div style="width: 100%; max-width: 90%; margin: 0 auto;">
+<div style="margin: 40px 0; max-width: none; width: 100%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 30px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); box-sizing: border-box;">
   <div style="position: absolute; top: -10px; left: 15px; font-size: 8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
   <p style="font-size: 1.0em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. The time saved in drafting is often spent on review, re-prompting, and cleanup. ...<span style="color: #ff8a80; font-weight: 600;">There has to be a better way.</span>"</p>
   <div style="font-size: 0.8em; color: var(--text-muted); position: relative; z-index: 1;">— Alex, Tech Lead, core backend team (8 devs), Kotlin + Gemini</div>
@@ -54,6 +57,7 @@ The presentation has three parts. First, **What** — problem framing through a 
 <ul class="distrust-notes">
   <li>Preliminary signal. Quality research planned in Month 1.</li>
 </ul>
+</div>
 
 Notes:
 We start with a concrete pain point. Alex, a Tech Lead on an 8-person backend team, uses JB AI Assistant daily. On Friday afternoon he gets a PR from a junior — 400+ lines of AI-refactored auth module. He can't tell if the session expiry logic actually changed. After 45 minutes of line-by-line review, the PR gets "Request Changes". Both are frustrated.
@@ -67,7 +71,8 @@ The signal check quote comes from an exploratory conversation with a developer m
 
 <p class="slide-subtitle"></p>
 
-<div class="adoption-layout">
+<div style="width: 100%; max-width: 95%; margin: 0 auto;">
+<div class="adoption-layout" style="margin: 10px 0; max-width: none; width: 100%;">
 <div class="adoption-col adoption-col-left">
 <div class="adoption-hero">
 <span class="adoption-hero-number">90%</span>
@@ -107,6 +112,7 @@ The signal check quote comes from an exploratory conversation with a developer m
 
 <div class="adoption-takeaway">
   <p><strong>Takeaway:</strong> 90% adoption + 15pp distrust surge → developers use AI for speed but reject unpredictable output → our opportunity: make AI-assisted dev predictable.</p>
+</div>
 </div>
 
 Notes:

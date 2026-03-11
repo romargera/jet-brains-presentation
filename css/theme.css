@@ -623,8 +623,10 @@
 
 /* Takeaway */
 .adoption-takeaway {
-  margin: 10px auto 0;
-  max-width: 95%;
+  margin: 10px 0 0;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
   background: rgba(59, 130, 246, 0.08);
   border: 1px solid rgba(59, 130, 246, 0.25);
   border-radius: var(--border-radius);
@@ -643,7 +645,7 @@
 }
 
 .distrust-takeaway {
-  margin: 15px auto 15px;
+  margin: 15px 0;
 }
 
 /* Distrust Issues Table */
@@ -655,9 +657,9 @@
 
 .distrust-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 0.45em;
-  /* Adjusted to fit 7 rows and legend */
   text-align: left;
 }
 
@@ -896,6 +898,11 @@
 
 .distrust-notes {
   margin-top: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
   font-size: 0.44em;
   color: #999;
   background: rgba(26, 26, 26, 0.6);
@@ -931,6 +938,7 @@
 
 .score-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 0.48em;
   text-align: left;
