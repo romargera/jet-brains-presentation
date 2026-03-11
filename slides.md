@@ -547,7 +547,7 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
     <p class="chosen-tile-body">90% adoption + 15pp distrust surge prove demand. Spec-driven scores highest (3.25). JB's PSI gives a 12-18 month semantic edge. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">$4.91B TAM</a>, <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">~$0.93M Y1 bottom-up</a>.</p>
   </div>
   <div class="chosen-tile chosen-tile--green" style="display: flex; align-items: center; justify-content: center;">
-    <p class="chosen-tile-label" style="font-size: 1.2em; margin: 0; padding: 0; border: none; font-weight: 700;">NEXT: HOW <span style="margin-left: 8px; color: var(--accent-blue);">→</span></p>
+    <p class="chosen-tile-label">NEXT: HOW <span style="margin-left: 8px; color: var(--accent-blue);">→</span></p>
   </div>
 </div>
 
@@ -1038,7 +1038,7 @@ Notes:
 <div class="roadmap-container" style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 0.56em !important; line-height: 1.22 !important; width: 100% !important;">
 
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+    <div class="roadmap-timeline" style="flex: 0 0 140px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Week 1</span>
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Internal Ramp-Up</span>
     </div>
@@ -1048,7 +1048,7 @@ Notes:
   </div>
 
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+    <div class="roadmap-timeline" style="flex: 0 0 140px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Weeks 2-3</span>
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Validation + Planning</span>
     </div>
@@ -1058,7 +1058,7 @@ Notes:
   </div>
 
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(90, 65, 65, 0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+    <div class="roadmap-timeline" style="flex: 0 0 140px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Week 4</span>
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Go / No-Go</span>
     </div>
@@ -1068,7 +1068,7 @@ Notes:
   </div>
 
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+    <div class="roadmap-timeline" style="flex: 0 0 140px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">End Mo 1</span>
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Outputs</span>
     </div>
@@ -1085,9 +1085,6 @@ Notes:
 
 # Appendix
 
----
-Notes:
-This slide maps the original detailed competitive landscape for spec-driven development. Tier 1 includes five players we consider direct competitors: Spec Kit leads by traction, Kiro is Amazon's bet on this category, BMAD differentiates with multi-agent depth, OpenSpec is uniquely vendor-agnostic, and CodeSpeak takes spec-driven to its purest form — specs compile directly to code. Tier 2 products are on our watch list — they address adjacent problems or are too early-stage to evaluate fully. The key insight: the market is fragmented and early, with no dominant player and no standard methodology.
 
 ---
 <!-- .slide: id="segmentation" -->
