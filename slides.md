@@ -520,8 +520,11 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
     <p class="chosen-tile-label">WHY</p>
     <p class="chosen-tile-body">90% adoption + 15pp distrust surge prove demand. Spec-driven scores highest (3.25). JB's PSI gives a 12-18 month semantic edge. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">$4.91B TAM</a>, <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: underline;">~$0.93M Y1 bottom-up</a>.</p>
   </div>
-  <div class="chosen-tile chosen-tile--green" style="display: flex; align-items: center; justify-content: center;">
-    <p class="chosen-tile-label">NEXT: HOW <span style="margin-left: 8px; color: var(--accent-blue);">→</span></p>
+  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column;">
+    <p class="chosen-tile-label">HOW</p>
+    <div class="chosen-tile-body" style="flex: 1; display: flex; align-items: center; justify-content: center; font-size: 1.3em;">
+      <a href="#/roadmap">Next slides ></a>
+    </div>
   </div>
 </div>
 
