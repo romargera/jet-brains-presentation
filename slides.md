@@ -22,15 +22,15 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 <div class="agenda-nav">
   <div class="agenda-section">
     <h4>WHAT</h4>
-    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Define the problem and pick a direction</div>
+    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px;">Define the problem and pick a direction</div>
   </div>
   <div class="agenda-section">
     <h4>WHY</h4>
-    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Map the market and justify the approach</div>
+    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px;">Map the market and justify the approach</div>
   </div>
   <div class="agenda-section">
     <h4>HOW</h4>
-    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px; font-weight: 600;">Roadmap, MVP, metrics, risks, and first 30 days</div>
+    <div style="font-size: 0.6em; color: var(--text-main); margin: 0 0 6px;">Roadmap, MVP, metrics, risks, and first 30 days</div>
   </div>
 </div>
 
@@ -50,8 +50,8 @@ The presentation has three parts. First, **What** — problem framing through a 
 <div style="width: 100%; max-width: 90%; margin: 0 auto;">
 <div style="margin: 40px 0; max-width: none; width: 100%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 30px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); box-sizing: border-box;">
   <div style="position: absolute; top: -10px; left: 15px; font-size: 8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
-  <p style="font-size: 1.0em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. The time saved in drafting is often spent on review, re-prompting, and cleanup. ...<span style="color: #ff8a80; font-weight: 600;">There has to be a better way.</span>"</p>
-  <div style="font-size: 0.8em; color: var(--text-muted); position: relative; z-index: 1;">— Alex, Tech Lead, core backend team (8 devs), Kotlin + Gemini</div>
+  <p style="font-size: 0.66em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. The time saved in drafting is often spent on review, re-prompting, and cleanup. ...<span style="color: #ff8a80; font-weight: 600;">There has to be a better way.</span>"</p>
+  <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;">— Alex, Tech Lead, core backend team (8 devs), Kotlin + Gemini</div>
 </div>
 
 <ul class="distrust-notes">
@@ -212,7 +212,7 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
       <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: #4fc3f7;">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: #4fc3f7;">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: #4fc3f7;">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: #4fc3f7;">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: #4fc3f7;">OpenSpec</a></p>
       <p style="margin-bottom: 2px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;"><strong>Tier 2: Watchlist</strong></p>
       <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://www.task-master.dev/" target="_blank" style="color: #4fc3f7;">Taskmaster</a>, <a href="https://stately.ai/" target="_blank" style="color: #4fc3f7;">Stately</a>, <a href="https://buildermethods.com/agent-os" target="_blank" style="color: #4fc3f7;">Agent-OS</a>, <a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: #4fc3f7;">Autospec</a>, <a href="https://www.autok.dev/" target="_blank" style="color: #4fc3f7;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #4fc3f7;">devplan</a></p>
-      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;">Phased plan-first workflows. Strongest conceptual alignment.</p>
+      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;">Phased plan-first workflows.</p>
     </div>
   </div>
   <div class="chosen-tile">
@@ -234,7 +234,7 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
 </div>
 
 Notes:
-This slide summarizes the competitive landscape into three buckets. Direct competitors are spec-driven (Spec Kit, Kiro, BMAD), indirect are IDE-native assistants (Cursor, Copilot) which lack enforcement, and adjacent are AI code reviewers (CodeRabbit) addressing the same pain but purely post-facto. 
+This slide summarizes the competitive landscape into three buckets. Direct competitors are spec-driven (Spec Kit, Kiro, BMAD), indirect are IDE-native assistants (Cursor, Copilot) which lack enforcement, and adjacent are AI code reviewers (CodeRabbit) addressing the same pain but purely post-facto.
 
 ---
 <!-- .slide: id="learn-and-steal" -->
@@ -357,7 +357,7 @@ Spec-driven development leads (3.25) vs Observability (3.0). Both share high con
     <p class="chosen-tile-label">Primary Niche: Early Adopters</p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Leads &amp; Senior Engineers</p>
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> Teams 10-50 devs, production JB IDE users, already using AI code gen (Copilot/JB AI)</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> Teams 10-50 devs, production JB IDE users, already using AI code gen</p>
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> Unscoped AI diffs → review bottlenecks and unpredictable regressions</p>
       <p><strong style="color: var(--r-main-color);">Trigger:</strong> AI-caused prod incident or 3+ review cycles on a single AI-generated PR</p>
     </div>
@@ -367,7 +367,7 @@ Spec-driven development leads (3.25) vs Observability (3.0). Both share high con
     <div class="chosen-tile-body">
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> EM, Dir of Eng, Security</p>
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> 100+ dev orgs, multi-repo, compliance pressure</p>
-      <p><strong style="color: var(--r-main-color);">Problem:</strong> No standard for AI governance across teams</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> No standard for AI governance across teams</p>
     </div>
   </div>
 </div>
@@ -586,84 +586,6 @@ Notes:
 This summary connects the dots from problem to execution. The Mermaid diagram visualizes the decision chain: from Alex's concrete pain → JTBD → market validation → approach selection → entry strategy → resolution → execution plan. Each step is backed by evidence presented in the preceding slides.
 
 ---
-<!-- .slide: id="golden-path-steps" -->
-
-## HOW: "Golden" Path <span class="metric-badge">A</span>
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table">
-  <thead>
-    <tr>
-      <th style="width: 8%;">Min</th>
-      <th style="width: 12%;">Alex does</th>
-      <th style="width: 33%;">Bonsai does</th>
-      <th style="width: 47%;">Alex sees</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>0:00</strong></td>
-      <td>Installs Bonsai from JB Marketplace (1-click)</td>
-      <td>—</td>
-      <td>Plugin appears in sidebar</td>
-    </tr>
-    <tr>
-      <td><strong>1:00</strong></td>
-      <td>Right-clicks <code>auth_engine.kt</code> → "Extract Spec"</td>
-      <td>PSI parses classes, methods, annotations, deps. Sends structured pre-prompt (200 tokens) to LLM.</td>
-      <td>Loading spinner (2–3 sec)</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>1:30</strong></td>
-      <td>Reads generated spec in side panel</td>
-      <td>—</td>
-      <td>[SYNCED] Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
-    </tr>
-    <tr>
-      <td><strong>2:30</strong></td>
-      <td>Edits: adds "Rate limit: 5 attempts/15 min"</td>
-      <td>Saves as <code>/specs/auth_engine.spec.md</code></td>
-      <td>[EDITED]</td>
-    </tr>
-    <tr>
-      <td><strong>T+3:00</strong><br><span style="font-size: 0.78em;">(same session)</span></td>
-      <td>Alex goes home happy.</td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>T+4:00</strong><br><span style="font-size: 0.78em;">(later / next iteration)</span></td>
-      <td>Junior pushes commit: session expiry → 4h</td>
-      <td>Detects drift: spec says 2h, code says 4h</td>
-      <td>[DRIFT]: 47 — Session changed 2h→4h</td>
-    </tr>
-    <tr>
-      <td><strong>5:00</strong></td>
-      <td>Alex opens PR — sees spec-delta summary at top</td>
-      <td>Auto-generates: "1 drift detected, 1 new endpoint, 0 removed"</td>
-      <td>Review time: 5 min instead of 45 min</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>7:00</strong></td>
-      <td>Alex clicks "Update Spec" (accepts 4h change) OR "Request Fix"</td>
-      <td>If accepted: spec auto-updates. If rejected: blocks merge until code reverts.</td>
-      <td>[RESOLVED]</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Result:</strong> 45-minute blind review → 7-minute spec-guided review. Spec becomes the shared contract between author and reviewer.</p>
-</div>
-
-Notes:
-This walkthrough shows the complete user journey in under 10 minutes.
-Key moments: minute 1:30 (first spec extracted — immediate value), minute 4:00 (first drift caught — the "aha" moment), minute 7:00 (resolution — the workflow completes).
-The critical insight: Alex never had to *write* a spec. He only had to *read and approve* one. That's the difference between Bonsai and every previous documentation tool.
-The 45→7 minute improvement is our core value metric, tested in Phase 1 with design partners.
-
----
 <!-- .slide: id="roadmap" -->
 
 ## HOW: Roadmap <span class="metric-badge">A</span>
@@ -672,7 +594,7 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 
   <!-- Phase 1 -->
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+    <div class="roadmap-timeline" style="flex: 0 0 145px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 1</span>
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
@@ -683,7 +605,7 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 
   <!-- Phase 2 -->
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+    <div class="roadmap-timeline" style="flex: 0 0 145px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Month 2</span>
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization & OSS</span>
     </div>
@@ -694,7 +616,7 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 
   <!-- Phase 3 -->
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(90, 65, 65, 0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+    <div class="roadmap-timeline" style="flex: 0 0 145px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 3-4</span>
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 3: Scale</span>
     </div>
@@ -705,7 +627,7 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 
   <!-- Phase 4 -->
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-    <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
+    <div class="roadmap-timeline" style="flex: 0 0 145px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.95em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 5-6</span>
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standard</span>
     </div>
@@ -786,6 +708,84 @@ The 45→7 minute improvement is our core value metric, tested in Phase 1 with d
 Notes:
 MVP scope is intentionally narrow: one real workflow on partner repos with strict containment and clear traceability.
 Success criteria are repeat weekly usage, low-noise operation, and measurable review-cycle improvement before broader rollout.
+
+---
+<!-- .slide: id="golden-path-steps" -->
+
+## HOW: "Golden" Path <span class="metric-badge">A</span>
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table">
+  <thead>
+    <tr>
+      <th style="width: 8%;">Min</th>
+      <th style="width: 12%;">Alex does</th>
+      <th style="width: 33%;">Bonsai does</th>
+      <th style="width: 47%;">Alex sees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>0:00</strong></td>
+      <td>Installs Bonsai from JB Marketplace (1-click)</td>
+      <td>—</td>
+      <td>Plugin appears in sidebar</td>
+    </tr>
+    <tr>
+      <td><strong>1:00</strong></td>
+      <td>Right-clicks <code>auth_engine.kt</code> → "Extract Spec"</td>
+      <td>PSI parses classes, methods, annotations, deps. Sends structured pre-prompt (200 tokens) to LLM.</td>
+      <td>Loading spinner (2–3 sec)</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>1:30</strong></td>
+      <td>Reads generated spec in side panel</td>
+      <td>—</td>
+      <td>[SYNCED] Flow: User→OAuth→JWT. Session: 2h. Secrets: Vault-only.</td>
+    </tr>
+    <tr>
+      <td><strong>2:30</strong></td>
+      <td>Edits: adds "Rate limit: 5 attempts/15 min"</td>
+      <td>Saves as <code>/specs/auth_engine.spec.md</code></td>
+      <td>[EDITED]</td>
+    </tr>
+    <tr>
+      <td><strong>T+3:00</strong><br><span style="font-size: 0.78em;">(same session)</span></td>
+      <td>Alex goes home happy.</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>T+4:00</strong><br><span style="font-size: 0.78em;">(later / next iteration)</span></td>
+      <td>Junior pushes commit: session expiry → 4h</td>
+      <td>Detects drift: spec says 2h, code says 4h</td>
+      <td>[DRIFT]: 47 — Session changed 2h→4h</td>
+    </tr>
+    <tr>
+      <td><strong>5:00</strong></td>
+      <td>Alex opens PR — sees spec-delta summary at top</td>
+      <td>Auto-generates: "1 drift detected, 1 new endpoint, 0 removed"</td>
+      <td>Review time: 5 min instead of 45 min</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>7:00</strong></td>
+      <td>Alex clicks "Update Spec" (accepts 4h change) OR "Request Fix"</td>
+      <td>If accepted: spec auto-updates. If rejected: blocks merge until code reverts.</td>
+      <td>[RESOLVED]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway">
+  <p><strong>Result:</strong> 45-minute blind review → 7-minute spec-guided review. Spec becomes the shared contract between author and reviewer.</p>
+</div>
+
+Notes:
+This walkthrough shows the complete user journey in under 10 minutes.
+Key moments: minute 1:30 (first spec extracted — immediate value), minute 4:00 (first drift caught — the "aha" moment), minute 7:00 (resolution — the workflow completes).
+The critical insight: Alex never had to *write* a spec. He only had to *read and approve* one. That's the difference between Bonsai and every previous documentation tool.
+The 45→7 minute improvement is our core value metric, tested in Phase 1 with design partners.
 
 ---
 <!-- .slide: id="pricing-monetization" -->
@@ -1074,7 +1074,7 @@ Notes:
       <span style="font-size: 0.8em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Internal Ramp-Up</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;">&bull; Meet team and stakeholders; align on product stage, constraints, and success definition.<br>&bull; Review prior launches and learnings: what worked, what failed, and best practices.<br>&bull; Start a massive assumptions burn-down: validate PSI token-signal/cost claim, spec-first demand, design-partner ramp speed, and early monetization assumptions.</p>
+      <p style="margin: 0 !important; display: block !important;">&bull; Meet team and stakeholders; align on product stage, constraints, and success definition.<br>&bull; Review prior launches and learnings: what worked, what failed, and best practices.<br>&bull; Start a massive assumptions <span class="metric-badge">A</span> burn-down: validate PSI token-signal/cost claim, spec-first demand, design-partner ramp speed, and early monetization assumptions.</p>
     </div>
   </div>
 
@@ -1117,59 +1117,6 @@ Notes:
 # Appendix
 
 ---
-<!-- .slide: id="appendix-competitor-landscape" -->
-
-## APPENDIX: Competitor Landscape (Detailed)
-
-<div class="competitor-layout" style="display: flex; gap: 15px; align-items: stretch; justify-content: space-between;">
-<div class="competitor-col-left" style="font-size: 0.38em; flex: 1;">
-<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Direct Competitors</h4>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #10b981; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <div style="display: flex; gap: 0; align-items: stretch;">
-    <p style="flex: 1; display: flex; align-items: center; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0; padding-right: 8px; line-height: 1.2;">Tier 1:<br>Direct Threats</p>
-    <div style="flex: 4; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 8px;">
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://speckit.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Spec Kit</a>: GitHub-supported, 73.6k★, phased plan-first workflow, CLI + in-agent</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://kiro.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Kiro</a>: Built on Amazon Bedrock, 1.5M MAU, IDE + CLI + in-agent</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://docs.bmad-method.org/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">BMAD</a>: 38.9k★, 19 roles, CLI + agent, adaptive depth</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://openspec.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">OpenSpec</a>: Vendor-agnostic, Open Source, No APIs</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://codespeak.dev/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">CodeSpeak</a>: Specs compile to code, diff sync</p>
-    </div>
-  </div>
-</div>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #ffb74d; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <div style="display: flex; gap: 0; align-items: stretch;">
-    <p style="flex: 1; display: flex; align-items: center; font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0; padding-right: 8px; line-height: 1.2;">Tier 2:<br>Watchlist</p>
-    <div style="flex: 4; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 8px;">
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.task-master.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Taskmaster</a>: PRD→tasks + TDD autopilot</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://stately.ai/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Stately</a>: State machines as specs</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://buildermethods.com/agent-os" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Agent-OS</a>: Auto-extract repo conventions</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">Autospec</a>: Spec Kit fork, YAML pipeline</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://specs.md/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">specs.md</a>: Formal AI-DLC, VS Code ext</p>
-      <p style="font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0 0 2px;"><a href="https://www.autok.dev/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: #ffb74d; text-decoration: none; font-weight: 600;">devplan</a>: Graph context + sync</p>
-    </div>
-  </div>
-</div>
-</div>
-<div class="competitor-col-right" style="font-size: 0.38em; flex: 1;">
-<h4 style="font-size: 1em; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.2);">Indirect Competitors</h4>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #4fc3f7; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">IDE AI Assistants (baseline)</p>
-  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://cursor.com/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">JB AI</a></p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Have steering files (Rules, CLAUDE.md) but no spec enforcement or drift detection</p>
-</div>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #b388ff; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">AI Code Reviewers</p>
-  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://coderabbit.ai/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Qodo</a></p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Same trust pain, review stage</p>
-</div>
-<div class="indirect-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-left: 3px solid #69f0ae; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px;">
-  <p style="font-size: 1em; font-weight: 700; color: #e0e0e0; margin: 0 0 1px;">Observability + Evals</p>
-  <p style="font-size: 0.9em; margin: 0 0 1px;"><a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: #4fc3f7; text-decoration: none; font-weight: 600;">Datadog LLM</a></p>
-  <p style="font-size: 0.85em; color: rgba(255,255,255,0.5); margin: 0; font-style: italic;">Trace agent steps, convergence risk</p>
-</div>
-</div>
-</div>
-
 Notes:
 This slide maps the original detailed competitive landscape for spec-driven development. Tier 1 includes five players we consider direct competitors: Spec Kit leads by traction, Kiro is Amazon's bet on this category, BMAD differentiates with multi-agent depth, OpenSpec is uniquely vendor-agnostic, and CodeSpeak takes spec-driven to its purest form — specs compile directly to code. Tier 2 products are on our watch list — they address adjacent problems or are too early-stage to evaluate fully. The key insight: the market is fragmented and early, with no dominant player and no standard methodology.
 
@@ -1259,42 +1206,6 @@ Here we detail the 4 main B2B growth mechanics that drive viral product-led expa
 2) Collaboration: Bringing non-coding stakeholders (architects, security) into the review process using readable contracts.
 3) Org-wide Expansion: A single spec scales across multiple projects, accelerating adoption as its value grows with every added repository.
 4) Ecosystem Agnosticism: Being an open format means it can be adopted without massive migration or forcing developers out of their favorite IDE.
-
----
-<!-- .slide: id="golden-path" -->
-
-## HOW: "Golden" Path <span class="metric-badge">A</span>
-
-<div class="chosen-grid chosen-grid--2col">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Persona</p>
-    <div style="font-size: 0.8em; margin-top: 10px;">
-      <p><strong>Alex, Tech Lead</strong></p>
-      <ul>
-        <li>8-person backend team</li>
-        <li>Kotlin monorepo</li>
-        <li>Daily JB AI Assistant user</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="chosen-tile chosen-tile--red">
-    <p class="chosen-tile-label">Trigger (Friday Afternoon)</p>
-    <div style="font-size: 0.8em; margin-top: 10px;">
-      <p>PR from junior: 400+ lines AI-refactored auth module.</p>
-      <ul>
-        <li>Alex can't tell if session logic changed.</li>
-        <li>Spends 45m line-by-line review.</li>
-        <li>PR gets "Request Changes". Junior frustrated.</li>
-      </ul>
-      <p style="margin-top: 10px; font-style: italic; color: #ff8a80;">"There has to be a better way."</p>
-    </div>
-  </div>
-</div>
-
-Notes:
-Persona: Alex, Tech Lead, 8-person backend team, Kotlin monorepo, using JB AI Assistant daily.
-Trigger: Friday afternoon. Alex reviews a PR from a junior dev who used AI to refactor the auth module. The diff is 400+ lines. Alex can't tell if the session expiry logic changed or not. He spends 45 minutes line-by-line. The PR gets "Request Changes". The junior is frustrated. Alex thinks: "There has to be a better way."
 
 ---
 <!-- .slide: id="distrust-issues" -->
