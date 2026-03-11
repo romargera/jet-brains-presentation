@@ -51,7 +51,7 @@ The presentation has three parts. First, **What** — problem framing through a 
 <div style="margin: 40px 0; max-width: none; width: 100%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 30px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); box-sizing: border-box;">
   <div style="position: absolute; top: -10px; left: 15px; font-size: 8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
   <p style="font-size: 0.66em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. What used to be a 5-minute review can easily turn into 45 minutes of review, re-prompting, and cleanup... <span style="color: #ff8a80; font-weight: 600;">there has to be a better way.</span>"</p>
-  <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;">— Alex, Tech Lead, Kotlin + Gemini</div>
+  <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;"> (c) Alex, Tech Lead, Kotlin + Gemini</div>
 </div>
 
 <ul class="distrust-notes">
@@ -176,7 +176,7 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 </table>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Two directions share the top score (2.5): AI-dev transparency (from Distrust data) and Spec Formalisation (from Time Spent data). Both converge on the same approach — persistent specs that make AI output transparent and controllable. Fallback: Review &amp; Debug assist (1.7) if pre-hoc spec control proves too high-friction.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong>Across the three evidence layers, distrust, time spent, and B2B issues, two directions emerged as the strongest: AI dev transparency and spec formalisation. Together, they point to the same core solution: persistent specs that make AI output transparent, reviewable, and controllable. Therefore, the primary recommendation is to invest in spec-driven control as the main path forward. If pre-hoc spec control proves too high-friction, the fallback is Review & Debug Assist.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -218,17 +218,17 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
   <div class="chosen-tile">
     <p class="chosen-tile-label" style="color: #4fc3f7;">Indirect: IDE Assistants</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong><a href="https://cursor.com/" target="_blank" style="color: #4fc3f7;">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: #4fc3f7;">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: #4fc3f7;">JB AI</a></strong></p>
+      <p style="margin-bottom: 5px;"><strong><a href="https://cursor.com/" target="_blank" style="color: var(--accent-blue);">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: var(--accent-blue);">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: var(--accent-blue);">JB AI</a></strong></p>
       <p style="font-size: 0.9em; color: var(--text-muted);">Rule files exist, but lack hard spec enforcement and drift detection.</p>
     </div>
   </div>
   <div class="chosen-tile">
-    <p class="chosen-tile-label" style="color: #b388ff;">Adjacent: Post-facto / Evals</p>
+    <p class="chosen-tile-label" style="color: #b388ff;">Adjacent: Post-facto, Evals</p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 2px;"><strong>AI Code Reviewers</strong></p>
-      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://coderabbit.ai/" target="_blank" style="color: #4fc3f7;">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: #4fc3f7;">Qodo</a> (Review stage trust)</p>
+      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://coderabbit.ai/" target="_blank" style="color: var(--accent-blue);">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: var(--accent-blue);">Qodo</a> (Review stage trust)</p>
       <p style="margin-bottom: 2px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;"><strong>Observability & Evals</strong></p>
-      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: #4fc3f7;">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: #4fc3f7;">Datadog LLM</a> (Trace agent steps, convergence risk)</p>
+      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: var(--accent-blue);">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: var(--accent-blue);">Datadog LLM</a> (Trace agent steps, convergence risk)</p>
     </div>
   </div>
 </div>
@@ -1084,7 +1084,6 @@ Notes:
 <!-- .slide: id="appendix" -->
 
 # Appendix
-
 
 ---
 <!-- .slide: id="segmentation" -->
