@@ -123,63 +123,38 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 
 ## WHAT: Strategic Directions
 
-<table class="score-table">
-  <thead>
-    <tr>
-      <th>Direction</th>
-      <th>Source</th>
-      <th>ICE Score <span class="metric-badge">A</span></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="highlight-row">
-      <td><strong>AI-dev transparency:</strong> code &amp; architecture</td>
-      <td><span class="tag tag-pain-review">Distrust issues</span></td>
-      <td>2.5</td>
-    </tr>
-    <tr class="highlight-row">
-      <td><strong>Spec Formalisation Proactive Assist</strong></td>
-      <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <td><strong>Security &amp; Compliance</strong> (proactive assist)</td>
-      <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <td><strong>Review &amp; Debug assist</strong></td>
-      <td><span class="tag tag-pain-review">Distrust issues</span></td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <td><strong>Dev Env Simplification</strong></td>
-      <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <td><strong>Delivery time variability</strong> (accurate forecasting)</td>
-      <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <td><strong>Token Spent Optimization</strong></td>
-      <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <td><strong>Quality &amp; reliability risk</strong> from software errors</td>
-      <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>1.1</td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Across the three evidence layers, <a href="#/distrust-issues" style="color: var(--accent-blue);">dev distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>, two directions emerged as the strongest: AI dev transparency and spec formalisation. Together, they point to the same core solution: persistent specs that make AI output transparent, reviewable, and controllable. Therefore, the primary recommendation is to invest in spec-driven control as the main path forward. If pre-hoc spec control proves too high-friction, the fallback is Review & Debug Assist.</p>
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr);">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">AI-Dev Transparency</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;">Fixes <strong>Distrust</strong>.</p>
+      <p>Makes generation predictable.</p>
+      <p class="chosen-segment-name" style="margin-top: 10px;">Core Focus</p>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Spec Formalisation</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;">Fixes <strong>Time Spent</strong>.</p>
+      <p>Persistent context & rules.</p>
+      <p class="chosen-segment-name" style="margin-top: 10px;">Core Focus</p>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Review Assist</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;">Fixes <strong>Distrust</strong>.</p>
+      <p>Post-facto validation.</p>
+      <p style="color: #f87171; font-weight: 600; margin-top: 10px;">Fallback Option</p>
+    </div>
+  </div>
 </div>
 
-<ul class="distrust-notes">
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Across <a href="#/distrust-issues" style="color: var(--accent-blue);">dev distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>, two directions lead. They converge to: <strong>persistent, controllable specs</strong>.</p>
+</div>
+
+<ul class="distrust-notes" style="display: none;">
 <li>ICE Score ranks directions by value vs cost: ICE Score = (Impact × Confidence) / Effort. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=1907182755#gid=1907182755&range=A1" target="_blank">Calculations</a>.</li>
 <li>Mapping: Impact/Effort High=3, Med=2, Low=1; Confidence High=1, Med=0.75, Low=0.5.</li>
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
