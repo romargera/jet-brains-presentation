@@ -35,7 +35,7 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 </div>
 
 <ul class="distrust-notes">
-  <li><span class="metric-badge">A</span> Assumptions are marked with this icon</li>
+  <span class="metric-badge">A</span> Assumptions are marked with this icon
 </ul>
 </div>
 
@@ -45,24 +45,32 @@ The presentation has three parts. First, **What** — problem framing through a 
 ---
 <!-- .slide: id="what-icp-jtbd" -->
 
-## WHAT: Issue signal
+## WHAT: Issue signal*
 
 <div style="width: 100%; max-width: 90%; margin: 0 auto;">
-<div style="margin: 40px 0; max-width: none; width: 100%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 30px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); box-sizing: border-box;">
-  <div style="position: absolute; top: -10px; left: 15px; font-size: 8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
-  <p style="font-size: 0.66em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 25px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. What used to be a 5-minute review can easily turn into 45 minutes of review, re-prompting, and cleanup... <span style="color: #ff8a80; font-weight: 600;">there has to be a better way.</span>"</p>
-  <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;"><span style="line-height: 1.5; color: #e0e0e0; font-style: italic; font-weight: 400;">(c) Alex</span>, <span style="font-style: italic;">Tech Lead, Kotlin + Gemini</span></div>
+<div style="margin: 40px 0; max-width: none; width: 100%; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 16px 18px; text-align: left; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); box-sizing: border-box; display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: start;">
+  <img src="Personas/photo_2026-03-12_19-49-00.jpg" alt="Alex portrait" style="width: 64px; height: 64px; border-radius: 6px; border: 1px solid rgba(129, 199, 132, 0.45); object-fit: cover; display: block;">
+  <div style="position: relative;">
+    <div style="position: absolute; top: -8px; left: -2px; font-size: 2.8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
+    <p style="font-size: 0.66em; line-height: 1.5; color: #e0e0e0; font-style: italic; margin: 0 0 8px 0; font-weight: 400; position: relative; z-index: 1;">"AI-generated code is often useful, but not production-ready. What used to be a 5-minute review can easily turn into 45 minutes of review, re-prompting, and cleanup."</p>
+    <div style="font-size: 0.66em; color: var(--text-muted); position: relative; z-index: 1;"><span style="line-height: 1.5; color: #e0e0e0; font-style: italic; font-weight: 400;">(c) Alex</span>, <span style="font-style: italic;">Tech Lead, Kotlin + Gemini</span></div>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px; border-left: 4px solid #34d399; background: rgba(16, 185, 129, 0.12); border-color: rgba(52, 211, 153, 0.35);">
+  <p>There has to be a better way</p>
 </div>
 
 <ul class="distrust-notes">
-  <li>Preliminary signal. N=1 exploratory interview. Systematic validation: Month 1.</li>
+  * Preliminary signal. N=1 exploratory interview. Systematic validation: Month 1.
 </ul>
 </div>
 
 Notes:
 We start with a concrete pain point. Alex, a Tech Lead on an 8-person backend team, uses JB AI Assistant daily. On Friday afternoon he gets a PR from a junior — 400+ lines of AI-refactored auth module. He can't tell if the session expiry logic actually changed. After 45 minutes of line-by-line review, the PR gets "Request Changes". Both are frustrated.
 This maps directly to our Core JTBD: "When I use AI to write code, I want it to be predictable so I don't break production."
-The signal check quote comes from an exploratory conversation with a developer matching our target ICP. Full validation is planned for Month 1 with 10-15 design partners.
+
+* The signal check quote comes from an exploratory conversation with a developer matching our target ICP. Full validation is planned for Month 1 with 10-15 design partners.
 
 ---
 <!-- .slide: id="adoption-paradox" -->
@@ -91,7 +99,7 @@ The signal check quote comes from an exploratory conversation with a developer m
 </div>
 </div>
 <div class="adoption-metric-header">
-<span class="adoption-metric-name">DISTRUST (SOMEWHAT + HIGH)</span>
+<span class="adoption-metric-name" style="color: var(--text-muted);">DISTRUST (SOMEWHAT + HIGH)</span>
 </div>
 </div>
 <div class="adoption-metric metric-unfavorable">
@@ -103,7 +111,7 @@ The signal check quote comes from an exploratory conversation with a developer m
 </div>
 </div>
 <div class="adoption-metric-header">
-<span class="adoption-metric-name">UNFAVORABLE SENTIMENT</span>
+<span class="adoption-metric-name" style="color: var(--text-muted);">UNFAVORABLE SENTIMENT</span>
 </div>
 </div>
 <p class="adoption-source"><a href="https://survey.stackoverflow.co/" target="_blank">Stack Overflow Developer Survey 2025</a></p>
@@ -135,40 +143,81 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
     </div>
   </div>
 
-  <div class="chosen-tile" style="border: 1px solid rgba(96, 165, 250, 0.42); background: rgba(37, 99, 235, 0.12);">
+  <div class="chosen-tile" style="border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18); opacity: 0.9;">
     <div>
-      <p class="chosen-tile-label">2 Spec Formalisation</p>
+      <p class="chosen-tile-label">2 Review &amp; Debug Assist</p>
       <div class="chosen-tile-body">
-        <p style="font-size: 0.82em; line-height: 1.32;">Creates persistent context, rules, and clearer execution.</p>
+        <p style="font-size: 0.82em; line-height: 1.32;">Use if spec-first control is too high-friction.</p>
       </div>
     </div>
   </div>
 
-  <div class="chosen-tile" style="border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18); opacity: 0.9;">
+  <div class="chosen-tile" style="border: 1px solid rgba(96, 165, 250, 0.42); background: rgba(37, 99, 235, 0.12);">
     <div>
-      <p class="chosen-tile-label">3 Review &amp; Debug Assist</p>
+      <p class="chosen-tile-label">3 Spec Formalisation</p>
       <div class="chosen-tile-body">
-        <p style="font-size: 0.82em; line-height: 1.32;">Use if spec-first control is too high-friction.</p>
+        <p style="font-size: 0.82em; line-height: 1.32;">Creates persistent context, rules, and clearer execution.</p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <ul style="margin: 0; padding-left: 18px;">
-    <p><strong>Takeaway:</strong> Prioritize AI-dev transparency at the code and architecture level as the primary direction. It stands out clearly above all other options, indicating that distrust, rather than generic productivity, is the dominant problem to solve. Build around making AI output inspectable and controllable, with Review & Debug Assist as the fallback if proactive control creates adoption friction.</p>
-  </ul>
+  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> We considered three directions. The core problem is trust in AI output, not generic productivity. Within that space, spec-driven control is the strongest initial wedge because it makes AI changes inspectable and constrained before review. Review/debug assist stays the fallback if workflow friction is too high.</p>
 </div>
 
 Notes:
 This is an executive decision slide: two lead directions converge on one path (spec-driven control), with a clear fallback if pre-hoc control friction is too high.
 
 ---
+<!-- .slide: id="target-niche" -->
+
+## WHY: Target Niche <span class="metric-badge">A</span>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Primary Niche: Early Adopters</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Leads &amp; Senior Engineers</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> Teams 10-50 devs, production JB IDE</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> Unscoped AI diffs → review bottlenecks</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Trigger:</strong> 3+ review cycles on a single PR</p>
+      <p style="margin-bottom: 5px; color: #e0e0e0; font-style: italic;">"I review 5-10 AI PRs each week and need to see what AI changed without reading 400 lines of code."</p>
+      <p style="margin: 0; color: var(--text-muted); font-style: italic;">(c)</p>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Scaling Niche (after proving value)</p>
+    <div class="chosen-tile-body">
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Eng Managers, Directors, Security</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> 100+ dev orgs, compliance pressure</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> No standard for AI governance</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Trigger:</strong> AI policy violation or incident</p>
+      <p style="margin-bottom: 5px; color: #e0e0e0; font-style: italic;">"I manage 40 developers. After one untracked AI change caused a bug, I need org-wide visibility and hard gates."</p>
+      <p style="margin: 0; color: var(--text-muted); font-style: italic;">(c)</p>
+    </div>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px;">
+  <p><strong>Takeaway:</strong> We start narrow — Tech Leads feeling AI review pain in JB IDEs — and expand to org-wide governance once value is proven.</p>
+</div>
+
+<ul class="distrust-notes" style="margin-top: 10px;">
+  <li>Inputs so far: 1 exploratory interview, desk research, competitor pattern review. Systematic validation: Month 1.</li>
+</ul>
+
+Notes:
+Our primary niche is Tech Leads and Senior Engineers working in teams of 10-50 developers who use JetBrains IDEs in production and already use AI code generation. Their specific pain: unscoped AI diffs cause review bottlenecks and unpredictable regressions. The trigger event is an AI-caused production incident or repeated review cycles on AI-generated PRs.
+After proving value, we expand to the scaling niche: Engineering Managers, Directors, and Security leads who need org-wide AI governance standards.
+
+---
 <!-- .slide: id="why-competitor-landscape" -->
 
 ## WHY: Competitor Landscape
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr);">
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); width: 95%; margin: 0 auto;">
   <div class="chosen-tile">
     <p class="chosen-tile-label" style="color: #10b981; line-height: 1.12;">
       <span style="display: block; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Direct</span>
@@ -210,7 +259,6 @@ This is an executive decision slide: two lead directions converge on one path (s
 Notes:
 This slide summarizes the competitive landscape into three buckets. Direct competitors are spec-driven (Spec Kit, Kiro, BMAD), indirect are IDE-native assistants (Cursor, Copilot) which lack enforcement, and adjacent are AI code reviewers (CodeRabbit) addressing the same pain but purely post-facto.
 
----
 <!-- .slide: id="learn-and-steal" -->
 
 ## WHY: Learn & Steal
@@ -275,71 +323,16 @@ Here we look at what's actually working in the market. First, Git-native markdow
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <ul style="margin: 0; padding-left: 18px;">
-    <li style="margin-bottom: 5px;"><strong>Recommendation:</strong> Prioritize spec-driven development as the core approach.</li>
-    <li style="margin-bottom: 5px;"><strong>Why:</strong> It prevents ambiguity before generation; Observability &amp; Evals mainly detects issues, so less effective.</li>
-    <li style="margin-bottom: 5px;"><strong>Implication:</strong> Build spec-first, with observability as a validation layer.</li>
-    <li><strong>Risk / Fallback:</strong> If spec workflows prove too high-friction, rely more on observability signals and Adversarial Review Agents.</li>
+  <ul style="margin: 0; padding-left: 18px; font-size: 0.62em; color: var(--text-main);">
+    <li style="margin-bottom: 5px; font-size: 0.62em;"><strong>Signal:</strong> Current evidence points to review pain from unpredictable AI diffs as the dominant JetBrains-team problem, not generic coding speed.</li>
+    <li style="margin-bottom: 5px; font-size: 0.62em;"><strong>Working decision:</strong> Start with spec-driven control because it constrains AI changes before PR review, where trust breaks today.</li>
+    <li style="margin-bottom: 5px; font-size: 0.62em;"><strong>Calibration:</strong> This is a high-confidence hypothesis, not a final truth; it must be validated by Month 1 repeat usage and review outcomes.</li>
+    <li style="font-size: 0.62em;"><strong>Fallback trigger:</strong> If spec-first flow adds too much friction, shift weight toward observability signals and adversarial review assist.</li>
   </ul>
 </div>
 
 Notes:
-Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the tie-break comes from the intervention point in the SDLC. Spec-driven is a Shift-Left approach: it constrains AI output before generation via a reviewable contract. Observability is Shift-Right: it detects drift and regressions after execution. For the trust JTBD ("I want predictable AI output so I don't break production"), preventive control is a stronger fit — the developer needs to trust the result before merging, not discover problems after. Additionally, JetBrains PSI gives spec-driven a native IDE advantage (bi-directional spec↔code), while observability tools are infrastructure-layer and not IDE-differentiated. Observability remains critical as a complementary layer for drift detection and validation.
-
----
-<!-- .slide: id="target-niche" -->
-
-## WHY: Target Niche <span class="metric-badge">A</span>
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
-  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-      <p class="chosen-tile-label">Primary Niche: Early Adopters</p>
-      <div class="chosen-tile-body">
-        <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Leads &amp; Senior Engineers</p>
-        <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> Teams 10-50 devs, production JB IDE</p>
-        <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> Unscoped AI diffs → review bottlenecks</p>
-        <p><strong style="color: var(--r-main-color);">Trigger:</strong> 3+ review cycles on a single PR</p>
-      </div>
-    </div>
-    <div style="margin-top: 10px; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 10px 12px; position: relative; overflow: hidden; display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: start;">
-      <img src="Personas/Gemini_Generated_Image_k82vk6k82vk6k82v.png" alt="Alex portrait" style="width: 64px; height: 64px; border-radius: 6px; border: 1px solid rgba(129, 199, 132, 0.45); object-fit: cover; display: block;">
-      <div style="position: relative;">
-        <div style="position: absolute; top: -8px; left: -2px; font-size: 2.8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
-        <p style="font-size: 0.48em; line-height: 1.45; color: #e0e0e0; font-style: italic; margin: 0 0 8px 0; position: relative; z-index: 1;">"I review 5-10 AI PRs each week and need to see what AI changed without reading 400 lines of code."</p>
-        <div style="font-size: 0.48em; color: var(--text-muted); position: relative; z-index: 1;"><span style="line-height: 1.5; color: #e0e0e0; font-style: italic; font-weight: 400;">(c) Alex</span>, <span style="font-style: italic;">Tech Lead</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-      <p class="chosen-tile-label">Scaling Niche (after proving value)</p>
-      <div class="chosen-tile-body">
-        <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Eng Managers, Directors, Security</p>
-        <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> 100+ dev orgs, compliance pressure</p>
-        <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> No standard for AI governance</p>
-        <p><strong style="color: var(--r-main-color);">Trigger:</strong> AI policy violation or incident</p>
-      </div>
-    </div>
-    <div style="margin-top: 10px; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 10px 12px; position: relative; overflow: hidden; display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: start;">
-      <img src="Personas/3.png" alt="Maria portrait" style="width: 64px; height: 64px; border-radius: 6px; border: 1px solid rgba(129, 199, 132, 0.45); object-fit: cover; display: block;">
-      <div style="position: relative;">
-        <div style="position: absolute; top: -8px; left: -2px; font-size: 2.8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
-        <p style="font-size: 0.48em; line-height: 1.45; color: #e0e0e0; font-style: italic; margin: 0 0 8px 0; position: relative; z-index: 1;">"I manage 40 developers. After one untracked AI change caused a bug, I need org-wide visibility and hard gates."</p>
-        <div style="font-size: 0.48em; color: var(--text-muted); position: relative; z-index: 1;"><span style="line-height: 1.5; color: #e0e0e0; font-style: italic; font-weight: 400;">(c) Maria</span>, <span style="font-style: italic;">Engineering Manager</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px;">
-  <p><strong>Takeaway:</strong> We start narrow — Tech Leads feeling AI review pain in JB IDEs — and expand to org-wide governance once value is proven.</p>
-</div>
-
-Notes:
-Our primary niche is Tech Leads and Senior Engineers working in teams of 10-50 developers who use JetBrains IDEs in production and already use AI code generation. Their specific pain: unscoped AI diffs cause review bottlenecks and unpredictable regressions. The trigger event is an AI-caused production incident or repeated review cycles on AI-generated PRs.
-After proving value, we expand to the scaling niche: Engineering Managers, Directors, and Security leads who need org-wide AI governance standards.
+Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the tie-break comes from intervention point in the SDLC. For JetBrains teams, trust is won at review time, so pre-review constraint is a better first bet than post-facto detection.
 
 ---
 <!-- .slide: id="why-specs-not-just-models" -->
@@ -364,7 +357,7 @@ After proving value, we expand to the scaling niche: Engineering Managers, Direc
 ---
 <!-- .slide: id="why-summary-main-copy" -->
 
-## WHAT & WHY: Summary
+## WHY: Summary
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;">
 
@@ -380,7 +373,7 @@ After proving value, we expand to the scaling niche: Engineering Managers, Direc
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Differentiation</p>
-    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI <span class="metric-badge">A</span>: extract specs (zero friction), contain changes in diff (change containment), and detect drift early. <a href="#/differentiation">Details</a></p>
+    <p class="chosen-tile-body">Bi-directional spec↔code in IDE via PSI <span class="metric-badge">A</span>: extract specs (zero friction), contain changes in diff (change containment), and detect drift early. <a href="#/differentiation">Differentiation</a></p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
@@ -397,6 +390,41 @@ After proving value, we expand to the scaling niche: Engineering Managers, Direc
 
 Notes:
 This summary focuses on WHY evidence layers: strategic alignment, market, differentiation, niches, and monetization plus growth mechanics.
+
+---
+<!-- .slide: id="why-summary-v2" -->
+
+## WHY: Summary
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Decision Summary</p>
+    <p class="chosen-tile-body">AI coding is mainstream, but trust in AI output is falling. Start with Tech Leads in 10-50 dev teams using JetBrains IDEs, and solve review pain via spec-linked change containment.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
+    <p class="chosen-tile-body">While the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$171.85M top-down SOM</a> targets a 5% share of the $4.91B market, the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$0.93M bottom-up Year 1</a> exit run-rate <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=C29" target="_blank" style="color: var(--accent-blue); text-decoration: none;">(~0.54% SOM)</a> reflects early funnel ramp-up versus a mature steady-state.</p>
+  </div>
+</div>
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Differentiation</p>
+    <p class="chosen-tile-body">IDE-native bi-directional spec↔code via PSI: extract intent, constrain the diff, detect drift early. <a href="#/differentiation">Differentiation</a></p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Monetization</p>
+    <p class="chosen-tile-body">Free entry via JetBrains distribution and OSS trust layer. Paid value starts when teams need shared controls, visibility, and PR/CI workflow integration. <a href="#/pricing-monetization">Monetization</a></p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Growth Loops</p>
+    <p class="chosen-tile-body">Repo-native specs, reviewer reuse, CI gates, and ecosystem distribution reinforce team adoption over time. <a href="#/growth-loops">Growth Loops</a></p>
+  </div>
+</div>
+
+Notes:
+This version is intentionally decision-first: market context plus three operating levers (differentiation, monetization, growth loops).
 
 ---
 <!-- .slide: id="roadmap" -->
@@ -436,12 +464,6 @@ This summary focuses on WHY evidence layers: strategic alignment, market, differ
     </div>
     <p style="margin: 10px 0 0 0;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.45); background: rgba(51, 65, 85, 0.22);">Gate: repeat usage + stable unit signal</span></p>
   </div>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <p style="margin: 0 0 7px 0;"><strong>Recommendation:</strong> De-risk in sequence: validate trust first, then paid intent, then scale through pilots.</p>
-  <p style="margin: 0 0 7px 0;"><strong>Why:</strong> The main risk is not shipping the plugin, but scaling before repeatable trust and commercial demand are proven.</p>
-  <p style="margin: 0;"><strong>Rule:</strong> No full launch before commercial intent and pilot usage are validated.</p>
 </div>
 
 <p style="margin-top: 6px; font-size: 0.55em; color: rgba(148, 163, 184, 0.85);">Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
@@ -571,44 +593,33 @@ Success criteria are repeat weekly usage, low-noise operation, and measurable re
 
 ## HOW: Monetization <span class="metric-badge">A</span>
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; text-align: left;">
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; text-align: left;">
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Packaging (min)</p>
+    <p class="chosen-tile-label">What is free vs paid</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>OSS (risk mitigation, narrow scope):</strong> Spec format + validator/linter + examples.</li>
-        <li><strong>Free (plugin):</strong> try core workflow on small scope.</li>
-        <li><strong>Paid (plugin):</strong> team templates, basic controls, usage visibility, PR/CI integrations, change containment.</li>
-        <li><strong>Enterprise add-ons:</strong> governance, audit, rollout support.</li>
+        <li><strong>OSS:</strong> spec format, validator, examples.</li>
+        <li><strong>Free plugin:</strong> single-user, small-scope workflow.</li>
+        <li><strong>Paid team:</strong> templates, controls, visibility, PR/CI integrations, change containment.</li>
       </ul>
     </div>
   </div>
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">When Money Starts</p>
+    <p class="chosen-tile-label">When we start charging</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>Mo 2:</strong> commercial intent only (written budget intent + pilot terms), no product charging.</li>
-        <li><strong>Mo 3-4:</strong> paid pilots once plugin MVP exists.</li>
-        <li><strong>Mo 5-6:</strong> repeatable upgrades via JetBrains ecosystem distribution.</li>
+        <li><strong>Mo 2:</strong> written budget intent + pilot terms.</li>
+        <li><strong>Mo 3-4:</strong> paid pilots after plugin MVP.</li>
+        <li><strong>Mo 5-6:</strong> repeatable upgrades via JetBrains ecosystem.</li>
       </ul>
     </div>
   </div>
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Pricing Principles</p>
+    <p class="chosen-tile-label">Signals the model works</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li>Keep packaging simple and predictable.</li>
-        <li>OSS is the standard layer; paid value stays in IDE-native workflow and team controls.</li>
-        <li>Start team-first, then add enterprise governance.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Success Checks</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Budget intent to paid pilot conversion.</li>
-        <li>Team expansion inside one org.</li>
+        <li>Budget intent converts to paid pilot.</li>
+        <li>One team expands inside the org.</li>
         <li>Weekly repeat usage of the core scenario.</li>
       </ul>
     </div>
@@ -616,9 +627,53 @@ Success criteria are repeat weekly usage, low-noise operation, and measurable re
 </div>
 
 Notes:
-This monetization model starts with low-friction adoption and converts only after value is observable in real workflows.
-Month 2 validates commercial intent and procurement path; revenue begins with paid pilots once plugin MVP is usable in Months 3-4.
-OSS stays narrow and strategic as the standard layer, while paid value concentrates in IDE-native team controls and workflow integration.
+This version keeps monetization logic as three decisions: free vs paid, when charging starts, and how we know it works.
+
+---
+<!-- .slide: id="pricing-monetization-logic" -->
+
+## HOW: Monetization Logic
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; text-align: left;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">What is free vs paid</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li><strong>OSS:</strong> spec format, validator, examples.</li>
+        <li><strong>Free plugin:</strong> single-user, small-scope workflow.</li>
+        <li><strong>Team paid:</strong> templates, controls, visibility, PR/CI, change containment.</li>
+        <li><strong>Enterprise:</strong> governance, audit, rollout support.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">When charging starts</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li><strong>Mo 2:</strong> written budget intent + pilot terms.</li>
+        <li><strong>Mo 3-4:</strong> paid pilots after plugin MVP.</li>
+        <li><strong>Mo 5-6:</strong> repeatable upgrades via JetBrains ecosystem.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">What must be true</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Budget intent converts to pilot.</li>
+        <li>One team expands inside the org.</li>
+        <li>Weekly repeat usage of the core scenario.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> Monetize team control inside the IDE, not the spec standard itself.</p>
+</div>
+
+Notes:
+Separate monetization logic: free-to-paid packaging, charging timing, and proof signals aligned to team behavior.
 
 ---
 <!-- .slide: id="metrics" -->
@@ -681,12 +736,11 @@ Notes:
 3) **Safety & Quality**: Tracking latency and false positives alongside qualitative CSAT to ensure we don't harm the IDE experience.
 4) **Value**: Proving cost efficiency and improved PR throughput (passing checks on 1st try).
 
----
 <!-- .slide: id="risks-mitigation" -->
 
 ## HOW: Risks & Mitigation
 
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;">Top risks only; full Impact × Probability matrix is in <a href="#/risks-mitigation-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;">Top risks below. Full Impact × Probability matrix is in <a href="#/risks-mitigation-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
@@ -731,12 +785,6 @@ Notes:
     </tr>
   </tbody>
 </table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px; padding: 10px 14px; border-left: 4px solid #f59e0b; text-align: left;">
-  <p style="margin: 0 0 7px 0;"><strong>Recommendation:</strong> Treat PoC value as the gating risk and resolve it before full build.</p>
-  <p style="margin: 0 0 7px 0;"><strong>Why:</strong> If repeatable value is not proven early, the product thesis is weaker than any execution plan.</p>
-  <p style="margin: 0;"><strong>Mitigation:</strong> Run parallel PoCs, require repeat usage, and switch the entry point if the spec-first flow does not outperform alternatives.</p>
 </div>
 
 Notes:
@@ -881,10 +929,6 @@ Notes:
       <p>Hard gate on commitments [A].</p>
     </div>
   </div>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Gate:</strong> 3 Pilot commitments = GO. Else pivot entry [A].</p>
 </div>
 
 Notes:
