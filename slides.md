@@ -123,45 +123,40 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 
 ## WHAT: Strategic Directions
 
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;">Two directions lead across <a href="#/distrust-issues" style="color: var(--accent-blue);">distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>.</p>
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;"><a href="#/stream-options-main-appendix" style="color: var(--accent-blue);">Prioritized</a> across <a href="#/distrust-issues" style="color: var(--accent-blue);">distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>.</p>
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: stretch; margin-top: 2px;">
-  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px;">
+  <div class="chosen-tile chosen-tile--green">
     <div>
       <p class="chosen-tile-label">1 AI-dev Transparency</p>
       <div class="chosen-tile-body">
         <p style="font-size: 0.82em; line-height: 1.32;">Makes AI output visible, reviewable, and predictable.</p>
       </div>
     </div>
-    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">Primary bet</span></p>
   </div>
 
-  <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px; border: 1px solid rgba(96, 165, 250, 0.42); background: rgba(37, 99, 235, 0.12);">
+  <div class="chosen-tile" style="border: 1px solid rgba(96, 165, 250, 0.42); background: rgba(37, 99, 235, 0.12);">
     <div>
       <p class="chosen-tile-label">2 Spec Formalisation</p>
       <div class="chosen-tile-body">
         <p style="font-size: 0.82em; line-height: 1.32;">Creates persistent context, rules, and clearer execution.</p>
       </div>
     </div>
-    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Complementary</span></p>
   </div>
 
-  <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px; border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18); opacity: 0.9;">
+  <div class="chosen-tile" style="border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18); opacity: 0.9;">
     <div>
-      <p class="chosen-tile-label">Review &amp; Debug Assist</p>
+      <p class="chosen-tile-label">3 Review &amp; Debug Assist</p>
       <div class="chosen-tile-body">
         <p style="font-size: 0.82em; line-height: 1.32;">Use if spec-first control is too high-friction.</p>
       </div>
     </div>
-    <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #fca5a5; border: 1px solid rgba(252, 165, 165, 0.45); background: rgba(127, 29, 29, 0.25);">Fallback</span></p>
   </div>
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
   <ul style="margin: 0; padding-left: 18px;">
-    <li style="margin-bottom: 5px;"><strong>Recommendation:</strong> Prioritise spec-driven control as the main path forward.</li>
-    <li style="margin-bottom: 5px;"><strong>Why:</strong> The two strongest directions, AI-dev Transparency and Spec Formalisation, converge on the same solution: persistent specs that make AI output transparent, reviewable, and controllable.</li>
-    <li><strong>Fallback:</strong> If pre-hoc spec control assist proves too high-friction, shift to Review &amp; Debug Assist.</li>
+    <p><strong>Takeaway:</strong> Prioritize AI-dev transparency at the code and architecture level as the primary direction. It stands out clearly above all other options, indicating that distrust, rather than generic productivity, is the dominant problem to solve. Build around making AI output inspectable and controllable, with Review & Debug Assist as the fallback if proactive control creates adoption friction.</p>
   </ul>
 </div>
 
@@ -240,7 +235,7 @@ This slide summarizes the competitive landscape into three buckets. Direct compe
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Synthesis:</strong> The winning pattern is clear: an IDE-native, Git-native spec layer with bi-directional sync and persistent steering.</p>
+  <p><strong>Takeaway:</strong> The winning pattern is clear: an IDE-native, Git-native spec layer with bi-directional sync and persistent steering.</p>
 </div>
 
 Notes:
@@ -251,16 +246,13 @@ Here we look at what's actually working in the market. First, Git-native markdow
 
 ## WHY: Approaches
 
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 14px;">One primary bet stands out: spec-driven control. Observability supports it, but does not replace it.</p>
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 14px;">Prioritized approaches across <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">observed solutions</a>.</p>
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: stretch; margin-top: 2px;">
   <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px;">
     <div>
       <p class="chosen-tile-label">1 SPEC-DRIVEN CONTROL</p>
-      <div class="chosen-tile-body">
-        <p style="font-size: 0.82em; line-height: 1.32;">Prevents ambiguity before generation.</p>
-        <p style="font-size: 0.82em; line-height: 1.32;">Turns intent into persistent, reviewable constraints.</p>
-      </div>
+      <p class="chosen-tile-body">Prevents ambiguity before generation.<br>Turns intent into persistent, reviewable constraints.</p>
     </div>
     <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">Primary bet</span></p>
   </div>
@@ -268,10 +260,7 @@ Here we look at what's actually working in the market. First, Git-native markdow
   <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px; border: 1px solid rgba(96, 165, 250, 0.42); background: rgba(37, 99, 235, 0.12);">
     <div>
       <p class="chosen-tile-label">2 OBSERVABILITY &amp; EVALS</p>
-      <div class="chosen-tile-body">
-        <p style="font-size: 0.82em; line-height: 1.32;">Detects drift, regressions, and failures after execution.</p>
-        <p style="font-size: 0.82em; line-height: 1.32;">Best for validation, not primary control.</p>
-      </div>
+      <p class="chosen-tile-body">Detects drift, regressions, and failures after execution.<br>Best for validation, not primary control.</p>
     </div>
     <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Complementary</span></p>
   </div>
@@ -279,19 +268,19 @@ Here we look at what's actually working in the market. First, Git-native markdow
   <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px; border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18); opacity: 0.9;">
     <div>
       <p class="chosen-tile-label">ADVERSARIAL REVIEW AGENTS</p>
-      <div class="chosen-tile-body">
-        <p style="font-size: 0.82em; line-height: 1.32;">Reduce manual review effort post-generation.</p>
-        <p style="font-size: 0.82em; line-height: 1.32;">Useful downstream, but too post-facto to be the core bet.</p>
-      </div>
+      <p class="chosen-tile-body">Reduce manual review effort post-generation.<br>Useful downstream, but too post-facto to be the core bet.</p>
     </div>
     <p style="margin-top: 10px;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #fca5a5; border: 1px solid rgba(252, 165, 165, 0.45); background: rgba(127, 29, 29, 0.25);">Fallback</span></p>
   </div>
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <p style="margin: 0 0 7px 0;"><strong>Recommendation:</strong> Prioritise spec-driven development as the core approach.</p>
-  <p style="margin: 0 0 7px 0;"><strong>Why (equal ICE, different intervention point):</strong> Both score 6.7, but spec-driven is <em>Shift-Left</em> (prevents ambiguity before generation), while observability is <em>Shift-Right</em> (detects issues after output). For the trust JTBD, prevention &gt; detection.</p>
-  <p style="margin: 0;"><strong>Use observability for:</strong> drift detection, regression monitoring, and validation — complementary, not a replacement.</p>
+  <ul style="margin: 0; padding-left: 18px;">
+    <li style="margin-bottom: 5px;"><strong>Recommendation:</strong> Prioritize spec-driven development as the core approach.</li>
+    <li style="margin-bottom: 5px;"><strong>Why:</strong> It prevents ambiguity before generation; Observability &amp; Evals mainly detects issues, so less effective.</li>
+    <li style="margin-bottom: 5px;"><strong>Implication:</strong> Build spec-first, with observability as a validation layer.</li>
+    <li><strong>Risk / Fallback:</strong> If spec workflows prove too high-friction, rely more on observability signals and Adversarial Review Agents.</li>
+  </ul>
 </div>
 
 Notes:
@@ -314,7 +303,7 @@ Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the
       </div>
     </div>
     <div style="margin-top: 10px; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 10px 12px; position: relative; overflow: hidden; display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: start;">
-      <div style="width: 64px; height: 64px; border-radius: 6px; border: 1px dashed rgba(129, 199, 132, 0.45); background: rgba(129, 199, 132, 0.08); display: flex; align-items: center; justify-content: center; color: rgba(224,224,224,0.85); font-size: 0.36em; font-weight: 700; letter-spacing: 0.08em;">PHOTO</div>
+      <img src="Personas/Gemini_Generated_Image_k82vk6k82vk6k82v.png" alt="Alex portrait" style="width: 64px; height: 64px; border-radius: 6px; border: 1px solid rgba(129, 199, 132, 0.45); object-fit: cover; display: block;">
       <div style="position: relative;">
         <div style="position: absolute; top: -8px; left: -2px; font-size: 2.8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
         <p style="font-size: 0.48em; line-height: 1.45; color: #e0e0e0; font-style: italic; margin: 0 0 8px 0; position: relative; z-index: 1;">"I review 5-10 AI PRs each week and need to see what AI changed without reading 400 lines of code."</p>
@@ -334,7 +323,7 @@ Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the
       </div>
     </div>
     <div style="margin-top: 10px; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 10px 12px; position: relative; overflow: hidden; display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: start;">
-      <div style="width: 64px; height: 64px; border-radius: 6px; border: 1px dashed rgba(129, 199, 132, 0.45); background: rgba(129, 199, 132, 0.08); display: flex; align-items: center; justify-content: center; color: rgba(224,224,224,0.85); font-size: 0.36em; font-weight: 700; letter-spacing: 0.08em;">PHOTO</div>
+      <img src="Personas/3.png" alt="Maria portrait" style="width: 64px; height: 64px; border-radius: 6px; border: 1px solid rgba(129, 199, 132, 0.45); object-fit: cover; display: block;">
       <div style="position: relative;">
         <div style="position: absolute; top: -8px; left: -2px; font-size: 2.8em; color: rgba(129, 199, 132, 0.15); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
         <p style="font-size: 0.48em; line-height: 1.45; color: #e0e0e0; font-style: italic; margin: 0 0 8px 0; position: relative; z-index: 1;">"I manage 40 developers. After one untracked AI change caused a bug, I need org-wide visibility and hard gates."</p>
@@ -796,6 +785,7 @@ This slide keeps one gating thesis risk (PoC value) and only three secondary exe
 
 Notes:
 Strategy Evaluation (chosen over 7 alternatives):
+
 1. IDE-Native (PoC): No major player is natively integrated into IntelliJ SDK for control pipelines.
 2. Architecture Governance: Solves "docs rot" via live spec↔code syncing.
 3. Spec Compiler: True bi-directional sync. Future R&D (6-12m).
@@ -863,7 +853,6 @@ Notes:
 3) **Scale**: The JetBrains ecosystem is our unfair advantage. One-click install via Toolbox/Marketplace.
 4) **Standard**: We open-source the Spec Format and CLI to become the protocol, while monetizing the orchestration and governance.
 
-
 ---
 
 <!-- .slide: id="month1-actions" -->
@@ -905,7 +894,6 @@ Weeks 2-3: Option A (Primary): 8+ discovery interviews, scheduling design partne
 Week 4: Gate: Pilot commitments >=3, Top-3 problem rank for 5/8 devs, ICP waitlist >=15.
 End Mo 1 Deliverable: Initial qualitative signal, updated roadmap, and MVP scope.
 Tracking logs maintained in the validation dashboard.
-
 
 ---
 
