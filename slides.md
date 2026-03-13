@@ -154,7 +154,7 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
 
   <div class="chosen-tile" style="border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18); opacity: 0.9;">
     <div>
-      <p class="chosen-tile-label">3 Spec Authoring UX (Enabler)</p>
+      <p class="chosen-tile-label">3 Spec Formalisation</p>
       <div class="chosen-tile-body">
         <p style="font-size: 0.82em; line-height: 1.32;">Reduces authoring friction with templates, defaults, and persistent context.</p>
       </div>
@@ -176,7 +176,7 @@ This is an executive decision slide: two lead directions converge on one path (s
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small" style="width: 90%; margin-left: auto; margin-right: auto;">
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Primary Niche: Early Adopters</p>
+    <p class="chosen-tile-label">Early Adopters</p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Tech Leads &amp; Senior Engineers</p>
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> Teams 10-50 devs, production JB IDE</p>
@@ -186,7 +186,7 @@ This is an executive decision slide: two lead directions converge on one path (s
   </div>
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Scaling Niche (after POC)</p>
+    <p class="chosen-tile-label">Scaling Stage</p>
     <div class="chosen-tile-body">
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Eng Managers, Directors, Security</p>
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> 100+ dev orgs, compliance pressure</p>
@@ -391,40 +391,45 @@ This version is intentionally decision-first: market context plus three operatin
 ---
 <!-- .slide: id="golden-path" -->
 
-## HOW: Golden Path (Before vs. After)
+## HOW: Alex "Golden" Path
 
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 12px;">Same workflow, different control point.</p>
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="grid-template-columns: 1fr 1fr; gap: 15px; align-items: stretch;">
-  
-  <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18);">
-    <div>
-      <p class="chosen-tile-label" style="color: #fca5a5;">BEFORE: 45-min bottleneck</p>
-      <div class="chosen-tile-body">
-        <ol style="margin: 0; padding-left: 16px;">
-          <li style="margin-bottom: 6px;"><strong>Trigger:</strong> Junior prompts AI to refactor auth module.</li>
-          <li style="margin-bottom: 6px;"><strong>AI generates:</strong> 400-line unscoped diff, no contract.</li>
-          <li style="margin-bottom: 6px;"><strong>Review:</strong> Line-by-line blind review — can't tell what changed vs. what's new.</li>
-          <li><strong>Outcome:</strong> 45 min wasted, "Request Changes", re-prompt cycle.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-      <p class="chosen-tile-label" style="color: #6ee7b7;">AFTER (Bonsai): 7-min guided flow</p>
-      <div class="chosen-tile-body">
-        <ol style="margin: 0; padding-left: 16px;">
-          <li style="margin-bottom: 6px;"><strong>1. Author:</strong> Junior writes a spec: "extract session-expiry logic".</li>
-          <li style="margin-bottom: 6px;"><strong>2. Generate:</strong> AI creates scoped diffs, strictly contained to contract.</li>
-          <li style="margin-bottom: 6px;"><strong>3. Review:</strong> Reviewer checks "diff vs spec" in IDE (hard stop on violations).</li>
-          <li><strong>4. Commit:</strong> 7 min to merge, persistent traceability stays in Git.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-
+<div id="golden-path-steps" class="distrust-table-wrapper">
+  <table class="distrust-table" style="table-layout: fixed; width: 100%;">
+    <thead>
+      <tr>
+        <th class="center">Step</th>
+        <th>Layer</th>
+        <th>Before (45-min flow)</th>
+        <th>After (7-min flow)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center">1</td>
+        <td><strong>Start</strong></td>
+        <td>Junior prompts AI to refactor the auth module directly, with no explicit contract.</td>
+        <td>Junior writes a spec first ("extract session-expiry logic"), then runs generation from the spec.</td>
+      </tr>
+      <tr>
+        <td class="center">2</td>
+        <td><strong>Generation</strong></td>
+        <td>AI returns a ~400-line unscoped diff.</td>
+        <td>AI returns scoped diffs constrained to the approved change scope.</td>
+      </tr>
+      <tr>
+        <td class="center">3</td>
+        <td><strong>Review</strong></td>
+        <td>Blind line-by-line review; hard to see what changed vs what is new.</td>
+        <td>Reviewer checks diff vs spec in IDE, with hard stop on scope violations.</td>
+      </tr>
+      <tr>
+        <td class="center">4</td>
+        <td><strong>Outcome</strong></td>
+        <td>~45 minutes, "Request Changes", re-prompt cycle.</td>
+        <td>~7 minutes, PR-ready merge with traceability retained in Git.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
@@ -485,84 +490,9 @@ Roadmap is shown as a gated de-risking path, not a calendar-only plan: trust sig
 
 ---
 
-<!-- .slide: id="mvp-definition" -->
-
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP</h2>
-<p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">What It Is</p>
-    <p class="chosen-tile-body">JetBrains IDE plugin that turns a spec (repo-native Markdown) into controlled code changes, with in-IDE review and traceability, so teams ship faster without unscoped diffs.</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Success Criteria <span class="metric-badge">A</span></p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Token spend per successful PR-ready outcome &darr; 10%</li>
-        <li>% PRs where CI checks pass on 1st try &uarr; 10%</li>
-        <li>Median time to PR-ready (from spec approved) &darr; 10-20%</li>
-        <li>Target range: 10-20% fewer unscoped diffs / rework signals</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Who It Is For (MVP users)</p>
-    <p class="chosen-tile-body">A small set of design partner teams on real JetBrains IDE repos (single repo each), where scoped changes are common and review cycles are costly.</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Core User Flow</p>
-    <div class="chosen-tile-body">
-      <ol style="margin: 0; padding-left: 16px;">
-        <li>Define a spec for a scoped change (Markdown in the repo).</li>
-        <li>Run spec-aware workflow in IDE to generate plan + scoped diffs (change containment).</li>
-        <li>Review and approve/apply changes in IDE (hard stop on scope violations).</li>
-        <li>Produce PR-ready changeset with traceability (spec ↔ diff ↔ commits).</li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Core Capabilities (MVP)</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Spec-aware workflow (not a Markdown editor): run/validate/apply from spec in IDE.</li>
-        <li>Change containment: hard scope boundaries + stop/ask on violations.</li>
-        <li>In-IDE diff review with approve/apply loop.</li>
-        <li>Traceability: links spec to diffs/commits + PR-ready summary.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--red">
-    <p class="chosen-tile-label">Not In MVP</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Full Code → Spec automation (validated via existing tools first).</li>
-        <li>Broad language/framework coverage and edge cases.</li>
-        <li>Full org governance (roles, audit, policy management at scale).</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Decision:</strong> MVP is one governed change flow in JetBrains IDEs, optimized for measurable outcome lift (time-to-PR, first-pass CI, token efficiency), not broad feature coverage.</p>
-</div>
-
-Notes:
-MVP scope is intentionally narrow: one real workflow on partner repos with strict containment and clear traceability.
-Success criteria are repeat weekly usage, low-noise operation, and measurable review-cycle improvement before broader rollout.
-
----
 <!-- .slide: id="mvp-definition-simplified" -->
 
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP (Simplified Version)</h2>
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP</h2>
 <p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small">
@@ -1359,7 +1289,7 @@ This slide zooms out from the developer to the business buyer. B2B buyers care a
       <td>4.4</td>
     </tr>
     <tr>
-      <td><strong>Spec Authoring UX</strong> (enabler)</td>
+      <td><strong>Spec Formalisation Assist</strong></td>
       <td><span class="tag tag-time-spent">Time Spent</span></td>
       <td>2.2</td>
     </tr>
