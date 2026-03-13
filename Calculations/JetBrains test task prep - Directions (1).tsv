@@ -1,0 +1,9 @@
+Direction	Category	Impact	Conf.	Easy	ICE Score
+AI-dev transparency: code & architecture	Distrust issues	High	Med	Low	6.7
+Review & Debug assist	Distrust issues	Med	Med	Low	4.4
+Spec Formalisation Proactive Assist	Time Spent	High	Low	Med	2.2
+Quality and reliability risk from software errors	B2B pains	Med	Low	Low	2.2
+Security & Compliance (proactive assist)	Time Spent	Med	Low	Med	1.5
+Dev Env Simplification	Time Spent	Med	Low	Med	1.5
+Delivery time variability (accurate forecasting)	B2B pains	Med	Low	Med	1.5
+Token Spent Optimization	B2B pains	Low	Med	Med	1.5

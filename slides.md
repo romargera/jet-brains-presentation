@@ -58,7 +58,7 @@ The presentation has three parts. First, **What** — problem framing through a 
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px; border-left: 4px solid #34d399; background: rgba(16, 185, 129, 0.12); border-color: rgba(52, 211, 153, 0.35);">
-  <p>There has to be a better way</p>
+  <p><strong>Takeaway:</strong> The core friction in AI adoption isn't writing code — it's the unpredictability and review bottlenecks caused by unscoped AI diffs.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -357,7 +357,7 @@ Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Decision Summary</p>
-    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp YoY (46% in 2025). Start with Tech Leads in 10-50 dev teams using JetBrains IDEs, and solve review pain via spec-linked change containment.</p>
+    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp YoY (46% in 2025). Start with Tech Leads in 10-50 dev teams using JetBrains IDEs, and solve blind review rework via spec-linked change containment while preserving high-signal review quality.</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
@@ -381,8 +381,58 @@ Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the
   </div>
 </div>
 
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> We are building a workflow moat (governed change vs unvetted generation) within JetBrains, monetizing team-level predictability rather than individual productivity.</p>
+</div>
+
 Notes:
 This version is intentionally decision-first: market context plus three operating levers (differentiation, monetization, growth loops).
+
+---
+<!-- .slide: id="golden-path" -->
+
+## HOW: Golden Path (Before vs. After)
+
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 12px;">Same workflow, different control point.</p>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="grid-template-columns: 1fr 1fr; gap: 15px; align-items: stretch;">
+  
+  <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18);">
+    <div>
+      <p class="chosen-tile-label" style="color: #fca5a5;">BEFORE: 45-min bottleneck</p>
+      <div class="chosen-tile-body">
+        <ol style="margin: 0; padding-left: 16px;">
+          <li style="margin-bottom: 6px;"><strong>Trigger:</strong> Junior prompts AI to refactor auth module.</li>
+          <li style="margin-bottom: 6px;"><strong>AI generates:</strong> 400-line unscoped diff, no contract.</li>
+          <li style="margin-bottom: 6px;"><strong>Review:</strong> Line-by-line blind review — can't tell what changed vs. what's new.</li>
+          <li><strong>Outcome:</strong> 45 min wasted, "Request Changes", re-prompt cycle.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <p class="chosen-tile-label" style="color: #6ee7b7;">AFTER (Bonsai): 7-min guided flow</p>
+      <div class="chosen-tile-body">
+        <ol style="margin: 0; padding-left: 16px;">
+          <li style="margin-bottom: 6px;"><strong>1. Author:</strong> Junior writes a spec: "extract session-expiry logic".</li>
+          <li style="margin-bottom: 6px;"><strong>2. Generate:</strong> AI creates scoped diffs, strictly contained to contract.</li>
+          <li style="margin-bottom: 6px;"><strong>3. Review:</strong> Reviewer checks "diff vs spec" in IDE (hard stop on violations).</li>
+          <li><strong>4. Commit:</strong> 7 min to merge, persistent traceability stays in Git.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
+  <p><strong>Result:</strong> Same task, same people — but the control point shifts from "review the output" to "verify against the contract".</p>
+</div>
+
+Notes:
+This slide shows the same workflow (junior refactors auth module using AI) from two perspectives. Without Bonsai, the reviewer gets a blind 400-line diff with no contract. With Bonsai, the spec exists first, and the review becomes a simple question: "Does this diff fulfill the spec?" The time drops from 45 minutes to 7, and the spec persists in the repo for future AI sessions.
 
 ---
 <!-- .slide: id="roadmap" -->
@@ -417,8 +467,8 @@ This version is intentionally decision-first: market context plus three operatin
   <div class="chosen-tile" style="min-height: 182px; display: flex; flex-direction: column; justify-content: space-between; border: 1px dashed rgba(148, 163, 184, 0.4); background: rgba(30, 41, 59, 0.2); opacity: 0.9;">
     <div>
       <p class="chosen-tile-label">Months 5-6</p>
-      <p style="margin: 0 0 6px 0; font-weight: 700; color: #cbd5e1;">Phase: "Scale"</p>
-      <p class="chosen-tile-body" style="margin: 0;">Standardize the offer and expand distribution.</p>
+      <p style="margin: 0 0 6px 0; font-weight: 700; color: #cbd5e1;">Phase: Standardization</p>
+      <p class="chosen-tile-body" style="margin: 0;">Standardize the governed-change workflow for JetBrains teams and partner organizations.</p>
     </div>
     <p style="margin: 10px 0 0 0;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.45); background: rgba(51, 65, 85, 0.22);">Gate: repeat usage + stable unit signal</span></p>
   </div>
@@ -426,56 +476,15 @@ This version is intentionally decision-first: market context plus three operatin
 
 <p style="margin-top: 6px; font-size: 0.55em; color: rgba(148, 163, 184, 0.85);">Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
 
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> Execution is evidence-gated: trust signal (Mo1) -> budget intent (Mo2) -> paid pilot outcomes (Mo3-4) -> scale only with stable usage and unit economics (Mo5-6).</p>
+</div>
+
 Notes:
 Roadmap is shown as a gated de-risking path, not a calendar-only plan: trust signal -> paid intent -> paid pilot proof -> conditional launch.
 
 ---
-<!-- .slide: id="golden-path" -->
 
-## HOW: Golden Path (Before vs. After)
-
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 12px;">Same workflow, different control point.</p>
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="grid-template-columns: 1fr 1fr; gap: 15px; align-items: stretch;">
-  
-  <div class="chosen-tile" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(248, 113, 113, 0.35); background: rgba(127, 29, 29, 0.18);">
-    <div>
-      <p class="chosen-tile-label" style="color: #fca5a5;">BEFORE: 45-min bottleneck</p>
-      <div class="chosen-tile-body">
-        <ol style="margin: 0; padding-left: 16px;">
-          <li style="margin-bottom: 6px;"><strong>Trigger:</strong> Junior prompts AI to refactor auth module.</li>
-          <li style="margin-bottom: 6px;"><strong>AI generates:</strong> 400-line unscoped diff, no contract.</li>
-          <li style="margin-bottom: 6px;"><strong>Review:</strong> Line-by-line blind review — can't tell what changed vs. what's new.</li>
-          <li><strong>Outcome:</strong> 45 min wasted, "Request Changes", re-prompt cycle.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-      <p class="chosen-tile-label" style="color: #6ee7b7;">AFTER (Bonsai): 7-min guided review</p>
-      <div class="chosen-tile-body">
-        <ol style="margin: 0; padding-left: 16px;">
-          <li style="margin-bottom: 6px;"><strong>Trigger:</strong> Junior writes a spec: "extract session-expiry logic into a service".</li>
-          <li style="margin-bottom: 6px;"><strong>AI generates:</strong> Scoped diff, hard-contained to the spec contract.</li>
-          <li style="margin-bottom: 6px;"><strong>Review:</strong> Reviewer checks "does the diff match the spec?" — guided, not blind.</li>
-          <li><strong>Outcome:</strong> 7 min review, merge, persistent spec stays in repo.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Result:</strong> Same task, same people — but the control point shifts from "review the output" to "verify against the contract".</p>
-</div>
-
-Notes:
-This slide shows the same workflow (junior refactors auth module using AI) from two perspectives. Without Bonsai, the reviewer gets a blind 400-line diff with no contract. With Bonsai, the spec exists first, and the review becomes a simple question: "Does this diff fulfill the spec?" The time drops from 45 minutes to 7, and the spec persists in the repo for future AI sessions.
-
----
 <!-- .slide: id="mvp-definition" -->
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP</h2>
@@ -542,9 +551,63 @@ This slide shows the same workflow (junior refactors auth module using AI) from 
 
 </div>
 
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Decision:</strong> MVP is one governed change flow in JetBrains IDEs, optimized for measurable outcome lift (time-to-PR, first-pass CI, token efficiency), not broad feature coverage.</p>
+</div>
+
 Notes:
 MVP scope is intentionally narrow: one real workflow on partner repos with strict containment and clear traceability.
 Success criteria are repeat weekly usage, low-noise operation, and measurable review-cycle improvement before broader rollout.
+
+---
+<!-- .slide: id="mvp-definition-simplified" -->
+
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP (Simplified Version)</h2>
+<p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">What It Is</p>
+    <p class="chosen-tile-body">JetBrains IDE plugin that turns a spec (repo-native Markdown) into controlled code changes, with in-IDE review and traceability, so teams ship faster without unscoped diffs.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Who It Is For (MVP users)</p>
+    <p class="chosen-tile-body">A small set of design partner teams on real JetBrains IDE repos, where scoped changes are common and review cycles are costly.</p>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Core Capabilities (MVP)</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Spec-aware workflow (not a Markdown editor): run/validate/apply from spec in IDE.</li>
+        <li>Change containment: hard scope boundaries + stop/ask on violations.</li>
+        <li>In-IDE diff review with approve/apply loop.</li>
+        <li>Traceability: links spec to diffs/commits + PR-ready summary.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Not In MVP</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Full Code → Spec automation (validated via existing tools first).</li>
+        <li>Broad language/framework coverage and edge cases.</li>
+        <li>Full org governance (roles, audit, policy management at scale).</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Decision:</strong> MVP is one governed change flow in JetBrains IDEs, optimized for measurable outcome lift, not broad feature coverage.</p>
+</div>
+
+Notes:
+MVP scope is intentionally narrow: one real workflow on partner repos with strict containment and clear traceability.
 
 ---
 <!-- .slide: id="pricing-monetization" -->
@@ -637,9 +700,10 @@ This version keeps monetization logic as three decisions: free vs paid, when cha
     <p class="chosen-tile-label">4. Value & Outcomes</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>Cost:</b> Total avg token spend, Token cost per governed change</li>
+        <li><b>Cost:</b> Token spend per successful PR-ready outcome</li>
         <li><b>Quality:</b> % PRs passing checks on 1st try</li>
-        <li><b>Velocity:</b> Time to merged PR (from spec)</li>
+        <li><b>Scope Control:</b> Unscoped diff / scope-violation rate</li>
+        <li><b>Velocity:</b> Median time to PR-ready (from spec approved)</li>
       </ul>
     </div>
   </div>
@@ -1168,7 +1232,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> We see an opportunity to cut low-value overhead and reinvest the saved capacity into the core work developers value most: Coding & System Architecture/Design.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> We cut low-value rework and unscoped review churn, then reinvest saved capacity into Coding and System Architecture without reducing high-signal code review quality.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -1259,7 +1323,7 @@ Here we look at how developers actually spend their time versus how they ideally
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The two highest-scoring B2B pains — delivery unpredictability and quality risk — are directly amplified by uncontrolled AI-generated code entering review pipelines.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The two highest-scoring B2B pains — delivery unpredictability and quality risk — are strongly aligned with control gaps in AI-assisted workflows; uncontrolled AI diffs are a likely accelerator, making change containment a high-leverage first wedge.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -1482,10 +1546,10 @@ Spec-driven and Observability both score 6.7 — the tie-break is the interventi
   <div class="roadmap-item" style="display: flex !important; flex-direction: row !important; align-items: flex-start !important; gap: 12px !important; padding: 6px !important; margin: 0 !important; width: 100% !important; background: rgba(255,255,255,0.03); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
     <div class="roadmap-timeline" style="flex: 0 0 100px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 1px !important;">
       <span class="roadmap-timeline-label" style="font-size: 0.85em !important; padding: 1px 6px !important; background: var(--jb-purple); color: white; border-radius: 4px;">Months 5-6</span>
-      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standard</span>
+      <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standardization</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the approach and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; MRR target: $5-15k from paid pilots by Month 4-6<br>&bull; Usage: most active teams run core scenario &ge;2x/week<br>&bull; &ge;70% with clear qualitative wins (CS + SMM)<br>&bull; Guardrail: alert disable rate stable + cost per outcome stable<br>&bull; Active users per org target: 3-5 by Month 6</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the governed-change workflow for JetBrains teams and partner organizations, and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; MRR target: $5-15k from paid pilots by Month 4-6<br>&bull; Usage: most active teams run core scenario &ge;2x/week<br>&bull; &ge;70% with clear qualitative wins (CS + SMM)<br>&bull; Guardrail: alert disable rate stable + cost per outcome stable<br>&bull; Active users per org target: 3-5 by Month 6</p>
     </div>
   </div>
 

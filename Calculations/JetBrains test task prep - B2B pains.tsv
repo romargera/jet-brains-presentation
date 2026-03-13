@@ -1,0 +1,8 @@
+B2B pains	Details (argumentation for reach and frequency)	Source	Reach (1-3)	Frequency (1-3)	Probability to make a diff (0.5-1)	Priority
+Delivery predictability and lead time variability	This waiting period affects planning accuracy because work depending on unpredictable reviewers cannot be reliably forecast.	https://axify.io/blog/lead-time-in-software-development	3	2	0.75	4.5
+Quality and reliability risk from software errors	Poor software quality costs US companies upwards of $2.08 trillion annually.	https://raygun.com/blog/cost-of-software-errors/	3	3	0.5	4.5
+Documentation debt harming onboarding and satisfaction and speed	41% of developers report this as a major hindrance. “Our research shows that 97% of developers are losing significant time to inefficiencies…”	https://www.atlassian.com/software/compass/resources/state-of-developer-2024	2	2	0.75	3.0
+Token Spent Optimization	“On average, token consumption decreased by 15–20%…”	https://arxiv.org/html/2504.15989v2	2	2	0.75	3.0
+Developer burnout from cognitive load and on-call burden	83% of surveyed software engineers reported feelings of burnout.	https://www.softwareseni.com/developer-burnout-and-cognitive-load-in-the-devops-era/	2	2	0.5	2.0
+Productivity loss from technical debt waste	Developers waste on average 23% of their time due to technical debt.	https://research.chalmers.se/publication/511450/file/511450_Fulltext.pdf	1	3	0.5	1.5
+Compliance overhead from AI and tooling	Compliance overhead increases 10–20% in regulated industries due to AI audit and privacy controls.	https://www.softwareseni.com/the-real-economics-of-ai-coding-beyond-vendor-productivity-claims/	2	1	0.75	1.5
