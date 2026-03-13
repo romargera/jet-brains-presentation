@@ -646,6 +646,13 @@
   margin: 15px auto 15px;
 }
 
+/* Keep top-level takeaway/notes width aligned with slide content blocks */
+.reveal section > .adoption-takeaway {
+  width: 95%;
+  max-width: 95%;
+  box-sizing: border-box;
+}
+
 /* Distrust Issues Table */
 .distrust-table-wrapper {
   margin-top: 5px;
@@ -905,6 +912,13 @@
   text-align: left;
   line-height: 1.4;
   list-style-type: disc;
+}
+
+.reveal section > .distrust-notes {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 .distrust-notes li {
