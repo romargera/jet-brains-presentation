@@ -350,43 +350,39 @@ Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the
 
 
 ---
-<!-- .slide: id="why-summary-v2" -->
+<!-- .slide: id="why-summary-v3-copy" -->
 
-## WHY: Summary
+## WHY: Summary (Focused Copy)
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr; gap: 8px; margin-top: 8px;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Decision Summary</p>
-    <p class="chosen-tile-body">AI adoption hit 90% but distrust surged +15pp YoY (46% in 2025). Start with Tech Leads in 10-50 dev teams using JetBrains IDEs, and solve blind review rework via spec-linked change containment while preserving high-signal review quality.</p>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
-    <p class="chosen-tile-body">While the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$171.85M top-down SOM</a> targets a 5% share of the $4.91B market, the <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$0.93M bottom-up Year 1</a> exit run-rate <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=C29" target="_blank" style="color: var(--accent-blue); text-decoration: none;">(~0.54% SOM)</a> reflects early funnel ramp-up versus a mature steady-state.</p>
+    <div>
+      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Thesis:</strong> We win if teams can predict PR outcome before review, not after.</p>
+      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why now:</strong> AI adoption is <a href="#/adoption-paradox" style="color: var(--accent-blue); text-decoration: none;">90%, distrust is 46% (+15pp YoY)</a>.</p>
+      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why us:</strong> IDE-native spec-to-PR workflow with scope checks reduces unscoped diffs before review.</p>
+      <p class="chosen-tile-body" style="margin: 0;"><strong>Why win:</strong> Start with Tech Leads (10-50 dev teams), prove paid pilot outcomes by Mo3-4, then expand via JetBrains distribution.</p>
+    </div>
   </div>
 </div>
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;">
   <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
+    <p class="chosen-tile-body">Top-down targets a <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$171.85M SOM</a> (5% of $4.91B). Bottom-up Year 1 estimates a <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$0.93M exit run-rate</a> <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=C29" target="_blank" style="color: var(--accent-blue); text-decoration: none;">(~0.54% SOM)</a>, reflecting early funnel ramp versus steady-state.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Differentiation</p>
-    <p class="chosen-tile-body">IDE-native bi-directional spec↔code via PSI: extract intent, constrain the diff, detect drift early. <a href="#/differentiation">Differentiation</a></p>
+    <p class="chosen-tile-body">IDE-native spec↔code plus scope checks makes PR outcomes predictable before review. <a href="#/differentiation">Differentiation</a></p>
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Monetization</p>
-    <p class="chosen-tile-body">Free entry comes through JetBrains distribution and an OSS trust layer. Paid value starts when teams need shared controls, visibility, and PR/CI workflow integration. <a href="#/pricing-monetization">Monetization</a></p>
+    <p class="chosen-tile-body">Free for individuals and OSS trust level. Paid at team level when shared controls and PR/CI integrations are needed. <a href="#/pricing-monetization">Monetization</a> & <a href="#/growth-loops">Growth Loops</a></p>
   </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Growth Loops</p>
-    <p class="chosen-tile-body">Repo-native specs, reviewer reuse, CI gates, and ecosystem distribution reinforce team adoption over time. <a href="#/growth-loops">Growth Loops</a></p>
-  </div>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> We are building a workflow moat (governed change vs unvetted generation) within JetBrains, monetizing team-level predictability rather than individual productivity.</p>
 </div>
 
 Notes:
-This version is intentionally decision-first: market context plus three operating levers (differentiation, monetization, growth loops).
+Focused copy for comparison: same logic, lower jargon density, preserved links to supporting slides and market model.
 
 ---
 <!-- .slide: id="golden-path" -->
