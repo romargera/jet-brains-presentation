@@ -162,7 +162,7 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
   </div>
 </div>
 
-<div class="adoption-takeaway distrust-takeaway" style="margin: 12px auto 0 auto; width: 80%; box-sizing: border-box; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
+<div class="adoption-takeaway distrust-takeaway" style="margin: 12px auto 0 auto; width: 95%; box-sizing: border-box; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
   <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> We considered three directions. The core problem is trust in AI output, not generic productivity. Within that space, spec-driven control is the strongest initial wedge because it makes AI changes inspectable and constrained before review. Review &amp; Debug Assist remains the fallback if proactive control creates too much workflow friction.</p>
 </div>
 
