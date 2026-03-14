@@ -154,10 +154,13 @@
 
 ## WHAT: Target Niche <span class="metric-badge">A</span>
 
-<div style="width: 90%; margin: 6px auto 10px auto; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 8px 12px; text-align: left; position: relative; box-sizing: border-box;">
-  <div style="position: absolute; top: -3px; left: 8px; font-size: 1.8em; color: rgba(129, 199, 132, 0.2); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
-  <p style="margin: 0 0 3px 0; padding-left: 10px; font-size: 0.53em; line-height: 1.35; color: #e0e0e0; font-style: italic;">"AI may change how we do code reviews… The diff tells you what shipped. The conversation tells you why."</p>
-  <p style="margin: 0; padding-left: 10px; font-size: 0.47em; color: var(--text-muted);"><a href="https://x.com/addyosmani/status/2011338548763664475" target="_blank" style="color: var(--accent-blue); text-decoration: none;">(c)</a> Addy Osmani, Director, Google Cloud AI</p>
+<div style="width: 90%; margin: 6px auto 10px auto; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 8px 12px; text-align: left; position: relative; box-sizing: border-box; display: grid; grid-template-columns: 40px 1fr; gap: 10px; align-items: center;">
+  <img src="Personas/Director.jpg" alt="Addy Osmani portrait" style="width: 40px; height: 40px; border-radius: 6px; border: 1px solid rgba(129, 199, 132, 0.45); object-fit: cover; display: block;">
+  <div style="position: relative;">
+    <div style="position: absolute; top: -5px; left: -1px; font-size: 1.8em; color: rgba(129, 199, 132, 0.2); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
+    <p style="margin: 0 0 3px 0; padding-left: 10px; font-size: 0.53em; line-height: 1.35; color: #e0e0e0; font-style: italic;">"AI may change how we do code reviews… The diff tells you what shipped. The conversation tells you why."</p>
+    <p style="margin: 0; padding-left: 10px; font-size: 0.47em; color: var(--text-muted);"><a href="https://x.com/addyosmani/status/2011338548763664475" target="_blank" style="color: var(--accent-blue); text-decoration: none;">(c)</a> Addy Osmani, Director, Google Cloud AI</p>
+  </div>
 </div>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="width: 90%; margin-left: auto; margin-right: auto;">
@@ -454,7 +457,7 @@
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: Key Metrics</h2>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="text-align: left;">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="text-align: left; grid-template-columns: 55% 45%;">
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">1. NSM & Engagement</p>
@@ -482,10 +485,10 @@
     <p class="chosen-tile-label">3. Guardrails & Basic Quality</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>Safety:</b> CR to core JB actions, Sec/privacy incidents</li>
+        <li><b>Safety:</b> CR to core JB actions, Sec/privacy incidents <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
         <li><b>Quality:</b> False positive rate, added latency/Time to PR <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
         <li><b>Drift:</b> Drift rate & severity, prevented incidents <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
-        <li><b>Qualitative:</b> CSAT & User Interviews on Spec View</li>
+        <li><b>Qualitative:</b> CSAT & User Interviews on Spec View <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
       </ul>
     </div>
   </div>
@@ -496,7 +499,7 @@
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
         <li><b>Cost:</b> Token spend per successful PR-ready outcome <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
         <li><b>Quality:</b> % PRs passing checks on 1st try <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
-        <li><b>Scope Control:</b> Unscoped diff / scope-violation rate</li>
+        <li><b>Scope Control:</b> Unscoped diff / scope-violation rate <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
         <li><b>Velocity:</b> Median time to PR-ready (from spec approved) <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
       </ul>
     </div>
@@ -508,9 +511,10 @@
   <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: Mo1 repeat usage in 3 pilot teams, Mo2 payment-intent commitments, Mo3-4 paid-pilot outcome uplift (time-to-PR, first-pass CI, token efficiency), Mo5-6 stable usage and unit economics.</p>
 </div>
 
-<ul class="distrust-notes" style="margin-top: 8px;">
-  <li><strong>Notes:</strong> <span style="display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: #22c55e; vertical-align: middle; margin: 0 4px;"></span> MVP metric, <span style="display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: #3b82f6; vertical-align: middle; margin: 0 4px;"></span> Scale metric.</li>
-</ul>
+<div class="distrust-notes" style="margin-top: 8px;">
+  <span style="display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: #22c55e; vertical-align: middle; margin-right: 6px;"></span>MVP stage metric,&nbsp;
+  <span style="display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: #3b82f6; vertical-align: middle; margin: 0 6px 0 10px;"></span>Scale stage metric.
+</div>
 
 ---
 <!-- .slide: id="pricing-monetization" -->
@@ -731,6 +735,30 @@
 # Appendix
 
 ---
+<!-- .slide: id="jb-strategic-fit" -->
+
+## WHY: JetBrains Strategic Fit <span class="metric-badge">A</span>
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Right to win</p>
+    <p class="chosen-tile-body">JetBrains owns the IDE workflow and has PSI-native context.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Portfolio fit</p>
+    <p class="chosen-tile-body">Bonsai complements AI Assistant and Junie by adding governance, not generation.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Business fit</p>
+    <p class="chosen-tile-body">It increases enterprise retention and creates team-level attach potential.</p>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> JetBrains is well positioned to own governed AI-assisted development, not just AI code generation.</p>
+</div>
+
+---
 <!-- .slide: id="gtm" -->
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy <span class="metric-badge">A</span></h2>
@@ -786,72 +814,6 @@
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
   <p><strong>Takeaway:</strong> GTM sequencing is deliberate: prove workflow value, secure budget intent, convert to paid pilots, then scale through JetBrains distribution and OSS standardization.</p>
-</div>
-
----
-<!-- .slide: id="gtm-phase-gate-view" -->
-
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy <span class="metric-badge">A</span></h2>
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
-  <colgroup>
-    <col style="width: 12%;">
-    <col style="width: 22%;">
-    <col style="width: 22%;">
-    <col style="width: 22%;">
-    <col style="width: 22%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th></th>
-      <th>Pilot Teams (Mo 1)</th>
-      <th>Paid Intent (Mo 2)</th>
-      <th>Scale (Mo 3-4)</th>
-      <th>Standard (Mo 5-6)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Do</strong></td>
-      <td>Golden path demo - 3 pilot teams with design partners</td>
-      <td>Budget-intent letters from &ge;3 buyers</td>
-      <td>Paid pilots on MVP plugin via JB ecosystem</td>
-      <td>PLG loop: individual - team policy, OSS templates</td>
-    </tr>
-    <tr>
-      <td><strong>Gate</strong></td>
-      <td>&ge;2 teams with weekly usage</td>
-      <td>Named buyer + budget committed</td>
-      <td>&ge;3 paid pilots + outcome uplift</td>
-      <td>Stable MRR + repeat usage</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
----
-<!-- .slide: id="jb-strategic-fit" -->
-
-## WHY: JetBrains Strategic Fit <span class="metric-badge">A</span>
-
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Right to win</p>
-    <p class="chosen-tile-body">JetBrains owns the IDE workflow and has PSI-native context.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Portfolio fit</p>
-    <p class="chosen-tile-body">Bonsai complements AI Assistant and Junie by adding governance, not generation.</p>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Business fit</p>
-    <p class="chosen-tile-body">It increases enterprise retention and creates team-level attach potential.</p>
-  </div>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> JetBrains is well positioned to own governed AI-assisted development, not just AI code generation.</p>
 </div>
 
 ---
