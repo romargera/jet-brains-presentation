@@ -156,8 +156,8 @@
 
 <div style="width: 90%; margin: 6px auto 10px auto; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 8px 12px; text-align: left; position: relative; box-sizing: border-box;">
   <div style="position: absolute; top: -3px; left: 8px; font-size: 1.8em; color: rgba(129, 199, 132, 0.2); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
-  <p style="margin: 0 0 3px 0; padding-left: 10px; font-size: 0.53em; line-height: 1.35; color: #e0e0e0; font-style: italic;">AI may change how we do code reviews… The diff tells you what shipped. The conversation tells you why.</p>
-  <p style="margin: 0; padding-left: 10px; font-size: 0.47em; color: var(--text-muted);"><a href="https://x.com/addyosmani/status/2011338548763664475" target="_blank" style="color: var(--accent-blue); text-decoration: none;">Addy Osmani, Director, Google Cloud AI</a></p>
+  <p style="margin: 0 0 3px 0; padding-left: 10px; font-size: 0.53em; line-height: 1.35; color: #e0e0e0; font-style: italic;">"AI may change how we do code reviews… The diff tells you what shipped. The conversation tells you why."</p>
+  <p style="margin: 0; padding-left: 10px; font-size: 0.47em; color: var(--text-muted);"><a href="https://x.com/addyosmani/status/2011338548763664475" target="_blank" style="color: var(--accent-blue); text-decoration: none;">(c)</a> Addy Osmani, Director, Google Cloud AI</p>
 </div>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="width: 90%; margin-left: auto; margin-right: auto;">
@@ -182,11 +182,11 @@
   </div>
 </div>
 
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px;">
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px; width: 90%; margin-left: auto; margin-right: auto;">
   <p><strong>Takeaway:</strong> We start narrow - Tech Leads feeling AI review pain in JB IDEs - and expand to org-wide governance once value is proven.</p>
 </div>
 
-<ul class="distrust-notes" style="margin-top: 10px;">
+<ul class="distrust-notes" style="margin: 10px auto 0 auto; width: 90%;">
   <li>Inputs so far: 1 exploratory interview, desk research, competitor pattern review. Systematic validation: Month 1.</li>
 </ul>
 
@@ -460,10 +460,10 @@
     <p class="chosen-tile-label">1. NSM & Engagement</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>NSM:</b> Active users/wk with ≥1 spec-linked merge <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
-        <li><b>Engagement:</b> Activation to 1st merge, N-day retention, WAU/MAU <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
-        <li><b>Expansion:</b> % org with X+ users with ≥1 spec-merge <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
-        <li><b>Velocity:</b> Lead time & deployment frequency <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>NSM:</b> Active users/wk with ≥1 spec-linked merge <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
+        <li><b>Engagement:</b> Activation to 1st merge, N-day retention, WAU/MAU <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
+        <li><b>Expansion:</b> % org with X+ users with ≥1 spec-merge <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
+        <li><b>Velocity:</b> Lead time & deployment frequency <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
       </ul>
     </div>
   </div>
@@ -472,8 +472,8 @@
     <p class="chosen-tile-label">2. Monetization</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats) <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
-        <li><b>Attributed JB MRR:</b> Attach rate (JB paid with product), Cohort ARPU & Churn <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats) <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
+        <li><b>Attributed JB MRR:</b> Attach rate (JB paid with product), Cohort ARPU & Churn <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
       </ul>
     </div>
   </div>
@@ -483,8 +483,8 @@
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
         <li><b>Safety:</b> CR to core JB actions, Sec/privacy incidents</li>
-        <li><b>Quality:</b> False positive rate, added latency/Time to PR <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
-        <li><b>Drift:</b> Drift rate & severity, prevented incidents <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Quality:</b> False positive rate, added latency/Time to PR <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
+        <li><b>Drift:</b> Drift rate & severity, prevented incidents <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
         <li><b>Qualitative:</b> CSAT & User Interviews on Spec View</li>
       </ul>
     </div>
@@ -494,10 +494,10 @@
     <p class="chosen-tile-label">4. Value & Outcomes</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>Cost:</b> Token spend per successful PR-ready outcome <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
-        <li><b>Quality:</b> % PRs passing checks on 1st try <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Cost:</b> Token spend per successful PR-ready outcome <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
+        <li><b>Quality:</b> % PRs passing checks on 1st try <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
         <li><b>Scope Control:</b> Unscoped diff / scope-violation rate</li>
-        <li><b>Velocity:</b> Median time to PR-ready (from spec approved) <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Velocity:</b> Median time to PR-ready (from spec approved) <span style="display: inline-block; width: 8px; height: 8px; margin-left: 6px; border-radius: 2px; background: #22c55e; vertical-align: middle;"></span><span style="display: inline-block; width: 8px; height: 8px; margin-left: 2px; border-radius: 2px; background: #3b82f6; vertical-align: middle;"></span></li>
       </ul>
     </div>
   </div>
@@ -507,6 +507,10 @@
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
   <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: Mo1 repeat usage in 3 pilot teams, Mo2 payment-intent commitments, Mo3-4 paid-pilot outcome uplift (time-to-PR, first-pass CI, token efficiency), Mo5-6 stable usage and unit economics.</p>
 </div>
+
+<ul class="distrust-notes" style="margin-top: 8px;">
+  <li><strong>Notes:</strong> <span style="display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: #22c55e; vertical-align: middle; margin: 0 4px;"></span> MVP metric, <span style="display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: #3b82f6; vertical-align: middle; margin: 0 4px;"></span> Scale metric.</li>
+</ul>
 
 ---
 <!-- .slide: id="pricing-monetization" -->
@@ -605,7 +609,6 @@
 
 <ul class="distrust-notes" style="margin-top: 8px;">
   <li><strong>Notes:</strong> Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</li>
-  <li><strong>Why 3 teams (not 10):</strong> Month 1 is a speed-gated discovery phase; 3 teams are enough for cross-team repeatability signal without slowing decisions and burn.</li>
 </ul>
 
 ---
