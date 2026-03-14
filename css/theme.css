@@ -693,27 +693,15 @@
   font-weight: 700;
 }
 
-/* Golden Path Flow slide */
-#golden-path-steps .distrust-table th:nth-child(1),
-#golden-path-steps .distrust-table td:nth-child(1) {
-  width: 8%;
+/* Keep tile body text size aligned with WHY: Summary tiles */
+.tile-text-match-summary .chosen-tile-body {
+  font-size: 0.48em !important;
 }
 
-#golden-path-steps .distrust-table th:nth-child(2),
-#golden-path-steps .distrust-table td:nth-child(2) {
-  width: 18%;
-}
-
-#golden-path-steps .distrust-table th:nth-child(3),
-#golden-path-steps .distrust-table td:nth-child(3) {
-  width: 33%;
-  white-space: normal;
-}
-
-#golden-path-steps .distrust-table th:nth-child(4),
-#golden-path-steps .distrust-table td:nth-child(4) {
-  width: 41%;
-  white-space: normal;
+.tile-text-match-summary .chosen-tile-body p,
+.tile-text-match-summary .chosen-tile-body ul,
+.tile-text-match-summary .chosen-tile-body li {
+  font-size: inherit !important;
 }
 
 /* Pricing & Monetization slide */

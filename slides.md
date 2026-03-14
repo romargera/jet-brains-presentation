@@ -118,12 +118,12 @@
 
 <p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;"><a href="#/stream-options-main-appendix" style="color: var(--accent-blue);">Prioritized</a> across <a href="#/distrust-issues" style="color: var(--accent-blue);">distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>.</p>
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: stretch; margin-top: 2px; width: 95%; margin-left: auto; margin-right: auto;">
+<div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: stretch; margin-top: 2px; width: 95%; margin-left: auto; margin-right: auto;">
   <div class="chosen-tile chosen-tile--green">
     <div>
       <p class="chosen-tile-label">1 Spec-driven Control</p>
       <div class="chosen-tile-body">
-        <p style="font-size: 0.82em; line-height: 1.32;">Makes AI output visible, reviewable, and predictable.</p>
+        <p style="line-height: 1.32;">Makes AI output visible, reviewable, and predictable.</p>
       </div>
     </div>
   </div>
@@ -132,7 +132,7 @@
     <div>
       <p class="chosen-tile-label">2 Review &amp; Debug Assist</p>
       <div class="chosen-tile-body">
-        <p style="font-size: 0.82em; line-height: 1.32;">Use if spec-first control is too high-friction.</p>
+        <p style="line-height: 1.32;">Use if spec-first control is too high-friction.</p>
       </div>
     </div>
   </div>
@@ -141,7 +141,7 @@
     <div>
       <p class="chosen-tile-label">3 Spec Formalisation</p>
       <div class="chosen-tile-body">
-        <p style="font-size: 0.82em; line-height: 1.32;">Reduces authoring friction with templates, defaults, and persistent context.</p>
+        <p style="line-height: 1.32;">Reduces authoring friction with templates, defaults, and persistent context.</p>
       </div>
     </div>
   </div>
@@ -156,7 +156,7 @@
 
 ## WHAT: Target Niche <span class="metric-badge">A</span>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="width: 90%; margin-left: auto; margin-right: auto;">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="width: 90%; margin-left: auto; margin-right: auto;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Early Adopters</p>
     <div class="chosen-tile-body">
@@ -191,7 +191,7 @@
 
 ## WHY: Competitor Landscape
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); width: 95%; margin: 0 auto;">
+<div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: repeat(3, 1fr); width: 95%; margin: 0 auto;">
   <div class="chosen-tile" style="display: flex; flex-direction: column;">
     <p class="chosen-tile-label" style="color: #10b981; line-height: 1.12;">
       <span style="display: block; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Direct</span>
@@ -199,8 +199,8 @@
     </p>
     <div class="chosen-tile-body" style="display: flex; flex-direction: column; flex: 1;">
       <p style="margin: 0 0 6px 0;">&nbsp;</p>
-      <p style="margin-top: 0; margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: var(--accent-blue);">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: var(--accent-blue);">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: var(--accent-blue);">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: var(--accent-blue);">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: var(--accent-blue);">OpenSpec</a>, <a href="https://www.task-master.dev/" target="_blank" style="color: var(--accent-blue);">Taskmaster</a>, <a href="https://stately.ai/" target="_blank" style="color: var(--accent-blue);">Stately</a>, <a href="https://buildermethods.com/agent-os" target="_blank" style="color: var(--accent-blue);">Agent-OS</a>, <a href="https://www.autok.dev/" target="_blank" style="color: var(--accent-blue);">autok</a>, <a href="https://www.devplan.com/" target="_blank" style="color: var(--accent-blue);">devplan</a></p>
-      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: re-usable explicit spec artifact<br>&bull; Gap: weak IDE-native control, limited change containment, early maturity</p>
+      <p style="margin-top: 0; margin-bottom: 8px; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: var(--accent-blue);">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: var(--accent-blue);">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: var(--accent-blue);">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: var(--accent-blue);">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: var(--accent-blue);">OpenSpec</a>, <span style="color: rgba(147,197,253,0.72);"><a href="https://www.task-master.dev/" target="_blank" style="color: rgba(147,197,253,0.72);">Taskmaster</a>, <a href="https://stately.ai/" target="_blank" style="color: rgba(147,197,253,0.72);">Stately</a>, <a href="https://buildermethods.com/agent-os" target="_blank" style="color: rgba(147,197,253,0.72);">Agent-OS</a>, <a href="https://ariel-frischer.github.io/autospec/" target="_blank" style="color: rgba(147,197,253,0.72);">Autospec</a>, <a href="https://specs.md/" target="_blank" style="color: rgba(147,197,253,0.72);">specs.md</a>, <a href="https://www.autok.dev/" target="_blank" style="color: rgba(147,197,253,0.72);">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: rgba(147,197,253,0.72);">devplan</a></span></p>
+      <p style="color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: re-usable explicit spec artifact<br>&bull; Gap: weak IDE-native control, limited change containment, early maturity</p>
     </div>
   </div>
   <div class="chosen-tile" style="display: flex; flex-direction: column;">
@@ -211,7 +211,7 @@
     <div class="chosen-tile-body" style="display: flex; flex-direction: column; flex: 1;">
       <p style="margin: 0 0 6px 0;">&nbsp;</p>
       <p style="margin-top: 0; margin-bottom: 5px;"><strong><a href="https://cursor.com/" target="_blank" style="color: var(--accent-blue);">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: var(--accent-blue);">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: var(--accent-blue);">JB AI</a></strong></p>
-      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: fast generation in the IDE<br>&bull; Gap: rules guide behavior but do not enforce persistent boundaries</p>
+      <p style="color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: fast generation in the IDE<br>&bull; Gap: rules guide behavior but do not enforce persistent boundaries</p>
     </div>
   </div>
   <div class="chosen-tile" style="display: flex; flex-direction: column;">
@@ -221,8 +221,8 @@
     </p>
     <div class="chosen-tile-body" style="display: flex; flex-direction: column; flex: 1;">
       <p style="margin: 0 0 6px 0;">&nbsp;</p>
-      <p style="margin-top: 0; margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://coderabbit.ai/" target="_blank" style="color: var(--accent-blue);">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: var(--accent-blue);">Qodo</a>, <a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: var(--accent-blue);">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: var(--accent-blue);">Datadog LLM</a></p>
-      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: catches issues after generation<br>&bull; Gap: improves detection, not prevention</p>
+      <p style="margin-top: 0; margin-bottom: 8px; color: rgba(255,255,255,0.7);"><a href="https://coderabbit.ai/" target="_blank" style="color: var(--accent-blue);">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: var(--accent-blue);">Qodo</a>, <a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: var(--accent-blue);">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: var(--accent-blue);">Datadog LLM</a></p>
+      <p style="color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: catches issues after generation<br>&bull; Gap: improves detection, not prevention</p>
       <p style="margin: 0 0 6px 0;">&nbsp;</p>
     </div>
   </div>
@@ -364,8 +364,8 @@
     <thead>
       <tr>
         <th>Layer</th>
-        <th>Before (45-min flow)</th>
-        <th>After (7-min flow)</th>
+        <th>Before</th>
+        <th>After</th>
       </tr>
     </thead>
     <tbody>
@@ -404,7 +404,7 @@
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP</h2>
 <p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="grid-template-columns: 3fr 2fr;">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary">
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">What It Is</p>
@@ -634,7 +634,7 @@
       <td style="background: rgba(34, 197, 94, 0.09);"><strong>Trust</strong></td>
       <td style="background: rgba(34, 197, 94, 0.13);"><strong>Paid Intent</strong></td>
       <td style="background: rgba(34, 197, 94, 0.17);"><strong>MVP Launch</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.21);"><strong>Standardization</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.21);"><strong>Org Workflow Standardization</strong></td>
     </tr>
     <tr>
       <td><strong>Goal</strong></td>
@@ -654,27 +654,13 @@
 </table>
 </div>
 
-<div style="width: 95%; margin: 8px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
-  <div style="padding: 6px 8px; border-radius: 6px; border: 1px dashed rgba(148, 163, 184, 0.4); background: rgba(30, 41, 59, 0.28); text-align: center;">
-    <p style="margin: 0; font-size: 0.43em; color: var(--text-main);"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; margin-right: 6px;"></span><strong>Gate 1:</strong> Trust &rarr; Paid Intent</p>
-    <p style="margin: 2px 0 0 0; font-size: 0.4em; color: var(--text-muted);">3 PoCs completed, &ge;2 with weekly active usage over 3 weeks</p>
-  </div>
-  <div style="padding: 6px 8px; border-radius: 6px; border: 1px dashed rgba(148, 163, 184, 0.4); background: rgba(30, 41, 59, 0.28); text-align: center;">
-    <p style="margin: 0; font-size: 0.43em; color: var(--text-main);"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; margin-right: 6px;"></span><strong>Gate 2:</strong> Paid Intent &rarr; MVP Launch</p>
-    <p style="margin: 2px 0 0 0; font-size: 0.4em; color: var(--text-muted);">&ge;3 signed payment-intent commitments with named buyer and budget</p>
-  </div>
-  <div style="padding: 6px 8px; border-radius: 6px; border: 1px dashed rgba(148, 163, 184, 0.4); background: rgba(30, 41, 59, 0.28); text-align: center;">
-    <p style="margin: 0; font-size: 0.43em; color: var(--text-main);"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; margin-right: 6px;"></span><strong>Gate 3:</strong> MVP Launch &rarr; Standardization</p>
-    <p style="margin: 2px 0 0 0; font-size: 0.4em; color: var(--text-muted);">&ge;3 paid pilots and &ge;10% improvement in two key outcome metrics</p>
-  </div>
-</div>
-
-<p style="margin-top: 6px; font-size: 0.55em; color: rgba(148, 163, 184, 0.9);"><strong>Current status:</strong> Month 1 - 1 of 3 PoCs in progress.</p>
-<p style="margin-top: 4px; font-size: 0.55em; color: rgba(148, 163, 184, 0.85);">Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
-
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
   <p><strong>Takeaway:</strong> Each phase requires passing a quantified gate before investment in the next. No gate passed = no next phase.</p>
 </div>
+
+<ul class="distrust-notes" style="margin-top: 8px;">
+  <li><strong>Notes:</strong> Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</li>
+</ul>
 
 ---
 <!-- .slide: id="risks-mitigation" -->
@@ -736,28 +722,51 @@
 
 <!-- .slide: id="month1-actions" -->
 
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">My 1st month actions</h2>
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: My 1st month actions</h2>
 
-<div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: repeat(3, 1fr); gap: 10px;">
+<div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: 0.9fr 24px 1.2fr 24px 0.9fr; gap: 6px; align-items: stretch; width: 100%; margin: 0 auto;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Week 1</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Internal Ramp</strong></p>
-      <p>Align stakes. Review past launches.</p>
+      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Align &amp; Orient</p>
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Stakeholder alignment: map decision-makers, agree on success criteria.</li>
+        <li style="margin-bottom: 0.9em;">Audit last 3 launches: what shipped, what moved metrics, what didn't.</li>
+      </ul>
+      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Shared doc with aligned problem statement and known constraints.</p>
     </div>
   </div>
-  <div class="chosen-tile">
-    <p class="chosen-tile-label">Weeks 2-3</p>
+
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8;">
+    <span style="font-size: 1.05em; line-height: 1;">&rarr;</span>
+  </div>
+
+  <div class="chosen-tile" style="border: 1px solid rgba(250, 204, 21, 0.45); background: rgba(234, 179, 8, 0.12);">
+    <p class="chosen-tile-label" style="color: #facc15;">Weeks 2-3</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Validation</strong></p>
-      <p>15 interviews. Pilot outreach [A].</p>
+      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Validate Problem &amp; Solution Direction</p>
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>15 customer interviews -> synthesized pain points and willingness to pay.</li>
+        <li style="margin-bottom: 1.8em;">Run 3 PoCs with design partners in [A] segment and instrument weekly active usage.</li>
+      </ul>
+      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Evidence brief + Mo1 gate evidence (3 PoCs completed; &ge;2 show weekly active usage over 3 weeks).</p>
     </div>
   </div>
+
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8;">
+    <span style="font-size: 1.05em; line-height: 1;">&rarr;</span>
+  </div>
+
   <div class="chosen-tile chosen-tile--red">
     <p class="chosen-tile-label">Week 4</p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong>Go / No-Go</strong></p>
-      <p>Hard gate on commitments [A].</p>
+      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Go / No-Go Gate</p>
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Present recommendation to leadership with evidence.</li>
+        <li>Go -> draft roadmap + resourcing ask for next 90 days.</li>
+        <li>No-Go -> document learnings, pivot thesis, or kill cleanly.</li>
+      </ul>
+      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Decision made, next steps committed.</p>
     </div>
   </div>
 </div>
@@ -1311,15 +1320,9 @@
 </table>
 </div>
 
-<div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> Spec-driven and Observability share the top ICE Score (6.7), but spec-driven wins the tie-break: it is a <em>Shift-Left</em> (preventive) approach that constrains AI output before generation, while Observability is <em>Shift-Right</em> (reactive) — it detects issues after execution. For the trust JTBD, prevention > detection. JB PSI also gives spec-driven a native IDE advantage.</p>
-</div>
-
 <ul class="distrust-notes">
-<li>Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (their weights sum to 1), equal to each of the other dimensions (Cost, Transparency, SDLC coverage, Adoption friction, Monetization), which all have equal weight. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort (Effort and Confidence both rated 1–3). <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Details →</a></li>
-<li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
+<li>ICE Score = Impact Total × Confidence ÷ Ease (all rated 1–3). Estimates are expert-based and assumed.<span class="metric-badge">A</span><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Details →</a></li>
 <li>Note: IDE-native steering files (Cursor Rules, CLAUDE.md, Windsurf Memory) partially solve persistent context but lack spec enforcement, drift detection, and structured generation pipelines.</li>
-<li>Each score was triangulated against: (1) Distrust + Time Spent + B2B evidence, (2) competitor traction signals, (3) JB SDK feasibility.</li>
 </ul>
 
 ---
@@ -1336,7 +1339,7 @@
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; Pilot commitments &ge;3<br>&bull; Problem ranks top-3 for &ge;5/8 respondents in AI dev<br>&bull; Qualified waitlist signups (ICP) &ge;15<br>&bull; Core risk: demand for spec-first is a hypothesis; Month 1 runs 3 PoCs with a hard gate on repeat usage.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span> 3 PoCs completed; &ge;2 show weekly active usage over 3 weeks.</p>
     </div>
   </div>
 
@@ -1347,7 +1350,7 @@
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 2: Monetization & OSS</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification from &ge;3 companies (named budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS track: spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span> &ge;3 payment-intent commitments with named budget owners and agreed pilot terms.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Lock commercial demand before MVP.<br><strong style="color: var(--r-main-color);">Do:</strong> Get payment-intent verification from &ge;3 companies (named budget owner + pilot terms), define pilot KPI/outcomes/client inputs, and package JetBrains ecosystem offer (standalone plugin vs AI plans). OSS track: spec format v1 + validator + examples to widen funnel and reduce trust risk.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span> &ge;3 signed payment-intent commitments with named buyer and budget.</p>
     </div>
   </div>
 
@@ -1358,7 +1361,7 @@
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 3: MVP Launch</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Soft-launch a minimal IDE plugin and start paid pilots.<br><strong style="color: var(--r-main-color);">Do:</strong> MVP on one primary scenario, one low-noise quality check (change containment or drift signal), one workflow integration (PR/commits), first paid partner pilots.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; Paid partner pilots &ge;3<br>&bull; Token spend per successful PR-ready outcome &darr; 10%<br>&bull; % PRs where CI checks pass on 1st try &uarr; 10%<br>&bull; Median time to PR-ready (from spec approved) &darr; 10-20%<br>&bull; Target range: 10-20% fewer unscoped diffs / rework signals</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Soft-launch a minimal IDE plugin and start paid pilots.<br><strong style="color: var(--r-main-color);">Do:</strong> MVP on one primary scenario, one low-noise quality check (change containment or drift signal), one workflow integration (PR/commits), first paid partner pilots.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; Paid partner pilots &ge;3<br>&bull; &ge;10% improvement in at least two key outcome metrics (time-to-PR, first-pass CI, token efficiency)</p>
     </div>
   </div>
 
@@ -1369,7 +1372,7 @@
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 4: Standardization</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the governed-change workflow for JetBrains teams and partner organizations, and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span><br>&bull; MRR target: $5-15k from paid pilots by Month 4-6<br>&bull; Usage: most active teams run core scenario &ge;2x/week<br>&bull; &ge;70% with clear qualitative wins (CS + SMM)<br>&bull; Guardrail: alert disable rate stable + cost per outcome stable<br>&bull; Active users per org target: 3-5 by Month 6</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Standardize the governed-change workflow for JetBrains teams and partner organizations, and start ecosystem effects.<br><strong style="color: var(--r-main-color);">Do:</strong> Publish in JB ecosystem (listing, onboarding, activation), add team features (shared templates, baseline settings, usage visibility), and push OSS growth (format refresh, starter templates, first external contributors).<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span> Scale decision: stable unit economics and repeat usage thresholds met.<br>&bull; Reference thresholds: MRR $5-15k, core scenario usage &ge;2x/week, stable cost per outcome.</p>
     </div>
   </div>
 
@@ -1396,7 +1399,7 @@
       <tr>
         <td class="col-num"><strong>0</strong></td>
         <td class="col-risk"><strong>PoC risk: we can't prove repeatable value for spec-first + diff control</strong></td>
-        <td class="col-mitigation">Month 1: 3 parallel PoCs with an instrumented prototype: (1) spec-first control, (2) review help, (3) diff control (change containment). Gate: most partners repeat the core scenario 2x in 7 days and outcomes beat alternatives. If not, switch the entry point before building the plugin MVP.</td>
+        <td class="col-mitigation">Month 1: 3 parallel PoCs with an instrumented prototype: (1) spec-first control, (2) review help, (3) diff control (change containment). Gate: 3 PoCs completed; &ge;2 show weekly active usage over 3 weeks. If not, switch the entry point before building the plugin MVP.</td>
         <td class="col-status text-high"><strong>High</strong></td>
         <td class="col-status text-med"><strong>Med</strong></td>
         <td class="col-score"><strong>6</strong></td>
