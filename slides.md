@@ -505,7 +505,7 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: Mo1 repeat usage in PoCs, Mo2 payment-intent commitments, Mo3-4 paid-pilot outcome uplift (time-to-PR, first-pass CI, token efficiency), Mo5-6 stable usage and unit economics.</p>
+  <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: Mo1 repeat usage in 3 pilot teams, Mo2 payment-intent commitments, Mo3-4 paid-pilot outcome uplift (time-to-PR, first-pass CI, token efficiency), Mo5-6 stable usage and unit economics.</p>
 </div>
 
 ---
@@ -551,7 +551,183 @@
 </div>
 
 ---
+<!-- .slide: id="roadmap" -->
 
+## HOW: Roadmap <span class="metric-badge">A</span>
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
+  <colgroup>
+    <col style="width: 14%;">
+    <col style="width: 21.5%;">
+    <col style="width: 21.5%;">
+    <col style="width: 21.5%;">
+    <col style="width: 21.5%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.09);">Mo 1</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.13);">Mo 2</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.17);">Mo 3-4</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.21);">Mo 5-6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Phase</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.09);"><strong>Trust</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.13);"><strong>Paid Intent</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.17);"><strong>MVP Launch</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.21);"><strong>Org Workflow Standardization</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Goal</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.09);">3 pilot teams with repeat usage</td>
+      <td style="background: rgba(34, 197, 94, 0.13);">3 payment-intent commitments</td>
+      <td style="background: rgba(34, 197, 94, 0.17);">&ge;3 paid pilots + outcome data</td>
+      <td style="background: rgba(34, 197, 94, 0.21);">Stable unit economics + repeat usage</td>
+    </tr>
+    <tr>
+      <td><strong>Gate to next</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.09);">3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks</td>
+      <td style="background: rgba(34, 197, 94, 0.13);">&ge;3 signed payment-intent commitments with named buyer and budget</td>
+      <td style="background: rgba(34, 197, 94, 0.17);">&ge;3 paid pilots; &ge;10% improvement in two key outcome metrics</td>
+      <td style="background: rgba(34, 197, 94, 0.21);">Scale decision: stable unit economics and repeat usage thresholds met</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> Each phase requires passing a quantified gate before investment in the next. No gate passed = no next phase.</p>
+</div>
+
+<ul class="distrust-notes" style="margin-top: 8px;">
+  <li><strong>Notes:</strong> Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</li>
+  <li><strong>Why 3 teams (not 10):</strong> Month 1 is a speed-gated discovery phase; 3 teams are enough for cross-team repeatability signal without slowing decisions and burn.</li>
+</ul>
+
+---
+<!-- .slide: id="risks-mitigation" -->
+
+## HOW: Risks & Mitigation
+
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;">Top risks below. Full Impact × Probability matrix is in <a href="#/risks-mitigation-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
+  <colgroup>
+    <col style="width: 18%;">
+    <col style="width: 37%;">
+    <col style="width: 37%;">
+    <col style="width: 8%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Risk</th>
+      <th>Why It Matters</th>
+      <th>Mitigation</th>
+      <th class="center">Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="highlight-row">
+      <td><strong>PoC value</strong></td>
+      <td>Spec-first may not prove repeatable value fast enough. If Month 1 lacks repeat usage and better outcomes, the thesis weakens.</td>
+      <td>Run 3 pilot teams in parallel, require repeat-usage gate, and switch entry point if outcomes do not outperform alternatives.</td>
+      <td class="center score val-high">High</td>
+    </tr>
+    <tr>
+      <td><strong>Partner speed</strong></td>
+      <td>Not enough high-signal design partners fast enough.</td>
+      <td>Warm network + OSS wedge.</td>
+      <td class="center score val-med">Med</td>
+    </tr>
+    <tr>
+      <td><strong>PSI complexity</strong></td>
+      <td>Integration complexity can slow delivery.</td>
+      <td>Kotlin-first, native PSI APIs.</td>
+      <td class="center score val-med">Med</td>
+    </tr>
+    <tr>
+      <td><strong>Dev friction</strong></td>
+      <td>Adoption may feel too heavy for real workflows.</td>
+      <td>Repo-native, zero-friction extraction.</td>
+      <td class="center score val-med">Med</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> The primary risk is failing to prove repeatable value for spec-first control in Month 1. Mitigation is explicit: 3 pilot teams with a hard pivot gate before MVP build.</p>
+</div>
+
+---
+
+<!-- .slide: id="month1-actions" -->
+
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: My 1st month actions</h2>
+
+<div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: 0.9fr 24px 1.2fr 24px 0.9fr; gap: 6px; align-items: stretch; width: 100%; margin: 0 auto;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Week 1</p>
+    <div class="chosen-tile-body">
+      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Align &amp; Orient</p>
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Stakeholder alignment: map decision-makers, agree on success criteria.</li>
+        <li style="margin-bottom: 0.9em;">Audit last 3 launches: what shipped, what moved metrics, what didn't.</li>
+      </ul>
+      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Shared doc with aligned problem statement and known constraints.</p>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8;">
+    <span style="font-size: 1.05em; line-height: 1;">&rarr;</span>
+  </div>
+
+  <div class="chosen-tile" style="border: 1px solid rgba(250, 204, 21, 0.45); background: rgba(234, 179, 8, 0.12);">
+    <p class="chosen-tile-label" style="color: #facc15;">Weeks 2-3</p>
+    <div class="chosen-tile-body">
+      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Validate Problem &amp; Solution Direction</p>
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>15 customer interviews -> synthesized pain points and willingness to pay.</li>
+        <li style="margin-bottom: 1.8em;">Run with 3 design-partner teams in [A] segment and instrument weekly active usage.</li>
+      </ul>
+      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Evidence brief + Mo1 gate evidence (3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks).</p>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8;">
+    <span style="font-size: 1.05em; line-height: 1;">&rarr;</span>
+  </div>
+
+  <div class="chosen-tile chosen-tile--red">
+    <p class="chosen-tile-label">Week 4</p>
+    <div class="chosen-tile-body">
+      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Go / No-Go Gate</p>
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Present recommendation to leadership with evidence.</li>
+        <li>Go -> draft roadmap + resourcing ask for next 90 days.</li>
+        <li>No-Go -> document learnings, pivot thesis, or kill cleanly.</li>
+      </ul>
+      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Decision made, next steps committed.</p>
+    </div>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
+  <p><strong>Result after 30 days:</strong> We will know whether spec-driven control creates repeatable value for real teams - backed by usage data from 3 pilot teams and 15 customer interviews. If yes, we have a validated entry point and a resourced 90-day plan. If no, we pivot before spending engineering time on an MVP.</p>
+</div>
+
+---
+
+<!-- .slide: id="appendix" -->
+
+# Appendix
+
+---
 <!-- .slide: id="gtm" -->
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy <span class="metric-badge">A</span></h2>
@@ -559,7 +735,7 @@
 <div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="text-align: left;">
 
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">1. PoC & Early Adopters</p>
+    <p class="chosen-tile-label">1. Pilot Teams & Early Adopters</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
         <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
@@ -626,7 +802,7 @@
   <thead>
     <tr>
       <th></th>
-      <th>PoC (Mo 1)</th>
+      <th>Pilot Teams (Mo 1)</th>
       <th>Paid Intent (Mo 2)</th>
       <th>Scale (Mo 3-4)</th>
       <th>Standard (Mo 5-6)</th>
@@ -635,14 +811,14 @@
   <tbody>
     <tr>
       <td><strong>Do</strong></td>
-      <td>Golden path demo - 3 PoCs with design partners</td>
+      <td>Golden path demo - 3 pilot teams with design partners</td>
       <td>Budget-intent letters from &ge;3 buyers</td>
       <td>Paid pilots on MVP plugin via JB ecosystem</td>
       <td>PLG loop: individual - team policy, OSS templates</td>
     </tr>
     <tr>
       <td><strong>Gate</strong></td>
-      <td>&ge;2 PoCs with weekly usage</td>
+      <td>&ge;2 teams with weekly usage</td>
       <td>Named buyer + budget committed</td>
       <td>&ge;3 paid pilots + outcome uplift</td>
       <td>Stable MRR + repeat usage</td>
@@ -650,186 +826,6 @@
   </tbody>
 </table>
 </div>
-
----
-<!-- .slide: id="roadmap" -->
-
-## HOW: Roadmap <span class="metric-badge">A</span>
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
-  <colgroup>
-    <col style="width: 14%;">
-    <col style="width: 21.5%;">
-    <col style="width: 21.5%;">
-    <col style="width: 21.5%;">
-    <col style="width: 21.5%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th></th>
-      <th class="center" style="background: rgba(34, 197, 94, 0.09);">Mo 1</th>
-      <th class="center" style="background: rgba(34, 197, 94, 0.13);">Mo 2</th>
-      <th class="center" style="background: rgba(34, 197, 94, 0.17);">Mo 3-4</th>
-      <th class="center" style="background: rgba(34, 197, 94, 0.21);">Mo 5-6</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Phase</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.09);"><strong>Trust</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.13);"><strong>Paid Intent</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.17);"><strong>MVP Launch</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.21);"><strong>Org Workflow Standardization</strong></td>
-    </tr>
-    <tr>
-      <td><strong>Goal</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.09);">3 PoCs with repeat usage</td>
-      <td style="background: rgba(34, 197, 94, 0.13);">3 payment-intent commitments</td>
-      <td style="background: rgba(34, 197, 94, 0.17);">&ge;3 paid pilots + outcome data</td>
-      <td style="background: rgba(34, 197, 94, 0.21);">Stable unit economics + repeat usage</td>
-    </tr>
-    <tr>
-      <td><strong>Gate to next</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.09);">3 PoCs completed; &ge;2 show weekly active usage over 3 weeks</td>
-      <td style="background: rgba(34, 197, 94, 0.13);">&ge;3 signed payment-intent commitments with named buyer and budget</td>
-      <td style="background: rgba(34, 197, 94, 0.17);">&ge;3 paid pilots; &ge;10% improvement in two key outcome metrics</td>
-      <td style="background: rgba(34, 197, 94, 0.21);">Scale decision: stable unit economics and repeat usage thresholds met</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> Each phase requires passing a quantified gate before investment in the next. No gate passed = no next phase.</p>
-</div>
-
-<ul class="distrust-notes" style="margin-top: 8px;">
-  <li><strong>Notes:</strong> Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</li>
-</ul>
-
----
-<!-- .slide: id="risks-mitigation" -->
-
-## HOW: Risks & Mitigation
-
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;">Top risks below. Full Impact × Probability matrix is in <a href="#/risks-mitigation-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
-
-<div class="distrust-table-wrapper">
-<table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
-  <colgroup>
-    <col style="width: 18%;">
-    <col style="width: 37%;">
-    <col style="width: 37%;">
-    <col style="width: 8%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Risk</th>
-      <th>Why It Matters</th>
-      <th>Mitigation</th>
-      <th class="center">Priority</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="highlight-row">
-      <td><strong>PoC value</strong></td>
-      <td>Spec-first may not prove repeatable value fast enough. If Month 1 lacks repeat usage and better outcomes, the thesis weakens.</td>
-      <td>Run 3 parallel PoCs, require repeat-usage gate, and switch entry point if outcomes do not outperform alternatives.</td>
-      <td class="center score val-high">High</td>
-    </tr>
-    <tr>
-      <td><strong>Partner speed</strong></td>
-      <td>Not enough high-signal design partners fast enough.</td>
-      <td>Warm network + OSS wedge.</td>
-      <td class="center score val-med">Med</td>
-    </tr>
-    <tr>
-      <td><strong>PSI complexity</strong></td>
-      <td>Integration complexity can slow delivery.</td>
-      <td>Kotlin-first, native PSI APIs.</td>
-      <td class="center score val-med">Med</td>
-    </tr>
-    <tr>
-      <td><strong>Dev friction</strong></td>
-      <td>Adoption may feel too heavy for real workflows.</td>
-      <td>Repo-native, zero-friction extraction.</td>
-      <td class="center score val-med">Med</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> The primary risk is failing to prove repeatable value for spec-first control in Month 1. Mitigation is explicit: 3 parallel PoCs with a hard pivot gate before MVP build.</p>
-</div>
-
----
-
-<!-- .slide: id="month1-actions" -->
-
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: My 1st month actions</h2>
-
-<div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: 0.9fr 24px 1.2fr 24px 0.9fr; gap: 6px; align-items: stretch; width: 100%; margin: 0 auto;">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Week 1</p>
-    <div class="chosen-tile-body">
-      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Align &amp; Orient</p>
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Stakeholder alignment: map decision-makers, agree on success criteria.</li>
-        <li style="margin-bottom: 0.9em;">Audit last 3 launches: what shipped, what moved metrics, what didn't.</li>
-      </ul>
-      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Shared doc with aligned problem statement and known constraints.</p>
-    </div>
-  </div>
-
-  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8;">
-    <span style="font-size: 1.05em; line-height: 1;">&rarr;</span>
-  </div>
-
-  <div class="chosen-tile" style="border: 1px solid rgba(250, 204, 21, 0.45); background: rgba(234, 179, 8, 0.12);">
-    <p class="chosen-tile-label" style="color: #facc15;">Weeks 2-3</p>
-    <div class="chosen-tile-body">
-      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Validate Problem &amp; Solution Direction</p>
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>15 customer interviews -> synthesized pain points and willingness to pay.</li>
-        <li style="margin-bottom: 1.8em;">Run 3 PoCs with design partners in [A] segment and instrument weekly active usage.</li>
-      </ul>
-      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Evidence brief + Mo1 gate evidence (3 PoCs completed; &ge;2 show weekly active usage over 3 weeks).</p>
-    </div>
-  </div>
-
-  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8;">
-    <span style="font-size: 1.05em; line-height: 1;">&rarr;</span>
-  </div>
-
-  <div class="chosen-tile chosen-tile--red">
-    <p class="chosen-tile-label">Week 4</p>
-    <div class="chosen-tile-body">
-      <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Go / No-Go Gate</p>
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Present recommendation to leadership with evidence.</li>
-        <li>Go -> draft roadmap + resourcing ask for next 90 days.</li>
-        <li>No-Go -> document learnings, pivot thesis, or kill cleanly.</li>
-      </ul>
-      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Decision made, next steps committed.</p>
-    </div>
-  </div>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Result after 30 days:</strong> We will know whether spec-driven control creates repeatable value for real teams - backed by usage data from 3 PoCs and 15 customer interviews. If yes, we have a validated entry point and a resourced 90-day plan. If no, we pivot before spending engineering time on an MVP.</p>
-</div>
-
-<ul class="distrust-notes" style="margin-top: 8px;">
-  <li><strong>Why me:</strong> [X years in Y] + [specific relevant skill, e.g. "shipped IDE plugins" / "built dev tooling at Z" / "ran 0->1 product discovery at W"]. I know how to move from hypothesis to evidence fast, and I'm not attached to any single solution - I'm attached to finding the right one.</li>
-</ul>
-
----
-
-<!-- .slide: id="appendix" -->
-
-# Appendix
 
 ---
 <!-- .slide: id="jb-strategic-fit" -->
@@ -1393,7 +1389,7 @@
       <span style="font-size: 0.7em !important; font-weight: bold !important; color: rgba(255,255,255,0.6) !important; text-transform: uppercase !important;">Phase 1: PoC</span>
     </div>
     <div class="roadmap-content" style="flex: 1 !important; padding: 0 !important; text-align: left !important;">
-      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span> 3 PoCs completed; &ge;2 show weekly active usage over 3 weeks.</p>
+      <p style="margin: 0 !important; display: block !important;"><strong style="color: var(--r-main-color);">Goal:</strong> Pick the entry point and primary data scenario pre-product.<br><strong style="color: var(--r-main-color);">Do:</strong> 10-15 partners (power JB users, JB dev employees, large friendly client teams); 3 prototypes (spec-first control, review assist, diff change containment); one measurable repeatable flow with fail/error log; spec format v1 + 5-10 examples.<br><span style="color: #64ffda; font-weight: bold;">Gate:</span> <span class="metric-badge">A</span> 3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks.</p>
     </div>
   </div>
 
@@ -1453,7 +1449,7 @@
       <tr>
         <td class="col-num"><strong>0</strong></td>
         <td class="col-risk"><strong>PoC risk: we can't prove repeatable value for spec-first + diff control</strong></td>
-        <td class="col-mitigation">Month 1: 3 parallel PoCs with an instrumented prototype: (1) spec-first control, (2) review help, (3) diff control (change containment). Gate: 3 PoCs completed; &ge;2 show weekly active usage over 3 weeks. If not, switch the entry point before building the plugin MVP.</td>
+        <td class="col-mitigation">Month 1: 3 pilot teams in parallel with an instrumented prototype: (1) spec-first control, (2) review help, (3) diff control (change containment). Gate: 3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks. If not, switch the entry point before building the plugin MVP.</td>
         <td class="col-status text-high"><strong>High</strong></td>
         <td class="col-status text-med"><strong>Med</strong></td>
         <td class="col-score"><strong>6</strong></td>
