@@ -52,7 +52,7 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px; border-left: 4px solid #34d399; background: rgba(16, 185, 129, 0.12); border-color: rgba(52, 211, 153, 0.35);">
-  <p><strong>Takeaway:</strong> The core friction in AI adoption isn't writing code — it's the unpredictability and review bottlenecks caused by unscoped AI diffs.</p>
+  <p><strong>Takeaway:</strong> The core friction in AI adoption isn't writing code - it's the unpredictability and review bottlenecks caused by unscoped AI diffs.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -68,17 +68,16 @@
 <p class="slide-subtitle"></p>
 
 <div style="width: 100%; max-width: 95%; margin: 0 auto;">
-<div class="adoption-layout" style="margin: 10px 0; max-width: none; width: 100%;">
-<div class="adoption-col adoption-col-left">
+<div class="adoption-layout" style="margin: 10px 0; max-width: none; width: 100%; align-items: center;">
+<div class="adoption-col adoption-col-left" style="border-color: transparent; background: transparent !important;">
 <div class="adoption-hero">
 <span class="adoption-hero-number">90%</span>
-<span class="adoption-hero-label">of developers use AI tools</span>
+<span class="adoption-hero-label">of developers use AI tools <a href="https://dora.dev/research/2025/dora-report/" target="_blank" style="color: var(--accent-blue); text-decoration: none;">[1]</a></span>
 <span class="adoption-hero-delta">+14% YoY</span>
 </div>
-<p class="adoption-source"><a href="https://dora.dev/research/2025/dora-report/" target="_blank">DORA Report 2025</a></p>
 </div>
-<div class="adoption-col adoption-col-right">
-<div class="adoption-metric metric-distrust">
+<div class="adoption-col adoption-col-right" style="border-color: transparent; background: transparent !important;">
+<div class="adoption-metric metric-distrust" style="background: transparent !important; box-shadow: none;">
 <div class="adoption-metric-body">
 <div class="adoption-metric-main negative">46%</div>
 <div class="adoption-metric-sub">
@@ -87,10 +86,10 @@
 </div>
 </div>
 <div class="adoption-metric-header">
-<span class="adoption-metric-name" style="color: var(--text-muted);">DISTRUST (SOMEWHAT + HIGH)</span>
+<span class="adoption-metric-name" style="color: var(--text-muted);">DISTRUST (SOMEWHAT + HIGH) <a href="https://survey.stackoverflow.co/" target="_blank" style="color: var(--accent-blue); text-decoration: none;">[2]</a></span>
 </div>
 </div>
-<div class="adoption-metric metric-unfavorable">
+<div class="adoption-metric metric-unfavorable" style="background: transparent !important; box-shadow: none;">
 <div class="adoption-metric-body">
 <div class="adoption-metric-main negative">20%</div>
 <div class="adoption-metric-sub">
@@ -99,10 +98,9 @@
 </div>
 </div>
 <div class="adoption-metric-header">
-<span class="adoption-metric-name" style="color: var(--text-muted);">UNFAVORABLE SENTIMENT</span>
+<span class="adoption-metric-name" style="color: var(--text-muted);">UNFAVORABLE SENTIMENT <a href="https://survey.stackoverflow.co/" target="_blank" style="color: var(--accent-blue); text-decoration: none;">[2]</a></span>
 </div>
 </div>
-<p class="adoption-source"><a href="https://survey.stackoverflow.co/" target="_blank">Stack Overflow Developer Survey 2025</a></p>
 </div>
 </div>
 
@@ -114,7 +112,7 @@
 ---
 <!-- .slide: id="stream-options" -->
 
-## WHAT: Strategic Directions
+## WHAT: Strategic Directions <span class="metric-badge">A</span>
 
 <p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;"><a href="#/stream-options-main-appendix" style="color: var(--accent-blue);">Prioritized</a> across <a href="#/distrust-issues" style="color: var(--accent-blue);">distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>.</p>
 
@@ -156,6 +154,12 @@
 
 ## WHAT: Target Niche <span class="metric-badge">A</span>
 
+<div style="width: 90%; margin: 6px auto 10px auto; background: #1a1a1a; border-left: 4px solid #81c784; border-radius: 4px; padding: 8px 12px; text-align: left; position: relative; box-sizing: border-box;">
+  <div style="position: absolute; top: -3px; left: 8px; font-size: 1.8em; color: rgba(129, 199, 132, 0.2); font-family: serif; line-height: 1; pointer-events: none;">&ldquo;</div>
+  <p style="margin: 0 0 3px 0; padding-left: 10px; font-size: 0.53em; line-height: 1.35; color: #e0e0e0; font-style: italic;">AI may change how we do code reviews… The diff tells you what shipped. The conversation tells you why.</p>
+  <p style="margin: 0; padding-left: 10px; font-size: 0.47em; color: var(--text-muted);"><a href="https://x.com/addyosmani/status/2011338548763664475" target="_blank" style="color: var(--accent-blue); text-decoration: none;">Addy Osmani, Director, Google Cloud AI</a></p>
+</div>
+
 <div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="width: 90%; margin-left: auto; margin-right: auto;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Early Adopters</p>
@@ -179,7 +183,7 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 10px;">
-  <p><strong>Takeaway:</strong> We start narrow — Tech Leads feeling AI review pain in JB IDEs — and expand to org-wide governance once value is proven.</p>
+  <p><strong>Takeaway:</strong> We start narrow - Tech Leads feeling AI review pain in JB IDEs - and expand to org-wide governance once value is proven.</p>
 </div>
 
 <ul class="distrust-notes" style="margin-top: 10px;">
@@ -352,7 +356,7 @@
 ---
 <!-- .slide: id="golden-path" -->
 
-## HOW: Alex <img src="Personas/photo_2026-03-12_19-49-00.jpg" alt="Alex" style="width: 0.95em; height: 0.95em; border-radius: 50%; vertical-align: -0.08em; margin: 0 0.14em 0 0.08em; object-fit: cover;"> "Golden" Path
+## HOW: Alex <img src="Personas/photo_2026-03-12_19-49-00.jpg" alt="Alex" style="width: 0.95em; height: 0.95em; border-radius: 50%; vertical-align: -0.08em; margin: 0 0.14em 0 0.08em; object-fit: cover;"> "Golden" Path <span class="metric-badge">A</span>
 
 <div id="golden-path-steps" class="distrust-table-wrapper">
   <table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
@@ -385,16 +389,16 @@
         <td>Reviewer checks diff against spec in IDE; scope violations are blocked.</td>
       </tr>
       <tr class="highlight-row">
-        <td><strong>Outcome</strong></td>
-        <td><span style="color: #f87171; font-weight: 700;">~45 min</span>, "Request Changes", re-prompt loop.</td>
-        <td><span style="color: #4ade80; font-weight: 700;">~7 min</span>, PR-ready merge with traceability in Git.</td>
+        <td style="width: 18%;"><strong>Outcome</strong></td>
+        <td style="width: 41%;"><span style="color: #f87171; font-weight: 700;">~45 min</span>, "Request Changes", re-prompt loop.</td>
+        <td style="width: 41%;"><span style="color: #4ade80; font-weight: 700;">~7 min</span>, PR-ready merge with traceability in Git.</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Result:</strong> Same task, same people — but the control point shifts from "review the output" to "verify against the contract".</p>
+  <p><strong>Result:</strong> Same task, same people - but the control point shifts from "review the output" to "verify against the contract".</p>
 </div>
 
 ---
@@ -456,10 +460,10 @@
     <p class="chosen-tile-label">1. NSM & Engagement</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>NSM:</b> Active users/wk with ≥1 spec-linked merge</li>
-        <li><b>Engagement:</b> Activation to 1st merge, N-day retention, WAU/MAU</li>
-        <li><b>Expansion:</b> % org with X+ users with ≥1 spec-merge</li>
-        <li><b>Velocity:</b> Lead time & deployment frequency</li>
+        <li><b>NSM:</b> Active users/wk with ≥1 spec-linked merge <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Engagement:</b> Activation to 1st merge, N-day retention, WAU/MAU <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Expansion:</b> % org with X+ users with ≥1 spec-merge <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Velocity:</b> Lead time & deployment frequency <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
       </ul>
     </div>
   </div>
@@ -468,8 +472,8 @@
     <p class="chosen-tile-label">2. Monetization</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats)</li>
-        <li><b>Attributed JB MRR:</b> Attach rate (JB paid with product), Cohort ARPU & Churn</li>
+        <li><b>New MRR:</b> Activation to paid, ARPU, Churn (IC/seats) <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Attributed JB MRR:</b> Attach rate (JB paid with product), Cohort ARPU & Churn <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
       </ul>
     </div>
   </div>
@@ -479,8 +483,8 @@
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
         <li><b>Safety:</b> CR to core JB actions, Sec/privacy incidents</li>
-        <li><b>Quality:</b> False positive rate, added latency/Time to PR</li>
-        <li><b>Drift:</b> Drift rate & severity, prevented incidents</li>
+        <li><b>Quality:</b> False positive rate, added latency/Time to PR <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Drift:</b> Drift rate & severity, prevented incidents <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
         <li><b>Qualitative:</b> CSAT & User Interviews on Spec View</li>
       </ul>
     </div>
@@ -490,10 +494,10 @@
     <p class="chosen-tile-label">4. Value & Outcomes</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><b>Cost:</b> Token spend per successful PR-ready outcome</li>
-        <li><b>Quality:</b> % PRs passing checks on 1st try</li>
+        <li><b>Cost:</b> Token spend per successful PR-ready outcome <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
+        <li><b>Quality:</b> % PRs passing checks on 1st try <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
         <li><b>Scope Control:</b> Unscoped diff / scope-violation rate</li>
-        <li><b>Velocity:</b> Median time to PR-ready (from spec approved)</li>
+        <li><b>Velocity:</b> Median time to PR-ready (from spec approved) <span style="display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">MVP</span><span style="display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 999px; font-size: 0.72em; line-height: 1.2; font-weight: 700; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.45); background: rgba(59, 130, 246, 0.14);">Scale</span></li>
       </ul>
     </div>
   </div>
@@ -515,7 +519,7 @@
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
         <li><strong>OSS:</strong> spec format, validator, examples.</li>
-        <li><strong>Free plugin:</strong> single-user, small-scope workflow.</li>
+        <li><strong>Free:</strong> single-user, small-scope workflow.</li>
         <li><strong>Paid team:</strong> templates, controls, visibility, PR/CI integrations, change containment.</li>
       </ul>
     </div>
@@ -606,9 +610,51 @@
 </div>
 
 ---
+<!-- .slide: id="gtm-phase-gate-view" -->
+
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy <span class="metric-badge">A</span></h2>
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
+  <colgroup>
+    <col style="width: 12%;">
+    <col style="width: 22%;">
+    <col style="width: 22%;">
+    <col style="width: 22%;">
+    <col style="width: 22%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th>PoC (Mo 1)</th>
+      <th>Paid Intent (Mo 2)</th>
+      <th>Scale (Mo 3-4)</th>
+      <th>Standard (Mo 5-6)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Do</strong></td>
+      <td>Golden path demo - 3 PoCs with design partners</td>
+      <td>Budget-intent letters from &ge;3 buyers</td>
+      <td>Paid pilots on MVP plugin via JB ecosystem</td>
+      <td>PLG loop: individual - team policy, OSS templates</td>
+    </tr>
+    <tr>
+      <td><strong>Gate</strong></td>
+      <td>&ge;2 PoCs with weekly usage</td>
+      <td>Named buyer + budget committed</td>
+      <td>&ge;3 paid pilots + outcome uplift</td>
+      <td>Stable MRR + repeat usage</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+---
 <!-- .slide: id="roadmap" -->
 
-## HOW: Roadmap
+## HOW: Roadmap <span class="metric-badge">A</span>
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
@@ -771,6 +817,14 @@
   </div>
 </div>
 
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
+  <p><strong>Result after 30 days:</strong> We will know whether spec-driven control creates repeatable value for real teams - backed by usage data from 3 PoCs and 15 customer interviews. If yes, we have a validated entry point and a resourced 90-day plan. If no, we pivot before spending engineering time on an MVP.</p>
+</div>
+
+<ul class="distrust-notes" style="margin-top: 8px;">
+  <li><strong>Why me:</strong> [X years in Y] + [specific relevant skill, e.g. "shipped IDE plugins" / "built dev tooling at Z" / "ran 0->1 product discovery at W"]. I know how to move from hypothesis to evidence fast, and I'm not attached to any single solution - I'm attached to finding the right one.</li>
+</ul>
+
 ---
 
 <!-- .slide: id="appendix" -->
@@ -825,7 +879,7 @@
     </tr>
     <tr>
       <td><strong>Deep Semantic Context</strong></td>
-      <td><span class="metric-badge">A</span> PSI extracts structured signal at 100–300 tokens (70–90% saving). Compiler-grade structural parsing substantially reduces hallucination risk on structure-sensitive tasks. Not a permanent moat — a 12–18 month head start we convert into data and workflow lock-in.</td>
+      <td><span class="metric-badge">A</span> PSI extracts structured signal at 100–300 tokens (70–90% saving). Compiler-grade structural parsing substantially reduces hallucination risk on structure-sensitive tasks. Not a permanent moat - a 12–18 month head start we convert into data and workflow lock-in.</td>
     </tr>
     <tr>
       <td><strong>Continuous drift detection</strong></td>
@@ -1278,7 +1332,7 @@
       <td><strong>Observability + evals</strong></td>
       <td>Trace inputs/outputs &amp; agent steps; measure quality via datasets &amp; LLM-as-judge. Catch degradations pre-release.</td>
       <td><a href="https://docs.langchain.com/langsmith/home" target="_blank">LangSmith</a>, <a href="https://docs.wandb.ai/weave" target="_blank">W&amp;B Weave</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank">Datadog LLM</a>, <a href="https://galileo.ai/" target="_blank">Galileo</a>, <a href="https://docs.ragas.io/" target="_blank">Ragas</a>, <a href="https://github.com/truera/trulens" target="_blank">TruLens</a>, <a href="https://www.braintrust.dev/docs" target="_blank">Braintrust</a></td>
-      <td class="center score">18.0</td>
+      <td class="center score">12</td>
     </tr>
     <tr>
       <td><strong>Last mile quality gates</strong></td>
@@ -1321,7 +1375,7 @@
 </div>
 
 <ul class="distrust-notes">
-<li>ICE Score = Impact Total × Confidence ÷ Ease (all rated 1–3). Estimates are expert-based and assumed.<span class="metric-badge">A</span><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Details →</a></li>
+<li>ICE Score = Impact Total × Confidence × Ease (all rated 1–3). Estimates are expert-based and assumed.<span class="metric-badge">A</span><a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Details →</a></li>
 <li>Note: IDE-native steering files (Cursor Rules, CLAUDE.md, Windsurf Memory) partially solve persistent context but lack spec enforcement, drift detection, and structured generation pipelines.</li>
 </ul>
 
