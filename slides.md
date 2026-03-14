@@ -10,9 +10,6 @@
   </div>
 </div>
 
-Notes:
-Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a product concept for predictable, AI-assisted development through spec-driven control. I'll cover the problem space, market opportunity, and a concrete execution plan. Let's begin.
-
 ---
 <!-- .slide: id="agenda" -->
 
@@ -39,9 +36,6 @@ Good morning. I'm Roman Babunts. Today I'll walk you through Bonsai — a produc
 </ul>
 </div>
 
-Notes:
-The presentation has three parts. First, **What** — problem framing through a real user story, JTBD, and strategic direction choice. Second, **Why** — competitor landscape, approach comparison, niche and entry strategy, differentiation. Third, **How** — execution roadmap, MVP, monetization, metrics, risks, GTM, and first-month actions. Let's start with the problem.
-
 ---
 <!-- .slide: id="what-icp-jtbd" -->
 
@@ -65,12 +59,6 @@ The presentation has three parts. First, **What** — problem framing through a 
   * Preliminary signal. N=1 exploratory interview. Systematic validation: Month 1.
 </ul>
 </div>
-
-Notes:
-We start with a concrete pain point. Alex, a Tech Lead on an 8-person backend team, uses JB AI Assistant daily. On Friday afternoon he gets a PR from a junior — 400+ lines of AI-refactored auth module. He can't tell if the session expiry logic actually changed. After 45 minutes of line-by-line review, the PR gets "Request Changes". Both are frustrated.
-This maps directly to our Core JTBD: "When I use AI to write code, I want it to be predictable so I don't break production."
-
-* The signal check quote comes from an exploratory conversation with a developer matching our target ICP. Full validation is planned for Month 1 with 10-15 design partners.
 
 ---
 <!-- .slide: id="adoption-paradox" -->
@@ -123,9 +111,6 @@ This maps directly to our Core JTBD: "When I use AI to write code, I want it to 
 </div>
 </div>
 
-Notes:
-Let's start with the market signal. AI adoption among developers has hit 90% — up 14% year over year, according to Google's DORA report. But here's the paradox: adoption is up, yet trust is collapsing. Stack Overflow's 2025 survey shows unfavorable sentiment toward AI jumped 14 points in one year. Trust dropped from 43% to 33%. And active distrust — developers who say they distrust AI output — surged from 30% to nearly 46%. The takeaway is clear: developers use AI because it's fast, but they don't trust it — because the output is unpredictable and hard to control. This is the gap we're going after.
-
 ---
 <!-- .slide: id="stream-options" -->
 
@@ -166,13 +151,10 @@ Let's start with the market signal. AI adoption among developers has hit 90% —
   <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> We considered three directions. The core problem is trust in AI output, not generic productivity. Within that space, spec-driven control is the strongest initial wedge because it makes AI changes inspectable and constrained before review. Review &amp; Debug Assist remains the fallback if proactive control creates too much workflow friction.</p>
 </div>
 
-Notes:
-This is an executive decision slide: two lead directions converge on one path (spec-driven control), with a clear fallback if pre-hoc control friction is too high.
-
 ---
 <!-- .slide: id="target-niche" -->
 
-## WHY: Target Niche <span class="metric-badge">A</span>
+## WHAT: Target Niche <span class="metric-badge">A</span>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small" style="width: 90%; margin-left: auto; margin-right: auto;">
   <div class="chosen-tile chosen-tile--green">
@@ -204,51 +186,44 @@ This is an executive decision slide: two lead directions converge on one path (s
   <li>Inputs so far: 1 exploratory interview, desk research, competitor pattern review. Systematic validation: Month 1.</li>
 </ul>
 
-Notes:
-Our primary niche is Tech Leads and Senior Engineers working in teams of 10-50 developers who use JetBrains IDEs in production and already use AI code generation. Their specific pain: unscoped AI diffs cause review bottlenecks and unpredictable regressions. The trigger event is an AI-caused production incident or repeated review cycles on AI-generated PRs.
-After proving value, we expand to the scaling niche: Engineering Managers, Directors, and Security leads who need org-wide AI governance standards.
-
 ---
 <!-- .slide: id="why-competitor-landscape" -->
 
 ## WHY: Competitor Landscape
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); width: 95%; margin: 0 auto;">
-  <div class="chosen-tile">
+  <div class="chosen-tile" style="display: flex; flex-direction: column;">
     <p class="chosen-tile-label" style="color: #10b981; line-height: 1.12;">
       <span style="display: block; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Direct</span>
       <span style="display: block;">Spec-driven</span>
     </p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 2px; font-weight: 800; color: var(--text-main);"><strong>Tier 1: Direct Threats</strong></p>
-      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: var(--accent-blue);">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: var(--accent-blue);">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: var(--accent-blue);">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: var(--accent-blue);">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: var(--accent-blue);">OpenSpec</a></p>
-      <p style="margin-bottom: 2px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; font-weight: 800; color: var(--text-main);"><strong>Tier 2: Watchlist</strong></p>
-      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://www.task-master.dev/" target="_blank" style="color: var(--accent-blue);">Taskmaster</a>, <a href="https://stately.ai/" target="_blank" style="color: var(--accent-blue);">Stately</a>, <a href="https://buildermethods.com/agent-os" target="_blank" style="color: var(--accent-blue);">Agent-OS</a>, <a href="https://github.com/ariel-frischer/autospec" target="_blank" style="color: var(--accent-blue);">Autospec</a>, <a href="https://www.autok.dev/" target="_blank" style="color: var(--accent-blue);">autok</a> / <a href="https://www.devplan.com/" target="_blank" style="color: var(--accent-blue);">devplan</a></p>
-      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;">&bull; Strength: explicit spec artifact and plan-first workflow<br>&bull; Gap: weak IDE-native control, limited change containment, early maturity</p>
+    <div class="chosen-tile-body" style="display: flex; flex-direction: column; flex: 1;">
+      <p style="margin: 0 0 6px 0;">&nbsp;</p>
+      <p style="margin-top: 0; margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://speckit.org/" target="_blank" style="color: var(--accent-blue);">Spec Kit</a>, <a href="https://kiro.dev/" target="_blank" style="color: var(--accent-blue);">Kiro</a>, <a href="https://docs.bmad-method.org/" target="_blank" style="color: var(--accent-blue);">BMAD</a>, <a href="https://codespeak.dev/" target="_blank" style="color: var(--accent-blue);">CodeSpeak</a>, <a href="https://openspec.dev/" target="_blank" style="color: var(--accent-blue);">OpenSpec</a>, <a href="https://www.task-master.dev/" target="_blank" style="color: var(--accent-blue);">Taskmaster</a>, <a href="https://stately.ai/" target="_blank" style="color: var(--accent-blue);">Stately</a>, <a href="https://buildermethods.com/agent-os" target="_blank" style="color: var(--accent-blue);">Agent-OS</a>, <a href="https://www.autok.dev/" target="_blank" style="color: var(--accent-blue);">autok</a>, <a href="https://www.devplan.com/" target="_blank" style="color: var(--accent-blue);">devplan</a></p>
+      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: re-usable explicit spec artifact<br>&bull; Gap: weak IDE-native control, limited change containment, early maturity</p>
     </div>
   </div>
-  <div class="chosen-tile">
+  <div class="chosen-tile" style="display: flex; flex-direction: column;">
     <p class="chosen-tile-label" style="color: #4fc3f7; line-height: 1.12;">
       <span style="display: block; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Indirect</span>
       <span style="display: block;">IDE Assistants</span>
     </p>
-    <div class="chosen-tile-body">
+    <div class="chosen-tile-body" style="display: flex; flex-direction: column; flex: 1;">
       <p style="margin: 0 0 6px 0;">&nbsp;</p>
       <p style="margin-top: 0; margin-bottom: 5px;"><strong><a href="https://cursor.com/" target="_blank" style="color: var(--accent-blue);">Cursor</a>, <a href="https://github.com/features/copilot" target="_blank" style="color: var(--accent-blue);">Copilot</a>, <a href="https://www.jetbrains.com/ai-assistant/" target="_blank" style="color: var(--accent-blue);">JB AI</a></strong></p>
-      <p style="font-size: 0.9em; color: var(--text-muted);">&bull; Strength: fast generation in the IDE<br>&bull; Gap: rules guide behavior but do not enforce persistent boundaries</p>
+      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: fast generation in the IDE<br>&bull; Gap: rules guide behavior but do not enforce persistent boundaries</p>
     </div>
   </div>
-  <div class="chosen-tile">
+  <div class="chosen-tile" style="display: flex; flex-direction: column;">
     <p class="chosen-tile-label" style="color: #b388ff; line-height: 1.12;">
       <span style="display: block; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Adjacent</span>
       <span style="display: block;">Post-facto &amp; Evals</span>
     </p>
-    <div class="chosen-tile-body">
-      <p style="margin-bottom: 2px; font-weight: 800; color: var(--text-main);"><strong>AI Code Reviewers</strong></p>
-      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://coderabbit.ai/" target="_blank" style="color: var(--accent-blue);">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: var(--accent-blue);">Qodo</a></p>
-      <p style="margin-bottom: 2px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; font-weight: 800; color: var(--text-main);"><strong>Observability & Evals</strong></p>
-      <p style="margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: var(--accent-blue);">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: var(--accent-blue);">Datadog LLM</a></p>
-      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;">&bull; Strength: catches issues after generation<br>&bull; Gap: improves detection, not prevention</p>
+    <div class="chosen-tile-body" style="display: flex; flex-direction: column; flex: 1;">
+      <p style="margin: 0 0 6px 0;">&nbsp;</p>
+      <p style="margin-top: 0; margin-bottom: 8px; font-size: 0.8em; color: rgba(255,255,255,0.7);"><a href="https://coderabbit.ai/" target="_blank" style="color: var(--accent-blue);">CodeRabbit</a>, <a href="https://www.qodo.ai/" target="_blank" style="color: var(--accent-blue);">Qodo</a>, <a href="https://docs.langchain.com/langsmith/home" target="_blank" style="color: var(--accent-blue);">LangSmith</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank" style="color: var(--accent-blue);">Datadog LLM</a></p>
+      <p style="font-size: 0.85em; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: auto; text-align: left;">&bull; Strength: catches issues after generation<br>&bull; Gap: improves detection, not prevention</p>
+      <p style="margin: 0 0 6px 0;">&nbsp;</p>
     </div>
   </div>
 </div>
@@ -285,9 +260,6 @@ After proving value, we expand to the scaling niche: Engineering Managers, Direc
   <p><strong>Takeaway:</strong> The market is converging on four useful patterns: Git-native specs, IDE-native workflow, persistent steering, and bi-directional sync. Our bet is to combine them into a control layer, not just a documentation layer.</p>
 </div>
 
-Notes:
-Here we look at what's actually working in the market. First, Git-native markdown specs are the standard—tools like SpecKit prove developers won't adopt proprietary formats. Second, bi-directional sync: specs compile to code, code updates specs (like CodeSpeak), which stops doc rot. Third, surface area: web-first SaaS creates a context switch; successful workflows are IDE-native or CLI-native. Finally, persistent steering and slash-commands give us a natural UX that prevents AI amnesia.
-
 ---
 <!-- .slide: id="competitive-approaches" -->
 
@@ -322,11 +294,8 @@ Here we look at what's actually working in the market. First, Git-native markdow
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin: 12px auto 0 auto; width: 95%; box-sizing: border-box; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Decision:</strong> Start with spec-driven control as the initial wedge for JetBrains teams.<br><strong>Why:</strong> Review pain starts before merge, when change scope is unclear. Spec-driven control constrains the diff before generation; observability helps validate drift later.<br><strong>Implication:</strong> Use specs as the primary control plane, and use observability as a validation layer, not the entry wedge.<br><strong>Fallback:</strong> If authoring specs proves too heavy, start from diff containment / review assist and evolve toward spec-first.</p>
+  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Decision:</strong> Start with spec-driven control as the initial wedge.<br><strong>Why:</strong> The core problem appears before merge, when change scope is unclear. Spec-driven control constrains the diff upstream; observability is better used later to validate drift.</p>
 </div>
-
-Notes:
-Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the tie-break comes from intervention point in the SDLC. For JetBrains teams, trust is won at review time, so pre-review constraint is a better first bet than post-facto detection.
 
 ---
 <!-- .slide: id="why-specs-not-just-models" -->
@@ -348,20 +317,19 @@ Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the
   <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> The primary problem is not smarter generation, but governed change.</p>
 </div>
 
-
 ---
 <!-- .slide: id="why-summary-v3-copy" -->
 
-## WHY: Summary (Focused Copy)
+## WHY: Summary
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: 1fr; gap: 8px; margin-top: 8px;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Decision Summary</p>
     <div>
-      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Thesis:</strong> We win if teams can predict PR outcome before review, not after.</p>
+      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Thesis:</strong> We win if teams can predict PR review outcome before review, not after.</p>
       <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why now:</strong> AI adoption is <a href="#/adoption-paradox" style="color: var(--accent-blue); text-decoration: none;">90%, distrust is 46% (+15pp YoY)</a>.</p>
-      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why us:</strong> IDE-native spec-to-PR workflow with scope checks reduces unscoped diffs before review.</p>
-      <p class="chosen-tile-body" style="margin: 0;"><strong>Why win:</strong> Start with Tech Leads (10-50 dev teams), prove paid pilot outcomes by Mo3-4, then expand via JetBrains distribution.</p>
+      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why us:</strong> This wedge builds on JetBrains’ IDE and PSI advantage, complements the existing AI portfolio. <a href="#/jb-strategic-fit" style="color: var(--accent-blue); text-decoration: none;">JB Strategic Fit</a></p>
+      <p class="chosen-tile-body" style="margin: 0;"><strong>How we win:</strong> Start with Tech Leads at 10-50 dev teams, prove paid pilot outcomes by Mo3-4, then expand via JetBrains distribution.</p>
     </div>
   </div>
 </div>
@@ -369,7 +337,7 @@ Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Market Size <span class="metric-badge">A</span></p>
-    <p class="chosen-tile-body">Top-down targets a <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$171.85M SOM</a> (5% of $4.91B). Bottom-up Year 1 estimates a <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$0.93M exit run-rate</a> <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=C29" target="_blank" style="color: var(--accent-blue); text-decoration: none;">(~0.54% SOM)</a>, reflecting early funnel ramp versus steady-state.</p>
+    <p class="chosen-tile-body">Top-down targets a <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=856599423#gid=856599423&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$171.85M SOM</a> (5% of $4.91B). Bottom-up Year 1 base scenario estimates a <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=A1" target="_blank" style="color: var(--accent-blue); text-decoration: none;">$0.93M exit run-rate</a> <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=194025656#gid=194025656&range=C29" target="_blank" style="color: var(--accent-blue); text-decoration: none;">(~0.54% SOM)</a>, reflecting early funnel ramp versus steady-state.</p>
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Differentiation</p>
@@ -381,19 +349,20 @@ Both Spec-driven development and Observability + Evals score 6.7 in ICE, but the
   </div>
 </div>
 
-Notes:
-Focused copy for comparison: same logic, lower jargon density, preserved links to supporting slides and market model.
-
 ---
 <!-- .slide: id="golden-path" -->
 
-## HOW: Alex "Golden" Path
+## HOW: Alex <img src="Personas/photo_2026-03-12_19-49-00.jpg" alt="Alex" style="width: 0.95em; height: 0.95em; border-radius: 50%; vertical-align: -0.08em; margin: 0 0.14em 0 0.08em; object-fit: cover;"> "Golden" Path
 
 <div id="golden-path-steps" class="distrust-table-wrapper">
-  <table class="distrust-table" style="table-layout: fixed; width: 100%;">
+  <table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
+    <colgroup>
+      <col style="width: 18%;">
+      <col style="width: 41%;">
+      <col style="width: 41%;">
+    </colgroup>
     <thead>
       <tr>
-        <th class="center">Step</th>
         <th>Layer</th>
         <th>Before (45-min flow)</th>
         <th>After (7-min flow)</th>
@@ -401,28 +370,24 @@ Focused copy for comparison: same logic, lower jargon density, preserved links t
     </thead>
     <tbody>
       <tr>
-        <td class="center">1</td>
         <td><strong>Start</strong></td>
-        <td>Junior prompts AI to refactor the auth module directly, with no explicit contract.</td>
-        <td>Junior writes a spec first ("extract session-expiry logic"), then runs generation from the spec.</td>
+        <td>Junior asks AI to refactor auth directly, with no explicit contract.</td>
+        <td>Junior writes a spec first, then generates from it.</td>
       </tr>
       <tr>
-        <td class="center">2</td>
         <td><strong>Generation</strong></td>
         <td>AI returns a ~400-line unscoped diff.</td>
-        <td>AI returns scoped diffs constrained to the approved change scope.</td>
+        <td>AI returns a scoped diff within the approved change boundaries.</td>
       </tr>
       <tr>
-        <td class="center">3</td>
         <td><strong>Review</strong></td>
-        <td>Blind line-by-line review; hard to see what changed vs what is new.</td>
-        <td>Reviewer checks diff vs spec in IDE, with hard stop on scope violations.</td>
+        <td>Blind line-by-line review; intent vs net-new code is unclear.</td>
+        <td>Reviewer checks diff against spec in IDE; scope violations are blocked.</td>
       </tr>
-      <tr>
-        <td class="center">4</td>
+      <tr class="highlight-row">
         <td><strong>Outcome</strong></td>
-        <td>~45 minutes, "Request Changes", re-prompt cycle.</td>
-        <td>~7 minutes, PR-ready merge with traceability retained in Git.</td>
+        <td><span style="color: #f87171; font-weight: 700;">~45 min</span>, "Request Changes", re-prompt loop.</td>
+        <td><span style="color: #4ade80; font-weight: 700;">~7 min</span>, PR-ready merge with traceability in Git.</td>
       </tr>
     </tbody>
   </table>
@@ -432,58 +397,6 @@ Focused copy for comparison: same logic, lower jargon density, preserved links t
   <p><strong>Result:</strong> Same task, same people — but the control point shifts from "review the output" to "verify against the contract".</p>
 </div>
 
-Notes:
-This slide shows the same workflow (junior refactors auth module using AI) from two perspectives. Without Bonsai, the reviewer gets a blind 400-line diff with no contract. With Bonsai, the spec exists first, and the review becomes a simple question: "Does this diff fulfill the spec?" The time drops from 45 minutes to 7, and the spec persists in the repo for future AI sessions.
-
----
-<!-- .slide: id="roadmap" -->
-
-## HOW: Roadmap
-
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(4, 1fr); gap: 8px; align-items: stretch;">
-  <div class="chosen-tile chosen-tile--green" style="min-height: 182px; display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-      <p class="chosen-tile-label">Month 1</p>
-      <p style="margin: 0 0 6px 0; font-weight: 700; color: #a7f3d0;">Phase: Trust</p>
-      <p class="chosen-tile-body" style="margin: 0;">Validate core trust in the workflow.</p>
-    </div>
-    <p style="margin: 10px 0 0 0;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.45); background: rgba(16, 185, 129, 0.15);">Gate: 3 PoCs + repeat usage signal</span></p>
-  </div>
-  <div class="chosen-tile" style="min-height: 182px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(45, 212, 191, 0.55); background: rgba(20, 184, 166, 0.16); box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.25) inset;">
-    <div>
-      <p class="chosen-tile-label">Month 2</p>
-      <p style="margin: 0 0 6px 0; font-weight: 700; color: #99f6e4;">Phase: Paid Intent</p>
-      <p class="chosen-tile-body" style="margin: 0;">Confirm budgeted demand before MVP.</p>
-    </div>
-    <p style="margin: 10px 0 0 0;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #99f6e4; border: 1px solid rgba(153, 246, 228, 0.5); background: rgba(13, 148, 136, 0.2);">Gate: 3 payment-intent commitments</span></p>
-  </div>
-  <div class="chosen-tile" style="min-height: 182px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(148, 163, 184, 0.35); background: rgba(51, 65, 85, 0.22);">
-    <div>
-      <p class="chosen-tile-label">Months 3-4</p>
-      <p style="margin: 0 0 6px 0; font-weight: 700; color: #cbd5e1;">Phase: MVP Launch</p>
-      <p class="chosen-tile-body" style="margin: 0;">Run a narrow MVP with paid pilots.</p>
-    </div>
-    <p style="margin: 10px 0 0 0;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.45); background: rgba(71, 85, 105, 0.25);">Gate: &ge;3 paid pilots + outcome signal</span></p>
-  </div>
-  <div class="chosen-tile" style="min-height: 182px; display: flex; flex-direction: column; justify-content: space-between; border: 1px dashed rgba(148, 163, 184, 0.4); background: rgba(30, 41, 59, 0.2); opacity: 0.9;">
-    <div>
-      <p class="chosen-tile-label">Months 5-6</p>
-      <p style="margin: 0 0 6px 0; font-weight: 700; color: #cbd5e1;">Phase: Standardization</p>
-      <p class="chosen-tile-body" style="margin: 0;">Standardize the governed-change workflow for JetBrains teams and partner organizations.</p>
-    </div>
-    <p style="margin: 10px 0 0 0;"><span style="display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.7em; line-height: 1.2; color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.45); background: rgba(51, 65, 85, 0.22);">Gate: repeat usage + stable unit signal</span></p>
-  </div>
-</div>
-
-<p style="margin-top: 6px; font-size: 0.55em; color: rgba(148, 163, 184, 0.85);">Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> Execution is evidence-gated: trust signal (Mo1) -> budget intent (Mo2) -> paid pilot outcomes (Mo3-4) -> scale only with stable usage and unit economics (Mo5-6).</p>
-</div>
-
-Notes:
-Roadmap is shown as a gated de-risking path, not a calendar-only plan: trust signal -> paid intent -> paid pilot proof -> conditional launch.
-
 ---
 
 <!-- .slide: id="mvp-definition-simplified" -->
@@ -491,7 +404,7 @@ Roadmap is shown as a gated de-risking path, not a calendar-only plan: trust sig
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP</h2>
 <p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition (Phase 3, Mo 3-4)</p>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="grid-template-columns: 3fr 2fr;">
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">What It Is</p>
@@ -529,64 +442,15 @@ Roadmap is shown as a gated de-risking path, not a calendar-only plan: trust sig
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Decision:</strong> MVP is one governed change flow in JetBrains IDEs, optimized for measurable outcome lift, not broad feature coverage.</p>
+  <p>This scope is sufficient to prove the core hypothesis: spec-linked reviews are faster than blind reviews</p>
 </div>
-
-Notes:
-MVP scope is intentionally narrow: one real workflow on partner repos with strict containment and clear traceability.
-
----
-<!-- .slide: id="pricing-monetization" -->
-
-## HOW: Monetization <span class="metric-badge">A</span>
-
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; text-align: left;">
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">What is free vs paid</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>OSS:</strong> spec format, validator, examples.</li>
-        <li><strong>Free plugin:</strong> single-user, small-scope workflow.</li>
-        <li><strong>Paid team:</strong> templates, controls, visibility, PR/CI integrations, change containment.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">When we start charging</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>Mo 2:</strong> written budget intent + pilot terms.</li>
-        <li><strong>Mo 3-4:</strong> paid pilots after plugin MVP.</li>
-        <li><strong>Mo 5-6:</strong> repeatable upgrades via JetBrains ecosystem.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">Signals the model works</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px;">
-        <li>Budget intent converts to paid pilot.</li>
-        <li>One team expands inside the org.</li>
-        <li>Weekly repeat usage of the core scenario.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Decision:</strong> Keep individual entry free, monetize team-level control (shared templates, governance visibility, PR/CI integration), and start charging at paid pilot stage once MVP value is proven.</p>
-</div>
-
-Notes:
-This version keeps monetization logic as three decisions: free vs paid, when charging starts, and how we know it works.
-
 
 ---
 <!-- .slide: id="metrics" -->
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: Key Metrics</h2>
 
-<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="text-align: left;">
+<div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="text-align: left;">
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">1. NSM & Engagement</p>
@@ -640,13 +504,179 @@ This version keeps monetization logic as three decisions: free vs paid, when cha
   <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: Mo1 repeat usage in PoCs, Mo2 payment-intent commitments, Mo3-4 paid-pilot outcome uplift (time-to-PR, first-pass CI, token efficiency), Mo5-6 stable usage and unit economics.</p>
 </div>
 
-Notes:
+---
+<!-- .slide: id="pricing-monetization" -->
 
-1) **North Star**: Focus is on habitual usage (spec-linked merges), tracking both individual users and orgs.
-2) **Monetization**: Tracking New MRR for the product, and rigorously attributing JB Core revenue via matched cohort uplifts.
-3) **Safety & Quality**: Tracking latency and false positives alongside qualitative CSAT to ensure we don't harm the IDE experience.
-4) **Value**: Proving cost efficiency and improved PR throughput (passing checks on 1st try).
+## HOW: Monetization <span class="metric-badge">A</span>
 
+<div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; text-align: left;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">What is free vs paid</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li><strong>OSS:</strong> spec format, validator, examples.</li>
+        <li><strong>Free plugin:</strong> single-user, small-scope workflow.</li>
+        <li><strong>Paid team:</strong> templates, controls, visibility, PR/CI integrations, change containment.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">When we start charging</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li><strong>Mo 2:</strong> written budget intent + pilot terms.</li>
+        <li><strong>Mo 3-4:</strong> paid pilots after plugin MVP.</li>
+        <li><strong>Mo 5-6:</strong> repeatable upgrades via JetBrains ecosystem.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Signals the model works</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px;">
+        <li>Budget intent converts to paid pilot.</li>
+        <li>One team expands inside the org.</li>
+        <li>Weekly repeat usage of the core scenario.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Decision:</strong> Keep individual entry free, monetize team-level control (shared templates, governance visibility, PR/CI integration), and start charging at paid pilot stage once MVP value is proven.</p>
+</div>
+
+---
+
+<!-- .slide: id="gtm" -->
+
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy <span class="metric-badge">A</span></h2>
+
+<div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary" style="text-align: left;">
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">1. PoC & Early Adopters</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
+        <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="#/golden-path">Details</a></li>
+        <li><strong>Goal:</strong> Validate spec-first + diff control (change containment) via instrumented prototype before plugin MVP.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">2. Early Monetization</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><strong>Offer:</strong> Written budget intent + pilot agreement (scope, success metrics, buyer, procurement path).</li>
+        <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (Mo 3-4).</li>
+        <li><strong>Model:</strong> Add-on to JB AI credits (shared quota).</li>
+        <li><strong>Goal:</strong> Prove WTP and secure team budget early.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">3. Scale Sales</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><strong>Distribution:</strong> JB IDE Promo, Toolbox, Marketplace.</li>
+        <li><strong>Motion:</strong> PLG loop (Indiv. &rarr; Team org policy).</li>
+        <li><strong>Goal:</strong> Zero-friction install to paid conversion.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">4. Market Standard</p>
+    <div class="chosen-tile-body">
+      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
+        <li><span class="metric-badge">A</span> <strong>OSS (risk mitigation first):</strong> Spec Format + validator + examples to widen partner funnel and reduce distrust; later OSS adds templates/hooks starter pack and compatibility assets.</li>
+        <li><strong>Ecosystem:</strong> Marketplace for hooks and templates.</li>
+        <li><strong>Enterprise:</strong> Hosted orchestration and governance.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> GTM sequencing is deliberate: prove workflow value, secure budget intent, convert to paid pilots, then scale through JetBrains distribution and OSS standardization.</p>
+</div>
+
+---
+<!-- .slide: id="roadmap" -->
+
+## HOW: Roadmap
+
+<div class="distrust-table-wrapper">
+<table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
+  <colgroup>
+    <col style="width: 14%;">
+    <col style="width: 21.5%;">
+    <col style="width: 21.5%;">
+    <col style="width: 21.5%;">
+    <col style="width: 21.5%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.09);">Mo 1</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.13);">Mo 2</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.17);">Mo 3-4</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.21);">Mo 5-6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Phase</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.09);"><strong>Trust</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.13);"><strong>Paid Intent</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.17);"><strong>MVP Launch</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.21);"><strong>Standardization</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Goal</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.09);">3 PoCs with repeat usage</td>
+      <td style="background: rgba(34, 197, 94, 0.13);">3 payment-intent commitments</td>
+      <td style="background: rgba(34, 197, 94, 0.17);">&ge;3 paid pilots + outcome data</td>
+      <td style="background: rgba(34, 197, 94, 0.21);">Stable unit economics + repeat usage</td>
+    </tr>
+    <tr>
+      <td><strong>Gate to next</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.09);">3 PoCs completed; &ge;2 show weekly active usage over 3 weeks</td>
+      <td style="background: rgba(34, 197, 94, 0.13);">&ge;3 signed payment-intent commitments with named buyer and budget</td>
+      <td style="background: rgba(34, 197, 94, 0.17);">&ge;3 paid pilots; &ge;10% improvement in two key outcome metrics</td>
+      <td style="background: rgba(34, 197, 94, 0.21);">Scale decision: stable unit economics and repeat usage thresholds met</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div style="width: 95%; margin: 8px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+  <div style="padding: 6px 8px; border-radius: 6px; border: 1px dashed rgba(148, 163, 184, 0.4); background: rgba(30, 41, 59, 0.28); text-align: center;">
+    <p style="margin: 0; font-size: 0.43em; color: var(--text-main);"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; margin-right: 6px;"></span><strong>Gate 1:</strong> Trust &rarr; Paid Intent</p>
+    <p style="margin: 2px 0 0 0; font-size: 0.4em; color: var(--text-muted);">3 PoCs completed, &ge;2 with weekly active usage over 3 weeks</p>
+  </div>
+  <div style="padding: 6px 8px; border-radius: 6px; border: 1px dashed rgba(148, 163, 184, 0.4); background: rgba(30, 41, 59, 0.28); text-align: center;">
+    <p style="margin: 0; font-size: 0.43em; color: var(--text-main);"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; margin-right: 6px;"></span><strong>Gate 2:</strong> Paid Intent &rarr; MVP Launch</p>
+    <p style="margin: 2px 0 0 0; font-size: 0.4em; color: var(--text-muted);">&ge;3 signed payment-intent commitments with named buyer and budget</p>
+  </div>
+  <div style="padding: 6px 8px; border-radius: 6px; border: 1px dashed rgba(148, 163, 184, 0.4); background: rgba(30, 41, 59, 0.28); text-align: center;">
+    <p style="margin: 0; font-size: 0.43em; color: var(--text-main);"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; margin-right: 6px;"></span><strong>Gate 3:</strong> MVP Launch &rarr; Standardization</p>
+    <p style="margin: 2px 0 0 0; font-size: 0.4em; color: var(--text-muted);">&ge;3 paid pilots and &ge;10% improvement in two key outcome metrics</p>
+  </div>
+</div>
+
+<p style="margin-top: 6px; font-size: 0.55em; color: rgba(148, 163, 184, 0.9);"><strong>Current status:</strong> Month 1 - 1 of 3 PoCs in progress.</p>
+<p style="margin-top: 4px; font-size: 0.55em; color: rgba(148, 163, 184, 0.85);">Detailed month-by-month actions, metrics, and gates moved to <a href="#/roadmap-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> Each phase requires passing a quantified gate before investment in the next. No gate passed = no next phase.</p>
+</div>
+
+---
 <!-- .slide: id="risks-mitigation" -->
 
 ## HOW: Risks & Mitigation
@@ -702,80 +732,13 @@ Notes:
   <p><strong>Takeaway:</strong> The primary risk is failing to prove repeatable value for spec-first control in Month 1. Mitigation is explicit: 3 parallel PoCs with a hard pivot gate before MVP build.</p>
 </div>
 
-
----
-
-<!-- .slide: id="gtm" -->
-
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: GTM Strategy <span class="metric-badge">A</span></h2>
-
-<div class="chosen-grid chosen-grid--2col chosen-grid--small" style="text-align: left;">
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">1. PoC & Early Adopters</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
-        <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="#/golden-path">Details</a></li>
-        <li><strong>Goal:</strong> Validate spec-first + diff control (change containment) via instrumented prototype before plugin MVP.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">2. Early Monetization</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><strong>Offer:</strong> Written budget intent + pilot agreement (scope, success metrics, buyer, procurement path).</li>
-        <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (Mo 3-4).</li>
-        <li><strong>Model:</strong> Add-on to JB AI credits (shared quota).</li>
-        <li><strong>Goal:</strong> Prove WTP and secure team budget early.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">3. Scale Sales</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><strong>Distribution:</strong> JB IDE Promo, Toolbox, Marketplace.</li>
-        <li><strong>Motion:</strong> PLG loop (Indiv. &rarr; Team org policy).</li>
-        <li><strong>Goal:</strong> Zero-friction install to paid conversion.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">4. Market Standard</p>
-    <div class="chosen-tile-body">
-      <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><span class="metric-badge">A</span> <strong>OSS (risk mitigation first):</strong> Spec Format + validator + examples to widen partner funnel and reduce distrust; later OSS adds templates/hooks starter pack and compatibility assets.</li>
-        <li><strong>Ecosystem:</strong> Marketplace for hooks and templates.</li>
-        <li><strong>Enterprise:</strong> Hosted orchestration and governance.</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-
-<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> GTM sequencing is deliberate: prove workflow value, secure budget intent, convert to paid pilots, then scale through JetBrains distribution and OSS standardization.</p>
-</div>
-
-Notes:
-
-1) **PoC**: We don't need a perfect product, we need a "golden path" that demonstrates value in 10 minutes.
-2) **Monetization**: Early monetization starts as budget intent and pilot agreements. Charging starts when plugin MVP is usable.
-3) **Scale**: The JetBrains ecosystem is our unfair advantage. One-click install via Toolbox/Marketplace.
-4) **Standard**: We open-source the Spec Format and CLI to become the protocol, while monetizing the orchestration and governance.
-
 ---
 
 <!-- .slide: id="month1-actions" -->
 
 <h2 style="font-size: 1.4em; margin-bottom: 5px;">My 1st month actions</h2>
 
-<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px;">
+<div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: repeat(3, 1fr); gap: 10px;">
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Week 1</p>
     <div class="chosen-tile-body">
@@ -799,19 +762,35 @@ Notes:
   </div>
 </div>
 
-Notes:
-Detailed Action Plan:
-Week 1: Meet stakeholders, align on success definition, burn-down assumptions (PSI signal, demand).
-Weeks 2-3: Option A (Primary): 8+ discovery interviews, scheduling design partners. Option B: Fake door/Marketplace listing.
-Week 4: Gate: Pilot commitments >=3, Top-3 problem rank for 5/8 devs, ICP waitlist >=15.
-End Mo 1 Deliverable: Initial qualitative signal, updated roadmap, and MVP scope.
-Tracking logs maintained in the validation dashboard.
-
 ---
 
 <!-- .slide: id="appendix" -->
 
 # Appendix
+
+---
+<!-- .slide: id="jb-strategic-fit" -->
+
+## WHY: JetBrains Strategic Fit <span class="metric-badge">A</span>
+
+<div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;">
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Right to win</p>
+    <p class="chosen-tile-body">JetBrains owns the IDE workflow and has PSI-native context.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Portfolio fit</p>
+    <p class="chosen-tile-body">Bonsai complements AI Assistant and Junie by adding governance, not generation.</p>
+  </div>
+  <div class="chosen-tile chosen-tile--green">
+    <p class="chosen-tile-label">Business fit</p>
+    <p class="chosen-tile-body">It increases enterprise retention and creates team-level attach potential.</p>
+  </div>
+</div>
+
+<div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
+  <p><strong>Takeaway:</strong> JetBrains is well positioned to own governed AI-assisted development, not just AI code generation.</p>
+</div>
 
 ---
 <!-- .slide: id="differentiation" -->
@@ -856,26 +835,12 @@ Tracking logs maintained in the validation dashboard.
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="padding: 10px 15px; margin-top: 10px;">
-  <p>We bridge the gap between developer freedom and enterprise-level control: turning chaotic AI-assisted development into a predictable, specified, and reviewable architectural workflow.</p>
+  <p>We turn AI-assisted changes into a more predictable and reviewable workflow for teams that need enterprise-grade control.</p>
 </div>
 
 <ul class="distrust-notes">
   <li>Note: PSI isn’t exclusive; defensibility compounds via accumulated spec data + workflow lock-in.</li>
 </ul>
-
-Notes:
-Why us? Let's look at our 5 core differentiators.
-First, Native JetBrains Integration—we go where Enterprise sits. Instead of a rigid, one-way CLI, developers get editable intermediate layers right in their IDE with zero context switch.
-Second, Deep Semantic Context using JetBrains PSI, completely eliminating the hallucinations you get with standard AST or vector search in complex codebases.
-Third, Continuous Drift Detection. We don't just offer proactive inline warnings; we provide bi-directional sync (code ↔ spec) so that artifacts never diverge, unlike reactive CI breaks or flat docs that rot over time.
-Fourth, AI-Native BDD (Behavior-Driven Development). We don't just 'generate and pray'—we treat specs as executable tests, automatically validating the LLM's output against the schema before it ever hits your code.
-And finally, Zero Vendor Lock-in with an open markdown format combined with a premium plugin.
-These differentiators culminate in our core value proposition: We bridge the gap between developer freedom and enterprise control. Instead of forcing rigid top-down workflows that developers hate, Bonsai embraces bottom-up intent extraction—turning chaotic "vibe-coding" into a predictable, reviewable architectural workflow, right inside the JetBrains IDE.
-
-PSI advantage is structural, not exclusive — any JB plugin can use PSI, and LSP + tree-sitter cover ~60-70% outside JB.
-The defensibility comes from compounding: PSI accuracy → better specs → users trust and maintain specs → spec data becomes the real moat (not the parser).
-Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org scale (100 commits/day, 50 files/commit), this is ~$1,300/month cost difference.
-
 
 ---
 <!-- .slide: id="growth-loops" -->
@@ -891,7 +856,7 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Invite-The-Reviewer Loop</p>
-    <p class="chosen-tile-body">Specs create readable contracts → architects/sec engineers get invited to PRs → reviews speed up → format sticks →</p>
+    <p class="chosen-tile-body">Specs make PR intent clearer -> domain reviewers join earlier -> review quality and speed improve -> trust in spec-linked PRs rises -> more changes start with specs</p>
   </div>
 
   <div class="chosen-tile chosen-tile--green">
@@ -901,22 +866,14 @@ Token savings estimate: 70-90% per file analysis vs raw LLM approach. At org sca
 
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Ecosystem Distribution</p>
-    <p class="chosen-tile-body">Format works in Cursor, VS Code, CI → tried locally w/o migration → becomes org-wide standard, not just an app →</p>
+    <p class="chosen-tile-body">More tool compatibility -> lower adoption friction -> more teams try the format -> more templates / hooks / integrations appear -> compatibility improves further</p>
   </div>
 
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> Growth compounds when spec-linked review becomes default team behavior: reviewer reuse, cross-repo template reuse, and ecosystem compatibility turn local adoption into org-wide standards.</p>
+  <p><strong>Takeaway:</strong> The product has credible compounding paths: reusable review patterns, cross-repo templates, and ecosystem compatibility can turn single-team wins into team-to-team adoption. The scaling challenge is to prove one repeatable expansion loop first, then standardize it across repos and teams.</p>
 </div>
-
-Notes:
-Here we detail the 4 main B2B growth mechanics that drive viral product-led expansion across an enterprise.
-
-1) Repo-native: Viral spread inside a single team via PR checks. This forces adoption simply by interacting with code.
-2) Collaboration: Bringing non-coding stakeholders (architects, security) into the review process using readable contracts.
-3) Org-wide Expansion: A single spec scales across multiple projects, accelerating adoption as its value grows with every added repository.
-4) Ecosystem Agnosticism: Being an open format means it can be adopted without massive migration or forcing developers out of their favorite IDE.
 
 ---
 <!-- .slide: id="distrust-issues" -->
@@ -924,71 +881,52 @@ Here we detail the 4 main B2B growth mechanics that drive viral product-led expa
 ## WHAT: Distrust issues
 
 <div class="distrust-table-wrapper">
-<table class="distrust-table">
+<table class="distrust-table" style="table-layout: fixed; width: 100%;">
+<colgroup>
+<col style="width: 35%;">
+<col style="width: 53%;">
+<col style="width: 12%;">
+</colgroup>
 <thead>
 <tr>
 <th>Trust points (when utilizing AI)</th>
 <th>Details</th>
-<th class="center">Reach <span class="metric-badge">A</span></th>
-<th class="center">Freq. <span class="metric-badge">A</span></th>
-<th class="center">Conf. <span class="metric-badge">A</span></th>
 <th class="center">Score <span class="metric-badge">A</span></th>
 </tr>
 </thead>
 <tr class="highlight-row">
 <td>Skepticism regarding code accuracy and quality</td>
 <td>45.7% distrust AI (up 15.3 pp YoY). 75% would ask a person for help when they don’t trust AI answers. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
 <td class="center score val-high">9.0</td>
 </tr>
 <tr class="highlight-row">
 <td>Increased review and debugging time</td>
 <td>45% say debugging AI code is more time-consuming. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
 <td class="center score val-high">9.0</td>
 </tr>
 <tr>
 <td>Concerns regarding security and vulnerabilities</td>
 <td>&gt;60% frequently have ethical / security-related concerns about AI-generated code. <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[1]</a></td>
-<td class="center val-high">High</td>
-<td class="center val-high">High</td>
-<td class="center val-med">Med</td>
 <td class="center score val-high">6.8</td>
 </tr>
 <tr>
 <td>AI decision-making opacity and ambiguous accountability for errors</td>
 <td>75% would ask a person for help when they don’t trust AI answers, keeping humans as final arbiters of correctness. <a href="https://arxiv.org/html/2502.18468v1" target="_blank">[1]</a> <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[2]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
 <td class="center score val-med">3.0</td>
 </tr>
 <tr>
 <td>Risk of engineering skill degradation</td>
 <td>60% believe AI tools lead to less skilled developers (web-dev firstly). <a href="https://2025.stateofdevs.com/en-US/" target="_blank">[1]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-med">Med</td>
-<td class="center val-low">Low</td>
 <td class="center score val-low">2.0</td>
 </tr>
 <tr>
 <td>Fear of data leaks and privacy concerns</td>
 <td>40% of security incidents involve AI (incident-level). &gt;80% report concerns about data security and privacy. Frequency=Low because measured via incidents. <a href="https://www.microsoft.com/en-us/security/blog/2024/11/13/microsoft-data-security-index-annual-report-highlights-evolving-generative-ai-security-needs/" target="_blank">[1]</a> <a href="https://survey.stackoverflow.co/2025/ai" target="_blank">[2]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-low">Low</td>
-<td class="center val-med">Med</td>
 <td class="center score val-low">1.5</td>
 </tr>
 <tr>
 <td>Legal uncertainty regarding copyrights and licensing for AI-generated code</td>
 <td>Survey of 574 GenAI users: broad disagreement and uncertainty about output ownership and copyright risk. <a href="https://arxiv.org/html/2502.18468v1" target="_blank">[1]</a> <a href="https://arxiv.org/html/2411.10877v1" target="_blank">[2]</a></td>
-<td class="center val-med">Med</td>
-<td class="center val-low">Low</td>
-<td class="center val-med">Med</td>
 <td class="center score val-low">1.5</td>
 </tr>
 </tbody>
@@ -1000,12 +938,9 @@ Here we detail the 4 main B2B growth mechanics that drive viral product-led expa
 </div>
 
 <ul class="distrust-notes">
-<li>Reach, Freq. (Frequency), Conf. (Confidence, as a probability to make a difference) and Score are subjectively estimated/measured based on synthesis of external report signals. </li>
+<li>Score is subjectively estimated/measured based on synthesis of external report signals.</li>
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
 </ul>
-
-Notes:
-Let's drill down into these distrust issues. We analyzed various market reports and extracted the major pain points. As you can see in this table, the top two issues—highlighted here—are skepticism regarding code accuracy and the increased review and debugging time. Both of these score a 9 when evaluating their Reach, Frequency, and our Confidence that solving them will make a difference. Security concerns are also very high but have slightly less consistent frequency of blocking daily workflows. Note that the scores and parameters are our subjective estimates based on these signals.
 
 ---
 <!-- .slide: id="time-spend" -->
@@ -1158,7 +1093,7 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> We cut low-value rework and unscoped review churn, then reinvest saved capacity into Coding and System Architecture without reducing high-signal code review quality.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The largest recoverable capacity sits upstream: planning, debugging, and compliance consume outsized time before code lands. The product bet is to make changes better scoped and more reviewable, so effort shifts from avoidable rework into Coding and System Architecture.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -1167,23 +1102,22 @@ Let's drill down into these distrust issues. We analyzed various market reports 
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
 </ul>
 
-Notes:
-Here we look at how developers actually spend their time versus how they ideally want to spend it. The largest gaps—the overhead we can cut—are in Security & Compliance, Debugging, and Environment Setup. At the same time, we see massive negative gaps in Coding and System Architecture. Developers want to spend almost double the time on architecture and double the time on coding. If we can automate the high-gap overhead areas, we unlock capacity for the deep work that drives real product value and developer satisfaction.
-
 ---
 <!-- .slide: id="b2b-pains" -->
 
 ## WHAT: B2B Pains
 
 <div class="distrust-table-wrapper">
-<table class="distrust-table">
+<table class="distrust-table" style="table-layout: fixed; width: 100%;">
+<colgroup>
+<col style="width: 35%;">
+<col style="width: 53%;">
+<col style="width: 12%;">
+</colgroup>
 <thead>
 <tr>
 <th>B2B Pain (Engineering / Product Teams)</th>
 <th>Details</th>
-<th class="center">Reach <span class="metric-badge">A</span></th>
-<th class="center">Freq. <span class="metric-badge">A</span></th>
-<th class="center">Conf. <span class="metric-badge">A</span></th>
 <th class="center">Score <span class="metric-badge">A</span></th>
 </tr>
 </thead>
@@ -1191,57 +1125,36 @@ Here we look at how developers actually spend their time versus how they ideally
 <tr class="highlight-row">
 <td>Delivery predictability and lead time variability</td>
 <td>Unpredictable reviewers make dependent work impossible to forecast reliably. <a href="https://axify.io/blog/lead-time-in-software-development" target="_blank">[1]</a></td>
-<td class="center val-high">3</td>
-<td class="center val-med">2</td>
-<td class="center val-med">0.75</td>
 <td class="center score val-high">4.5</td>
 </tr>
 <tr class="highlight-row">
 <td>Quality and reliability risk from software errors</td>
 <td>Poor software quality costs US companies $2.08 trillion annually. <a href="https://raygun.com/blog/cost-of-software-errors/" target="_blank">[1]</a></td>
-<td class="center val-high">3</td>
-<td class="center val-high">3</td>
-<td class="center val-low">0.5</td>
 <td class="center score val-high">4.5</td>
 </tr>
 <tr>
 <td>Documentation debt harming onboarding, satisfaction and speed</td>
 <td>41% of developers report this as a major hindrance. 97% lose significant time to inefficiencies. <a href="https://www.atlassian.com/software/compass/resources/state-of-developer-2024" target="_blank">[1]</a></td>
-<td class="center val-med">2</td>
-<td class="center val-med">2</td>
-<td class="center val-med">0.75</td>
 <td class="center score val-med">3.0</td>
 </tr>
 <tr>
 <td>Token Spent Optimization</td>
 <td>On average, token consumption decreased by 15–20%. <a href="https://arxiv.org/html/2504.15989v2" target="_blank">[1]</a></td>
-<td class="center val-med">2</td>
-<td class="center val-med">2</td>
-<td class="center val-med">0.75</td>
 <td class="center score val-med">3.0</td>
 </tr>
 <tr>
 <td>Developer burnout from cognitive load and on-call burden</td>
 <td>83% of software engineers report feelings of burnout. <a href="https://www.softwareseni.com/developer-burnout-and-cognitive-load-in-the-devops-era/" target="_blank">[1]</a></td>
-<td class="center val-med">2</td>
-<td class="center val-med">2</td>
-<td class="center val-low">0.5</td>
 <td class="center score val-low">2.0</td>
 </tr>
 <tr>
 <td>Productivity loss from technical debt waste</td>
 <td>Developers waste on average 23% of their time due to technical debt. <a href="https://research.chalmers.se/publication/511450/file/511450_Fulltext.pdf" target="_blank">[1]</a></td>
-<td class="center val-low">1</td>
-<td class="center val-high">3</td>
-<td class="center val-low">0.5</td>
 <td class="center score val-low">1.5</td>
 </tr>
 <tr>
 <td>Compliance overhead from AI and tooling</td>
 <td>Compliance overhead increases 10–20% in regulated industries due to AI audit and privacy controls. <a href="https://www.softwareseni.com/the-real-economics-of-ai-coding-beyond-vendor-productivity-claims/" target="_blank">[1]</a></td>
-<td class="center val-med">2</td>
-<td class="center val-low">1</td>
-<td class="center val-med">0.75</td>
 <td class="center score val-low">1.5</td>
 </tr>
 </tbody>
@@ -1249,16 +1162,13 @@ Here we look at how developers actually spend their time versus how they ideally
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The two highest-scoring B2B pains — delivery unpredictability and quality risk — are strongly aligned with control gaps in AI-assisted workflows; uncontrolled AI diffs are a likely accelerator, making change containment a high-leverage first wedge.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The clearest B2B pains are delivery unpredictability and quality risk. That makes controlled change, not faster generation, the strongest entry wedge for AI-assisted teams: reduce variance first, then scale output on top of a more reviewable workflow.</p>
 </div>
 
 <ul class="distrust-notes">
-<li>Reach, Freq. (Frequency), Conf. (Confidence = probability to make a difference) and Score are subjectively estimated based on external report signals.</li>
+<li>Score is subjectively estimated based on external report signals.</li>
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
 </ul>
-
-Notes:
-This slide zooms out from the developer to the business buyer. B2B buyers care about delivery predictability and software quality — both of which are threatened by unvetted AI output. The top two pains score equally at 4.5, driven by high reach across engineering orgs and strong argumentation from industry data. Compliance overhead is real but lower frequency, making it a secondary concern for the initial wedge.
 
 ---
 <!-- .slide: id="stream-options-main-appendix" -->
@@ -1275,44 +1185,44 @@ This slide zooms out from the developer to the business buyer. B2B buyers care a
   </thead>
   <tbody>
     <tr class="highlight-row">
-      <td><strong>Spec-driven control (AI-dev transparency):</strong> code &amp; architecture</td>
+      <td><strong>AI-dev transparency:</strong> code &amp; architecture</td>
       <td><span class="tag tag-pain-review">Distrust issues</span></td>
-      <td>6.7</td>
+      <td>18.0</td>
     </tr>
     <tr>
       <td><strong>Review &amp; Debug assist</strong></td>
       <td><span class="tag tag-pain-review">Distrust issues</span></td>
-      <td>4.4</td>
+      <td>12.0</td>
     </tr>
     <tr>
       <td><strong>Spec Formalisation Assist</strong></td>
       <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>2.2</td>
+      <td>6.0</td>
     </tr>
     <tr>
-      <td><strong>Quality &amp; reliability risk</strong> from software errors</td>
+      <td><strong>Quality and reliability risk</strong> from software errors</td>
       <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>2.2</td>
+      <td>6.0</td>
     </tr>
     <tr>
       <td><strong>Security &amp; Compliance</strong> (proactive assist)</td>
       <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>1.5</td>
+      <td>4.0</td>
     </tr>
     <tr>
       <td><strong>Dev Env Simplification</strong></td>
       <td><span class="tag tag-time-spent">Time Spent</span></td>
-      <td>1.5</td>
+      <td>4.0</td>
     </tr>
     <tr>
       <td><strong>Delivery time variability</strong> (accurate forecasting)</td>
       <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>1.5</td>
+      <td>4.0</td>
     </tr>
     <tr>
       <td><strong>Token Spent Optimization</strong></td>
       <td><span class="tag tag-b2b">B2B Pains</span></td>
-      <td>1.5</td>
+      <td>4.0</td>
     </tr>
   </tbody>
 </table>
@@ -1326,18 +1236,6 @@ This slide zooms out from the developer to the business buyer. B2B buyers care a
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
 <li>Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</li>
 </ul>
-
-Notes:
-Direction scores inherit ICE scores from the Core JTBD Landscape framework (see Approaches appendix for methodology: Score = weighted-average Impact × Confidence ÷ Effort, where Impact is a weighted average across 9 criteria).
-All scores are assumptions marked with A — to be validated through user interviews and early pilots.
-
-Key risks of chosen direction (AI-dev transparency): spec fatigue — developers approve without reading; enforcement resistance — teams reject mandatory gates. Both are tested in Phase 1 experiments.
-
-What would change our mind on runner-ups:
-• Review & Debug assist (4.4): if ICP interviews reveal developers prefer post-hoc review over pre-hoc control, we pivot to this direction — it shares the same trust JTBD but inverts the intervention point.
-• Security & Compliance (1.5): if enterprise pilots show compliance gates drive faster budget approval than architecture governance, we re-scope the wedge.
-
-Next: we define the chosen direction in detail with JTBD and early adopter segments.
 
 ---
 <!-- .slide: id="competitive-approaches-main-appendix" -->
@@ -1365,49 +1263,49 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
       <td><strong>Spec-driven development</strong></td>
       <td>Spec-first: AI generates code &amp; checks from contracts. Spec becomes a reviewable, regression artifact.</td>
       <td><a href="https://kiro.dev/" target="_blank">Kiro</a>, <a href="https://speckit.org/" target="_blank">Spec Kit</a>, <a href="https://codespeak.dev/" target="_blank">CodeSpeak</a>, <a href="https://www.task-master.dev/" target="_blank">Taskmaster</a>, <a href="https://docs.bmad-method.org/" target="_blank">BMAD</a></td>
-      <td class="center score">6.7</td>
+      <td class="center score">18.0</td>
     </tr>
     <tr class="highlight-row">
       <td><strong>Observability + evals</strong></td>
       <td>Trace inputs/outputs &amp; agent steps; measure quality via datasets &amp; LLM-as-judge. Catch degradations pre-release.</td>
       <td><a href="https://docs.langchain.com/langsmith/home" target="_blank">LangSmith</a>, <a href="https://docs.wandb.ai/weave" target="_blank">W&amp;B Weave</a>, <a href="https://www.datadoghq.com/product/llm-observability/" target="_blank">Datadog LLM</a>, <a href="https://galileo.ai/" target="_blank">Galileo</a>, <a href="https://docs.ragas.io/" target="_blank">Ragas</a>, <a href="https://github.com/truera/trulens" target="_blank">TruLens</a>, <a href="https://www.braintrust.dev/docs" target="_blank">Braintrust</a></td>
-      <td class="center score">6.7</td>
+      <td class="center score">18.0</td>
     </tr>
     <tr>
       <td><strong>Last mile quality gates</strong></td>
       <td>I/O guardrails + JSON Schema validation + AI test gen; CI blocks merge until checks pass.</td>
       <td><a href="https://github.com/guardrails-ai/guardrails" target="_blank">Guardrails AI</a>, <a href="https://docs.nvidia.com/nemo-guardrails/index.html" target="_blank">NeMo</a>, <a href="https://developers.openai.com/api/docs/guides/structured-outputs/" target="_blank">OpenAI Structured</a>, <a href="https://www.diffblue.com/diffblue-cover/" target="_blank">Diffblue</a>, <a href="https://keploy.io/" target="_blank">Keploy</a>, <a href="https://junit.org/" target="_blank">JUnit</a></td>
-      <td class="center score">4.4</td>
+      <td class="center score">12.0</td>
     </tr>
     <tr>
       <td><strong>Security &amp; compliance guardrails</strong></td>
       <td>Static analysis + runtime protection: catch vulnerabilities &amp; prompt injection, enforce compliance policies.</td>
       <td><a href="https://snyk.io/product/snyk-code/" target="_blank">Snyk Code</a>, <a href="https://semgrep.dev/" target="_blank">Semgrep</a>, <a href="https://codeql.github.com/docs/" target="_blank">CodeQL</a>, <a href="https://www.lakera.ai/lakera-guard" target="_blank">Lakera Guard</a>, <a href="https://www.holisticai.com/" target="_blank">Holistic AI</a>, <a href="https://protectai.com/" target="_blank">Protect AI</a></td>
-      <td class="center score">4.4</td>
+      <td class="center score">12.0</td>
     </tr>
     <tr>
       <td><strong>AI code reviewer</strong></td>
       <td>AI analyzes diffs &amp; repo context, finds issues, generates review summaries.</td>
       <td><a href="https://www.qodo.ai/" target="_blank">Qodo</a>, <a href="https://coderabbit.ai/" target="_blank">CodeRabbit</a>, <a href="https://github.com/qodo-ai/pr-agent" target="_blank">PR-Agent</a></td>
-      <td class="center score">4.4</td>
+      <td class="center score">12.0</td>
     </tr>
     <tr>
       <td><strong>AI-driven task orchestration</strong></td>
       <td>Tasks get AI context; agents run on subtasks; code changes, PRs &amp; statuses flow in one managed pipeline.</td>
       <td><a href="https://vibekanban.com/" target="_blank">Vibe Kanban</a></td>
-      <td class="center score">4.4</td>
+      <td class="center score">12.0</td>
     </tr>
     <tr>
       <td><strong>Deterministic LLM output</strong></td>
       <td>Force strictly validatable structure; retry/fix on schema mismatch.</td>
       <td><a href="https://ai.pydantic.dev/" target="_blank">PydanticAI</a>, <a href="https://github.com/567-labs/instructor" target="_blank">Instructor</a>, <a href="https://github.com/dottxt-ai/outlines" target="_blank">Outlines</a></td>
-      <td class="center score">1.5</td>
+      <td class="center score">4.0</td>
     </tr>
     <tr>
       <td><strong>Human-Freelancer in the Loop</strong></td>
       <td>AI writes code; freelancer expert approves changes instead of the team.</td>
       <td><a href="https://tendem.ai/" target="_blank">Tendem</a></td>
-      <td class="center score">1.5</td>
+      <td class="center score">4.0</td>
     </tr>
   </tbody>
 </table>
@@ -1423,10 +1321,6 @@ Next: we define the chosen direction in detail with JTBD and early adopter segme
 <li>Note: IDE-native steering files (Cursor Rules, CLAUDE.md, Windsurf Memory) partially solve persistent context but lack spec enforcement, drift detection, and structured generation pipelines.</li>
 <li>Each score was triangulated against: (1) Distrust + Time Spent + B2B evidence, (2) competitor traction signals, (3) JB SDK feasibility.</li>
 </ul>
-
-Notes:
-This slide maps competitive approaches to improving trust in AI-assisted development, scored using a weighted ICE framework. Impact is scored 1–3 across 9 criteria. Speed, DX, Quality, and JTBD time-saved are grouped as one "Delivery Outcomes" block (weights sum to 1), equal to Cost, Transparency, SDLC coverage, Adoption friction, and Monetization. Impact Total is the weighted average. Total Score = Impact Total × Confidence ÷ Effort.
-Spec-driven and Observability both score 6.7 — the tie-break is the intervention point. Spec-driven is Shift-Left: it constrains ambiguity before code generation via a reviewable contract. Observability is Shift-Right: it detects drift and regressions after execution. For the trust JTBD ("I want AI output to be predictable so I don't break production"), preventive control is the stronger fit — the developer needs trust before merging, not post-merge diagnostics. Additionally, JetBrains PSI enables bi-directional spec↔code within the IDE, giving spec-driven a native platform advantage that observability (infrastructure-layer) does not benefit from.
 
 ---
 <!-- .slide: id="roadmap-main-appendix" -->
@@ -1480,7 +1374,6 @@ Spec-driven and Observability both score 6.7 — the tie-break is the interventi
   </div>
 
 </div>
-
 
 ---
 <!-- .slide: id="risks-mitigation-main-appendix" -->
@@ -1567,13 +1460,3 @@ Spec-driven and Observability both score 6.7 — the tie-break is the interventi
     </tbody>
   </table>
 </div>
-
-Notes:
-
-Risk #0 is our highest-priority uncertainty. Developers report distrust in AI code (validated), but they do not explicitly ask for specs (hypothesis). If Phase 1 shows weak repeat usage (most partners don’t repeat the core scenario 2x in 7 days) and alternatives win on measured outcomes, we switch entry point before building the plugin MVP.
-Separate risk: if partner recruitment is slow, OSS narrow scope is used to widen the funnel and generate pilots from community pull.
-
-1) **Technical**: We are building on top of JetBrains' own infrastructure. It's complex, but it's where our advantage lies.
-2) **Accuracy**: AI is the assistant, not the decider. The "Approve" button is our safety valve.
-3) **Adoption**: Documentation fails when it's external. By making it part of the repo and extraction-based, we remove the "writing tax".
-4) **Market**: Cursor/Copilot focus on code generation. We focus on structural alignment and predictability.
