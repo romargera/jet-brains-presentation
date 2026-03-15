@@ -10,6 +10,9 @@
   </div>
 </div>
 
+Notes:
+привет. Меня зовут Роман Бабунц, и это мое тестовое задание. Я расскажу, какую проблему я решаю, почему выбираю именно это направление и подход и как я бы реализовал его в первые шесть месяцев.
+
 ---
 <!-- .slide: id="agenda" -->
 
@@ -35,6 +38,11 @@
   <span class="metric-badge">A</span> Assumptions are marked with this icon
 </ul>
 </div>
+
+Notes:
+Презентация разделена на три блока. WHAT, где я определяю проблему и выбираю направление. WHY, где я показываю рынок и обосновываю подход. И HOW, где речь про roadmap, MVP, метрики и риски.
+
+Отдельно отмечу сразу: все допущения я пометил этим бейджем. Большинство из них я планирую верифицировать в первый месяц работы.
 
 ---
 <!-- .slide: id="adoption-paradox" -->
@@ -66,6 +74,11 @@
 </div>
 </div>
 
+Notes:
+Согласно исследованию 5000 респондентов от Dora за 2025 AI-инструментами пользуются 90% разработчиков, это плюс 14% год к году. Но одновременно быстро растет недоверие: 46% разработчиков сообщают о среднем или высоком уровне distrust, это плюс 15 процентных пунктов за год.
+
+Таким образом, мы видим парадокс: разработчики активно используют AI ради скорости, но все меньше доверяют тому, что он выдает. И именно разрыв между adoption и trust создает окно возможности. Если сделать AI-assisted development предсказуемым, мы решаем проблему, которая не уменьшается, а становится только острее.
+
 ---
 <!-- .slide: id="what-icp-jtbd" -->
 
@@ -89,6 +102,11 @@
   * Preliminary signal. N=1 exploratory interview. Systematic validation: Month 1.
 </ul>
 </div>
+
+Notes:
+Я провел интервью с пользователем. Александр, Tech Lead, который работает с Kotlin и Gemini. Александр говорит: AI-код часто полезен, но не готов к продакшену. То, что раньше занимало пять минут на review, легко превращается в сорок пять минут. В одном случае AI добавил зависимости, которые нужно было отдельно согласовывать с безопасниками, и затронул файлы, которые команда старается не менять. Reviewer потратил время не на логику, а на то, чтобы понять, что вообще произошло.
+
+Важно, что это пока только один интервьюируемый, N=1. Это нельзя считать верификацией боли, но это сильный сигнал, который стоит проверять дальше. То, что описывает Александр, говорит о следующем: основная проблема в AI adoption не в самой генерации кода, а в непредсказуемости результата и в review overhead, который эта непредсказуемость создает. Поэтому в первый месяц я планирую провести качественное исследование, чтобы проверить, что этот сигнал системно повторяется.
 
 ---
 <!-- .slide: id="stream-options" -->
@@ -118,8 +136,15 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin: 12px auto 0 auto; width: 95%; box-sizing: border-box; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> Primary bet: unscoped AI output - strongest wedge because it constrains diffs before review, not after. Fallback: post-generation review burden - activates if month 1 gate fails (&lt;2/3 pilot teams with repeat prototype engagement). Pivot decision happens before MVP build.</p>
+  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> Primary bet: unscoped AI output - strongest entry point because it constrains diffs before review, not after. Fallback: post-generation review burden - activates if month 1 gate fails (no validated hypothesis + not enough committed design partners). Pivot decision happens before MVP build.</p>
 </div>
+
+Notes:
+Для того, чтобы рассмотреть ситуацию с непрозрачность AI разработки с разрых сторон, я проанализировал 3 источника: данные о проблемах доверия из исследований Stakeoverflow; исследованеи Microsoft о желаемом и фактическом распределении времени разработчика; боли b2b - продуктовых компаний, упомянутые в публичных источниках. По клику на гиперссылки есть слайды с более разобором списком направлений и источников.
+
+По результату я приоритеризировал 2 основных направления: незапланированный AI OUTPUT и доп усилия на ревью после генерации.
+
+В качестве основного направления я выбраю UNSCOPED AI OUTPUT, потому что review assist оптимизирует обнаружение проблем, но не предотвращает их. Если diff вышел за scope, даже идеальный review tool просто быстрее покажет, что всё плохо. Control нужен выше в рамках этой воронки воркфлоу. Review Assist я оставляю как fallback.
 
 ---
 <!-- .slide: id="target-niche" -->
@@ -165,6 +190,13 @@
   <li>Inputs so far: 1 exploratory interview, desk research, competitor pattern review. Systematic validation: Month 1.</li>
 </ul>
 
+Notes:
+Эту боль хорошо резюмирует цитата Addy Osmani: именно непрозрачность того, что именно и почему было изменено при AI разработке, снижает доверие и делает AI-review болезненным.
+
+Cделаем допущение и в качестве early adopters возьмем Tech Leads и Senior Engineers в относительно небольших компаниях на 10-50 разработчиков, работающих в JetBrains IDE, где unscoped AI diffs создают bottleneck в review. Триггер здесь - это три и более цикла review на одном PR.
+
+Дальше есть понятный второй этап масштабирования, это engineering managers, directors и security/compliance организации, где проблема уже не только в review, а в отсутствии стандарта AI governance. Сначала нужно доказать ценность продукта.
+
 ---
 <!-- .slide: id="why-competitor-landscape" -->
 
@@ -208,8 +240,15 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin: 12px auto 0 auto; width: 95%; box-sizing: border-box; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> Competition is fragmented: spec tools own planning artifacts, IDE assistants own generation speed, and post-facto tools own detection. Our wedge is IDE-native pre-merge control via spec-linked change containment.</p>
+  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> Competition is fragmented: spec tools own planning artifacts, IDE assistants own generation speed, and post-facto tools own detection. Our entry point is IDE-native pre-merge control via spec-linked change containment.</p>
 </div>
+
+Notes:
+Конкурентное поле с точки зрения нашей Core JTBD: когда инженеры используют AI в проде, им важны предсказуемость и контроль, чтобы быстрее выпускать продукт с уверенностью.
+
+Рассмотрим прямых, непрямых конкурентов и тех, кто решают смежные джобы. Прямые конкуренты, spec-driven tools вроде Kiro, Spec Kit, CodeSpeak позволяют работать относительно подготовленного артефакта. Непрямые конкуренты, Cursor, Copilot, Antogravity, Codex, Claude Code, JetBrains AI, владеют скоростью генерации и лидируют всю индустрию, но не создают устойчивых boundary controls. Продукты со смешанными джобами, например CodeRabbit, Qodo, LangSmith, работают в первую очередь с тем, чтобы находить и помогать решать проблемы AI-разработки постфактум.
+
+Ключевой вывод здесь в том, что почти никто не делает IDE-native pre-merge control основным продуктовым обещанием. Spec-tools помогают планировать, IDE assistants помогают генерировать, review tools помогают обнаруживать. Но почти никто не ограничивает diff до того, как он доходит до reviewer. Именно в этот gap и встает наш продукт.
 
 ---
 <!-- .slide: id="learn-and-steal" -->
@@ -239,12 +278,17 @@
   <p><strong>Takeaway:</strong> The market is converging on four useful patterns: Git-native specs, IDE-native workflow, persistent steering, and bi-directional sync. Our bet is to combine them into a control layer, not just a documentation layer.</p>
 </div>
 
+Notes:
+При этом рынок уже явно сформировал нескольких полезных паттернов, которые нет смысла изобретать заново. Первый, Git-native Markdown для specs, открытый и AI-friendly формат без vendor lock-in. Второй, bi-directional sync между code и specs, который подтверждает, что двусторонняя связь действительно работает. Третий, web-first tools создают фрикшен, так как надо переключаться между контекстами. И четвертый, использование persistent steering, то есть постоянные правила и ограничения, которые не исчезают после одной chat-сессии.
+
+Наша ставка в том, чтобы собрать эти четыре паттерна в единый control layer. Не просто слой документации, а слой управления с возможностью прозрачно отследить изменения поверх него.
+
 ---
 <!-- .slide: id="competitive-approaches" -->
 
 ## WHY: Approaches
 
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 14px;">The primary problem is unscoped AI output. Below: TOP-3 approaches prioritized across <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank" style="color: var(--accent-blue);">observed solutions</a>.</p>
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 14px;">TOP-3 approaches prioritized across <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank" style="color: var(--accent-blue);">observed solutions:</a></p>
 
 <div class="chosen-grid chosen-grid--small" style="grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: stretch; margin-top: 2px; width: 95%; margin-left: auto; margin-right: auto;">
   <div class="chosen-tile chosen-tile--green" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 190px;">
@@ -273,13 +317,20 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin: 12px auto 0 auto; width: 95%; box-sizing: border-box; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Decision:</strong> Start with spec-driven control as the initial wedge.<br><strong>Why:</strong> The core problem appears before merge, when change scope is unclear. Spec-driven control constrains the diff upstream; observability is better used later to validate drift.</p>
+  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Decision:</strong> Start with spec-driven control as the initial entry point.<br><strong>Why:</strong> The core problem appears before merge, when change scope is unclear. Spec-driven control constrains the diff upstream; observability is better used later to validate drift.</p>
 </div>
 
 <ul class="distrust-notes" style="margin-top: 12px;">
 <li>Estimates are expert-based and assumed.<span class="metric-badge">A</span> <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=549312952#gid=549312952&range=A1" target="_blank">Details →</a></li>
 <li>Note: IDE-native steering files (Cursor Rules, CLAUDE.md, Windsurf Memory) partially solve persistent context but lack spec enforcement, drift detection, and structured generation pipelines.</li>
 </ul>
+
+Notes:
+Ранее мы выбрали направление - UNSCOPED AI OUTPUT. Теперь давайте расмотрим типы решений, которые уже есть на рынке. Это три основных подхода.
+
+Spec-driven control - основной выбор, потому что он снимает ambiguity до генерации и превращает нашу потребость в проверяемые ограничения, которыми мы можем управлять. Observability & evals - дополняющий слой, он лучше работает для проверки drift и деградации уже после выполнения. Review & Debug Assist - fallback, если окажется, что создание спецификаций в реальном workflow создает дополнительный фрикшен и не подойдут другие решения, например code to spec.
+
+Приоритеризируем spec-driven control, тк ключевая проблема появляется до merge, в тот момент, когда scope изменения еще неясен. Значит, и контрольная точка должна находиться выше по воронке workflow, а не после выполнения.
 
 ---
 <!-- .slide: id="why-specs-not-just-models" -->
@@ -301,6 +352,11 @@
   <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> The primary problem is not smarter generation, but governed change.</p>
 </div>
 
+Notes:
+Посмотрим на наше решение критически. А не решат ли все просто лучшие модели? Да, но не полностью. Более сильные модели могут уменьшить число ошибок, но они не предоставляют инструмента для управления ограничениями output-а. Например, модель может стать умнее, но она все равно не гарантирует, что не затронет файлы вне согласованного scope.
+
+Недостающий слой здесь именно workflow control. Формализованная задача, границы scope и точки одобрения, которые живут дольше одной chat-сессии. Именно это и предоставляет specs-driven dev. То есть проблема не в том, что генерация недостаточно умная, а в том, что изменения должны быть управляемыми.
+
 ---
 <!-- .slide: id="why-summary-v3-copy" -->
 
@@ -312,7 +368,7 @@
     <div>
       <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Thesis:</strong> We win if teams can predict PR review outcome before review, not after.</p>
       <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why now:</strong> AI adoption is <a href="./index.html#/adoption-paradox" style="color: var(--accent-blue); text-decoration: none;">90%, distrust is 46% (+15pp YoY)</a>.</p>
-      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why us:</strong> This wedge builds on JetBrains’ IDE and PSI advantage, complements the existing AI portfolio. <a href="./index.html#/jb-strategic-fit" style="color: var(--accent-blue); text-decoration: none;">JB Strategic Fit</a></p>
+      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why us:</strong> This entry point builds on JetBrains’ IDE and PSI advantage, complements the existing AI portfolio. <a href="./index.html#/jb-strategic-fit" style="color: var(--accent-blue); text-decoration: none;">JB Strategic Fit</a></p>
       <p class="chosen-tile-body" style="margin: 0;"><strong>How we win:</strong> Start with Tech Leads at 10-50 dev teams, prove paid pilot outcomes by month 3-4, then expand via JetBrains distribution.</p>
     </div>
   </div>
@@ -332,6 +388,13 @@
     <p class="chosen-tile-body">Free for individuals and OSS trust level. Paid at team level when shared controls and PR/CI integrations are needed. <a href="./index.html#/pricing-monetization">Monetization</a> & <a href="./index.html#/growth-loops">Growth Loops</a></p>
   </div>
 </div>
+
+Notes:
+Давайте суммаризируем то, что мы прошли и обсудим дополнительные аргументы, которые должны повысить нашу увереннось в выбранном направлении и походе.
+
+Тезисно: мы выигрываем, если команда может предсказать outcome PR-review еще до review, а не разбираться с проблемой уже после. Это актуально сейчас, так как видно, что adoption AI уже 90%, но недоверие выросло так, что его выражает половина респондетов. И недоверие растет год к году несмотря на развитие качества моделей. Это должно получиться именно у Jet Brains, так как это ставка на преимущество JetBrains в IDE workflow и PSI-контексте. Также продукт хорошо встраивается и усиливает текущий AI-портфель, так как Bonsai усиливает текущие продукты JB и добавляет слой контроля, а не конкурирует с generation.
+
+Как мы выигрываем. Мы начинаем с Tech Leads в командах на 10-50 разработчиков, доказываем outcome на платных pilot’ах к третьему-четвертому месяцу, а дальше расширяемся через дистрибуцию JetBrains. На этом же слайде я коротко показываю market size, differentiation и monetization logic. Полный разбор, как обычно, вынесен в appendix.
 
 ---
 <!-- .slide: id="golden-path" -->
@@ -381,6 +444,13 @@
   <p><strong>Result:</strong> Same task, same people - but the control point shifts from "review the output" to "verify against the contract".</p>
 </div>
 
+Notes:
+Теперь давайте приземлим это в конкретный workflow. Здесь показан путь нашего респондента Александра, до и после использования нашего будущего продукта. До этого junior напрямую просит AI сделать auth refactor без явного контракта. AI возвращает diff, которого не было в скоупе примерно на 400 строк. Reviewer вынужден идти по строкам вручную, а задача и новый код плохо соотносятся друг с другом. Итог, Request Changes, новый prompt и повтор цикла.
+
+После, при использовании продукта, junior сначала пишет spec, а потом генерирует изменения на ее основе. AI возвращает diff уже внутри согласованных границ, указанных в spec. Reviewer сравнивает результат со spec прямо в IDE, а нарушения scope блокируются. В итоге задача, люди и контекст те же самые, но исход меняется: мы экономим время, токены и энергию команды и получаем merge, готовый к Pull Request.
+
+Здесь важно, что цифры пока являются допущениями, поэтому они помечены и должны быть валидированы в первых версиях продукта с пользователями. Но сам ключевой сдвиг уже понятен: контрольная точка смещается с review output на проверку against spec до review.
+
 ---
 
 <!-- .slide: id="mvp-definition-simplified" -->
@@ -428,6 +498,13 @@
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
   <p>This scope is sufficient to prove the core hypothesis: spec-linked reviews are faster than blind reviews</p>
 </div>
+
+Notes:
+MVP я определяю достаточно узко. Это JetBrains IDE plugin, который превращает spec, то есть Markdown-файл, в контролируемые code changes с review внутри IDE и полной отслеживаемость. Пользователь MVP, это небольшой число design partner teams на реальных JetBrains repos, где scoped changes часты, а review cycles дорогие.
+
+В ядро MVP входят четыре вещи. Spec-aware workflow внутри IDE, а не просто редактор Markdown. Change containment через PSI-based анализ: plugin сравнивает файлы и символы в diff с разрешённым scope из spec и блокирует commit при выходе за границу. Именно то, что не позволит повториться ситуации Александра с лишними зависимостями и файлами. IDE diff review с approve/apply loop. И отслеживаемость, которая связывает spec, diff и commits.
+
+Что сознательно не входит в MVP: полная автоматизация code-to-spec, широкое покрытие языков и edge cases, а также full org governance. С этим MVP хотим проверить главную гипотезу: spec-linked review значимо быстрее и предсказуемее, чем blind review.
 
 ---
 <!-- .slide: id="metrics" -->
@@ -485,13 +562,18 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: month 1 repeat usage in 3 pilot teams, month 2 payment-intent commitments, month 3-4 paid-pilot outcome uplift (time-to-PR, first-pass CI, token efficiency), month 5-6 stable usage and unit economics.</p>
+  <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: month 1 qualitative validation + design partner recruitment, month 2 pilot agreements with concrete test plans, month 3-4 measurable MVP impact with design partners, month 5-6 commercial repeatability.</p>
 </div>
 
 <div class="distrust-notes" style="margin-top: 8px;">
   <span style="display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: #22c55e; vertical-align: middle; margin-right: 6px;"></span>MVP stage metric,&nbsp;
   <span style="display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: #3b82f6; vertical-align: middle; margin: 0 6px 0 10px;"></span>Scale stage metric.
 </div>
+
+Notes:
+North Star - weekly active users с хотя бы одним spec-linked merge. Две gate-метрики для MVP: time-to-PR-approval и first-pass approval rate.
+
+На слайде можно увидеть больше метрик. Они разделены по группам и помечены цветами в зависимости от приминимости на этапах MVP и Scale.
 
 ---
 <!-- .slide: id="pricing-monetization" -->
@@ -510,12 +592,12 @@
     </div>
   </div>
   <div class="chosen-tile chosen-tile--green">
-    <p class="chosen-tile-label">When we start charging</p>
+    <p class="chosen-tile-label">Commercial sequence</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>month 2:</strong> written budget intent + pilot terms.</li>
+        <li><strong>month 2:</strong> 3+ pilot agreements with concrete test plans.</li>
         <li><strong>month 3-4:</strong> paid pilots after plugin MVP.</li>
-        <li><strong>month 5-6:</strong> repeatable upgrades via JetBrains ecosystem.</li>
+        <li><strong>month 5-6:</strong> commercial repeatability and expansion via JetBrains ecosystem.</li>
       </ul>
     </div>
   </div>
@@ -523,9 +605,9 @@
     <p class="chosen-tile-label">Signals the model works</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li>Budget intent converts to paid pilot.</li>
+        <li>1 paid conversion or 2 pilots entering procurement.</li>
         <li>One team expands inside the org.</li>
-        <li>Weekly repeat usage of the core scenario.</li>
+        <li>Clear package/pricing fit for team-level controls.</li>
       </ul>
     </div>
   </div>
@@ -534,6 +616,11 @@
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
   <p><strong>Decision:</strong> Keep individual entry free, monetize team-level control (shared templates, governance visibility, PR/CI integration), and start charging at paid pilot stage once MVP value is proven.</p>
 </div>
+
+Notes:
+Что касается монетизации. В open-source я бы оставил spec format, validator и examples, чтобы снизить недоверие и расширить верх воронки. Free tier, это single-user и небольшой workflow, чтобы достичь aha moment. Платный уровень начинается там, где появляется командная ценность: shared templates, controls, visibility, PR/CI integrations и change containment. Так же стоит рассмотреть вхождение продукта в существующие платные продукты JB.
+
+Я делаю допущение, что на втором месяце я хочу получить pilot agreements с design partners: кто sponsor, какой use case, какие success metrics и какой procurement path. А платные pilot’ы запускать уже после появления рабочего MVP, то есть в третий-четвертый месяц.
 
 ---
 <!-- .slide: id="roadmap" -->
@@ -562,31 +649,38 @@
     <tr>
       <td><strong>Phase</strong></td>
       <td style="background: rgba(34, 197, 94, 0.09);"><strong>Trust</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.13);"><strong>Paid Intent</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.13);"><strong>Design Partner Commitment</strong></td>
       <td style="background: rgba(34, 197, 94, 0.17);"><strong>MVP Launch</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.21);"><strong>Org Workflow Standardization</strong></td>
+      <td style="background: rgba(34, 197, 94, 0.21);"><strong>Scale</strong></td>
     </tr>
     <tr>
       <td><strong>Goal</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.09);">3 pilot teams with repeat usage</td>
-      <td style="background: rgba(34, 197, 94, 0.13);">3 payment-intent commitments</td>
-      <td style="background: rgba(34, 197, 94, 0.17);">&ge;3 paid pilots + outcome data</td>
-      <td style="background: rgba(34, 197, 94, 0.21);">Stable unit economics + repeat usage</td>
+      <td style="background: rgba(34, 197, 94, 0.09);">Core hypothesis validated + 3+ design partner teams recruited</td>
+      <td style="background: rgba(34, 197, 94, 0.13);">3+ pilot agreements with concrete test plans</td>
+      <td style="background: rgba(34, 197, 94, 0.17);">MVP live with 3+ design partner teams + measurable impact</td>
+      <td style="background: rgba(34, 197, 94, 0.21);">Commercial repeatability: conversion/procurement + expansion + pricing fit</td>
     </tr>
     <tr>
       <td><strong>Gate to next</strong></td>
-      <td style="background: rgba(34, 197, 94, 0.09);">3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks</td>
-      <td style="background: rgba(34, 197, 94, 0.13);">&ge;3 signed payment-intent commitments with named buyer and budget</td>
-      <td style="background: rgba(34, 197, 94, 0.17);">&ge;3 paid pilots; &ge;10% improvement in two key outcome metrics</td>
-      <td style="background: rgba(34, 197, 94, 0.21);">Scale decision: stable unit economics and repeat usage thresholds met</td>
+      <td style="background: rgba(34, 197, 94, 0.09);">&ge;8 interviews + baseline captured (calculated) on all 3 design-partner teams using the same metrics (review time, PR iterations, scope violations)</td>
+      <td style="background: rgba(34, 197, 94, 0.13);">3 pilot agreements with sponsor, success metrics, timeline, and procurement path; prototype tests in &ge;2 teams</td>
+      <td style="background: rgba(34, 197, 94, 0.17);">MVP in 3+ teams; &ge;2 teams show measurable uplift in key outcomes</td>
+      <td style="background: rgba(34, 197, 94, 0.21);">1 paid conversion or 2 pilots entering procurement + 1 org expansion + package/pricing fit evidence</td>
     </tr>
   </tbody>
 </table>
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> Each phase requires passing a quantified gate before investment in the next. No gate passed = no next phase.</p>
+  <p><strong>Takeaway:</strong> Each phase requires passing a quantified gate before investment in the next.</p>
 </div>
+
+Notes:
+Roadmap мы будем планировать вместе с командой, и пока это допущения. Month 1, это Trust. Month 2, Design Partner Commitment. Months 3-4, MVP Launch. Months 5-6, Commercial Repeatability, то есть scale: стандартизация workflow на уровне организации клиента и внутренняя дистрибуция через UGC spec и workflow templates. Для каждого этапа есть и цель, и gate для перехода дальше.
+
+Я отдельно хочу уточнить, что я еще уточню с командой пороги с учетом специфики домена.
+
+Поэтому gate на первый месяц такой: 8+ интервью и замерить текущий уровень (review time, PR iterations, scope violations) у 3 или более design partners. Дальше, на второй месяц, 3 pilot agreements, плюс Prototype tests хотя бы в двух командах. На третьем-четвертом месяце, MVP в 3+ командах и measurable uplift у минимум двух команд. На пятом-шестом месяце коммерческий gate, это 1 paid conversion or 2 пилотных закупки, плюс one org expansion и package/pricing fit evidence.
 
 ---
 <!-- .slide: id="risks-mitigation" -->
@@ -614,14 +708,14 @@
   <tbody>
     <tr class="highlight-row">
       <td><strong>PoC value</strong></td>
-      <td>Spec-first may not prove repeatable value fast enough. If Month 1 lacks repeat usage and better outcomes, the thesis weakens.</td>
-      <td>Run 3 pilot teams in parallel, require repeat-usage gate, and switch entry point if outcomes do not outperform alternatives.</td>
+      <td>Spec-first may not prove repeatable value fast enough. If Month 1 fails to validate the core hypothesis with design partners, the thesis weakens.</td>
+      <td>Run qualitative validation plus 3+ design partners, require evidence gate before MVP build, and switch entry point if outcomes do not outperform alternatives.</td>
       <td class="center score val-high">High</td>
     </tr>
     <tr>
       <td><strong>Partner speed</strong></td>
       <td>Not enough high-signal design partners fast enough.</td>
-      <td>Warm network + OSS wedge.</td>
+      <td>Warm network + OSS entry point.</td>
       <td class="center score val-med">Med</td>
     </tr>
     <tr>
@@ -633,7 +727,7 @@
     <tr>
       <td><strong>Dev friction</strong></td>
       <td>Adoption may feel too heavy for real workflows.</td>
-      <td>Repo-native, zero-friction extraction.</td>
+      <td>Repo-native, zero-friction extraction, code-to-spec flow.</td>
       <td class="center score val-med">Med</td>
     </tr>
   </tbody>
@@ -641,8 +735,13 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> The primary risk is failing to prove repeatable value for spec-first control in Month 1. Mitigation is explicit: 3 pilot teams with a hard pivot gate before MVP build.</p>
+  <p><strong>Takeaway:</strong> The primary risk is failing to prove repeatable value for spec-first control in Month 1. Mitigation is explicit: qualitative evidence + 3+ design partners with a hard pivot gate before MVP build.</p>
 </div>
+
+Notes:
+Главный риск - мы не сможем доказать repeatable value для spec-first control. Если это не подтвердится, то весь тезис ослабевает еще до того, как мы начали серьезно инвестировать в разработку. Поэтому mitigation здесь тоже жесткий и ранний: качественная валидация, 3+ design partner teams, явный evidence gate и возможность сменить core directions и подход до того, как мы строим полноценный plugin MVP.
+
+Дальше есть еще несколько понятных рисков, скорость привлечения design partners, сложность PSI integration и потенциальное developer friction. У каждого есть свой mitigation, но по-настоящему критичен именно первый риск. Потому что если core value не повторяется. Полная матрица рисков с допущениями по оценке эффекта и вероятности по гиперссылке.
 
 ---
 
@@ -673,9 +772,9 @@
       <p style="margin: 0 0 8px 0; font-weight: 700; color: var(--r-main-color); text-align: center;">Validate Problem &amp; Solution Direction</p>
       <ul style="margin: 0; padding-left: 15px;">
         <li>15 customer interviews -> synthesized pain points and willingness to pay.</li>
-        <li style="margin-bottom: 1.8em;">Run with 3 design-partner teams in a chosen segment and instrument weekly active usage.</li>
+        <li style="margin-bottom: 1.8em;">Recruit 3+ design-partner teams, map core workflow, and capture baseline metrics (review time / PR iterations / scope violations).</li>
       </ul>
-      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Evidence brief + month 1 gate evidence (3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks).</p>
+      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Evidence brief + month 1 gate evidence (&ge;8 interviews + baseline captured (calculated) on all 3 design-partner teams using the same metrics: review time, PR iterations, scope violations).</p>
     </div>
   </div>
 
@@ -698,8 +797,13 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 15px;">
-  <p><strong>Result after 30 days:</strong> We will know whether spec-driven control creates repeatable value for real teams - backed by usage data from 3 pilot teams and 15 customer interviews. If yes, we have a validated entry point and a resourced 90-day plan. If no, we pivot before spending engineering time on an MVP.</p>
+  <p><strong>30 days output:</strong> We will know whether spec-driven control creates repeatable value for real teams - backed by interview evidence, baseline workflow metrics, and committed design partners. If yes, we have a validated entry point and a resourced 90-day plan. If no, we pivot before spending engineering time on an MVP.</p>
 </div>
+
+Notes:
+И в конце о том, что именно я делаю в первые 30 дней. Первая неделя, align and orient. Я быстро выравниваю stakeholders, фиксирую success criteria и разбираю исторические внедрения - что сработало, что не сработало и какие есть ограничения. Вторая и третья недели, validate. Здесь я провожу около 8 customer interviews, синтезирую pain points и willingness to pay, и параллельно набираю 3+ design partner teams, чтобы зафиксировать baseline метрики по текущему workflow и проверить сам сценарий. Четвертая неделя, Go / No-Go. Я приношу leadership recommendation, основанную на evidence.
+
+В результате, у нас есть validated entry point и обоснованный план. Иначе мы сможем достаточно быстро развернуться в сторону другого направления или подхода. Спасибо.
 
 ---
 
@@ -753,10 +857,10 @@
     <p class="chosen-tile-label">2. Early Monetization</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
-        <li><strong>Offer:</strong> Written budget intent + pilot agreement (scope, success metrics, buyer, procurement path).</li>
+        <li><strong>Offer:</strong> Pilot agreement (scope, success metrics, sponsor, timeline, procurement path).</li>
         <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (month 3-4).</li>
         <li><strong>Model:</strong> Add-on to JB AI credits (shared quota).</li>
-        <li><strong>Goal:</strong> Prove WTP and secure team budget early.</li>
+        <li><strong>Goal:</strong> Secure design partner commitment before MVP monetization.</li>
       </ul>
     </div>
   </div>
@@ -786,7 +890,7 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> GTM sequencing is deliberate: prove workflow value, secure budget intent, convert to paid pilots, then scale through JetBrains distribution and OSS standardization.</p>
+  <p><strong>Takeaway:</strong> GTM sequencing is deliberate: prove workflow value, secure pilot agreements, convert to paid pilots, then scale through JetBrains distribution and OSS standardization.</p>
 </div>
 
 ---
@@ -1159,7 +1263,7 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway">
-  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The clearest B2B pains are delivery unpredictability and quality risk. That makes controlled change, not faster generation, the strongest entry wedge for AI-assisted teams: reduce variance first, then scale output on top of a more reviewable workflow.</p>
+  <p><strong>Takeaway <span class="metric-badge">A</span>:</strong> The clearest B2B pains are delivery unpredictability and quality risk. That makes controlled change, not faster generation, the strongest entry point for AI-assisted teams: reduce variance first, then scale output on top of a more reviewable workflow.</p>
 </div>
 
 <ul class="distrust-notes">
@@ -1255,7 +1359,7 @@
       <tr>
         <td class="col-num"><strong>0</strong></td>
         <td class="col-risk"><strong>PoC risk: we can't prove repeatable value for spec-first + diff control</strong></td>
-        <td class="col-mitigation">Month 1: 3 pilot teams in parallel with an instrumented prototype: (1) spec-first control, (2) review help, (3) diff control (change containment). Gate: 3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks. If not, switch the entry point before building the plugin MVP.</td>
+        <td class="col-mitigation">Month 1: run qualitative validation + recruit 3+ design partner teams. Gate: &ge;8 interviews + baseline captured (calculated) on all 3 design-partner teams using the same metrics (review time, PR iterations, scope violations). If not, switch the entry point before building the plugin MVP.</td>
         <td class="col-status text-high"><strong>High</strong></td>
         <td class="col-status text-med"><strong>Med</strong></td>
         <td class="col-score"><strong>6</strong></td>
@@ -1295,7 +1399,7 @@
       <tr>
         <td class="col-num">5</td>
         <td class="col-risk">Monetization risk: value is clear, but buyers don't approve budget / packaging is confusing</td>
-        <td class="col-mitigation">month 2: written budget intent + pilot terms (buyer, success metrics, procurement path). month 3-4: paid pilots once MVP exists. Keep pricing simple and tie value to measurable outcomes (fewer review iterations, faster time-to-PR, fewer unscoped diffs).</td>
+        <td class="col-mitigation">month 2: 3+ pilot agreements (sponsor, success metrics, test plan, procurement path). month 3-4: paid pilots once MVP exists. month 5-6: 1 paid conversion or 2 pilots entering procurement, plus one org expansion and pricing/package fit evidence.</td>
         <td class="col-status text-med">Med</td>
         <td class="col-status text-med">Med</td>
         <td class="col-score">4</td>
@@ -1311,7 +1415,7 @@
       <tr>
         <td class="col-num">7</td>
         <td class="col-risk">Adoption Tax</td>
-        <td class="col-mitigation">Strategic wedge: extract from existing code, don't force devs to write from scratch.</td>
+        <td class="col-mitigation">Strategic entry point: extract from existing code, don't force devs to write from scratch.</td>
         <td class="col-status text-med">Med</td>
         <td class="col-status text-low">Low</td>
         <td class="col-score">2</td>
