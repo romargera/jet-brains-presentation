@@ -62,7 +62,7 @@
 </div>
 
 <div class="adoption-takeaway">
-  <p><strong>Takeaway:</strong> 90% adoption + 15pp distrust surge → developers use AI for speed but reject unpredictable output → our opportunity: make AI-assisted dev predictable.</p>
+  <p><strong>Takeaway:</strong> 90% adoption + 45% distrust → developers use AI for speed but reject unpredictable output → our opportunity: make AI-assisted dev predictable.</p>
 </div>
 </div>
 
@@ -95,7 +95,7 @@
 
 ## WHAT: Strategic Directions <span class="metric-badge">A</span>
 
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;"><a href="#/stream-options-main-appendix" style="color: var(--accent-blue);">Prioritized</a> across <a href="#/distrust-issues" style="color: var(--accent-blue);">distrust</a>, <a href="#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>.</p>
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;"><a href="./index.html#/stream-options-main-appendix" style="color: var(--accent-blue);">Prioritized</a> across <a href="./index.html#/distrust-issues" style="color: var(--accent-blue);">distrust</a>, <a href="./index.html#/time-spend" style="color: var(--accent-blue);">time spent</a>, and <a href="./index.html#/b2b-pains" style="color: var(--accent-blue);">B2B issues</a>.</p>
 
 <div class="chosen-grid chosen-grid--small tile-text-match-summary" style="grid-template-columns: repeat(2, 1fr); gap: 10px; align-items: stretch; margin-top: 2px; width: 95%; margin-left: auto; margin-right: auto;">
   <div class="chosen-tile chosen-tile--green">
@@ -107,7 +107,7 @@
     </div>
   </div>
 
-  <div class="chosen-tile" style="border: 1px solid rgba(96, 165, 250, 0.42); background: rgba(37, 99, 235, 0.12);">
+  <div class="chosen-tile chosen-tile--green">
     <div>
       <p class="chosen-tile-label">2 Post-generation review burden</p>
       <div class="chosen-tile-body">
@@ -118,7 +118,7 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin: 12px auto 0 auto; width: 95%; box-sizing: border-box; padding: 10px 14px; border-left: 4px solid #34d399; text-align: left;">
-  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> Primary bet: unscoped AI output - strongest wedge because it constrains diffs before review, not after. Fallback: post-generation review burden - activates if Mo 1 gate fails (&lt;2/3 pilot teams with repeat prototype engagement). Pivot decision happens before MVP build.</p>
+  <p style="margin: 0; font-size: 0.62em; color: var(--text-main);"><strong>Takeaway:</strong> Primary bet: unscoped AI output - strongest wedge because it constrains diffs before review, not after. Fallback: post-generation review burden - activates if month 1 gate fails (&lt;2/3 pilot teams with repeat prototype engagement). Pivot decision happens before MVP build.</p>
 </div>
 
 ---
@@ -149,7 +149,7 @@
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Scaling Stage <span class="metric-badge">A</span></p>
     <div class="chosen-tile-body">
-      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Eng Managers, Directors, Security</p>
+      <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Who:</strong> Engineering Managers, Directors, Security</p>
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Where:</strong> 100+ dev orgs, compliance pressure</p>
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Problem:</strong> No standard for AI governance</p>
       <p style="margin-bottom: 5px;"><strong style="color: var(--r-main-color);">Trigger:</strong> AI policy violation or incident</p>
@@ -311,9 +311,9 @@
     <p class="chosen-tile-label">Decision Summary</p>
     <div>
       <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Thesis:</strong> We win if teams can predict PR review outcome before review, not after.</p>
-      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why now:</strong> AI adoption is <a href="#/adoption-paradox" style="color: var(--accent-blue); text-decoration: none;">90%, distrust is 46% (+15pp YoY)</a>.</p>
-      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why us:</strong> This wedge builds on JetBrains’ IDE and PSI advantage, complements the existing AI portfolio. <a href="#/jb-strategic-fit" style="color: var(--accent-blue); text-decoration: none;">JB Strategic Fit</a></p>
-      <p class="chosen-tile-body" style="margin: 0;"><strong>How we win:</strong> Start with Tech Leads at 10-50 dev teams, prove paid pilot outcomes by Mo3-4, then expand via JetBrains distribution.</p>
+      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why now:</strong> AI adoption is <a href="./index.html#/adoption-paradox" style="color: var(--accent-blue); text-decoration: none;">90%, distrust is 46% (+15pp YoY)</a>.</p>
+      <p class="chosen-tile-body" style="margin: 0 0 4px 0;"><strong>Why us:</strong> This wedge builds on JetBrains’ IDE and PSI advantage, complements the existing AI portfolio. <a href="./index.html#/jb-strategic-fit" style="color: var(--accent-blue); text-decoration: none;">JB Strategic Fit</a></p>
+      <p class="chosen-tile-body" style="margin: 0;"><strong>How we win:</strong> Start with Tech Leads at 10-50 dev teams, prove paid pilot outcomes by month 3-4, then expand via JetBrains distribution.</p>
     </div>
   </div>
 </div>
@@ -325,11 +325,11 @@
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Differentiation</p>
-    <p class="chosen-tile-body">IDE-native spec↔code plus scope checks makes PR outcomes predictable before review. <a href="#/differentiation">Differentiation</a></p>
+    <p class="chosen-tile-body">IDE-native spec↔code plus scope checks makes PR outcomes predictable before review. <a href="./index.html#/differentiation">Differentiation</a></p>
   </div>
   <div class="chosen-tile chosen-tile--green">
     <p class="chosen-tile-label">Monetization</p>
-    <p class="chosen-tile-body">Free for individuals and OSS trust level. Paid at team level when shared controls and PR/CI integrations are needed. <a href="#/pricing-monetization">Monetization</a> & <a href="#/growth-loops">Growth Loops</a></p>
+    <p class="chosen-tile-body">Free for individuals and OSS trust level. Paid at team level when shared controls and PR/CI integrations are needed. <a href="./index.html#/pricing-monetization">Monetization</a> & <a href="./index.html#/growth-loops">Growth Loops</a></p>
   </div>
 </div>
 
@@ -385,7 +385,7 @@
 
 <!-- .slide: id="mvp-definition-simplified" -->
 
-<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP (Mo 3-4)</h2>
+<h2 style="font-size: 1.4em; margin-bottom: 5px;">HOW: MVP (month 3-4)</h2>
 <p class="slide-subtitle" style="margin-bottom: 8px;">Product Definition</p>
 
 <div class="chosen-grid chosen-grid--2col chosen-grid--small tile-text-match-summary">
@@ -485,7 +485,7 @@
 </div>
 
 <div class="adoption-takeaway distrust-takeaway" style="margin-top: 12px;">
-  <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: Mo1 repeat usage in 3 pilot teams, Mo2 payment-intent commitments, Mo3-4 paid-pilot outcome uplift (time-to-PR, first-pass CI, token efficiency), Mo5-6 stable usage and unit economics.</p>
+  <p><strong>Takeaway:</strong> Metrics are tied to roadmap gates: month 1 repeat usage in 3 pilot teams, month 2 payment-intent commitments, month 3-4 paid-pilot outcome uplift (time-to-PR, first-pass CI, token efficiency), month 5-6 stable usage and unit economics.</p>
 </div>
 
 <div class="distrust-notes" style="margin-top: 8px;">
@@ -513,9 +513,9 @@
     <p class="chosen-tile-label">When we start charging</p>
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px;">
-        <li><strong>Mo 2:</strong> written budget intent + pilot terms.</li>
-        <li><strong>Mo 3-4:</strong> paid pilots after plugin MVP.</li>
-        <li><strong>Mo 5-6:</strong> repeatable upgrades via JetBrains ecosystem.</li>
+        <li><strong>month 2:</strong> written budget intent + pilot terms.</li>
+        <li><strong>month 3-4:</strong> paid pilots after plugin MVP.</li>
+        <li><strong>month 5-6:</strong> repeatable upgrades via JetBrains ecosystem.</li>
       </ul>
     </div>
   </div>
@@ -552,10 +552,10 @@
   <thead>
     <tr>
       <th></th>
-      <th class="center" style="background: rgba(34, 197, 94, 0.09);">Mo 1</th>
-      <th class="center" style="background: rgba(34, 197, 94, 0.13);">Mo 2</th>
-      <th class="center" style="background: rgba(34, 197, 94, 0.17);">Mo 3-4</th>
-      <th class="center" style="background: rgba(34, 197, 94, 0.21);">Mo 5-6</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.09);">month 1</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.13);">month 2</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.17);">month 3-4</th>
+      <th class="center" style="background: rgba(34, 197, 94, 0.21);">month 5-6</th>
     </tr>
   </thead>
   <tbody>
@@ -593,7 +593,7 @@
 
 ## HOW: Risks & Mitigation
 
-<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;">Top risks below. Full Impact × Probability matrix is in <a href="#/risks-mitigation-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
+<p class="slide-subtitle" style="margin-top: 4px; margin-bottom: 10px;">Top risks below. Full Impact × Probability matrix is in <a href="./index.html#/risks-mitigation-main-appendix" style="color: var(--accent-blue);">appendix</a>.</p>
 
 <div class="distrust-table-wrapper">
 <table class="distrust-table" style="table-layout: fixed; width: 100%; font-size: 0.43em;">
@@ -675,7 +675,7 @@
         <li>15 customer interviews -> synthesized pain points and willingness to pay.</li>
         <li style="margin-bottom: 1.8em;">Run with 3 design-partner teams in a chosen segment and instrument weekly active usage.</li>
       </ul>
-      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Evidence brief + Mo1 gate evidence (3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks).</p>
+      <p style="margin: 6px 0 0 0; padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.15);"><strong>DoD:</strong> Evidence brief + month 1 gate evidence (3 pilot teams onboarded; &ge;2 show weekly active usage over 3 weeks).</p>
     </div>
   </div>
 
@@ -743,7 +743,7 @@
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
         <li><strong>Target:</strong> JB Power Users, Tech Leads, DevEx.</li>
-        <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="#/golden-path">Details</a></li>
+        <li><strong>Motion:</strong> "Golden path" to PR in 10 mins. <a href="./index.html#/golden-path">Details</a></li>
         <li><strong>Goal:</strong> Validate spec-first + diff control (change containment) via instrumented prototype before plugin MVP.</li>
       </ul>
     </div>
@@ -754,7 +754,7 @@
     <div class="chosen-tile-body">
       <ul style="margin: 0; padding-left: 15px; margin-bottom: 4px;">
         <li><strong>Offer:</strong> Written budget intent + pilot agreement (scope, success metrics, buyer, procurement path).</li>
-        <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (Mo 3-4).</li>
+        <li><strong>When we charge:</strong> paid pilots start once plugin MVP exists (month 3-4).</li>
         <li><strong>Model:</strong> Add-on to JB AI credits (shared quota).</li>
         <li><strong>Goal:</strong> Prove WTP and secure team budget early.</li>
       </ul>
@@ -1229,9 +1229,9 @@
 </div>
 
 <ul class="distrust-notes">
-<li>Scores are derived from the <a href="#/competitive-approaches">Core JTBD Landscape ICE framework</a>. Each direction is mapped to the closest approach and inherits its ICE Score. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=1907182755#gid=1907182755&range=A1" target="_blank">Calculations</a>.</li>
+<li>Scores are derived from the <a href="./index.html#/competitive-approaches">Core JTBD Landscape ICE framework</a>. Each direction is mapped to the closest approach and inherits its ICE Score. <a href="https://docs.google.com/spreadsheets/d/1dJaYTAPnEGoDGKNcPKwCtwqx5y4589aNeUF5R1wia-o/edit?gid=1907182755#gid=1907182755&range=A1" target="_blank">Calculations</a>.</li>
 <li>All subjective/estimated parameters are marked with <span class="metric-badge">A</span>.</li>
-<li>Directions are derived from the top issues across three evidence layers: <a href="#/distrust-issues">Distrust</a>, <a href="#/time-spend">Time Spent</a>, and <a href="#/b2b-pains">B2B Issues</a>.</li>
+<li>Directions are derived from the top issues across three evidence layers: <a href="./index.html#/distrust-issues">Distrust</a>, <a href="./index.html#/time-spend">Time Spent</a>, and <a href="./index.html#/b2b-pains">B2B Issues</a>.</li>
 </ul>
 
 ---
@@ -1295,7 +1295,7 @@
       <tr>
         <td class="col-num">5</td>
         <td class="col-risk">Monetization risk: value is clear, but buyers don't approve budget / packaging is confusing</td>
-        <td class="col-mitigation">Mo 2: written budget intent + pilot terms (buyer, success metrics, procurement path). Mo 3-4: paid pilots once MVP exists. Keep pricing simple and tie value to measurable outcomes (fewer review iterations, faster time-to-PR, fewer unscoped diffs).</td>
+        <td class="col-mitigation">month 2: written budget intent + pilot terms (buyer, success metrics, procurement path). month 3-4: paid pilots once MVP exists. Keep pricing simple and tie value to measurable outcomes (fewer review iterations, faster time-to-PR, fewer unscoped diffs).</td>
         <td class="col-status text-med">Med</td>
         <td class="col-status text-med">Med</td>
         <td class="col-score">4</td>
